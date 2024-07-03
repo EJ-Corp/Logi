@@ -27,10 +27,10 @@ public class GameManager : MonoBehaviour
     public bool inMainView = true;
     public bool inPCView = false;
 
-    void Awake()
+    void Start()
     {
         gameState = GameState.mainView;
-        // computerScreen = GameObject.Find("Main Screen");
+        computerScreen = GameObject.FindGameObjectWithTag("PCScreen");
     }
 
     void Update()
