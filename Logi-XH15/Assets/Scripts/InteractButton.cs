@@ -5,28 +5,48 @@ using UnityEngine;
 public class InteractButton : Interactable
 {
     [SerializeField] private Animator buttonClick;
-    [SerializeField] private ProblemHandler problem;
+    [SerializeField] private ButtonProblem problem;
+    [SerializeField] private bool canFix = false;
+    private ProblemHandler warningSign; 
 
     void Start()
     {
-        problem = transform.GetComponent<ProblemHandler>();
+        
     }
 
     public override void OnInteract()
     {
-        Debug.Log("Interacted with " + gameObject.name);
         buttonClick.SetTrigger("IsClicked");
-        problem.FixProblem();
+        if(canFix)
+        {
+            FixProblem();
+        } else
+        {
+            //Show it was the wrong button -> maybe drop data collection rate and have a wrong sound + camera shake
+            Debug.Log("You got the wrong button");
+        }
         
     }
     public override void OnFocus()
     {
-        Debug.Log("Looking at " + gameObject.name);
-        print("Looking at " + gameObject.name);
+
     }
     public override void OnLoseFocus()
     {
-        Debug.Log("Stopped looking at " + gameObject.name);
+        
+    }
+
+    public void FixProblem()
+    {
+        Debug.Log("Fixed the problem");
+        warningSign.FixProblem();
+        canFix = false;
+    }
+
+    public void MakeProblem(ProblemHandler warning)
+    {
+        canFix = true;
+        warningSign = warning;
     }
 
     
