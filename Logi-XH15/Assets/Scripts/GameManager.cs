@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         gameState = GameState.mainView;
-        computerScreen = GameObject.Find("Main Screen");
+        // computerScreen = GameObject.Find("Main Screen");
     }
 
     void Update()
