@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
 
         Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
