@@ -1,0 +1,51 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(CharacterController))]
+
+public class PlayerController : MonoBehaviour
+{
+    
+    [SerializeField] private float walkSpeed = 7.5f;
+    [SerializeField] private Camera playerCamera;
+    [SerializeField] private float lookSpeed = 2;
+    [SerializeField] private float lookXLimit = 45;
+
+    private CharacterController characterController;
+    private Vector3 moveDirection = Vector3.zero;
+    private float rotationX = 0;
+
+    [SerializeField] private bool canMove = true;
+
+    void Start()
+    {
+        characterController = GetComponent<CharacterController>();
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = true;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Vector3 forward = transform.TransformDirection(Vector3.forward);
+        Vector3 right = transform.TransformDirection(Vector3.right);
+
+        float currentSpeedX = canMove ? walkSpeed * Input.GetAxis("Vertical") : 0;
+        float currentSpeedY = canMove ? walkSpeed * Input.GetAxis("Horizontal") : 0;
+
+        float movementDirectionY = moveDirection.y;
+        moveDirection = (forward * currentSpeedX) + (right * currentSpeedY);
+
+        characterController.Move(moveDirection * Time.deltaTime);
+
+        if(canMove)
+        {
+            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+        }
+    }
+}
