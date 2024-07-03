@@ -10,6 +10,10 @@ public class SolarFlare : MonoBehaviour
     public AudioMixer masterMixer;
     public float lowpass = 0f;
 
+    void Start()
+    {
+        transform.Rotate(0, 180, 0);
+    }
     void Update()
     {
         transform.Translate(Vector3.back*speed*Time.deltaTime);
