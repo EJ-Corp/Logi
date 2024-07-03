@@ -21,7 +21,7 @@ public class ButtonProblem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Debug"))
+        if(Input.GetButtonDown("Jump"))
         {
             if(!problemActive)
             {
