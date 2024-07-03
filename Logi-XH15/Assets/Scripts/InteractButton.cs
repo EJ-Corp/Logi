@@ -5,10 +5,18 @@ using UnityEngine;
 public class InteractButton : Interactable
 {
     [SerializeField] private Animator buttonClick;
+    [SerializeField] private ProblemHandler problem;
+
+    void Start()
+    {
+        problem = transform.GetComponent<ProblemHandler>();
+    }
+
     public override void OnInteract()
     {
         Debug.Log("Interacted with " + gameObject.name);
         buttonClick.SetTrigger("IsClicked");
+        problem.FixProblem();
         
     }
     public override void OnFocus()
