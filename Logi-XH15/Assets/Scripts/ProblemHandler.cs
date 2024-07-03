@@ -12,7 +12,6 @@ public class ProblemHandler : MonoBehaviour
 
     [SerializeField] private float flashInterval;
     [SerializeField] private float flashCooldown;
-    [SerializeField] private float warningFlashCount;
 
     enum WarningState
     {
@@ -71,13 +70,11 @@ public class ProblemHandler : MonoBehaviour
         {
             warningPanel.SetActive(false);
             active = false;
-            flashInterval = warningFlashCount;
             flashCooldown = flashInterval;
         } else 
         {
             warningPanel.SetActive(true);
             active = true;
-            flashInterval = warningFlashCount;
             flashCooldown = flashInterval;
         }
     }
