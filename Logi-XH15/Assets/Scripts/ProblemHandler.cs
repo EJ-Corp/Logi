@@ -78,4 +78,12 @@ public class ProblemHandler : MonoBehaviour
             flashCooldown = flashInterval;
         }
     }
+
+    public void FixProblem()
+    {
+        warningPanel.SetActive(false);
+        breakageTimer = timeToBreak;
+        currentState = WarningState.diabled;
+        active = false;
+    }
 }

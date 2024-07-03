@@ -600,6 +600,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 138451156567771327, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2140856824}
+    - targetCorrespondingSourceObject: {fileID: 138451156567771327, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2140856829}
   m_SourcePrefab: {fileID: 100100000, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
 --- !u!95 &568711972 stripped
 Animator:
@@ -1049,6 +1052,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
+--- !u!1 &2067224108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6790699824468964183, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
+  m_PrefabInstance: {fileID: 1611212380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2140856823 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 138451156567771327, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
@@ -1067,6 +1075,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonClick: {fileID: 568711972}
+  problem: {fileID: 0}
+--- !u!114 &2140856829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140856823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ece53ecdbf0054695a0a4661e860cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToBreak: 10
+  breakageTimer: 0
+  warningPanel: {fileID: 2067224108}
+  flashInterval: 1.5
+  flashCooldown: 0
+  currentState: 0
 --- !u!1001 &3191729078952870371
 PrefabInstance:
   m_ObjectHideFlags: 0
