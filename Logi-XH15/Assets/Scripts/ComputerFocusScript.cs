@@ -8,11 +8,13 @@ public class ComputerFocusScript : MonoBehaviour
 
     [SerializeField] private Camera roomCamera;
     [SerializeField] private Camera pcFocusCamera; 
-
-    [SerializeField] private Animator cameraAnimator;
-
     [SerializeField] private AudioListener roomListener;
     [SerializeField] private AudioListener pcFocusListener; 
+    [SerializeField] private Animator cameraAnimator;
+
+    [SerializeField] private PlayerController playerController;
+
+
 
 
     private float inputHorizontal;
@@ -31,6 +33,8 @@ public class ComputerFocusScript : MonoBehaviour
 
         cameraAnimator = roomCamera.GetComponent<Animator>();
         cameraAnimator.enabled = false;
+
+        playerController = gameManager.playerController;
     }
 
     // Update is called once per frame
@@ -46,7 +50,7 @@ public class ComputerFocusScript : MonoBehaviour
     {
         cameraAnimator.enabled = true;
         cameraAnimator.SetTrigger("focusOnPC");
-       // playerScript.SetStateIdle();
+        playerController.CanMove = false;
     }
 
     public void SwapCameras() 

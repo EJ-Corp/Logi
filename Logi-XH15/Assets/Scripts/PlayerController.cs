@@ -17,13 +17,18 @@ public class PlayerController : MonoBehaviour
     private float rotationX = 0;
 
     [SerializeField] private bool canMove = true;
+    public bool CanMove
+    {
+        get { return canMove; }
+        set { canMove = value; }
+    }
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
 
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
+        //Cursor.lockState = CursorLockMode.Confined;
+        //Cursor.visible = true;
     }
 
     // Update is called once per frame
