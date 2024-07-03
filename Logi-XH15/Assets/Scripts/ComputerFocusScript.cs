@@ -38,7 +38,6 @@ public class ComputerFocusScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && pcCamera.enabled == true)
         {
-            cameraAnimator.enabled = true;
             cameraAnimator.SetTrigger("pcTOmain");
         }
     }
