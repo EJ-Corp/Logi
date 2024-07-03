@@ -161,6 +161,12 @@ MonoBehaviour:
   lookSpeed: 2
   lookXLimit: 45
   canMove: 1
+  canInteract: 1
+  interactionRayPoint: {x: 0.5, y: 0.5, z: 0}
+  interactionDistance: 2
+  interactionLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &7840465959188848813
 GameObject:
   m_ObjectHideFlags: 0
