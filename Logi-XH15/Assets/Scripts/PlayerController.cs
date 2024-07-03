@@ -17,13 +17,29 @@ public class PlayerController : MonoBehaviour
     private float rotationX = 0;
 
     [SerializeField] private bool canMove = true;
+    public bool CanMove
+    {
+        get { return canMove; }
+        set { canMove = value; }
+    }
+
+    [Header("Funtional Options")]
+    [SerializeField] private bool canInteract = true;
+
+
+    [Header("Interaction")]
+    [SerializeField] private Vector3 interactionRayPoint = default;
+    [SerializeField] private float interactionDistance = default;
+    [SerializeField] private LayerMask interactionLayer = default;
+    private Interactable currentInteractable;
+    private KeyCode interactKey = KeyCode.Mouse0;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
 
         Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -46,6 +62,42 @@ public class PlayerController : MonoBehaviour
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+
+            if(canInteract)
+            {
+                HandleInteractionCheck();
+                HandleInteractionInput();
+            }
+        }
+    }
+
+    public void HandleInteractionCheck()
+    {
+        if(Physics.Raycast(playerCamera.ViewportPointToRay(interactionRayPoint), out RaycastHit hit, interactionDistance))
+        {
+            Debug.DrawRay(transform.position, transform.forward, Color.green);
+            
+            if(hit.collider.gameObject.layer == 6 && (currentInteractable == null || hit.collider.gameObject.GetInstanceID() != currentInteractable.GetInstanceID()))
+            {
+                hit.collider.TryGetComponent(out currentInteractable);
+
+                if(currentInteractable)
+                {
+                    currentInteractable.OnFocus();
+                }
+            }
+        } else if(currentInteractable)
+        {
+            currentInteractable.OnLoseFocus();
+            currentInteractable = null;
+        }
+    }
+
+    public void HandleInteractionInput()
+    {
+        if(Input.GetKeyDown(interactKey) && currentInteractable != null && Physics.Raycast(playerCamera.ViewportPointToRay(interactionRayPoint), out RaycastHit hit, interactionDistance, interactionLayer))
+        {
+            currentInteractable.OnInteract();
         }
     }
 }
