@@ -5,10 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     //camera objects
-    [SerializeField] public Camera roomCamera;
-    [SerializeField] public AudioListener roomListener;
-    [SerializeField] public Camera pcFocusCamera; 
-    [SerializeField] public AudioListener pcFocusListener; 
+    [SerializeField] public Camera mainCamera;
+    [SerializeField] public AudioListener mainListener;
+    [SerializeField] public Camera pcCamera; 
+    [SerializeField] public AudioListener pcListener; 
+
 
     //player objects
     [SerializeField] public PlayerController playerController;
@@ -18,32 +19,40 @@ public class GameManager : MonoBehaviour
 
     enum GameState
     {
-        roomView,
-        pcFocusView
+        mainView,
+        pcView
     };
 
     [SerializeField] private GameState gameState;
+    public bool inMainView = true;
+    public bool inPCView = false;
 
     void Start()
     {
-        gameState = GameState.roomView;
+        gameState = GameState.mainView;
     }
 
     void Update()
     {
         switch(gameState)
         {
-            case GameState.roomView:
-            if (roomCamera.enabled == false)
+            case GameState.mainView:
+            inMainView = true;
+            inPCView = false;
+
+            if (mainCamera.enabled == false)
             {
-                gameState = GameState.pcFocusView;
+                gameState = GameState.pcView;
             }
             break;
 
-            case GameState.pcFocusView:
-            if (pcFocusCamera.enabled == false)
+            case GameState.pcView:
+            inMainView = false;
+            inPCView = true;
+
+            if (pcCamera.enabled == false)
             {
-                gameState = GameState.roomView;
+                gameState = GameState.mainView;
             }
             break;
         }

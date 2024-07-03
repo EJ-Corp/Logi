@@ -6,32 +6,28 @@ public class ComputerFocusScript : MonoBehaviour
 {
     [SerializeField] GameManager gameManager;
 
-    [SerializeField] private Camera roomCamera;
-    [SerializeField] private Camera pcFocusCamera; 
-    [SerializeField] private AudioListener roomListener;
-    [SerializeField] private AudioListener pcFocusListener; 
+    [SerializeField] private Camera mainCamera;
+    [SerializeField] private AudioListener mainListener;
+
+    [SerializeField] private Camera pcCamera; 
+    [SerializeField] private AudioListener pcListener; 
+
     [SerializeField] private Animator cameraAnimator;
 
     [SerializeField] private PlayerController playerController;
 
-
-
-
-    private float inputHorizontal;
-    private float inputVertical;
-
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        roomCamera = gameManager.roomCamera;
-        roomListener = gameManager.roomListener;
+        mainCamera = gameManager.mainCamera;
+        mainListener = gameManager.mainListener;
 
-        pcFocusCamera = gameManager.pcFocusCamera;
-        pcFocusCamera.enabled = false;
-        pcFocusListener = gameManager.pcFocusListener;
-        pcFocusListener.enabled = false;
+        pcCamera = gameManager.pcCamera;
+        pcCamera.enabled = false;
+        pcListener = gameManager.pcListener;
+        pcListener.enabled = false;
 
-        cameraAnimator = roomCamera.GetComponent<Animator>();
+        cameraAnimator = mainCamera.GetComponent<Animator>();
         cameraAnimator.enabled = false;
 
         playerController = gameManager.playerController;
@@ -40,24 +36,26 @@ public class ComputerFocusScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && pcFocusCamera.enabled == true)
+        if (Input.GetButtonDown("Jump") && pcCamera.enabled == true)
         {
-            cameraAnimator.SetTrigger("unfocusOnPC");
+            cameraAnimator.enabled = true;
+            cameraAnimator.SetTrigger("pcTOmain");
         }
     }
 
     private void OnMouseUpAsButton() 
     {
         cameraAnimator.enabled = true;
-        cameraAnimator.SetTrigger("focusOnPC");
+        cameraAnimator.SetTrigger("mainTOpc");
         playerController.CanMove = false;
     }
 
     public void SwapCameras() 
     {
-        roomCamera.enabled = !roomCamera.enabled;
-        roomListener.enabled = !roomListener.enabled;
-        pcFocusCamera.enabled = !pcFocusCamera.enabled;
-        pcFocusListener.enabled = !pcFocusListener.enabled;
+        mainCamera.enabled = !mainCamera.enabled;
+        mainListener.enabled = !mainListener.enabled;
+
+        pcCamera.enabled = !pcCamera.enabled;
+        pcListener.enabled = !pcListener.enabled;
     }
 }
