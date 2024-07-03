@@ -442,7 +442,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f09f48c6e4457324eb5fce4ce446a1dc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -749,22 +749,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1733997072241740776, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
-      propertyPath: interactionDistance
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1733997072241740776, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
-      propertyPath: interactionRayPoint.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1733997072241740776, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
-      propertyPath: interactionRayPoint.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1733997072241740776, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
-      propertyPath: interactionLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 5925645374540641566, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
       propertyPath: m_Name
       value: FPSPlayer
