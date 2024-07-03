@@ -17,6 +17,11 @@ public class PlayerController : MonoBehaviour
     private float rotationX = 0;
 
     [SerializeField] private bool canMove = true;
+    public bool CanMove
+    {
+        get { return canMove; }
+        set { canMove = value; }
+    }
 
     [Header("Funtional Options")]
     [SerializeField] private bool canInteract = true;
