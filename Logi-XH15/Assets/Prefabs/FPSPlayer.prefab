@@ -143,7 +143,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &1733997072241740776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +161,12 @@ MonoBehaviour:
   lookSpeed: 2
   lookXLimit: 45
   canMove: 1
+  canInteract: 1
+  interactionRayPoint: {x: 0.5, y: 0.5, z: 0}
+  interactionDistance: 2
+  interactionLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &7840465959188848813
 GameObject:
   m_ObjectHideFlags: 0
