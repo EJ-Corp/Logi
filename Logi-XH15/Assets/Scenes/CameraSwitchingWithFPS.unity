@@ -859,9 +859,10 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   roomCamera: {fileID: 0}
   pcFocusCamera: {fileID: 0}
-  cameraAnimator: {fileID: 0}
   roomListener: {fileID: 0}
   pcFocusListener: {fileID: 0}
+  cameraAnimator: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1 &1102352430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,6 +1230,7 @@ MonoBehaviour:
   roomListener: {fileID: 1152392514}
   pcFocusCamera: {fileID: 38345275}
   pcFocusListener: {fileID: 38345276}
+  playerController: {fileID: 1186702215}
   computerScreen: {fileID: 1028694640}
   gameState: 0
 --- !u!4 &1661730932
