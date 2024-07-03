@@ -147,8 +147,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.47834533, y: 0.5494676, z: 0.72631633}
-  m_Center: {x: 0.012300538, y: 0.27473328, z: 0.000000019297687}
+  m_Size: {x: 0.47834533, y: 0.1, z: 0.72631633}
+  m_Center: {x: 0.012300425, y: 0.0058468194, z: 0.0000000018626451}
 --- !u!114 &14056493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,6 +824,10 @@ PrefabInstance:
       propertyPath: computerScreen
       value: 
       objectReference: {fileID: 14056488}
+    - target: {fileID: 6840276650374845709, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8200243184741035534, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
       propertyPath: m_Name
       value: GameManager

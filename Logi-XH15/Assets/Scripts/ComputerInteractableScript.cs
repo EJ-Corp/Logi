@@ -58,18 +58,20 @@ public class ComputerInteractableScript : Interactable
         pcListener.enabled = !pcListener.enabled;
     }
 
-        public override void OnInteract()
+    public override void OnInteract()
     {
         cameraAnimator.enabled = true;
         cameraAnimator.SetTrigger("mainTOpc");
         playerController.CanMove = false;
         
     }
+
     public override void OnFocus()
     {
         Debug.Log("Looking at " + gameObject.name);
         print("Looking at " + gameObject.name);
     }
+    
     public override void OnLoseFocus()
     {
         Debug.Log("Stopped looking at " + gameObject.name);
