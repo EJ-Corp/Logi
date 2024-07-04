@@ -5,7 +5,6 @@ using UnityEngine;
 public class ProblemHandler : MonoBehaviour
 {
     [SerializeField] private GameObject warningPanel;
-    [SerializeField] private AudioClip alarmSFX;
 
     [SerializeField] private float flashInterval;
     [SerializeField] private float flashCooldown;
@@ -63,7 +62,7 @@ public class ProblemHandler : MonoBehaviour
             warningPanel.SetActive(true);
             active = true;
             flashCooldown = flashInterval;
-            SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 1f);
+            
         }
     }
 

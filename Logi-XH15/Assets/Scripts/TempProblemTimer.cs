@@ -9,6 +9,7 @@ public class TempProblemTimer : MonoBehaviour
     [SerializeField] private int activeProblems = 0; 
     [SerializeField] private ButtonProblem buttonProblem;
     [SerializeField] private SwitchProblem switchProblem;
+    [SerializeField] private AudioClip alarmSFX;
 
     void Start()
     {
@@ -35,6 +36,8 @@ public class TempProblemTimer : MonoBehaviour
     public void StartProblem()
     {
         int randomProblem = Random.Range(1, 3);
+
+        SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 0.75f);
 
         if(randomProblem == 1)
         {
