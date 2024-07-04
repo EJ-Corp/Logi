@@ -21,17 +21,17 @@ public class ButtonProblem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Jump"))
-        {
-            if(!problemActive)
-            {
-                ActivateProblem();
-            } else 
-            {
-                Debug.Log("Button problem is already active");
-            }
+        // if(Input.GetButtonDown("Jump"))
+        // {
+        //     if(!problemActive)
+        //     {
+        //         ActivateProblem();
+        //     } else 
+        //     {
+        //         Debug.Log("Button problem is already active");
+        //     }
             
-        }
+        // }
     }
 
     public void ActivateProblem()
