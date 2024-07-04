@@ -81,6 +81,7 @@ public class TempProblemTimer : MonoBehaviour
     {
         activeProblems--;
         problemIDPool.Add(IDFixed);
+        computerScreen.FixedProblem(IDFixed);
 
         if(activeProblems <= 0)
         {

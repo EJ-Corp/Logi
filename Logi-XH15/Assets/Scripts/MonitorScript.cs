@@ -31,6 +31,10 @@ public class MonitorScript : MonoBehaviour
     [SerializeField] private GameObject switchProbBubble;
     [SerializeField] private GameObject randomFactBubble;
     [SerializeField] private GameObject flirtBubble;
+    [SerializeField] private List<GameObject> activeBubbles = new List<GameObject>();
+
+    private int buttonBubbleIdx;
+    private int switchBubbleIdx;
     
     
 
@@ -152,13 +156,32 @@ public class MonitorScript : MonoBehaviour
         {
             case 11: //Its the button problem (ID = 11)
                 GameObject buttonBubble = Instantiate(buttonProbBubble, bubbleHolder.transform);
+                buttonBubble.name = "11Bubble";
+                activeBubbles.Add(buttonBubble);
+                buttonBubbleIdx = activeBubbles.Count - 1;
                 //buttonBubble.transform.parent = bubbleHolder.transform;
                 break;
 
             case 12: //Its the switch Problem (ID = 12)
                 GameObject switchBubble = Instantiate(switchProbBubble, bubbleHolder.transform);
+                switchBubble.name = "12Bubble";
+                activeBubbles.Add(switchBubble);
+                switchBubbleIdx = activeBubbles.Count - 1;
                 //switchBubble.transform.parent = bubbleHolder.transform;
                 break;
+        }
+    }
+
+    public void FixedProblem(int problemID)
+    {
+        if(problemID == 11) //Fixed Buttons
+        {
+            Destroy(activeBubbles[buttonBubbleIdx].gameObject);
+            activeBubbles.RemoveAt(buttonBubbleIdx);
+        } else if(problemID == 12) //Fixed Switches
+        {
+            Destroy(activeBubbles[switchBubbleIdx].gameObject);
+            activeBubbles.RemoveAt(switchBubbleIdx);
         }
     }
 
