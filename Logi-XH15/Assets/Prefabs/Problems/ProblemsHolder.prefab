@@ -53,6 +53,7 @@ MonoBehaviour:
   buttonProblem: {fileID: 7649493771567849724}
   switchProblem: {fileID: 3240128620195944850}
   alarmSFX: {fileID: 8300000, guid: f9d3586731e9a4f64ac1b99c0f9dfe95, type: 3}
+  warningPanel: {fileID: 6076313066550673698}
   problemIDPool: 0b0000000c000000
 --- !u!114 &6076313066550673698
 MonoBehaviour:

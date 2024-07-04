@@ -41,6 +41,5 @@ public class ButtonProblem : MonoBehaviour
         fixButton.MakeProblem(warningSign);
         Debug.Log("Problem is the " + buttons[randomButton].name);
 
-        warningSign.StartProblem();
     }
 }

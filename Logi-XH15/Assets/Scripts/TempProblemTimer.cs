@@ -10,6 +10,7 @@ public class TempProblemTimer : MonoBehaviour
     [SerializeField] private ButtonProblem buttonProblem;
     [SerializeField] private SwitchProblem switchProblem;
     [SerializeField] private AudioClip alarmSFX;
+    [SerializeField] private ProblemHandler warningPanel;
 
     [SerializeField] private List<int> problemIDPool;   //IDs: Buttons - 11, Switches = 12
 
@@ -37,11 +38,13 @@ public class TempProblemTimer : MonoBehaviour
 
     public void StartProblem()
     {
-        Debug.Log("we started a problem");
+        if(activeProblems == 0)
+        {
+            warningPanel.StartProblem();
+        }
         int randomProblem = Random.Range(0, problemIDPool.Count);
 
         int chosenProblemID = problemIDPool[randomProblem];
-        Debug.Log("Problem id: " + chosenProblemID);
 
         SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 0.75f);
 
@@ -70,5 +73,10 @@ public class TempProblemTimer : MonoBehaviour
     {
         activeProblems--;
         problemIDPool.Add(IDFixed);
+
+        if(activeProblems <= 0)
+        {
+            warningPanel.NoProblems();
+        }
     }
 }

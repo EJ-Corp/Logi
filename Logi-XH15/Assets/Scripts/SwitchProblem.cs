@@ -75,7 +75,6 @@ public class SwitchProblem : MonoBehaviour
             
         }
 
-        warningSign.StartProblem();
         problemActive = true;
     }
 
