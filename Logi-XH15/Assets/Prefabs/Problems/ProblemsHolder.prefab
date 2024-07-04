@@ -47,11 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82bcc42c17a895d408e54a2b7378a836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberOfProblems: 2
   nextProblemCountDown: 15
   activeProblems: 0
   buttonProblem: {fileID: 7649493771567849724}
   switchProblem: {fileID: 3240128620195944850}
   alarmSFX: {fileID: 8300000, guid: f9d3586731e9a4f64ac1b99c0f9dfe95, type: 3}
+  problemIDPool: 0b0000000c000000
 --- !u!114 &6076313066550673698
 MonoBehaviour:
   m_ObjectHideFlags: 0

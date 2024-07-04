@@ -66,14 +66,14 @@ public class ProblemHandler : MonoBehaviour
         }
     }
 
-    public void FixProblem()
+    public void FixProblem(int problemID)
     {
         warningPanel.SetActive(false);
         currentState = WarningState.diabled;
         active = false;
 
         //get rid of this
-        problemTimer.FixedProblem();
+        problemTimer.FixedProblem(problemID);
     }
 
     public void StartProblem()

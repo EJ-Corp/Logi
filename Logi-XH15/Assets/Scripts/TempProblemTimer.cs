@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class TempProblemTimer : MonoBehaviour
 {
-    
+    [SerializeField] private int numberOfProblems;
     [SerializeField] private float nextProblemCountDown;
     [SerializeField] private int activeProblems = 0; 
     [SerializeField] private ButtonProblem buttonProblem;
     [SerializeField] private SwitchProblem switchProblem;
     [SerializeField] private AudioClip alarmSFX;
+
+    [SerializeField] private List<int> problemIDPool;   //IDs: Buttons - 11, Switches = 12
 
     void Start()
     {
@@ -19,7 +21,7 @@ public class TempProblemTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(activeProblems < 2)
+        if(activeProblems < numberOfProblems)
         {
             if(nextProblemCountDown > 0)
             {
@@ -35,20 +37,25 @@ public class TempProblemTimer : MonoBehaviour
 
     public void StartProblem()
     {
-        int randomProblem = Random.Range(1, 3);
+        Debug.Log("we started a problem");
+        int randomProblem = Random.Range(0, problemIDPool.Count);
+
+        int chosenProblemID = problemIDPool[randomProblem];
+        Debug.Log("Problem id: " + chosenProblemID);
 
         SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 0.75f);
 
-        if(randomProblem == 1)
+        if(chosenProblemID == 11) //Chose Buttons (ID = 11)
         {
-            //Start Button
             buttonProblem.ActivateProblem();
             activeProblems++;
+            problemIDPool.RemoveAt(randomProblem);
             
-        } else if(randomProblem == 2)
+        } else if(chosenProblemID == 12) //Chose Switched (ID = 12)
         {
             switchProblem.ActivateProblem();
             activeProblems++;
+            problemIDPool.RemoveAt(randomProblem);
         }
 
         ResetCountdown();
@@ -59,8 +66,9 @@ public class TempProblemTimer : MonoBehaviour
         nextProblemCountDown = Random.Range(10.0f, 15.0f);
     }
 
-    public void FixedProblem()
+    public void FixedProblem(int IDFixed)
     {
         activeProblems--;
+        problemIDPool.Add(IDFixed);
     }
 }

@@ -45,7 +45,7 @@ public class SwitchProblem : MonoBehaviour
                 breakbleSwitches.Clear();
                 switchesToBreak.Clear();
 
-                warningSign.FixProblem();
+                warningSign.FixProblem(12);
                 problemActive = false;
 
                 
