@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    private static GameManager manager;
+    public static GameManager Manager
+    {
+        get
+        {
+            return manager;
+        }
+    }
+
     //camera objects
     [SerializeField] public Camera mainCamera;
     [SerializeField] public AudioListener mainListener;
@@ -30,6 +40,16 @@ public class GameManager : MonoBehaviour
     public bool inMainView = true;
     public bool inPCView = false;
 
+    [Header("Problems")]
+    public SwitchProblem switches;
+
+    void Awake()
+    {
+        if(manager == null)
+        {
+            manager = this;
+        }
+    }
     void Start()
     {
         gameState = GameState.mainView;
