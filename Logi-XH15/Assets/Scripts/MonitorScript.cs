@@ -44,23 +44,39 @@ public class MonitorScript : MonoBehaviour
         //botright3 (greater than x less than y)
 
         //check y boundary
-        if (mousePos.y < screenCorners[0].y || mousePos.y < screenCorners[3].y)
+        if (mousePos.y <= screenCorners[0].y + 25)
         {
-           Mouse.current.WarpCursorPosition(new Vector2(mousePos.x, screenCorners[0].y));
-        } else 
-        if (mousePos.y > screenCorners[1].y || mousePos.y > screenCorners[2].y)
+            Mouse.current.WarpCursorPosition(new Vector2(mousePos.x , screenCorners[0].y + 30));
+        } else
+        if(mousePos.y >= screenCorners[1].y)
         {
-            mousePos.y--;
+            Mouse.current.WarpCursorPosition(new Vector2(mousePos.x, screenCorners[1].y - 5));
         }
 
         //check x boundary
-        if (mousePos.x < screenCorners[0].x || mousePos.x < screenCorners[1].x)
+        if (mousePos.y >= ((screenCorners[0].y + screenCorners[1].y) / 2))
         {
-            mousePos.x++;
-        } else 
-        if (mousePos.x > screenCorners[2].x || mousePos.x > screenCorners[3].x)
+            if(mousePos.x <= screenCorners[1].x)
+            {
+                Mouse.current.WarpCursorPosition(new Vector2(screenCorners[1].x + 5, mousePos.y));
+            } else       
+            if (mousePos.x >= screenCorners[2].x - 10)
+            {
+                Mouse.current.WarpCursorPosition(new Vector2(screenCorners[2].x - 15, mousePos.y));
+            }  
+
+        } else
+        if (mousePos.y <= ((screenCorners[0].y + screenCorners[1].y) / 2))
         {
-            mousePos.x--;
+            if (mousePos.x <= screenCorners[0].x)
+            {
+                Mouse.current.WarpCursorPosition(new Vector2(screenCorners[0].x + 5, mousePos.y));
+            } else        
+            if(mousePos.x >= screenCorners[3].x - 10)
+            {
+                Mouse.current.WarpCursorPosition(new Vector2(screenCorners[3].x - 15, mousePos.y));
+            }
         }
     }
+
 }
