@@ -8,11 +8,15 @@ public class SwitchProblem : MonoBehaviour
     [SerializeField] private List<InteractSwitch> breakbleSwitches;
     [SerializeField] private List<InteractSwitch> switchesToBreak;
 
-    private bool problemActive = false;
+    [SerializeField] private ProblemHandler warningSign;
+
+    [SerializeField] private bool problemActive = false;
+
+    [SerializeField] private int onSwitches;
 
     void Start()
     {
-        
+        onSwitches = allSwitches.Count;
     }
 
     // Update is called once per frame
@@ -25,15 +29,29 @@ public class SwitchProblem : MonoBehaviour
                 ActivateProblem();
             } else 
             {
-                Debug.Log("Button problem is already active");
+                Debug.Log("Switch problem is already active");
             }
             
+        }
+
+        if(problemActive)
+        {
+            if(onSwitches == allSwitches.Count)
+            {
+                Debug.Log("Problem Fixed");
+
+                breakbleSwitches.Clear();
+                switchesToBreak.Clear();
+
+                warningSign.FixProblem();
+                problemActive = false;
+            }
         }
     }
 
     public void ActivateProblem()
     {
-        problemActive = true;
+        
 
         Debug.Log("Problem Activated");
         int amountToBreak = Random.Range(1, allSwitches.Count);
@@ -50,6 +68,21 @@ public class SwitchProblem : MonoBehaviour
         for(int i = 0; i < switchesToBreak.Count; i++)
         {
             switchesToBreak[i].Break();
+            
+        }
+
+        warningSign.StartProblem();
+        problemActive = true;
+    }
+
+    public void SwitchTrigger(bool on)
+    {
+        if(on)
+        {
+            onSwitches++;
+        } else
+        {
+            onSwitches--;
         }
     }
 }

@@ -16,8 +16,7 @@ public class InteractSwitch : Interactable
     }
     public override void OnFocus()
     {
-        Debug.Log("Looking at switch " + transform.name);
-        //GetComponentInChildren<Outline>().enabled = true;
+        
     }
 
     public override void OnInteract()
@@ -25,9 +24,11 @@ public class InteractSwitch : Interactable
         if(isOn)
         {
             switchBody.Rotate(onRotation, Space.Self);
+            GameManager.Manager.switches.SwitchTrigger(false);
         } else 
         {
             switchBody.Rotate(offRotation, Space.Self);
+            GameManager.Manager.switches.SwitchTrigger(true);
         }
 
         isOn = !isOn;
@@ -40,8 +41,13 @@ public class InteractSwitch : Interactable
 
     public void Break()
     {
-        switchBody.Rotate(onRotation, Space.Self);
-        isOn = false;
+        if(isOn)
+        {
+            switchBody.Rotate(onRotation, Space.Self);
+            isOn = false;
+            GameManager.Manager.switches.SwitchTrigger(false);
+        }
+        
     }
 
   
