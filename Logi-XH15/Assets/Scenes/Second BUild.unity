@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &156241090 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7011966658848943816, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+  m_PrefabInstance: {fileID: 2107565970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &243930219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -427,7 +432,7 @@ PrefabInstance:
     - target: {fileID: 3503947036109650812, guid: 80e4b3b981636427c856589339f92e67, type: 3}
       propertyPath: playerLocation
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 156241090}
     - target: {fileID: 8394737136183770508, guid: 80e4b3b981636427c856589339f92e67, type: 3}
       propertyPath: m_Name
       value: Sun
@@ -788,6 +793,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4343eaaf54835a41bb520f02278a95b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1018110309 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6593742838578343171, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+  m_PrefabInstance: {fileID: 2107565970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1062848173 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 871509866936869268, guid: 80e4b3b981636427c856589339f92e67, type: 3}
@@ -859,6 +869,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 464852963}
     m_Modifications:
+    - target: {fileID: 2417183643275999908, guid: fd6d6011ea7c18049aabbce75f91980e, type: 3}
+      propertyPath: warningPanel
+      value: 
+      objectReference: {fileID: 1018110309}
     - target: {fileID: 3127887602050757727, guid: fd6d6011ea7c18049aabbce75f91980e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.289113
@@ -965,6 +979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonProblem
       objectReference: {fileID: 0}
+    - target: {fileID: 8824584093815258913, guid: 74963f0b36c54f940873ff3f1acca119, type: 3}
+      propertyPath: warningPanel
+      value: 
+      objectReference: {fileID: 1018110309}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
