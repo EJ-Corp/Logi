@@ -159,7 +159,9 @@ public class MonitorScript : MonoBehaviour
 
     public void SpawnAnnoyBubble()
     {
-        int randomAnnoy = Random.Range(0, amountOfAnnoyOptions -1);
+        int randomAnnoy = Random.Range(0, amountOfAnnoyOptions);
+
+        Debug.Log("Spawned Annoy ID: " + randomAnnoy);
 
         switch(randomAnnoy)
         {
@@ -176,6 +178,11 @@ public class MonitorScript : MonoBehaviour
         }
 
         annoyCountdown = Random.Range(5.0f, 30.0f);
+    }
+
+    public void ClosedAnnoy()
+    {
+        activeAnnoy--;
     }
 
     public void SpawnProblemFact(int problemID)
