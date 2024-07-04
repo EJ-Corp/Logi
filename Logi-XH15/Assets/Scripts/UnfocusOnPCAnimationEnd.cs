@@ -10,6 +10,8 @@ public class UnfocusOnPCAnimationEnd : StateMachineBehaviour
 
     void Awake() 
     {
+        //Debug.Log("We Start 2");
+      //  gameManager = GameManager.Manager.GetComponent<GameManager>();
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         mainCamera = gameManager.mainCamera;
         playerController = gameManager.playerController;
