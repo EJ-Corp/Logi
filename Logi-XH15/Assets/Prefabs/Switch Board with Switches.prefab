@@ -258,6 +258,11 @@ MonoBehaviour:
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &178120380850352491
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,6 +770,11 @@ MonoBehaviour:
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &835004089849063813
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,10 +946,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchBody: {fileID: 3467951255859679964}
+  switchBody: {fileID: 4810769375677009630}
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &924012985076075452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,6 +1730,11 @@ MonoBehaviour:
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &1882264924471983473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,10 +1804,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchBody: {fileID: 3467951255859679964}
+  switchBody: {fileID: 5603983735746953571}
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &1914993062048753354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,10 +1882,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchBody: {fileID: 3467951255859679964}
+  switchBody: {fileID: 7408892302633969925}
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &2007093494656239221
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,6 +2168,11 @@ MonoBehaviour:
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &2462795757316780359
 GameObject:
   m_ObjectHideFlags: 0
@@ -2498,6 +2533,11 @@ MonoBehaviour:
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &2689772919196115656
 GameObject:
   m_ObjectHideFlags: 0
@@ -3269,10 +3309,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchBody: {fileID: 3467951255859679964}
+  switchBody: {fileID: 3116990765041082642}
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &3853446286008772282
 GameObject:
   m_ObjectHideFlags: 0
@@ -3614,6 +3659,11 @@ MonoBehaviour:
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &4572729095321189558
 GameObject:
   m_ObjectHideFlags: 0
@@ -4060,6 +4110,11 @@ MonoBehaviour:
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &4947538912136789941
 GameObject:
   m_ObjectHideFlags: 0
@@ -4563,10 +4618,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchBody: {fileID: 3467951255859679964}
+  switchBody: {fileID: 1905898416219133379}
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &5485787970892336712
 GameObject:
   m_ObjectHideFlags: 0
@@ -4825,6 +4885,11 @@ MonoBehaviour:
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &5803563734679364247
 GameObject:
   m_ObjectHideFlags: 0
@@ -5351,6 +5416,11 @@ MonoBehaviour:
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &6612180167515994855
 GameObject:
   m_ObjectHideFlags: 0
@@ -5424,6 +5494,11 @@ MonoBehaviour:
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &6744844786281708088
 GameObject:
   m_ObjectHideFlags: 0
@@ -5497,6 +5572,11 @@ MonoBehaviour:
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &6812839673652487155
 GameObject:
   m_ObjectHideFlags: 0
@@ -5570,6 +5650,11 @@ MonoBehaviour:
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &7062280914099644404
 GameObject:
   m_ObjectHideFlags: 0
@@ -5907,10 +5992,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchBody: {fileID: 3467951255859679964}
+  switchBody: {fileID: 7722972412731175782}
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &7554846651823634920
 GameObject:
   m_ObjectHideFlags: 0
@@ -5984,6 +6074,11 @@ MonoBehaviour:
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &7833673581565010253
 GameObject:
   m_ObjectHideFlags: 0
@@ -6053,10 +6148,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchBody: {fileID: 3467951255859679964}
+  switchBody: {fileID: 2571408600718029394}
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &7835745923081399396
 GameObject:
   m_ObjectHideFlags: 0
@@ -6730,6 +6830,11 @@ MonoBehaviour:
   isOn: 1
   onRotation: {x: 90, y: 0, z: 0}
   offRotation: {x: 270, y: 0, z: 0}
+  switchSFX:
+  - {fileID: 8300000, guid: 422a5219c3cd8403c8ccd5d53f97c5e8, type: 3}
+  - {fileID: 8300000, guid: 2c27eca2c29044c828a6b07df831b4b1, type: 3}
+  - {fileID: 8300000, guid: 1e6f9069b0ae64859bd904a090b354c3, type: 3}
+  - {fileID: 8300000, guid: 2cd81920cb0b044dd9b43bf249b5b228, type: 3}
 --- !u!1 &8698408330665402184
 GameObject:
   m_ObjectHideFlags: 0
