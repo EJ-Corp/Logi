@@ -10,8 +10,6 @@ public class OutlineSelection : MonoBehaviour
     private RaycastHit raycastHit;
 
     [SerializeField] private Vector3 interactionRayPoint = default;
-    [SerializeField] private float interactionDistance = default;
-    [SerializeField] private LayerMask interactionLayer = default;
 
     void Update()
     {

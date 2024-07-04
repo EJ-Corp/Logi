@@ -26,18 +26,6 @@ public class ProblemHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // //Count time for time to break -> down to 0
-        // if(breakageTimer > 0)
-        // {
-        //     breakageTimer -= Time.deltaTime;
-        // }
-
-        // //When timer reaches 0 -> break
-        // if(breakageTimer <= 0)
-        // {
-        //     currentState = WarningState.active;
-        //}
-
         switch(currentState)
         {
             case WarningState.diabled:

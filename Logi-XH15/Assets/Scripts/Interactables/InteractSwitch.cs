@@ -38,5 +38,11 @@ public class InteractSwitch : Interactable
         GetComponentInChildren<Outline>().enabled = false;
     }
 
+    public void Break()
+    {
+        switchBody.Rotate(onRotation, Space.Self);
+        isOn = false;
+    }
+
   
 }

@@ -256,8 +256,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &178120380850352491
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,8 +763,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &835004089849063813
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,8 +938,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &924012985076075452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1713,8 +1713,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &1882264924471983473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,8 +1786,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &1914993062048753354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,8 +1859,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &2007093494656239221
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,8 +2136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &2462795757316780359
 GameObject:
   m_ObjectHideFlags: 0
@@ -2496,8 +2496,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &2689772919196115656
 GameObject:
   m_ObjectHideFlags: 0
@@ -3271,8 +3271,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &3853446286008772282
 GameObject:
   m_ObjectHideFlags: 0
@@ -3612,8 +3612,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &4572729095321189558
 GameObject:
   m_ObjectHideFlags: 0
@@ -4058,8 +4058,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 2652538821866222245}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &4947538912136789941
 GameObject:
   m_ObjectHideFlags: 0
@@ -4565,8 +4565,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &5485787970892336712
 GameObject:
   m_ObjectHideFlags: 0
@@ -4823,8 +4823,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &5803563734679364247
 GameObject:
   m_ObjectHideFlags: 0
@@ -5349,8 +5349,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &6612180167515994855
 GameObject:
   m_ObjectHideFlags: 0
@@ -5422,8 +5422,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &6744844786281708088
 GameObject:
   m_ObjectHideFlags: 0
@@ -5495,8 +5495,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 4518111499826705804}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &6812839673652487155
 GameObject:
   m_ObjectHideFlags: 0
@@ -5568,8 +5568,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 849580688600203563}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &7062280914099644404
 GameObject:
   m_ObjectHideFlags: 0
@@ -5909,8 +5909,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &7554846651823634920
 GameObject:
   m_ObjectHideFlags: 0
@@ -5982,8 +5982,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &7833673581565010253
 GameObject:
   m_ObjectHideFlags: 0
@@ -6055,8 +6055,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &7835745923081399396
 GameObject:
   m_ObjectHideFlags: 0
@@ -6728,8 +6728,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchBody: {fileID: 3467951255859679964}
   isOn: 1
-  onRotation: {x: 13, y: 0, z: 0}
-  offRotation: {x: 100, y: 0, z: 0}
+  onRotation: {x: 90, y: 0, z: 0}
+  offRotation: {x: 270, y: 0, z: 0}
 --- !u!1 &8698408330665402184
 GameObject:
   m_ObjectHideFlags: 0
