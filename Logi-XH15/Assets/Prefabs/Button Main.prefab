@@ -123,6 +123,11 @@ MonoBehaviour:
   buttonClick: {fileID: 8821939796930609031}
   problem: {fileID: 0}
   canFix: 0
+  buttonSFX:
+  - {fileID: 8300000, guid: 4fa739098111c47b8a088d9da4bcfcd7, type: 3}
+  - {fileID: 8300000, guid: aeda18de97d344ee7834ec81ac8057af, type: 3}
+  - {fileID: 8300000, guid: 03f2be26ccc684762b88fecadc6d9693, type: 3}
+  - {fileID: 8300000, guid: 29f14c80f10114e3bad01813d5c22470, type: 3}
 --- !u!1 &3771531301396966000
 GameObject:
   m_ObjectHideFlags: 0

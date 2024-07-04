@@ -7,6 +7,7 @@ public class InteractButton : Interactable
     [SerializeField] private Animator buttonClick;
     [SerializeField] private ButtonProblem problem;
     [SerializeField] private bool canFix = false;
+    [SerializeField] private AudioClip[] buttonSFX;
     private ProblemHandler warningSign; 
 
     void Start()
@@ -17,6 +18,7 @@ public class InteractButton : Interactable
     public override void OnInteract()
     {
         buttonClick.SetTrigger("IsClicked");
+        SFXManager.instance.PlayRandomSFXClip(buttonSFX, transform, 1f);
         if(canFix)
         {
             FixProblem();

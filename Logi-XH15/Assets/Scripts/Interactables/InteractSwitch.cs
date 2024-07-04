@@ -8,6 +8,7 @@ public class InteractSwitch : Interactable
     [SerializeField] private bool isOn = true;
     [SerializeField] private Vector3 onRotation = new Vector3(13, 0, 0);
     [SerializeField] private Vector3 offRotation = new Vector3(100, 0, 0);
+    [SerializeField] private AudioClip[] switchSFX;
     
     void Start()
     {
@@ -21,6 +22,7 @@ public class InteractSwitch : Interactable
 
     public override void OnInteract()
     {
+        SFXManager.instance.PlayRandomSFXClip(switchSFX, transform, 1f);
         if(isOn)
         {
             switchBody.Rotate(onRotation, Space.Self);
