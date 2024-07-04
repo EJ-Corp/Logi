@@ -11,7 +11,7 @@ public class InteractButton : Interactable
 
     void Start()
     {
-        GetComponentInChildren<Outline>().enabled = false;
+        
     }
 
     public override void OnInteract()
@@ -29,11 +29,11 @@ public class InteractButton : Interactable
     }
     public override void OnFocus()
     {
-        GetComponentInChildren<Outline>().enabled = true;
+
     }
     public override void OnLoseFocus()
     {
-        GetComponentInChildren<Outline>().enabled = false;
+        
     }
 
     public void FixProblem()

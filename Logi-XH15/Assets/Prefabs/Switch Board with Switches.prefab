@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3162476551063418485}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,9 +94,10 @@ GameObject:
   - component: {fileID: 9072839622733703178}
   - component: {fileID: 4532255765930211254}
   - component: {fileID: 1962932215640762086}
+  - component: {fileID: 2143502754219000414}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,6 +167,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2143502754219000414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77644267949788871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &148339327521317574
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,9 +194,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7802707753579662463}
+  - component: {fileID: 892857905257064358}
+  - component: {fileID: 1319534349574342092}
   m_Layer: 0
   m_Name: Switch (14)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,6 +221,43 @@ Transform:
   - {fileID: 5973685110297597390}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &892857905257064358
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148339327521317574}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &1319534349574342092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148339327521317574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &178120380850352491
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +271,7 @@ GameObject:
   - component: {fileID: 1125071286587797256}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -296,7 +354,7 @@ GameObject:
   - component: {fileID: 2160616137217154593}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -377,9 +435,10 @@ GameObject:
   - component: {fileID: 7722972412731175782}
   - component: {fileID: 8513912490385854247}
   - component: {fileID: 2381454182863829042}
+  - component: {fileID: 2642577241090818189}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -449,6 +508,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2642577241090818189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497314937839314259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &515695798653242881
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +539,7 @@ GameObject:
   - component: {fileID: 868166009160770736}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -545,7 +622,7 @@ GameObject:
   - component: {fileID: 7380522246990710191}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -624,9 +701,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3096703098497985834}
+  - component: {fileID: 7544429625048960279}
+  - component: {fileID: 1416052562822133484}
   m_Layer: 0
   m_Name: Switch (17)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -649,6 +728,43 @@ Transform:
   - {fileID: 2149415638830223464}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &7544429625048960279
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771077677901095800}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &1416052562822133484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771077677901095800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &835004089849063813
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,9 +776,10 @@ GameObject:
   - component: {fileID: 5141534968110300238}
   - component: {fileID: 4711280419162710716}
   - component: {fileID: 8721816352565054048}
+  - component: {fileID: 2160507099866274222}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -732,6 +849,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2160507099866274222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835004089849063813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &859828258544217554
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,9 +876,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 126971295320904686}
+  - component: {fileID: 7917805980000909902}
+  - component: {fileID: 1688745083896955069}
   m_Layer: 0
   m_Name: Switch (20)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -766,6 +903,43 @@ Transform:
   - {fileID: 1709938270484032631}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &7917805980000909902
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859828258544217554}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &1688745083896955069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859828258544217554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &924012985076075452
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +953,7 @@ GameObject:
   - component: {fileID: 7699378617066060416}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -862,7 +1036,7 @@ GameObject:
   - component: {fileID: 5177807165119315152}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -943,9 +1117,10 @@ GameObject:
   - component: {fileID: 1053756063271502682}
   - component: {fileID: 993544179546671375}
   - component: {fileID: 2407597389654276853}
+  - component: {fileID: 7280627810354121702}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1015,6 +1190,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7280627810354121702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170169653639471132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1180279405270397555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,7 +1221,7 @@ GameObject:
   - component: {fileID: 1145113134235706911}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1109,9 +1302,10 @@ GameObject:
   - component: {fileID: 7408892302633969925}
   - component: {fileID: 1470310379871368225}
   - component: {fileID: 8508760015562762337}
+  - component: {fileID: 6906880676047129787}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1181,6 +1375,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6906880676047129787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374245926187580015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1389135953946553632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,7 +1406,7 @@ GameObject:
   - component: {fileID: 1704758443089726686}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1277,7 +1489,7 @@ GameObject:
   - component: {fileID: 7850203625339294737}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1360,7 +1572,7 @@ GameObject:
   - component: {fileID: 3828490493630987761}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1439,9 +1651,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6340293087123016469}
+  - component: {fileID: 2920056411049065101}
+  - component: {fileID: 2345104135623016728}
   m_Layer: 0
   m_Name: Switch (8)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1464,6 +1678,43 @@ Transform:
   - {fileID: 1928021578238049496}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &2920056411049065101
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495939500799405603}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &2345104135623016728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495939500799405603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &1882264924471983473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,9 +1724,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3369581120632414018}
+  - component: {fileID: 8742999682640973153}
+  - component: {fileID: 6019302941138984490}
   m_Layer: 0
   m_Name: Switch (18)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1498,6 +1751,43 @@ Transform:
   - {fileID: 8051016441726691553}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &8742999682640973153
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882264924471983473}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &6019302941138984490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882264924471983473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &1914993062048753354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,9 +1797,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 489915207185521004}
+  - component: {fileID: 2796329035667888369}
+  - component: {fileID: 3180342118578328856}
   m_Layer: 0
   m_Name: Switch (19)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1532,6 +1824,43 @@ Transform:
   - {fileID: 2236218715251949554}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &2796329035667888369
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914993062048753354}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &3180342118578328856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914993062048753354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &2007093494656239221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,9 +1872,10 @@ GameObject:
   - component: {fileID: 7276458371749625694}
   - component: {fileID: 8763711071697575329}
   - component: {fileID: 2527939676404754382}
+  - component: {fileID: 2764112059893306768}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1615,6 +1945,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2764112059893306768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007093494656239221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2344131474114916796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,9 +1974,10 @@ GameObject:
   - component: {fileID: 4518111499826705804}
   - component: {fileID: 8833433317067789683}
   - component: {fileID: 4616056681901040064}
+  - component: {fileID: 1563969687916615217}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1698,6 +2047,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1563969687916615217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2344131474114916796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2354849891408961365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,9 +2074,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5407489437355781961}
+  - component: {fileID: 5120242210313347553}
+  - component: {fileID: 8866089679274787699}
   m_Layer: 0
   m_Name: Switch (13)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1732,6 +2101,43 @@ Transform:
   - {fileID: 8537868556359595176}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &5120242210313347553
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354849891408961365}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &8866089679274787699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354849891408961365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &2462795757316780359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1745,7 +2151,7 @@ GameObject:
   - component: {fileID: 3668347795928530877}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1826,9 +2232,10 @@ GameObject:
   - component: {fileID: 8891953605656699167}
   - component: {fileID: 2244885506446220511}
   - component: {fileID: 3029422620701279381}
+  - component: {fileID: 8523003821369421333}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1898,6 +2305,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8523003821369421333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2467030200020566793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2676933165285360607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1909,9 +2334,10 @@ GameObject:
   - component: {fileID: 849580688600203563}
   - component: {fileID: 484253464090052550}
   - component: {fileID: 7299510564474606324}
+  - component: {fileID: 4702478742658885470}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1981,6 +2407,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4702478742658885470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2676933165285360607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2688864518318006948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1990,9 +2434,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4837657114548744100}
+  - component: {fileID: 2417639730055304742}
+  - component: {fileID: 354089066209251455}
   m_Layer: 0
   m_Name: Switch (7)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2015,6 +2461,43 @@ Transform:
   - {fileID: 2389770411005643098}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &2417639730055304742
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688864518318006948}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &354089066209251455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688864518318006948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &2689772919196115656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,7 +2511,7 @@ GameObject:
   - component: {fileID: 8998614032931171273}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2111,7 +2594,7 @@ GameObject:
   - component: {fileID: 335965235716561316}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2192,9 +2675,10 @@ GameObject:
   - component: {fileID: 4394248390491596863}
   - component: {fileID: 444512161073938189}
   - component: {fileID: 8300506031556696200}
+  - component: {fileID: 7955356051683026988}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2264,6 +2748,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7955356051683026988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2873436503330031395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2878265830498149642
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,7 +2779,7 @@ GameObject:
   - component: {fileID: 3522642094403817590}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2360,7 +2862,7 @@ GameObject:
   - component: {fileID: 6145197824937644681}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2443,7 +2945,7 @@ GameObject:
   - component: {fileID: 5394467545559337311}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2526,7 +3028,7 @@ GameObject:
   - component: {fileID: 8150867455310639142}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2607,9 +3109,10 @@ GameObject:
   - component: {fileID: 3333420294368369895}
   - component: {fileID: 3622615382692232511}
   - component: {fileID: 8702580867967315051}
+  - component: {fileID: 6812776362767302381}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2679,6 +3182,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6812776362767302381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3613734307566474741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &3740948908237620323
 GameObject:
   m_ObjectHideFlags: 0
@@ -2688,9 +3209,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2255335889966800136}
+  - component: {fileID: 4077235606992941189}
+  - component: {fileID: 7107383002381751606}
   m_Layer: 0
   m_Name: Switch (6)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2713,6 +3236,43 @@ Transform:
   - {fileID: 7448426486660313902}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &4077235606992941189
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3740948908237620323}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &7107383002381751606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3740948908237620323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &3853446286008772282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,7 +3286,7 @@ GameObject:
   - component: {fileID: 3963031617342654137}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2809,7 +3369,7 @@ GameObject:
   - component: {fileID: 3341164607493298708}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2890,9 +3450,10 @@ GameObject:
   - component: {fileID: 2571408600718029394}
   - component: {fileID: 4398802658922276982}
   - component: {fileID: 4197313933841548287}
+  - component: {fileID: 812028463322840245}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2962,6 +3523,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &812028463322840245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4081356572653174702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &4089536084201347509
 GameObject:
   m_ObjectHideFlags: 0
@@ -2971,9 +3550,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8224651777800793070}
+  - component: {fileID: 8397438354123799016}
+  - component: {fileID: 4721570860546540854}
   m_Layer: 0
   m_Name: Switch (10)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2996,6 +3577,43 @@ Transform:
   - {fileID: 4388932289767199125}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &8397438354123799016
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4089536084201347509}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &4721570860546540854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4089536084201347509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &4572729095321189558
 GameObject:
   m_ObjectHideFlags: 0
@@ -3112,9 +3730,10 @@ GameObject:
   - component: {fileID: 2652538821866222245}
   - component: {fileID: 6190935517187428650}
   - component: {fileID: 1182363934945480910}
+  - component: {fileID: 4815515447851074074}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3184,6 +3803,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4815515447851074074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4574415627545955558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &4716077550540804637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,7 +3834,7 @@ GameObject:
   - component: {fileID: 4951733573983871943}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3280,7 +3917,7 @@ GameObject:
   - component: {fileID: 1571901383749346477}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3359,9 +3996,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1886997084861115698}
+  - component: {fileID: 1303779902716105355}
+  - component: {fileID: 7817025066642609281}
   m_Layer: 0
   m_Name: Switch (5)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3384,6 +4023,43 @@ Transform:
   - {fileID: 8049736352375089992}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &1303779902716105355
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795005681799470404}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &7817025066642609281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795005681799470404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 2652538821866222245}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &4947538912136789941
 GameObject:
   m_ObjectHideFlags: 0
@@ -3397,7 +4073,7 @@ GameObject:
   - component: {fileID: 3474809256316931897}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3480,7 +4156,7 @@ GameObject:
   - component: {fileID: 4425420590060334204}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3563,7 +4239,7 @@ GameObject:
   - component: {fileID: 6839642250094365309}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3644,9 +4320,10 @@ GameObject:
   - component: {fileID: 1905898416219133379}
   - component: {fileID: 4063505860175858399}
   - component: {fileID: 7536083488751688285}
+  - component: {fileID: 62808795120641879}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3716,6 +4393,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &62808795120641879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5404868429924973069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &5443907877589784579
 GameObject:
   m_ObjectHideFlags: 0
@@ -3729,7 +4424,7 @@ GameObject:
   - component: {fileID: 917601714849238991}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3808,9 +4503,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 157650452889939175}
+  - component: {fileID: 1837022643695769714}
+  - component: {fileID: 1324325516324853595}
   m_Layer: 0
   m_Name: Switch (9)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3833,6 +4530,43 @@ Transform:
   - {fileID: 7314388611831458479}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &1837022643695769714
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5485324824659007620}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &1324325516324853595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5485324824659007620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &5485787970892336712
 GameObject:
   m_ObjectHideFlags: 0
@@ -3844,9 +4578,10 @@ GameObject:
   - component: {fileID: 3116990765041082642}
   - component: {fileID: 5903257501989508432}
   - component: {fileID: 8245682208486001129}
+  - component: {fileID: 586522054170689432}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3916,6 +4651,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &586522054170689432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5485787970892336712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &5695275388011270994
 GameObject:
   m_ObjectHideFlags: 0
@@ -3929,7 +4682,7 @@ GameObject:
   - component: {fileID: 5868880844899678692}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4008,9 +4761,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3777820514798406868}
+  - component: {fileID: 8655789841122693699}
+  - component: {fileID: 2193184196654688690}
   m_Layer: 0
   m_Name: Switch (1)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4033,6 +4788,43 @@ Transform:
   - {fileID: 3029769097938550682}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &8655789841122693699
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5714942478988443755}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &2193184196654688690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5714942478988443755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &5803563734679364247
 GameObject:
   m_ObjectHideFlags: 0
@@ -4046,7 +4838,7 @@ GameObject:
   - component: {fileID: 955713103095547006}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4127,9 +4919,10 @@ GameObject:
   - component: {fileID: 6141381735625094637}
   - component: {fileID: 4186140475984159942}
   - component: {fileID: 8305098541765369479}
+  - component: {fileID: 2277729171404510730}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4199,6 +4992,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2277729171404510730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188004873363664928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &6401565572582571686
 GameObject:
   m_ObjectHideFlags: 0
@@ -4212,7 +5023,7 @@ GameObject:
   - component: {fileID: 7165597196109059244}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4295,7 +5106,7 @@ GameObject:
   - component: {fileID: 1386487054767024040}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4376,9 +5187,10 @@ GameObject:
   - component: {fileID: 3467951255859679964}
   - component: {fileID: 2924680216831280538}
   - component: {fileID: 7518917430579942517}
+  - component: {fileID: 2858209559848332355}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4391,13 +5203,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6539135967032912328}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.11634188, y: -0, z: -0, w: 0.99320924}
+  m_LocalRotation: {x: 0.11320323, y: 0, z: 0, w: 0.9935719}
   m_LocalPosition: {x: -0, y: 0, z: -0.00000011920929}
   m_LocalScale: {x: 1, y: 0.9999999, z: 0.9999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4748219295212633096}
-  m_LocalEulerAnglesHint: {x: 13.362, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 13, y: 0, z: 0}
 --- !u!33 &2924680216831280538
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4448,6 +5260,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2858209559848332355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6539135967032912328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &6599546939453759228
 GameObject:
   m_ObjectHideFlags: 0
@@ -4457,9 +5287,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4048671835831429196}
+  - component: {fileID: 8396211586907653189}
+  - component: {fileID: 7171933342913704413}
   m_Layer: 0
   m_Name: Switch (16)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4482,6 +5314,43 @@ Transform:
   - {fileID: 3366771416472237280}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &8396211586907653189
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6599546939453759228}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &7171933342913704413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6599546939453759228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &6612180167515994855
 GameObject:
   m_ObjectHideFlags: 0
@@ -4491,9 +5360,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 967223062298741408}
+  - component: {fileID: 2634184843410276360}
+  - component: {fileID: 7637934313769565276}
   m_Layer: 0
   m_Name: Switch (11)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4516,6 +5387,43 @@ Transform:
   - {fileID: 7640317938489983222}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &2634184843410276360
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612180167515994855}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &7637934313769565276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612180167515994855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &6744844786281708088
 GameObject:
   m_ObjectHideFlags: 0
@@ -4525,9 +5433,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8728614578861178456}
+  - component: {fileID: 8157420884686401012}
+  - component: {fileID: 480666440156622933}
   m_Layer: 0
   m_Name: Switch (4)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4550,6 +5460,43 @@ Transform:
   - {fileID: 1918286346490242166}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &8157420884686401012
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6744844786281708088}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &480666440156622933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6744844786281708088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 4518111499826705804}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &6812839673652487155
 GameObject:
   m_ObjectHideFlags: 0
@@ -4559,9 +5506,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1706600852533425456}
+  - component: {fileID: 4323919987552444480}
+  - component: {fileID: 7756462335981494256}
   m_Layer: 0
   m_Name: Switch (3)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4584,6 +5533,43 @@ Transform:
   - {fileID: 6464510783183018110}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &4323919987552444480
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6812839673652487155}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &7756462335981494256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6812839673652487155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 849580688600203563}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &7062280914099644404
 GameObject:
   m_ObjectHideFlags: 0
@@ -4597,7 +5583,7 @@ GameObject:
   - component: {fileID: 307295872699256834}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4678,9 +5664,10 @@ GameObject:
   - component: {fileID: 1355736298264081432}
   - component: {fileID: 5845486925624285190}
   - component: {fileID: 5410879265681383816}
+  - component: {fileID: 6833581840283136229}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4750,6 +5737,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6833581840283136229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7117951295068135574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &7248250197561954321
 GameObject:
   m_ObjectHideFlags: 0
@@ -4763,7 +5768,7 @@ GameObject:
   - component: {fileID: 3444693163476009533}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4842,9 +5847,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4278258444590732144}
+  - component: {fileID: 2005066478274728433}
+  - component: {fileID: 3363345063203738821}
   m_Layer: 0
   m_Name: Switch (12)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4867,6 +5874,43 @@ Transform:
   - {fileID: 4223754359821468607}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &2005066478274728433
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7345317145841554776}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &3363345063203738821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7345317145841554776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &7554846651823634920
 GameObject:
   m_ObjectHideFlags: 0
@@ -4876,9 +5920,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6285090440475771105}
+  - component: {fileID: 1327819102623114914}
+  - component: {fileID: 6031457190774429172}
   m_Layer: 0
   m_Name: Switch (2)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4901,6 +5947,43 @@ Transform:
   - {fileID: 341646004464439283}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &1327819102623114914
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7554846651823634920}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &6031457190774429172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7554846651823634920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &7833673581565010253
 GameObject:
   m_ObjectHideFlags: 0
@@ -4910,9 +5993,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9051043743374643985}
+  - component: {fileID: 6799698440158458949}
+  - component: {fileID: 8088416303496785685}
   m_Layer: 0
   m_Name: Switch (15)
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4935,6 +6020,43 @@ Transform:
   - {fileID: 5383090437843076393}
   m_Father: {fileID: 2912251362620478526}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &6799698440158458949
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7833673581565010253}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
+--- !u!114 &8088416303496785685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7833673581565010253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &7835745923081399396
 GameObject:
   m_ObjectHideFlags: 0
@@ -4948,7 +6070,7 @@ GameObject:
   - component: {fileID: 4045831295839442711}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5031,7 +6153,7 @@ GameObject:
   - component: {fileID: 4597378560086051172}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5114,7 +6236,7 @@ GameObject:
   - component: {fileID: 5634386341243505138}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5195,9 +6317,10 @@ GameObject:
   - component: {fileID: 4810769375677009630}
   - component: {fileID: 2211814829129365054}
   - component: {fileID: 1721412735987411807}
+  - component: {fileID: 3837248251318990932}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5267,6 +6390,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3837248251318990932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7924309618474698480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &8242215108392477710
 GameObject:
   m_ObjectHideFlags: 0
@@ -5280,7 +6421,7 @@ GameObject:
   - component: {fileID: 9186819903008541516}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5363,7 +6504,7 @@ GameObject:
   - component: {fileID: 5061865437856258506}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5446,7 +6587,7 @@ GameObject:
   - component: {fileID: 4824083690401972756}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5529,7 +6670,7 @@ GameObject:
   - component: {fileID: 4491043260024474462}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5571,8 +6712,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.13558859, y: 0.16752112, z: 0.13938794}
-  m_Center: {x: 0.003218431, y: 0.04238993, z: -0.002004549}
+  m_Size: {x: 0.09394458, y: 0.15594304, z: 0.11424739}
+  m_Center: {x: 0.00004358217, y: 0.036600888, z: -0.014574822}
 --- !u!114 &4491043260024474462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5585,6 +6726,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fca4fd0de9b134290ec3da168af2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  switchBody: {fileID: 3467951255859679964}
+  isOn: 1
+  onRotation: {x: 13, y: 0, z: 0}
+  offRotation: {x: 100, y: 0, z: 0}
 --- !u!1 &8698408330665402184
 GameObject:
   m_ObjectHideFlags: 0
@@ -5598,7 +6743,7 @@ GameObject:
   - component: {fileID: 204104534732636964}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5681,7 +6826,7 @@ GameObject:
   - component: {fileID: 2144908100997965876}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5764,7 +6909,7 @@ GameObject:
   - component: {fileID: 8512070380105689688}
   m_Layer: 0
   m_Name: Switch Base
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5845,9 +6990,10 @@ GameObject:
   - component: {fileID: 5603983735746953571}
   - component: {fileID: 9099411584017388199}
   - component: {fileID: 2089737399204380493}
+  - component: {fileID: 88011614913954522}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5917,6 +7063,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &88011614913954522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9094754097037949594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &9114576909358366243
 GameObject:
   m_ObjectHideFlags: 0
@@ -5930,7 +7094,7 @@ GameObject:
   - component: {fileID: 6674930432677049617}
   m_Layer: 0
   m_Name: Display
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6011,9 +7175,10 @@ GameObject:
   - component: {fileID: 3208680797602867762}
   - component: {fileID: 8460053920523574617}
   - component: {fileID: 4166674794164453460}
+  - component: {fileID: 4095140737122317880}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6083,3 +7248,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4095140737122317880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9195519009869663351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.101960786, g: 1, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
