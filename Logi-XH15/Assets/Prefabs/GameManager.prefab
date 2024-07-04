@@ -571,6 +571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProblemsHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 6076313066550673698, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
+      propertyPath: warningPanel
+      value: 
+      objectReference: {fileID: 6593742838578343171}
     - target: {fileID: 8541268041764627670, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
       propertyPath: warningPanel
       value: 
