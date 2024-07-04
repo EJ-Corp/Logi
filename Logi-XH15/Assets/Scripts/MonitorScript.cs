@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Unity.UI;
 
 public class MonitorScript : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class MonitorScript : MonoBehaviour
     [SerializeField] GameObject desktopScreen;
     [SerializeField] GameObject loginScreen;
 
+    [SerializeField] GameObject[] speechPanels = new GameObject[4];
+    private float nextFact = 0.0f;
+    private float randomCountdown;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +32,7 @@ public class MonitorScript : MonoBehaviour
         mouseBounds = gameManager.monitorBoundary;
         mouse = Mouse.current;
         desktopScreen.SetActive(false);
+        randomCountdown = Random.Range(2f, 10f);
     }
 
     // Update is called once per frame
@@ -47,6 +53,15 @@ public class MonitorScript : MonoBehaviour
         if (gameManager.inPCView)
         {
             RestrictMouseToMonitorBounds();
+        }
+
+        nextFact += Time.deltaTime;
+
+        if (nextFact >= randomCountdown)
+        {
+            RandomFact();
+            nextFact = 0.0f;
+            randomCountdown = Random.Range(2f, 10f);
         }
     }
 
@@ -97,6 +112,24 @@ public class MonitorScript : MonoBehaviour
             if(mousePos.x >= screenCorners[3].x - 10)
             {
                 Mouse.current.WarpCursorPosition(new Vector2(screenCorners[3].x - 15, mousePos.y));
+            }
+        }
+    }
+
+    public void RandomFact()
+    {
+        float randomFactNum = Random.Range(0,3);
+        float randomTurnOff = Random.Range(0,9);
+
+        for (int i = 0; i < speechPanels.Length; i++)
+        {
+            if (i == randomFactNum)
+            {
+                speechPanels[i].SetActive(true);
+            } 
+            if (i == randomTurnOff)
+            {
+                speechPanels[i].SetActive(false);
             }
         }
     }

@@ -36,7 +36,7 @@ public class ButtonProblem : MonoBehaviour
 
     public void ActivateProblem()
     {
-        int randomButton = Random.RandomRange(0, buttons.Count);
+        int randomButton = Random.Range(0, buttons.Count);
         fixButton = buttons[randomButton];
         fixButton.MakeProblem(warningSign);
         Debug.Log("Problem is the " + buttons[randomButton].name);
