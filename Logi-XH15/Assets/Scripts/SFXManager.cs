@@ -13,7 +13,7 @@ public class SFXManager : MonoBehaviour
         }
     }
     [SerializeField] AudioSource sfxObject;
-    private void awake()
+    private void Awake()
     {
         if(instance == null)
         {
