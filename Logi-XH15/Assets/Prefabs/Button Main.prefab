@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 524405634871844512}
   m_Layer: 0
   m_Name: Button Main
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 7136309905414823027}
   - component: {fileID: 3305942811967412198}
   - component: {fileID: 8821939796930609031}
+  - component: {fileID: 1213809281340046513}
   m_Layer: 0
   m_Name: Button Top
   m_TagString: Untagged
@@ -228,3 +229,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1213809281340046513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3771531301396966000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.10369992, g: 1, b: 0, a: 1}
+  outlineWidth: 9.4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
