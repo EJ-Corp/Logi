@@ -393,7 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82bcc42c17a895d408e54a2b7378a836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextProblemCountDown: 30
+  nextProblemCountDown: 15
   activeProblems: 0
   buttonProblem: {fileID: 1908011308}
   switchProblem: {fileID: 2004044571}
