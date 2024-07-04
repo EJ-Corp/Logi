@@ -158,6 +158,15 @@ MonoBehaviour:
   - {fileID: 8616555390932870864}
   - {fileID: 1155538087799567939}
   - {fileID: 6501447534472055075}
+  buttonProbBubble: {fileID: 6743292420630616860, guid: d3793b07412a3e348960f89e904d6e6f, type: 3}
+  switchProbBubble: {fileID: 9014948847776218458, guid: 92ce8ce3e7b4b80488c7d9c4b6fdd232, type: 3}
+  randomFactBubble: {fileID: 490484484383809632, guid: 6cbd9bd5339e2b44780424066b34215f, type: 3}
+  flirtBubble: {fileID: 850607240268304017, guid: 55f1b892dd44e794095aa97541592a4a, type: 3}
+  avaibleSpeechBubbles:
+  - {fileID: 6743292420630616860, guid: d3793b07412a3e348960f89e904d6e6f, type: 3}
+  - {fileID: 490484484383809632, guid: 6cbd9bd5339e2b44780424066b34215f, type: 3}
+  - {fileID: 850607240268304017, guid: 55f1b892dd44e794095aa97541592a4a, type: 3}
+  - {fileID: 9014948847776218458, guid: 92ce8ce3e7b4b80488c7d9c4b6fdd232, type: 3}
 --- !u!1001 &8114616530578661737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -167,8 +176,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 2208582549275231182}
     m_Modifications:
     - target: {fileID: 506883399095453625, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_Name
+      value: Flirt Speech Bubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 506883399095453625, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072898243649906762, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_Name
+      value: Button Problem Bubble
       objectReference: {fileID: 0}
     - target: {fileID: 3072898243649906762, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
       propertyPath: m_IsActive
@@ -181,6 +198,10 @@ PrefabInstance:
     - target: {fileID: 3956159210326962653, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4404295849934268855, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_Name
+      value: Fact Speech Bubble
       objectReference: {fileID: 0}
     - target: {fileID: 4404295849934268855, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
       propertyPath: m_IsActive
@@ -265,6 +286,10 @@ PrefabInstance:
     - target: {fileID: 4481822507171501202, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959648541104756522, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_Name
+      value: Switch Problem Bubble
       objectReference: {fileID: 0}
     - target: {fileID: 6959648541104756522, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
       propertyPath: m_IsActive

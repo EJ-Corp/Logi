@@ -25,6 +25,15 @@ public class MonitorScript : MonoBehaviour
     private float nextFact = 0.0f;
     private float randomCountdown = 10.0f;
 
+    [Header("Speech Bubbles")]
+    [SerializeField] private GameObject buttonProbBubble;
+    [SerializeField] private GameObject switchProbBubble;
+    [SerializeField] private GameObject randomFactBubble;
+    [SerializeField] private GameObject flirtBubble;
+    
+    [SerializeField] private List<GameObject> avaibleSpeechBubbles;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,7 +70,7 @@ public class MonitorScript : MonoBehaviour
 
         if (nextFact >= randomCountdown)
         {
-            RandomFact();
+            //RandomFact();
             nextFact = 0.0f;
             randomCountdown = Random.Range(5f, 15f);
         }
