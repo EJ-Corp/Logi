@@ -1091,7 +1091,7 @@ GameObject:
   - component: {fileID: 8896195451532259021}
   m_Layer: 5
   m_Name: password input
-  m_TagString: Untagged
+  m_TagString: pswdInput
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1667,7 +1667,7 @@ GameObject:
   - component: {fileID: 5994001713134848171}
   m_Layer: 5
   m_Name: id input
-  m_TagString: Untagged
+  m_TagString: idInput
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

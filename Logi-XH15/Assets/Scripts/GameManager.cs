@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public PlayerController playerController;
 
     //computer objects
-    [SerializeField] public GameObject computerScreen;
+    [SerializeField] public ComputerFocusScript computerScreenFocus;
     [SerializeField] public Canvas monitorBoundary;
     [SerializeField] public IDandPasswordInputScript idInput;
     [SerializeField] public IDandPasswordInputScript pswdInput;
@@ -49,11 +49,11 @@ public class GameManager : MonoBehaviour
         {
             manager = this;
         }
-    }
-    void Start()
-    {
+
+        computerScreenFocus = GameObject.FindGameObjectWithTag("PCScreen").GetComponent<ComputerFocusScript>();
+        idInput = GameObject.FindGameObjectWithTag("idInput").GetComponent<IDandPasswordInputScript>();
+        pswdInput = GameObject.FindGameObjectWithTag("pswdInput").GetComponent<IDandPasswordInputScript>();
         gameState = GameState.mainView;
-        computerScreen = GameObject.FindGameObjectWithTag("PCScreen");
     }
 
     void Update()
@@ -80,5 +80,10 @@ public class GameManager : MonoBehaviour
             }
             break;
         }
+    }
+
+    public ComputerFocusScript ShareComputerFocusScript()
+    {
+        return computerScreenFocus;
     }
 }
