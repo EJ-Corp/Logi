@@ -14,6 +14,8 @@ public class SwitchProblem : MonoBehaviour
 
     [SerializeField] private int onSwitches;
 
+    
+
     void Start()
     {
         onSwitches = allSwitches.Count;
@@ -45,6 +47,8 @@ public class SwitchProblem : MonoBehaviour
 
                 warningSign.FixProblem();
                 problemActive = false;
+
+                
             }
         }
     }
@@ -53,7 +57,7 @@ public class SwitchProblem : MonoBehaviour
     {
         
 
-        Debug.Log("Problem Activated");
+        //Debug.Log("Problem Activated");
         int amountToBreak = Random.Range(1, allSwitches.Count);
         Debug.Log("Must break: " + amountToBreak);
         breakbleSwitches = new List<InteractSwitch>(allSwitches);

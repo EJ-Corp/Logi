@@ -18,6 +18,9 @@ public class ProblemHandler : MonoBehaviour
     [SerializeField] private WarningState currentState;
     private bool active = false;
 
+    //Get rid of this and make it better
+    [SerializeField] private TempProblemTimer problemTimer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +72,9 @@ public class ProblemHandler : MonoBehaviour
         warningPanel.SetActive(false);
         currentState = WarningState.diabled;
         active = false;
+
+        //get rid of this
+        problemTimer.FixedProblem();
     }
 
     public void StartProblem()
