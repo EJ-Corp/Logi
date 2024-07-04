@@ -23,7 +23,7 @@ public class MonitorScript : MonoBehaviour
 
     [SerializeField] GameObject[] speechPanels = new GameObject[4];
     private float nextFact = 0.0f;
-    private float randomCountdown;
+    private float randomCountdown = 10.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,7 @@ public class MonitorScript : MonoBehaviour
         mouseBounds = gameManager.monitorBoundary;
         mouse = Mouse.current;
         desktopScreen.SetActive(false);
-        randomCountdown = Random.Range(2f, 10f);
+        randomCountdown = Random.Range(5f, 15f);
     }
 
     // Update is called once per frame
@@ -61,7 +61,7 @@ public class MonitorScript : MonoBehaviour
         {
             RandomFact();
             nextFact = 0.0f;
-            randomCountdown = Random.Range(2f, 10f);
+            randomCountdown = Random.Range(5f, 15f);
         }
     }
 
