@@ -40,6 +40,9 @@ public class GameManager : MonoBehaviour
     public bool inMainView = true;
     public bool inPCView = false;
 
+    //Get rid of this -> need fix
+    public SFXManager soundManager; 
+
     [Header("Problems")]
     public SwitchProblem switches;
 
