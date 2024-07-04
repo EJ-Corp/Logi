@@ -60,7 +60,7 @@ public class ProblemHandler : MonoBehaviour
             warningPanel.SetActive(true);
             active = true;
             flashCooldown = flashInterval;
-            SFXManager.instance.PlaySFXClip(alarmSFX, transform, 1f);
+            SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 1f);
         }
     }
 

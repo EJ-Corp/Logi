@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class SFXManager : MonoBehaviour
 {
-    public static SFXManager instance;
+    private static SFXManager instance;
+    public static SFXManager Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
     [SerializeField] AudioSource sfxObject;
     private void awake()
     {
