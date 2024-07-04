@@ -166,9 +166,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2208582549275231182}
     m_Modifications:
+    - target: {fileID: 506883399095453625, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072898243649906762, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3800316797207180150, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3956159210326962653, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4404295849934268855, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4481822507171501202, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
       propertyPath: m_Pivot.x
@@ -250,9 +266,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6959648541104756522, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7570742824194983327, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
       propertyPath: m_Name
       value: ComputerCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202092589350497091, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

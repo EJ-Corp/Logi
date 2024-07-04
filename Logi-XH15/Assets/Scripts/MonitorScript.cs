@@ -45,6 +45,8 @@ public class MonitorScript : MonoBehaviour
         pswdInputValue = gameManager.pswdInput.GetInputResult();
         CheckIDAndPassword();
 
+
+        //We are getting the same 4 corners repeadetly every fram --- IS THIS NEEDED??? NOT JUST ONCE?? BAD CODE.
         for (int i = 0 ; i < 4; i++)
         {
             screenCorners[i] = gameManager.pcCamera.WorldToScreenPoint(worldCorners[i]); //botleft, topleft, topright, botright
@@ -126,7 +128,7 @@ public class MonitorScript : MonoBehaviour
             if (i == randomFactNum)
             {
                 speechPanels[i].SetActive(true);
-            } 
+            } //Wont turn off if its 4 or higher
             if (i == randomTurnOff)
             {
                 speechPanels[i].SetActive(false);
