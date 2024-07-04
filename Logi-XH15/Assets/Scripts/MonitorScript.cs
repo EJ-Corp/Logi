@@ -21,10 +21,6 @@ public class MonitorScript : MonoBehaviour
     [SerializeField] GameObject desktopScreen;
     [SerializeField] GameObject loginScreen;
 
-    [SerializeField] GameObject[] speechPanels = new GameObject[4];
-    private float nextFact = 0.0f;
-    private float randomCountdown = 10.0f;
-
     [Header("Annoying Bubbles")]
     [SerializeField] private int maxAnnoy;
     [SerializeField] private int activeAnnoy;
@@ -52,7 +48,6 @@ public class MonitorScript : MonoBehaviour
         mouseBounds = gameManager.monitorBoundary;
         mouse = Mouse.current;
         desktopScreen.SetActive(false);
-        randomCountdown = Random.Range(5f, 15f);
     }
 
     // Update is called once per frame
@@ -135,24 +130,6 @@ public class MonitorScript : MonoBehaviour
             if(mousePos.x >= screenCorners[3].x - 10)
             {
                 Mouse.current.WarpCursorPosition(new Vector2(screenCorners[3].x - 15, mousePos.y));
-            }
-        }
-    }
-
-    public void RandomFact()
-    {
-        float randomFactNum = Random.Range(0,3);
-        float randomTurnOff = Random.Range(0,9);
-
-        for (int i = 0; i < speechPanels.Length; i++)
-        {
-            if (i == randomFactNum)
-            {
-                speechPanels[i].SetActive(true);
-            } //Wont turn off if its 4 or higher
-            if (i == randomTurnOff)
-            {
-                speechPanels[i].SetActive(false);
             }
         }
     }
