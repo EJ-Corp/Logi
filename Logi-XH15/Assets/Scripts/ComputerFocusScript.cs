@@ -36,7 +36,7 @@ public class ComputerFocusScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && pcCamera.enabled == true)
+        if (Input.GetButtonDown("Fire2") && pcCamera.enabled == true)
         {
             cameraAnimator.SetTrigger("pcTOmain");
         }

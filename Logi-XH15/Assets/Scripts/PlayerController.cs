@@ -38,8 +38,8 @@ public class PlayerController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
 
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+      //  Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -58,6 +58,8 @@ public class PlayerController : MonoBehaviour
 
         if(canMove)
         {
+            Cursor.lockState = CursorLockMode.Locked;
+
             rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
@@ -68,6 +70,9 @@ public class PlayerController : MonoBehaviour
                 HandleInteractionCheck();
                 HandleInteractionInput();
             }
+        } else {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
         }
     }
 
