@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     //computer objects
     [SerializeField] public GameObject computerScreen;
+    [SerializeField] public Canvas monitorBoundary;
 
     enum GameState
     {
@@ -58,5 +59,4 @@ public class GameManager : MonoBehaviour
             break;
         }
     }
-
 }

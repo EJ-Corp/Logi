@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class ComputerInteractableScript : Interactable
 {
     [SerializeField] GameManager gameManager;
@@ -77,3 +77,4 @@ public class ComputerInteractableScript : Interactable
         Debug.Log("Stopped looking at " + gameObject.name);
     }
 }
+*/
