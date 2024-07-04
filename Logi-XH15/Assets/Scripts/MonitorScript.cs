@@ -26,12 +26,13 @@ public class MonitorScript : MonoBehaviour
     private float randomCountdown = 10.0f;
 
     [Header("Speech Bubbles")]
+    [SerializeField] private GameObject bubbleHolder;
     [SerializeField] private GameObject buttonProbBubble;
     [SerializeField] private GameObject switchProbBubble;
     [SerializeField] private GameObject randomFactBubble;
     [SerializeField] private GameObject flirtBubble;
     
-    [SerializeField] private List<GameObject> avaibleSpeechBubbles;
+    
 
 
     // Start is called before the first frame update
@@ -142,6 +143,22 @@ public class MonitorScript : MonoBehaviour
             {
                 speechPanels[i].SetActive(false);
             }
+        }
+    }
+
+    public void SpawnProblemFact(int problemID)
+    {
+        switch(problemID)
+        {
+            case 11: //Its the button problem (ID = 11)
+                GameObject buttonBubble = Instantiate(buttonProbBubble, bubbleHolder.transform);
+                //buttonBubble.transform.parent = bubbleHolder.transform;
+                break;
+
+            case 12: //Its the switch Problem (ID = 12)
+                GameObject switchBubble = Instantiate(switchProbBubble, bubbleHolder.transform);
+                //switchBubble.transform.parent = bubbleHolder.transform;
+                break;
         }
     }
 

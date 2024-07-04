@@ -14,9 +14,11 @@ public class TempProblemTimer : MonoBehaviour
 
     [SerializeField] private List<int> problemIDPool;   //IDs: Buttons - 11, Switches = 12
 
+    private MonitorScript computerScreen;
+
     void Start()
     {
-        
+        computerScreen = GameObject.FindGameObjectWithTag("PCScreen").transform.GetComponent<MonitorScript>();
     }
 
     // Update is called once per frame
@@ -53,12 +55,18 @@ public class TempProblemTimer : MonoBehaviour
             buttonProblem.ActivateProblem();
             activeProblems++;
             problemIDPool.RemoveAt(randomProblem);
+
+            //Spawn Speech bubble
+            computerScreen.SpawnProblemFact(chosenProblemID);
             
         } else if(chosenProblemID == 12) //Chose Switched (ID = 12)
         {
             switchProblem.ActivateProblem();
             activeProblems++;
             problemIDPool.RemoveAt(randomProblem);
+
+            //Spawn Speech bubble
+            computerScreen.SpawnProblemFact(chosenProblemID);
         }
 
         ResetCountdown();
