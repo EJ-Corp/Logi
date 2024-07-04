@@ -10,9 +10,11 @@ public class FocusOnPCAnimationEnd : StateMachineBehaviour
 
     void Awake() 
     {
+       // Debug.Log("We start 1");
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        compFocusScript = gameManager.computerScreen.GetComponent<ComputerFocusScript>();
+        compFocusScript = gameManager.computerScreenFocus;
        // compInteractableScript = gameManager.computerScreen.GetComponent<ComputerInteractableScript>();
+       // compFocusScript = GameManager.manager.ShareComputerFocusScript();
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
