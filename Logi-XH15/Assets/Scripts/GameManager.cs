@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     //computer objects
     [SerializeField] public GameObject computerScreen;
     [SerializeField] public Canvas monitorBoundary;
+    [SerializeField] public IDandPasswordInputScript idInput;
+    [SerializeField] public IDandPasswordInputScript pswdInput;
 
     enum GameState
     {

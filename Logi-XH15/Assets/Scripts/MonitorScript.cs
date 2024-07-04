@@ -12,12 +12,21 @@ public class MonitorScript : MonoBehaviour
     private Vector3[] worldCorners = new Vector3[4];
     [SerializeField] private Vector3[] screenCorners = new Vector3[4];
 
+    [SerializeField] string correctID = "Edgar";
+    [SerializeField] string correctPSWD = "1234";
+    [SerializeField] string idInputValue;
+    [SerializeField] string pswdInputValue;
+
+    [SerializeField] GameObject desktopScreen;
+    [SerializeField] GameObject loginScreen;
+
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         mouseBounds = gameManager.monitorBoundary;
         mouse = Mouse.current;
+        desktopScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -25,6 +34,10 @@ public class MonitorScript : MonoBehaviour
     {
         mousePos = Input.mousePosition;
         mouseBounds.GetComponent<RectTransform>().GetWorldCorners(worldCorners);
+
+        idInputValue = gameManager.idInput.GetInputResult();
+        pswdInputValue = gameManager.pswdInput.GetInputResult();
+        CheckIDAndPassword();
 
         for (int i = 0 ; i < 4; i++)
         {
@@ -34,6 +47,15 @@ public class MonitorScript : MonoBehaviour
         if (gameManager.inPCView)
         {
             RestrictMouseToMonitorBounds();
+        }
+    }
+
+    void CheckIDAndPassword()
+    {
+        if (idInputValue == correctID && pswdInputValue == correctPSWD)
+        {
+            loginScreen.SetActive(false);
+            desktopScreen.SetActive(true);
         }
     }
 
