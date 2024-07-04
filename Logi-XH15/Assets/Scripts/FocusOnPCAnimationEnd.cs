@@ -6,16 +6,19 @@ public class FocusOnPCAnimationEnd : StateMachineBehaviour
 {
     [SerializeField] GameManager gameManager;
     [SerializeField] ComputerFocusScript compFocusScript;
+   // [SerializeField] ComputerInteractableScript compInteractableScript;
 
     void Awake() 
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         compFocusScript = gameManager.computerScreen.GetComponent<ComputerFocusScript>();
+       // compInteractableScript = gameManager.computerScreen.GetComponent<ComputerInteractableScript>();
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         compFocusScript.SwapCameras();
+       // compInteractableScript.SwapCameras();
     }
 }
