@@ -257,6 +257,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 20, y: 20, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &396801276 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7290810790245421925, guid: 08404c3e6fe79427a9b13c0cb44adaca, type: 3}
+  m_PrefabInstance: {fileID: 1115450106}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d9e486d2dd284ea3b1d92f00281710a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &439801307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1154,6 +1165,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6803998707453088731, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+      propertyPath: soundManager
+      value: 
+      objectReference: {fileID: 396801276}
     - target: {fileID: 6803998707453088731, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
       propertyPath: computerScreenFocus
       value: 
