@@ -22,17 +22,17 @@ public class SwitchProblem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Jump"))
-        {
-            if(!problemActive)
-            {
-                ActivateProblem();
-            } else 
-            {
-                Debug.Log("Switch problem is already active");
-            }
+        // if(Input.GetButtonDown("Jump"))
+        // {
+        //     if(!problemActive)
+        //     {
+        //         ActivateProblem();
+        //     } else 
+        //     {
+        //         Debug.Log("Switch problem is already active");
+        //     }
             
-        }
+        // }
 
         if(problemActive)
         {
