@@ -158,11 +158,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  maxAnnoy: 3
+  activeAnnoy: 0
+  amountOfAnnoyOptions: 2
+  annoyCountdown: 15
   bubbleHolder: {fileID: 5849317719660824670}
   buttonProbBubble: {fileID: 6743292420630616860, guid: d3793b07412a3e348960f89e904d6e6f, type: 3}
   switchProbBubble: {fileID: 9014948847776218458, guid: 92ce8ce3e7b4b80488c7d9c4b6fdd232, type: 3}
   randomFactBubble: {fileID: 490484484383809632, guid: 6cbd9bd5339e2b44780424066b34215f, type: 3}
   flirtBubble: {fileID: 850607240268304017, guid: 55f1b892dd44e794095aa97541592a4a, type: 3}
+  activeBubbles: []
 --- !u!1001 &8114616530578661737
 PrefabInstance:
   m_ObjectHideFlags: 0

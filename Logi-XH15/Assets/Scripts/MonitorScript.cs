@@ -25,6 +25,12 @@ public class MonitorScript : MonoBehaviour
     private float nextFact = 0.0f;
     private float randomCountdown = 10.0f;
 
+    [Header("Annoying Bubbles")]
+    [SerializeField] private int maxAnnoy;
+    [SerializeField] private int activeAnnoy;
+    [SerializeField] private int amountOfAnnoyOptions;
+    [SerializeField] private float annoyCountdown;
+
     [Header("Speech Bubbles")]
     [SerializeField] private GameObject bubbleHolder;
     [SerializeField] private GameObject buttonProbBubble;
@@ -71,13 +77,14 @@ public class MonitorScript : MonoBehaviour
             RestrictMouseToMonitorBounds();
         }
 
-        nextFact += Time.deltaTime;
-
-        if (nextFact >= randomCountdown)
+        if(annoyCountdown > 0 && activeAnnoy < maxAnnoy)
         {
-            //RandomFact();
-            nextFact = 0.0f;
-            randomCountdown = Random.Range(5f, 15f);
+            annoyCountdown -= Time.deltaTime;
+        }
+
+        if(annoyCountdown <= 0 && activeAnnoy < maxAnnoy)
+        {
+            SpawnAnnoyBubble();
         }
     }
 
@@ -148,6 +155,27 @@ public class MonitorScript : MonoBehaviour
                 speechPanels[i].SetActive(false);
             }
         }
+    }
+
+    public void SpawnAnnoyBubble()
+    {
+        int randomAnnoy = Random.Range(0, amountOfAnnoyOptions -1);
+
+        switch(randomAnnoy)
+        {
+            case 0: //Spawn a flirt
+                GameObject flirtSpeechBubble = Instantiate(flirtBubble, bubbleHolder.transform);
+                flirtSpeechBubble.name = "Flirt Bubble";
+                activeAnnoy++;
+                break;
+            case 1: //Spawn a fact
+                GameObject factSpeeechBubble = Instantiate(randomFactBubble, bubbleHolder.transform);
+                factSpeeechBubble.name = "Fact Bubble";
+                activeAnnoy++;
+                break;
+        }
+
+        annoyCountdown = Random.Range(5.0f, 30.0f);
     }
 
     public void SpawnProblemFact(int problemID)
