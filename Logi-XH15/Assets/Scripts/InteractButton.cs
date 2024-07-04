@@ -18,7 +18,7 @@ public class InteractButton : Interactable
     public override void OnInteract()
     {
         buttonClick.SetTrigger("IsClicked");
-        GameManager.Manager.soundManager.PlayRandomSFXClip(buttonSFX, transform, 1f);
+        SFXManager.Instance.PlayRandomSFXClip(buttonSFX, transform, 1f);
         if(canFix)
         {
             FixProblem();

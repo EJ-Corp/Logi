@@ -22,7 +22,7 @@ public class InteractSwitch : Interactable
 
     public override void OnInteract()
     {
-        GameManager.Manager.soundManager.PlayRandomSFXClip(switchSFX, transform, 1f);
+        SFXManager.Instance.PlayRandomSFXClip(switchSFX, transform, 1f);
         if(isOn)
         {
             switchBody.Rotate(onRotation, Space.Self);

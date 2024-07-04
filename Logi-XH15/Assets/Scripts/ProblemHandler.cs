@@ -63,7 +63,7 @@ public class ProblemHandler : MonoBehaviour
             warningPanel.SetActive(true);
             active = true;
             flashCooldown = flashInterval;
-            GameManager.Manager.soundManager.PlaySFXClip(alarmSFX, transform, 1f);
+            SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 1f);
         }
     }
 
