@@ -10,6 +10,7 @@ public class OutlineSelection : MonoBehaviour
     private RaycastHit raycastHit;
 
     [SerializeField] private Vector3 interactionRayPoint = default;
+    [SerializeField] private float interactionDistance = default;
 
     void Update()
     {
@@ -23,7 +24,7 @@ public class OutlineSelection : MonoBehaviour
 
         //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out raycastHit)) //Make sure you have EventSystem in the hierarchy before using EventSystem
+        if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out raycastHit, interactionDistance)) //Make sure you have EventSystem in the hierarchy before using EventSystem
         {
             highlight = raycastHit.transform;
             if (highlight.CompareTag("Selectable") && highlight != selection)

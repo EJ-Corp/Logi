@@ -170,10 +170,10 @@ public class Outline : MonoBehaviour {
       }
 
       // Serialize smooth normals
-      var smoothNormals = SmoothNormals(meshFilter.sharedMesh);
+      //var smoothNormals = SmoothNormals(meshFilter.sharedMesh);
 
       bakeKeys.Add(meshFilter.sharedMesh);
-      bakeValues.Add(new ListVector3() { data = smoothNormals });
+      //bakeValues.Add(new ListVector3() { data = smoothNormals });
     }
   }
 
@@ -189,10 +189,10 @@ public class Outline : MonoBehaviour {
 
       // Retrieve or generate smooth normals
       var index = bakeKeys.IndexOf(meshFilter.sharedMesh);
-      var smoothNormals = (index >= 0) ? bakeValues[index].data : SmoothNormals(meshFilter.sharedMesh);
+      //var smoothNormals = (index >= 0) ? bakeValues[index].data : SmoothNormals(meshFilter.sharedMesh);
 
       // Store smooth normals in UV3
-      meshFilter.sharedMesh.SetUVs(3, smoothNormals);
+      //meshFilter.sharedMesh.SetUVs(3, smoothNormals);
 
       // Combine submeshes
       var renderer = meshFilter.GetComponent<Renderer>();
@@ -218,39 +218,39 @@ public class Outline : MonoBehaviour {
     }
   }
 
-  List<Vector3> SmoothNormals(Mesh mesh) {
+  //List<Vector3> SmoothNormals(Mesh mesh) {
 
     // Group vertices by location
-    var groups = mesh.vertices.Select((vertex, index) => new KeyValuePair<Vector3, int>(vertex, index)).GroupBy(pair => pair.Key);
+    //var groups = mesh.vertices.Select((vertex, index) => new KeyValuePair<Vector3, int>(vertex, index)).GroupBy(pair => pair.Key);
 
     // Copy normals to a new list
-    var smoothNormals = new List<Vector3>(mesh.normals);
+    //var smoothNormals = new List<Vector3>(mesh.normals);
 
     // Average normals for grouped vertices
-    foreach (var group in groups) {
+    //foreach (var group in groups) {
 
-      // Skip single vertices
-      if (group.Count() == 1) {
-        continue;
-      }
+    //   // Skip single vertices
+    //   if (group.Count() == 1) {
+    //     continue;
+    //   }
 
-      // Calculate the average normal
-      var smoothNormal = Vector3.zero;
+    //   // Calculate the average normal
+    //   var smoothNormal = Vector3.zero;
 
-      foreach (var pair in group) {
-        smoothNormal += smoothNormals[pair.Value];
-      }
+    //   foreach (var pair in group) {
+    //     smoothNormal += smoothNormals[pair.Value];
+    //   }
 
-      smoothNormal.Normalize();
+    //   smoothNormal.Normalize();
 
-      // Assign smooth normal to each vertex
-      foreach (var pair in group) {
-        smoothNormals[pair.Value] = smoothNormal;
-      }
-    }
+    //   // Assign smooth normal to each vertex
+    //   foreach (var pair in group) {
+    //     smoothNormals[pair.Value] = smoothNormal;
+    //   }
+    // }
 
-    return smoothNormals;
-  }
+    //return smoothNormals;
+  //}
 
   void CombineSubmeshes(Mesh mesh, Material[] materials) {
 
@@ -266,7 +266,7 @@ public class Outline : MonoBehaviour {
 
     // Append combined submesh
     mesh.subMeshCount++;
-    mesh.SetTriangles(mesh.triangles, mesh.subMeshCount - 1);
+    //mesh.SetTriangles(mesh.triangles, mesh.subMeshCount - 1);
   }
 
   void UpdateMaterialProperties() {
