@@ -6,6 +6,8 @@ TagManager:
   tags:
   - GameManager
   - PCScreen
+  - idInput
+  - pswdInput
   - Selectable
   layers:
   - Default
