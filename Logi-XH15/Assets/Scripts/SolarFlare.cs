@@ -13,6 +13,7 @@ public class SolarFlare : MonoBehaviour
     void Start()
     {
         transform.Rotate(0, 180, 0);
+        BreakComputer();
     }
     void Update()
     {
@@ -46,5 +47,10 @@ public class SolarFlare : MonoBehaviour
 
         // Convert back to linear scale
         return Mathf.Pow(10, logFrequency);
+    }
+
+    public void BreakComputer()
+    {
+        
     }
 }
