@@ -20,6 +20,7 @@ public class InteractCompBreaker : Interactable
         if(isOn) //Turning Computer Off
         {
             GameManager.Manager.ToggleComputer(true);
+            isOn = false;
 
             //XAVIER add animation here from ON to OFF
 
@@ -27,11 +28,12 @@ public class InteractCompBreaker : Interactable
         } else //Turning COmputer On
         {
             GameManager.Manager.ToggleComputer(false);
+            isOn = true;
 
             //XAVIER add animation here from OFF to ON
         }
 
-        isOn = !isOn;
+        
     }
 
     public override void OnLoseFocus()
@@ -45,6 +47,6 @@ public class InteractCompBreaker : Interactable
         isOn = false;
 
         //XAVIER add animation here from ON to OFF
-        
+
     }
 }
