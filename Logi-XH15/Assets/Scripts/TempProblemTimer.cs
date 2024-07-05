@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TempProblemTimer : MonoBehaviour
 {
+    [SerializeField] private bool debug = false;
     [SerializeField] private int numberOfProblems;
     [SerializeField] private float nextProblemCountDown;
     [SerializeField] private int activeProblems = 0; 
@@ -24,7 +25,7 @@ public class TempProblemTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(activeProblems < numberOfProblems)
+        if(activeProblems < numberOfProblems && !debug)
         {
             if(nextProblemCountDown > 0)
             {
