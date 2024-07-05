@@ -532,6 +532,8 @@ PrefabInstance:
     - target: {fileID: 996946251081001471, guid: d4e1412c79458584993b019aa32724f2, type: 3}
       propertyPath: m_Text
       value: helios
+      propertyPath: m_Navigation.m_Mode
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2208582549275231182, guid: d4e1412c79458584993b019aa32724f2, type: 3}
       propertyPath: m_LocalPosition.x
