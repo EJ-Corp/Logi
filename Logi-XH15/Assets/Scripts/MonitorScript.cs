@@ -48,11 +48,13 @@ public class MonitorScript : MonoBehaviour
         mouseBounds = gameManager.monitorBoundary;
         mouse = Mouse.current;
         desktopScreen.SetActive(false);
+        correctID = "helios";
     }
 
     // Update is called once per frame
     void Update()
     {
+        correctPSWD = gameManager.password;
         mousePos = Input.mousePosition;
         mouseBounds.GetComponent<RectTransform>().GetWorldCorners(worldCorners);
 

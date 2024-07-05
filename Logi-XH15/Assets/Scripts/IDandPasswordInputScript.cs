@@ -34,7 +34,10 @@ public class IDandPasswordInputScript : MonoBehaviour
 
     public void ResetInputResult()
     {
-        textInput = null;
-        textDisplay.text = null;
+        if(this.gameObject.name != "id input")
+        {
+            textInput = null;
+            textDisplay.text = null;
+        }
     }
 }

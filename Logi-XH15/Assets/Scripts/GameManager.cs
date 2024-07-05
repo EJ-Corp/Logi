@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool randomLength = false;
     [SerializeField] private TMP_Text passwordNote;
 
+    public string password;
+
     void Awake()
     {
         if(manager == null)
@@ -62,6 +64,13 @@ public class GameManager : MonoBehaviour
         idInput = GameObject.FindGameObjectWithTag("idInput").GetComponent<IDandPasswordInputScript>();
         pswdInput = GameObject.FindGameObjectWithTag("pswdInput").GetComponent<IDandPasswordInputScript>();
         gameState = GameState.mainView;
+
+    }
+
+    void Start()
+    {
+        password = GeneratePassword();
+        passwordNote.text = password;
     }
 
     void Update()
@@ -126,6 +135,8 @@ public class GameManager : MonoBehaviour
             computerScreenFocus.transform.GetComponent<MonitorScript>().FixComputer();
             idInput.ResetInputResult();
             pswdInput.ResetInputResult();
+            password = GeneratePassword();
+            passwordNote.text = password;
         }
         
     }
