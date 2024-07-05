@@ -13,8 +13,8 @@ public class MonitorScript : MonoBehaviour
     private Vector3[] worldCorners = new Vector3[4];
     [SerializeField] private Vector3[] screenCorners = new Vector3[4];
 
-    [SerializeField] string correctID = "Edgar";
-    [SerializeField] string correctPSWD = "1234";
+    [SerializeField] string correctID = "helios";
+    [SerializeField] string correctPSWD = "password101";
     [SerializeField] string idInputValue;
     [SerializeField] string pswdInputValue;
     private bool isUsable = true;
@@ -76,7 +76,7 @@ public class MonitorScript : MonoBehaviour
 
         if (gameManager.inPCView)
         {
-            RestrictMouseToMonitorBounds();
+           // RestrictMouseToMonitorBounds();
         }
 
         if(annoyCountdown > 0 && activeAnnoy < maxAnnoy)
@@ -207,8 +207,6 @@ public class MonitorScript : MonoBehaviour
     public void BreakComputer()
     {
         isUsable = false;
-        idInputValue = null;
-        pswdInputValue = null;
         loginScreen.SetActive(false);
         desktopScreen.SetActive(false);
         powerSupply.FlareBreak();
@@ -217,8 +215,6 @@ public class MonitorScript : MonoBehaviour
     public void FixComputer()
     {
         isUsable = true;
-        idInputValue = null;
-        pswdInputValue = null;
         loginScreen.SetActive(true);
         desktopScreen.SetActive(false);
     }

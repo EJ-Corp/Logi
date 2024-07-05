@@ -92,9 +92,13 @@ public class GameManager : MonoBehaviour
         if(computerState) //Computer is on so we turn it off
         {
             computerScreenFocus.transform.GetComponent<MonitorScript>().BreakComputer();
+            idInput.ResetInputResult();
+            pswdInput.ResetInputResult();
         } else //COmputer is off so we turn it on
         {
             computerScreenFocus.transform.GetComponent<MonitorScript>().FixComputer();
+            idInput.ResetInputResult();
+            pswdInput.ResetInputResult();
         }
         
     }
