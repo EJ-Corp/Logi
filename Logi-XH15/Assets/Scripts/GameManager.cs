@@ -18,11 +18,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Camera mainCamera;
     [SerializeField] public AudioListener mainListener;
     [SerializeField] public Camera pcCamera; 
-    [SerializeField] public AudioListener pcListener; 
-
+    [SerializeField] public AudioListener pcListener;
 
     //player objects
     [SerializeField] public PlayerController playerController;
+    [SerializeField] public Canvas playerCanvas;
 
     //computer objects
     [SerializeField] public ComputerFocusScript computerScreenFocus;

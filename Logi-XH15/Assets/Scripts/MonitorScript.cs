@@ -13,8 +13,8 @@ public class MonitorScript : MonoBehaviour
     private Vector3[] worldCorners = new Vector3[4];
     [SerializeField] private Vector3[] screenCorners = new Vector3[4];
 
-    [SerializeField] string correctID = "helios";
-    [SerializeField] string correctPSWD = "password101";
+    [SerializeField] private string correctID;
+    [SerializeField] private string correctPSWD;
     [SerializeField] string idInputValue;
     [SerializeField] string pswdInputValue;
     private bool isUsable = true;
@@ -40,9 +40,6 @@ public class MonitorScript : MonoBehaviour
 
     private int buttonBubbleIdx;
     private int switchBubbleIdx;
-    
-    
-
 
     // Start is called before the first frame update
     void Start()
@@ -76,7 +73,10 @@ public class MonitorScript : MonoBehaviour
 
         if (gameManager.inPCView)
         {
-           // RestrictMouseToMonitorBounds();
+            gameManager.playerCanvas.enabled = false;
+            RestrictMouseToMonitorBounds();
+        } else {
+            gameManager.playerCanvas.enabled = true;
         }
 
         if(annoyCountdown > 0 && activeAnnoy < maxAnnoy)
