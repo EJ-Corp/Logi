@@ -52,13 +52,14 @@ public class PlayerController : MonoBehaviour
         float currentSpeedX = canMove ? walkSpeed * Input.GetAxis("Vertical") : 0;
         float currentSpeedY = canMove ? walkSpeed * Input.GetAxis("Horizontal") : 0;
 
-        float movementDirectionY = moveDirection.y;
+       // float movementDirectionY = moveDirection.y;
         moveDirection = (forward * currentSpeedX) + (right * currentSpeedY);
 
         characterController.Move(moveDirection * Time.deltaTime);
 
         if(canMove)
         {
+
             Cursor.lockState = CursorLockMode.Locked;
 
             rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;

@@ -373,6 +373,7 @@ MonoBehaviour:
   monitorBoundary: {fileID: 3990328492795263748}
   idInput: {fileID: 0}
   pswdInput: {fileID: 0}
+  problemPanel: {fileID: 0}
   gameState: 0
   inMainView: 1
   inPCView: 0
@@ -468,11 +469,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 6242420620231663883, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
   m_PrefabInstance: {fileID: 413424823675084372}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6593742838578343171 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6790699824468964183, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
-  m_PrefabInstance: {fileID: 413424823675084372}
-  m_PrefabAsset: {fileID: 0}
 --- !u!223 &6840276650374845709 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 6580125126564940633, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
@@ -511,7 +507,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -583,7 +579,7 @@ PrefabInstance:
     - target: {fileID: 1353800750139129136, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
       propertyPath: warningPanel
       value: 
-      objectReference: {fileID: 6593742838578343171}
+      objectReference: {fileID: 0}
     - target: {fileID: 5507657793669707926, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
       propertyPath: m_Name
       value: ProblemsHolder
@@ -591,11 +587,11 @@ PrefabInstance:
     - target: {fileID: 6076313066550673698, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
       propertyPath: warningPanel
       value: 
-      objectReference: {fileID: 6593742838578343171}
+      objectReference: {fileID: 0}
     - target: {fileID: 8541268041764627670, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
       propertyPath: warningPanel
       value: 
-      objectReference: {fileID: 6593742838578343171}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

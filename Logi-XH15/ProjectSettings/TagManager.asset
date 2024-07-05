@@ -9,6 +9,7 @@ TagManager:
   - idInput
   - pswdInput
   - Selectable
+  - problemPanel
   layers:
   - Default
   - TransparentFX

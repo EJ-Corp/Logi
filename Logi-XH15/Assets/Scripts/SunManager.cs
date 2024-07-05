@@ -16,6 +16,9 @@ public class SunManager : MonoBehaviour
     [SerializeField] Vector3 flareYOffset;
     private bool canFire = true;
 
+    [SerializeField] GameManager gameManager;
+    [SerializeField] CameraShake cameraShakeScript;
+
     private static SunManager sun;
     public static SunManager Sun
     {
@@ -35,6 +38,9 @@ public class SunManager : MonoBehaviour
 
     void Start()
     {
+
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        cameraShakeScript = gameManager.mainCamera.GetComponent<CameraShake>();
         randomWait = UnityEngine.Random.Range(minWait, maxWait);
         MoveParticleEmitter();
     }
@@ -70,6 +76,7 @@ public class SunManager : MonoBehaviour
     {
         solarFlareParticleSystem.Play();
         Instantiate(solarFlarePrefab, transform.position + flareYOffset, Quaternion.LookRotation(playerLocation.position - this.transform.position));
+        cameraShakeScript.StartCameraShake();
         randomWait = UnityEngine.Random.Range(minWait, maxWait);
         MoveParticleEmitter();
         canFire = false;
