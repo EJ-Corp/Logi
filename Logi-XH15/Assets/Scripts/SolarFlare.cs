@@ -13,7 +13,6 @@ public class SolarFlare : MonoBehaviour
     void Start()
     {
         transform.Rotate(0, 180, 0);
-        BreakComputer();
     }
     void Update()
     {

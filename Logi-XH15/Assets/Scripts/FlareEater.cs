@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class FlareEater : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private LayerMask flareLayer;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerEnter(Collider other) {
+        GameObject collided = other.gameObject;
+
+        if(flareLayer.Contains(collided))
+        {
+            Debug.Log("Eat Flare");
+            collided.transform.GetComponent<SolarFlare>().BreakComputer();
+            Destroy(collided.gameObject);
+        }
     }
 }
