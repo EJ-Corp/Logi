@@ -13,6 +13,7 @@ public class SunManager : MonoBehaviour
     public int minWait = 10;
     public int maxWait = 30;
     public float targetedFlareDistance = 0.5f;
+    [SerializeField] Vector3 flareYOffset;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +39,7 @@ public class SunManager : MonoBehaviour
         yield return new WaitForSeconds(randomWait);
         solarFlareParticleSystem.Play();
         yield return new WaitForSeconds(1.5f);
-        Instantiate(solarFlarePrefab, transform.position, Quaternion.LookRotation(playerLocation.position - this.transform.position));
+        Instantiate(solarFlarePrefab, transform.position + flareYOffset, Quaternion.LookRotation(playerLocation.position - this.transform.position));
         randomWait = UnityEngine.Random.Range(minWait, maxWait);
         MoveParticleEmitter();
     }

@@ -25,7 +25,7 @@ public class SolarFlare : MonoBehaviour
 
         if(timeElapsed >= lifetime)
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
     }
 
