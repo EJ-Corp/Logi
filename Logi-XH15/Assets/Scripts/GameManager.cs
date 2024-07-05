@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        idInput.GetTextInput("helios");
         password = GeneratePassword();
         passwordNote.text = password;
     }
