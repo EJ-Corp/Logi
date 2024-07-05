@@ -6,6 +6,7 @@ public class InteractCompBreaker : Interactable
 {
     [SerializeField] private bool isOn = true;
     [SerializeField] private AudioClip[] switchSFX;
+    [SerializeField] private Animator animator;
 
     public override void OnFocus()
     {
@@ -16,13 +17,13 @@ public class InteractCompBreaker : Interactable
     {
         
         SFXManager.Instance.PlayRandomSFXClip(switchSFX, transform, 1f);
-
-        if(isOn) //Turning Computer Off
+        if (isOn) //Turning Computer Off
         {
             GameManager.Manager.ToggleComputer(true);
             isOn = false;
 
             //XAVIER add animation here from ON to OFF
+            animator.SetTrigger("Off");
 
 
         } else //Turning COmputer On
@@ -31,6 +32,7 @@ public class InteractCompBreaker : Interactable
             isOn = true;
 
             //XAVIER add animation here from OFF to ON
+            animator.SetTrigger("On");
         }
 
         
