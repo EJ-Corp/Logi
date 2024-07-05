@@ -197,4 +197,9 @@ public class MonitorScript : MonoBehaviour
         }
     }
 
+    public void BreakComputer()
+    {
+        loginScreen.SetActive(false);
+    }
+
 }

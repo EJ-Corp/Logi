@@ -51,6 +51,6 @@ public class SolarFlare : MonoBehaviour
 
     public void BreakComputer()
     {
-        
+        GameManager.Manager.BreakComputer();
     }
 }

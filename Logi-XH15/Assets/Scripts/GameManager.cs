@@ -86,4 +86,9 @@ public class GameManager : MonoBehaviour
     {
         return computerScreenFocus;
     }
+
+    public void BreakComputer()
+    {
+        computerScreenFocus.transform.GetComponent<MonitorScript>().BreakComputer();
+    }
 }
