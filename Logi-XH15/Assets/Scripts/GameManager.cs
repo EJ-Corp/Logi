@@ -18,11 +18,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Camera mainCamera;
     [SerializeField] public AudioListener mainListener;
     [SerializeField] public Camera pcCamera; 
-    [SerializeField] public AudioListener pcListener; 
-
+    [SerializeField] public AudioListener pcListener;
 
     //player objects
     [SerializeField] public PlayerController playerController;
+    [SerializeField] public Canvas playerCanvas;
 
     //computer objects
     [SerializeField] public ComputerFocusScript computerScreenFocus;
@@ -119,9 +119,13 @@ public class GameManager : MonoBehaviour
         if(computerState) //Computer is on so we turn it off
         {
             computerScreenFocus.transform.GetComponent<MonitorScript>().BreakComputer();
+            idInput.ResetInputResult();
+            pswdInput.ResetInputResult();
         } else //COmputer is off so we turn it on
         {
             computerScreenFocus.transform.GetComponent<MonitorScript>().FixComputer();
+            idInput.ResetInputResult();
+            pswdInput.ResetInputResult();
         }
         
     }
