@@ -43,6 +43,13 @@ public class GameManager : MonoBehaviour
     [Header("Problems")]
     public SwitchProblem switches;
 
+    //Password Generator
+    [Header("Password Generation")]
+    [SerializeField] private int length = 7;
+    [SerializeField] private int max_length = 8;
+    [SerializeField] private int min_length = 4;
+    [SerializeField] private bool randomLength = false;
+
     void Awake()
     {
         if(manager == null)
@@ -85,5 +92,24 @@ public class GameManager : MonoBehaviour
     public ComputerFocusScript ShareComputerFocusScript()
     {
         return computerScreenFocus;
+    }
+
+    public string GeneratePassword()
+    {
+        if (randomLength)
+        {
+            length = Random.Range(min_length, max_length);
+        }
+
+        string allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        string password = "";
+
+        for (int i = 0; i < length; i++)
+        {
+            password += allChars[Random.Range(0, allChars.Length)];
+        }
+
+        return password;
     }
 }
