@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuCameraAnimator : MonoBehaviour
 {
@@ -51,6 +52,11 @@ public class MenuCameraAnimator : MonoBehaviour
         #else
             Application.Quit();
         #endif
+    }
+
+    public void LoadScene()
+    {   
+        SceneManager.LoadScene("Level2");
     }
 
     void Update()
