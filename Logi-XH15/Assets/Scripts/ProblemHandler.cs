@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ProblemHandler : MonoBehaviour
 {
-    [SerializeField] private GameObject warningPanel;
+    [SerializeField] private Image warningPanel;
 
     [SerializeField] private float flashInterval;
     [SerializeField] private float flashCooldown;
@@ -23,7 +24,8 @@ public class ProblemHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        warningPanel.SetActive(false);
+        warningPanel = GameManager.Manager.problemPanel;
+        warningPanel.enabled = false;
     }
 
     // Update is called once per frame
@@ -54,12 +56,12 @@ public class ProblemHandler : MonoBehaviour
     {
         if(active)
         {
-            warningPanel.SetActive(false);
+            warningPanel.enabled = false;
             active = false;
             flashCooldown = flashInterval;
         } else 
         {
-            warningPanel.SetActive(true);
+            warningPanel.enabled = true;
             active = true;
             flashCooldown = flashInterval;
             
@@ -78,7 +80,7 @@ public class ProblemHandler : MonoBehaviour
 
     public void NoProblems()
     {
-        warningPanel.SetActive(false);
+        warningPanel.enabled = false;
         currentState = WarningState.diabled;
         active = false;
     }

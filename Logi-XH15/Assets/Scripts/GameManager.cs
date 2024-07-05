@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+
 public class GameManager : MonoBehaviour
 {
 
@@ -29,6 +31,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Canvas monitorBoundary;
     [SerializeField] public IDandPasswordInputScript idInput;
     [SerializeField] public IDandPasswordInputScript pswdInput;
+    [SerializeField] public Image problemPanel;
 
     enum GameState
     {
@@ -63,6 +66,7 @@ public class GameManager : MonoBehaviour
         computerScreenFocus = GameObject.FindGameObjectWithTag("PCScreen").GetComponent<ComputerFocusScript>();
         idInput = GameObject.FindGameObjectWithTag("idInput").GetComponent<IDandPasswordInputScript>();
         pswdInput = GameObject.FindGameObjectWithTag("pswdInput").GetComponent<IDandPasswordInputScript>();
+        problemPanel = GameObject.FindGameObjectWithTag("problemPanel").GetComponent<Image>();
         gameState = GameState.mainView;
 
     }
