@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5528003092088883989}
   - component: {fileID: 3640337121958505230}
   - component: {fileID: 5660337474612774038}
-  - component: {fileID: 7582784083454438282}
   m_Layer: 0
   m_Name: Main Screen
   m_TagString: PCScreen
@@ -155,6 +154,7 @@ MonoBehaviour:
   pswdInputValue: 
   desktopScreen: {fileID: 4909353778477306399}
   loginScreen: {fileID: 1092279905117981226}
+  powerSupply: {fileID: 4706544164991944959}
   maxAnnoy: 3
   activeAnnoy: 0
   amountOfAnnoyOptions: 2
@@ -165,18 +165,6 @@ MonoBehaviour:
   randomFactBubble: {fileID: 490484484383809632, guid: 6cbd9bd5339e2b44780424066b34215f, type: 3}
   flirtBubble: {fileID: 850607240268304017, guid: 55f1b892dd44e794095aa97541592a4a, type: 3}
   activeBubbles: []
---- !u!114 &7582784083454438282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8579214578173781399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06a421cf9363a324eb879372420e1a49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8114616530578661737
 PrefabInstance:
   m_ObjectHideFlags: 0

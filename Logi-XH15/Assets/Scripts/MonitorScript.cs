@@ -18,8 +18,10 @@ public class MonitorScript : MonoBehaviour
     [SerializeField] string idInputValue;
     [SerializeField] string pswdInputValue;
 
+    [Header("Screens & Switch")]
     [SerializeField] GameObject desktopScreen;
     [SerializeField] GameObject loginScreen;
+    [SerializeField] private InteractCompBreaker powerSupply;
 
     [Header("Annoying Bubbles")]
     [SerializeField] private int maxAnnoy;
@@ -200,6 +202,12 @@ public class MonitorScript : MonoBehaviour
     public void BreakComputer()
     {
         loginScreen.SetActive(false);
+        powerSupply.FlareBreak();
+    }
+
+    public void FixComputer()
+    {
+        loginScreen.SetActive(true);
     }
 
 }

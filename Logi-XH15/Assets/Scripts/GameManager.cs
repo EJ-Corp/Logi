@@ -87,8 +87,15 @@ public class GameManager : MonoBehaviour
         return computerScreenFocus;
     }
 
-    public void BreakComputer()
+    public void ToggleComputer(bool computerState)
     {
-        computerScreenFocus.transform.GetComponent<MonitorScript>().BreakComputer();
+        if(computerState) //Computer is on so we turn it off
+        {
+            computerScreenFocus.transform.GetComponent<MonitorScript>().BreakComputer();
+        } else //COmputer is off so we turn it on
+        {
+            computerScreenFocus.transform.GetComponent<MonitorScript>().FixComputer();
+        }
+        
     }
 }

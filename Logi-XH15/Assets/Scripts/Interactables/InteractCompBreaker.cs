@@ -14,8 +14,24 @@ public class InteractCompBreaker : Interactable
 
     public override void OnInteract()
     {
-        isOn = !isOn;
+        
         SFXManager.Instance.PlayRandomSFXClip(switchSFX, transform, 1f);
+
+        if(isOn) //Turning Computer Off
+        {
+            GameManager.Manager.ToggleComputer(true);
+
+            //XAVIER add animation here from ON to OFF
+
+
+        } else //Turning COmputer On
+        {
+            GameManager.Manager.ToggleComputer(false);
+
+            //XAVIER add animation here from OFF to ON
+        }
+
+        isOn = !isOn;
     }
 
     public override void OnLoseFocus()
@@ -24,14 +40,11 @@ public class InteractCompBreaker : Interactable
     }
 
     // Start is called before the first frame update
-    void Start()
+    public void FlareBreak()
     {
-        
-    }
+        isOn = false;
 
-    // Update is called once per frame
-    void Update()
-    {
+        //XAVIER add animation here from ON to OFF
         
     }
 }
