@@ -13,7 +13,6 @@ public class SolarFlare : MonoBehaviour
     void Start()
     {
         transform.Rotate(0, 180, 0);
-        BreakComputer();
     }
     void Update()
     {
@@ -25,7 +24,7 @@ public class SolarFlare : MonoBehaviour
 
         if(timeElapsed >= lifetime)
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
     }
 
@@ -51,6 +50,6 @@ public class SolarFlare : MonoBehaviour
 
     public void BreakComputer()
     {
-        
+        GameManager.Manager.ToggleComputer(true);
     }
 }

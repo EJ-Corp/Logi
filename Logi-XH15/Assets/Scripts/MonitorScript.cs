@@ -17,9 +17,12 @@ public class MonitorScript : MonoBehaviour
     [SerializeField] string correctPSWD = "1234";
     [SerializeField] string idInputValue;
     [SerializeField] string pswdInputValue;
+    private bool isUsable = true;
 
+    [Header("Screens & Switch")]
     [SerializeField] GameObject desktopScreen;
     [SerializeField] GameObject loginScreen;
+    [SerializeField] private InteractCompBreaker powerSupply;
 
     [Header("Annoying Bubbles")]
     [SerializeField] private int maxAnnoy;
@@ -56,9 +59,13 @@ public class MonitorScript : MonoBehaviour
         mousePos = Input.mousePosition;
         mouseBounds.GetComponent<RectTransform>().GetWorldCorners(worldCorners);
 
-        idInputValue = gameManager.idInput.GetInputResult();
-        pswdInputValue = gameManager.pswdInput.GetInputResult();
-        CheckIDAndPassword();
+        if(isUsable)
+        {
+            idInputValue = gameManager.idInput.GetInputResult();
+            pswdInputValue = gameManager.pswdInput.GetInputResult();
+            CheckIDAndPassword();
+        }
+        
 
 
         //We are getting the same 4 corners repeadetly every fram --- IS THIS NEEDED??? NOT JUST ONCE?? BAD CODE.
@@ -195,6 +202,25 @@ public class MonitorScript : MonoBehaviour
             Destroy(activeBubbles[switchBubbleIdx].gameObject);
             activeBubbles.RemoveAt(switchBubbleIdx);
         }
+    }
+
+    public void BreakComputer()
+    {
+        isUsable = false;
+        idInputValue = null;
+        pswdInputValue = null;
+        loginScreen.SetActive(false);
+        desktopScreen.SetActive(false);
+        powerSupply.FlareBreak();
+    }
+
+    public void FixComputer()
+    {
+        isUsable = true;
+        idInputValue = null;
+        pswdInputValue = null;
+        loginScreen.SetActive(true);
+        desktopScreen.SetActive(false);
     }
 
 }

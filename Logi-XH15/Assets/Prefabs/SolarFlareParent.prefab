@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1635321683533288892}
   - component: {fileID: 700740775259121624}
   - component: {fileID: 5790960884383613466}
-  m_Layer: 0
+  - component: {fileID: 3726945988795984629}
+  m_Layer: 7
   m_Name: SolarFlareParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.42, y: 0, z: -1.304}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 30, y: 15, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4802868520925448612}
@@ -47,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af327ca17bca74d75abdd4b90b0a427e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
+  speed: 1
   lifetime: 10
   timeElapsed: 0
   opacity: 1
@@ -68,7 +69,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -170,6 +171,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!54 &3726945988795984629
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997127103868728048}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7779939658824006336
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +209,7 @@ GameObject:
   - component: {fileID: 4802868520925448612}
   - component: {fileID: 5199061633395756924}
   - component: {fileID: 291998436031495627}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Solar Flare Shot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
