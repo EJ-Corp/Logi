@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class GameManager : MonoBehaviour
 {
 
@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int max_length = 8;
     [SerializeField] private int min_length = 4;
     [SerializeField] private bool randomLength = false;
+    [SerializeField] private TMP_Text passwordNote;
 
     void Awake()
     {
