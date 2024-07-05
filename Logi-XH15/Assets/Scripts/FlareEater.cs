@@ -14,6 +14,7 @@ public class FlareEater : MonoBehaviour
             Debug.Log("Eat Flare");
             collided.transform.GetComponent<SolarFlare>().BreakComputer();
             Destroy(collided.gameObject);
+            SunManager.Sun.ResetFlare();
         }
     }
 }
