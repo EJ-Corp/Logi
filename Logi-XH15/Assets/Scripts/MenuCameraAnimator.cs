@@ -14,19 +14,10 @@ public class MenuCameraAnimator : MonoBehaviour
     [SerializeField] GameObject home;
     [SerializeField] GameObject options;
     [SerializeField] GameObject credits;
-    private bool isHomeTransition;
-    private bool isOptionsTransition;
-    private bool isCreditsTransition;
-    [SerializeField] private float fadeoutSpeed;
-
-    enum MenuState
-    {
-        homeMenu,
-        optionMenu,
-        creditsMenu
-    };
-
-    [SerializeField] private MenuState menuState;
+    public bool isHomeTransition;
+    public bool isOptionsTransition;
+    public bool isCreditsTransition;
+    public float fadeoutSpeed = 4;
 
     // Start is called before the first frame update
     void Start()
@@ -35,101 +26,22 @@ public class MenuCameraAnimator : MonoBehaviour
         options.SetActive(false);
         credits.SetActive(false);
     }
-
-    void Update()
-    {
-        if (isHomeTransition)
-        {
-            menuState = MenuState.homeMenu;
-        }
-        else if (isOptionsTransition)
-        {
-            menuState = MenuState.optionMenu;
-        }
-        else if (isCreditsTransition)
-        {
-            menuState = MenuState.creditsMenu;
-        }
-
-        switch(menuState)
-        {
-            case MenuState.homeMenu:
-
-                if(homeCanvasGroup.alpha <= 1)
-                {
-                    homeCanvasGroup.alpha += Time.deltaTime;
-                    creditsCanvasGroup.alpha -= Time.deltaTime * fadeoutSpeed;
-                    optionsCanvasGroup.alpha -= Time.deltaTime * fadeoutSpeed;
-
-                    if(homeCanvasGroup.alpha >= 1)
-                    {
-                        isHomeTransition = false;
-                        options.SetActive(false);
-                        credits.SetActive(false);
-                    }
-                } 
-            break;
-
-            case MenuState.optionMenu:
-
-                if(optionsCanvasGroup.alpha <= 1)
-                {
-                    optionsCanvasGroup.alpha += Time.deltaTime;
-                    homeCanvasGroup.alpha -= Time.deltaTime * fadeoutSpeed;
-
-                    if(optionsCanvasGroup.alpha >= 1)
-                    {
-                        isOptionsTransition = false;
-                        home.SetActive(false);
-                    }
-                }
-            break;
-
-            case MenuState.creditsMenu:
-
-                if(creditsCanvasGroup.alpha <= 1)
-                {
-                    creditsCanvasGroup.alpha += Time.deltaTime;
-                    homeCanvasGroup.alpha -= Time.deltaTime * fadeoutSpeed;
-
-                    if(creditsCanvasGroup.alpha >= 1)
-                    {
-                        isCreditsTransition = false;
-                        home.SetActive(false);
-                    }
-                }
-            break;
-        }
-    }
-
     public void ToOptions()
     {
         cameraAnimator.SetTrigger("toOptions");
-
-        isHomeTransition = false;
         isOptionsTransition = true;
-        isCreditsTransition = false;
-
         options.SetActive(true);
     }
     public void ToCredits()
     {
         cameraAnimator.SetTrigger("toCredits");
-
-        isHomeTransition = false;
-        isOptionsTransition = false;
         isCreditsTransition = true;
-
         credits.SetActive(true);
     }
     public void ToHome()
     {
         cameraAnimator.SetTrigger("toHome");
-
         isHomeTransition = true;
-        isOptionsTransition = false;
-        isCreditsTransition = false;
-
         home.SetActive(true);
     }
 
@@ -144,17 +56,15 @@ public class MenuCameraAnimator : MonoBehaviour
 
     public void LoadScene()
     {   
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Level2");
     }
 
-    /*
-    void OldUpdate()
+    void Update()
     {
         if(isOptionsTransition && optionsCanvasGroup.alpha <= 1)
         {
             optionsCanvasGroup.alpha += Time.deltaTime;
             homeCanvasGroup.alpha -= Time.deltaTime * fadeoutSpeed;
-
             if(optionsCanvasGroup.alpha >= 1)
             {
                 isOptionsTransition = false;
@@ -165,7 +75,6 @@ public class MenuCameraAnimator : MonoBehaviour
         {
             creditsCanvasGroup.alpha += Time.deltaTime;
             homeCanvasGroup.alpha -= Time.deltaTime * fadeoutSpeed;
-
             if(creditsCanvasGroup.alpha >= 1)
             {
                 isCreditsTransition = false;
@@ -177,7 +86,6 @@ public class MenuCameraAnimator : MonoBehaviour
             homeCanvasGroup.alpha += Time.deltaTime;
             creditsCanvasGroup.alpha -= Time.deltaTime * fadeoutSpeed;
             optionsCanvasGroup.alpha -= Time.deltaTime * fadeoutSpeed;
-
             if(homeCanvasGroup.alpha >= 1)
             {
                 isHomeTransition = false;
@@ -186,5 +94,4 @@ public class MenuCameraAnimator : MonoBehaviour
             }
         }
     }
-    */
 }

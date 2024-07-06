@@ -23,25 +23,21 @@ public class SFXManager : MonoBehaviour
 
     public void PlaySFXClip(AudioClip audioClip, Transform spawnTransform, float volume)
     {
-        if(audioClip != null)
-        {
-            //Spawn in gameObject
-            AudioSource audioSource = Instantiate(sfxObject, spawnTransform.position, Quaternion.identity);
+        //Spawn in gameObject
+        AudioSource audioSource = Instantiate(sfxObject, spawnTransform.position, Quaternion.identity);
 
-            //Load Audio Clip
-            audioSource.clip = audioClip;
+        //Load Audio Clip
+        audioSource.clip = audioClip;
 
-            //Assign Volume
-            audioSource.volume = volume;
+        //Assign Volume
+        audioSource.volume = volume;
 
-            //Play the clip
-            audioSource.Play();
+        //Play the clip
+        audioSource.Play();
 
-            //Destroy the gameObject
-            float clipLength = audioSource.clip.length;
-            Destroy(audioSource.gameObject, clipLength);
-        }
-        
+        //Destroy the gameObject
+        float clipLength = audioSource.clip.length;
+        Destroy(audioSource.gameObject, clipLength);
     }
 
     public void PlayRandomSFXClip(AudioClip[] audioClip, Transform spawnTransform, float volume)

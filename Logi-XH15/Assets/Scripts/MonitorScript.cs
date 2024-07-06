@@ -13,16 +13,13 @@ public class MonitorScript : MonoBehaviour
     private Vector3[] worldCorners = new Vector3[4];
     [SerializeField] private Vector3[] screenCorners = new Vector3[4];
 
-    [SerializeField] private string correctID;
-    [SerializeField] private string correctPSWD;
+    [SerializeField] string correctID = "Edgar";
+    [SerializeField] string correctPSWD = "1234";
     [SerializeField] string idInputValue;
     [SerializeField] string pswdInputValue;
-    private bool isUsable = true;
 
-    [Header("Screens & Switch")]
     [SerializeField] GameObject desktopScreen;
     [SerializeField] GameObject loginScreen;
-    [SerializeField] private InteractCompBreaker powerSupply;
 
     [Header("Annoying Bubbles")]
     [SerializeField] private int maxAnnoy;
@@ -40,6 +37,9 @@ public class MonitorScript : MonoBehaviour
 
     private int buttonBubbleIdx;
     private int switchBubbleIdx;
+    
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,23 +48,17 @@ public class MonitorScript : MonoBehaviour
         mouseBounds = gameManager.monitorBoundary;
         mouse = Mouse.current;
         desktopScreen.SetActive(false);
-        correctID = "helios";
     }
 
     // Update is called once per frame
     void Update()
     {
-        correctPSWD = gameManager.password;
         mousePos = Input.mousePosition;
         mouseBounds.GetComponent<RectTransform>().GetWorldCorners(worldCorners);
 
-        if(isUsable)
-        {
-            idInputValue = gameManager.idInput.GetInputResult();
-            pswdInputValue = gameManager.pswdInput.GetInputResult();
-            CheckIDAndPassword();
-        }
-        
+        idInputValue = gameManager.idInput.GetInputResult();
+        pswdInputValue = gameManager.pswdInput.GetInputResult();
+        CheckIDAndPassword();
 
 
         //We are getting the same 4 corners repeadetly every fram --- IS THIS NEEDED??? NOT JUST ONCE?? BAD CODE.
@@ -75,10 +69,7 @@ public class MonitorScript : MonoBehaviour
 
         if (gameManager.inPCView)
         {
-            gameManager.playerCanvas.enabled = false;
             RestrictMouseToMonitorBounds();
-        } else {
-            gameManager.playerCanvas.enabled = true;
         }
 
         if(annoyCountdown > 0 && activeAnnoy < maxAnnoy)
@@ -193,7 +184,7 @@ public class MonitorScript : MonoBehaviour
         }
     }
 
-    public void FixedProblemOnMonitor(int problemID)
+    public void FixedProblem(int problemID)
     {
         if(problemID == 11) //Fixed Buttons
         {
@@ -204,21 +195,6 @@ public class MonitorScript : MonoBehaviour
             Destroy(activeBubbles[switchBubbleIdx].gameObject);
             activeBubbles.RemoveAt(switchBubbleIdx);
         }
-    }
-
-    public void BreakComputer()
-    {
-        isUsable = false;
-        loginScreen.SetActive(false);
-        desktopScreen.SetActive(false);
-        powerSupply.FlareBreak();
-    }
-
-    public void FixComputer()
-    {
-        isUsable = true;
-        loginScreen.SetActive(true);
-        desktopScreen.SetActive(false);
     }
 
 }

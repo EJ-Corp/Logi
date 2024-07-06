@@ -46,12 +46,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _Animation_Speed: 0.2
-    - _Intensity: 6.25
-    - _Opacity: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Colour_Tint: {r: 0.6603774, g: 0.07278948, b: 0, a: 0}
     - _Flare_Shot_Colour: {r: 1, g: 0.2117647, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &2381593210516460037

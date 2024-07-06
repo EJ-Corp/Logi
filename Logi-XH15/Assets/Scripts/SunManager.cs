@@ -9,68 +9,16 @@ public class SunManager : MonoBehaviour
     [SerializeField] private GameObject solarFlarePrefab;
     [SerializeField] private Transform playerLocation;
     private Vector3 targetedParticlePosition;
-    [SerializeField] private float randomWait;
-    public float minWait = 10;
-    public float maxWait = 30;
+    private int randomWait;
+    public int minWait = 10;
+    public int maxWait = 30;
     public float targetedFlareDistance = 0.5f;
-    [SerializeField] Vector3 flareYOffset;
-    public bool canFire = true;
-    public float bufferTime = 0;
-    private bool bufferState = false;
 
-    [SerializeField] GameManager gameManager;
-    [SerializeField] CameraShake cameraShakeScript;
-
-    private static SunManager sun;
-    public static SunManager Sun
-    {
-        get
-        {
-            return sun;
-        }
-    }
-
-    void Awake()
-    {
-        if(sun == null)
-        {
-            sun = this;
-        }
-    }
-
+    // Start is called before the first frame update
     void Start()
     {
-
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        cameraShakeScript = gameManager.mainCamera.GetComponent<CameraShake>();
         randomWait = UnityEngine.Random.Range(minWait, maxWait);
         MoveParticleEmitter();
-    }
-
-    void Update()
-    {
-        if (bufferTime > 0)
-        {
-            bufferTime -= Time.deltaTime;
-        }
-        else if (bufferTime <= 0 && bufferState == true)
-        {
-            canFire = true;
-            bufferState = false;
-        }
-
-        if (canFire)
-        {
-            if(randomWait > 0)
-            {
-                randomWait -= Time.deltaTime;
-            }
-
-            if(randomWait <= 0)
-            {
-                FireSolarFlare();
-            }
-        }
     }
 
     void MoveParticleEmitter()
@@ -82,28 +30,16 @@ public class SunManager : MonoBehaviour
         solarFlareParticleSystem.gameObject.transform.position = targetedParticlePosition;
         solarFlareParticleSystem.gameObject.transform.LookAt(playerLocation.transform.position);
         solarFlareParticleSystem.transform.Rotate(180, 0, 0);
+        StartCoroutine(FireSolarFlare());
     }
 
-    public void FireSolarFlare()
+    private IEnumerator FireSolarFlare()
     {
-        bufferState = false;
+        yield return new WaitForSeconds(randomWait);
         solarFlareParticleSystem.Play();
-        Instantiate(solarFlarePrefab, transform.position + flareYOffset, Quaternion.LookRotation(playerLocation.position - this.transform.position));
-        cameraShakeScript.StartCameraShake();
+        yield return new WaitForSeconds(1.5f);
+        Instantiate(solarFlarePrefab, transform.position, Quaternion.LookRotation(playerLocation.position - this.transform.position));
         randomWait = UnityEngine.Random.Range(minWait, maxWait);
         MoveParticleEmitter();
-        canFire = false;
-    }
-
-    public void ResetFlare()
-    {
-        canFire = true;
-    }
-
-    public void BufferFlare()
-    {
-        bufferState = true;
-        canFire = false;
-        bufferTime = UnityEngine.Random.Range(minWait, maxWait);
     }
 }

@@ -8,8 +8,6 @@ public class InteractButton : Interactable
     [SerializeField] private ButtonProblem problem;
     [SerializeField] private bool canFix = false;
     [SerializeField] private AudioClip[] buttonSFX;
-    [SerializeField] private AudioClip[] correctSFX;
-    [SerializeField] private AudioClip[] wrongSFX;
     private ProblemHandler warningSign; 
 
     void Start()
@@ -23,13 +21,11 @@ public class InteractButton : Interactable
         SFXManager.Instance.PlayRandomSFXClip(buttonSFX, transform, 1f);
         if(canFix)
         {
-            FixProblemOnInteractButton();
-            SFXManager.Instance.PlayRandomSFXClip(correctSFX, transform, 1f);
+            FixProblem();
         } else
         {
             //Show it was the wrong button -> maybe drop data collection rate and have a wrong sound + camera shake
             Debug.Log("You got the wrong button");
-            SFXManager.Instance.PlayRandomSFXClip(wrongSFX, transform, 1f);
         }
         
     }
@@ -42,10 +38,10 @@ public class InteractButton : Interactable
         
     }
 
-    public void FixProblemOnInteractButton()
+    public void FixProblem()
     {
         Debug.Log("Fixed the problem");
-        warningSign.FixProblemOnHandler(11);
+        warningSign.FixProblem(11);
         canFix = false;
     }
 

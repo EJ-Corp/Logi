@@ -45,21 +45,19 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
         float currentSpeedX = canMove ? walkSpeed * Input.GetAxis("Vertical") : 0;
-        float currentSpeedZ = canMove ? walkSpeed * Input.GetAxis("Horizontal") : 0;
+        float currentSpeedY = canMove ? walkSpeed * Input.GetAxis("Horizontal") : 0;
 
-        moveDirection.y = -0.1f;
-        moveDirection = (forward * currentSpeedX) + (right * currentSpeedZ);
+        float movementDirectionY = moveDirection.y;
+        moveDirection = (forward * currentSpeedX) + (right * currentSpeedY);
 
         characterController.Move(moveDirection * Time.deltaTime);
 
         if(canMove)
         {
-
             Cursor.lockState = CursorLockMode.Locked;
 
             rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
