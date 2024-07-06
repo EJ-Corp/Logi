@@ -922,14 +922,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3503947036109650812, guid: 80e4b3b981636427c856589339f92e67, type: 3}
-      propertyPath: maxWait
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3503947036109650812, guid: 80e4b3b981636427c856589339f92e67, type: 3}
-      propertyPath: minWait
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3503947036109650812, guid: 80e4b3b981636427c856589339f92e67, type: 3}
       propertyPath: playerLocation
       value: 
       objectReference: {fileID: 4880433294490561435}
