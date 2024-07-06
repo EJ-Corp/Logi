@@ -31,7 +31,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Canvas monitorBoundary;
     [SerializeField] public IDandPasswordInputScript idInput;
     [SerializeField] public IDandPasswordInputScript pswdInput;
+
+    //problem objects
     [SerializeField] public Image problemPanel;
+    [SerializeField] public Light[] warningLights;
 
     enum GameState
     {
@@ -63,10 +66,10 @@ public class GameManager : MonoBehaviour
             manager = this;
         }
 
-        computerScreenFocus = GameObject.FindGameObjectWithTag("PCScreen").GetComponent<ComputerFocusScript>();
-        idInput = GameObject.FindGameObjectWithTag("idInput").GetComponent<IDandPasswordInputScript>();
-        pswdInput = GameObject.FindGameObjectWithTag("pswdInput").GetComponent<IDandPasswordInputScript>();
-        problemPanel = GameObject.FindGameObjectWithTag("problemPanel").GetComponent<Image>();
+        // computerScreenFocus = GameObject.FindGameObjectWithTag("PCScreen").GetComponent<ComputerFocusScript>();
+        // idInput = GameObject.FindGameObjectWithTag("idInput").GetComponent<IDandPasswordInputScript>();
+        // pswdInput = GameObject.FindGameObjectWithTag("pswdInput").GetComponent<IDandPasswordInputScript>();
+        // problemPanel = GameObject.FindGameObjectWithTag("problemPanel").GetComponent<Image>();
         gameState = GameState.mainView;
 
     }

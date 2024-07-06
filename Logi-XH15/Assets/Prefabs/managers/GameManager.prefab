@@ -374,6 +374,11 @@ MonoBehaviour:
   idInput: {fileID: 0}
   pswdInput: {fileID: 0}
   problemPanel: {fileID: 0}
+  warningLights:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   gameState: 0
   inMainView: 1
   inPCView: 0
