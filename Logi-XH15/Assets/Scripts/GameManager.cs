@@ -51,10 +51,10 @@ public class GameManager : MonoBehaviour
 
     //Password Generator
     [Header("Password Generation")]
-    [SerializeField] private int length = 7;
-    [SerializeField] private int max_length = 8;
-    [SerializeField] private int min_length = 4;
-    [SerializeField] private bool randomLength = false;
+    [SerializeField] private int length;
+    [SerializeField] private int max_length;
+    [SerializeField] private int min_length;
+    [SerializeField] private bool randomLength;
     [SerializeField] private TMP_Text passwordNote;
 
     public string password;
@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour
             length = Random.Range(min_length, max_length);
         }
 
-        string allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        string allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; //"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
         string password = "";
 

@@ -386,7 +386,7 @@ MonoBehaviour:
   length: 6
   max_length: 8
   min_length: 4
-  randomLength: 0
+  randomLength: 1
   passwordNote: {fileID: 7765970457598252642}
   password: 
 --- !u!1001 &413424823675084372
