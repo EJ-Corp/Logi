@@ -1,0 +1,99 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ProblemTimer : MonoBehaviour
+{
+    [SerializeField] private bool debug = false;
+    [SerializeField] private int numberOfProblems;
+    [SerializeField] private float nextProblemCountDown;
+    [SerializeField] private int activeProblems = 0; 
+
+    [SerializeField] private ButtonProblem buttonProblem;
+    [SerializeField] private SwitchProblem switchProblem;
+
+    [SerializeField] private AudioClip alarmSFX;
+    [SerializeField] private ProblemHandler warningPanel;
+
+    [SerializeField] private List<int> problemIDPool;   //IDs: Buttons - 11, Switches = 12
+
+    private MonitorScript computerScreen;
+
+    void Start()
+    {
+        computerScreen = GameObject.FindGameObjectWithTag("PCScreen").transform.GetComponent<MonitorScript>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(activeProblems < numberOfProblems && !debug)
+        {
+            if(nextProblemCountDown > 0)
+            {
+                nextProblemCountDown -= Time.deltaTime;
+            }
+
+            if(nextProblemCountDown <= 0)
+            {
+                StartProblem();
+            }
+        }
+
+        if (activeProblems < 0)
+        {
+            activeProblems = 0;
+        }
+    }
+
+    public void StartProblem()
+    {
+        if(activeProblems == 0)
+        {
+            warningPanel.StartWarning();
+        }
+        int randomProblem = Random.Range(0, problemIDPool.Count);
+
+        int chosenProblemID = problemIDPool[randomProblem];
+
+        SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 0.75f);
+
+        if(chosenProblemID == 11) //Chose Buttons (ID = 11)
+        {
+            buttonProblem.ActivateProblem();
+            activeProblems += 1;
+            problemIDPool.RemoveAt(randomProblem);
+
+            //Spawn Speech bubble
+            computerScreen.SpawnProblemFact(chosenProblemID);
+            
+        } else if(chosenProblemID == 12) //Chose Switched (ID = 12)
+        {
+            switchProblem.ActivateProblem();
+            activeProblems += 1;
+            problemIDPool.RemoveAt(randomProblem);
+
+            //Spawn Speech bubble
+            computerScreen.SpawnProblemFact(chosenProblemID);
+        }
+
+        ResetCountdown();
+    }
+
+    public void ResetCountdown()
+    {
+        nextProblemCountDown = Random.Range(10.0f, 15.0f);
+    }
+
+    public void FixedProblemOnTimer(int IDFixed)
+    {
+        activeProblems -= 1;
+        problemIDPool.Add(IDFixed);
+        computerScreen.FixedProblemOnMonitor(IDFixed);
+
+        if(activeProblems <= 0)
+        {
+            warningPanel.NoProblems();
+        }
+    }
+}

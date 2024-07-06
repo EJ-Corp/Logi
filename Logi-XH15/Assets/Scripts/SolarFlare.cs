@@ -24,7 +24,7 @@ public class SolarFlare : MonoBehaviour
 
         if(timeElapsed >= lifetime)
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
     }
 
@@ -46,5 +46,10 @@ public class SolarFlare : MonoBehaviour
 
         // Convert back to linear scale
         return Mathf.Pow(10, logFrequency);
+    }
+
+    public void BreakComputer()
+    {
+        GameManager.Manager.ToggleComputer(true);
     }
 }

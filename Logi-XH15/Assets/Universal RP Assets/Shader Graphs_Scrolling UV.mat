@@ -45,7 +45,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Blend: 1.5
+    - _Blend: 1.97
+    - _Brightness: -7.79
+    - _Intensity: 14.67
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Rotation_Speed_1: 1

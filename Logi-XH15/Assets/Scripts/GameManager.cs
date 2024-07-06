@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,17 +20,25 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Camera mainCamera;
     [SerializeField] public AudioListener mainListener;
     [SerializeField] public Camera pcCamera; 
-    [SerializeField] public AudioListener pcListener; 
-
+    [SerializeField] public AudioListener pcListener;
 
     //player objects
     [SerializeField] public PlayerController playerController;
+    [SerializeField] public Canvas playerCanvas;
 
     //computer objects
+    [SerializeField] public MonitorScript computerMonitor;
     [SerializeField] public ComputerFocusScript computerScreenFocus;
     [SerializeField] public Canvas monitorBoundary;
     [SerializeField] public IDandPasswordInputScript idInput;
     [SerializeField] public IDandPasswordInputScript pswdInput;
+
+    //problem objects
+    [SerializeField] public Image problemPanel;
+    [SerializeField] public Light[] warningLights;
+
+    //Sun objects
+    [SerializeField] public SunManager sumManager;
 
     enum GameState
     {
@@ -43,6 +53,18 @@ public class GameManager : MonoBehaviour
     [Header("Problems")]
     public SwitchProblem switches;
 
+    //Password Generator
+    [Header("Password Generation")]
+    [SerializeField] private int length;
+    [SerializeField] private int max_length;
+    [SerializeField] private int min_length;
+    [SerializeField] private bool randomLength;
+    [SerializeField] private TMP_Text passwordNote;
+
+    public string password;
+
+    public bool computerState = false;
+
     void Awake()
     {
         if(manager == null)
@@ -50,10 +72,19 @@ public class GameManager : MonoBehaviour
             manager = this;
         }
 
-        computerScreenFocus = GameObject.FindGameObjectWithTag("PCScreen").GetComponent<ComputerFocusScript>();
-        idInput = GameObject.FindGameObjectWithTag("idInput").GetComponent<IDandPasswordInputScript>();
-        pswdInput = GameObject.FindGameObjectWithTag("pswdInput").GetComponent<IDandPasswordInputScript>();
+        // computerScreenFocus = GameObject.FindGameObjectWithTag("PCScreen").GetComponent<ComputerFocusScript>();
+        // idInput = GameObject.FindGameObjectWithTag("idInput").GetComponent<IDandPasswordInputScript>();
+        // pswdInput = GameObject.FindGameObjectWithTag("pswdInput").GetComponent<IDandPasswordInputScript>();
+        // problemPanel = GameObject.FindGameObjectWithTag("problemPanel").GetComponent<Image>();
         gameState = GameState.mainView;
+
+    }
+
+    void Start()
+    {
+        idInput.GetTextInput("helios");
+        password = GeneratePassword();
+        passwordNote.text = password;
     }
 
     void Update()
@@ -85,5 +116,47 @@ public class GameManager : MonoBehaviour
     public ComputerFocusScript ShareComputerFocusScript()
     {
         return computerScreenFocus;
+    }
+
+    public string GeneratePassword()
+    {
+        if (randomLength)
+        {
+            length = Random.Range(min_length, max_length);
+        }
+
+        string allChars = "abcdefghijklmnopqrstuvwxyz0123456789";
+       // string allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+       // string allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        string password = "";
+
+        for (int i = 0; i < length; i++)
+        {
+            password += allChars[Random.Range(0, allChars.Length)];
+        }
+
+        return password;
+    }
+    
+    public void ToggleComputer(bool computerState)
+    {
+        if(computerState) //Computer is on so we turn it off
+        {
+            computerScreenFocus.transform.GetComponent<MonitorScript>().BreakComputer();
+            idInput.ResetInputResult();
+            pswdInput.ResetInputResult();
+            this.computerState = false;
+        } else //COmputer is off so we turn it on
+        {
+            this.computerState = true;
+            sumManager.BufferFlare();
+            computerScreenFocus.transform.GetComponent<MonitorScript>().FixComputer();
+            idInput.ResetInputResult();
+            pswdInput.ResetInputResult();
+            password = GeneratePassword();
+            passwordNote.text = password;
+        }
+        
     }
 }
