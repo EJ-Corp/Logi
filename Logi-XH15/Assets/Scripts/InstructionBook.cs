@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class InstructionBook : MonoBehaviour
+public class InstructionBook : Interactable
 {
     [TextArea(3, 10)]
     [SerializeField] private string content;
@@ -11,9 +11,14 @@ public class InstructionBook : MonoBehaviour
     [SerializeField] private TMP_Text currentPage;
     [SerializeField] private TMP_Text pagination;
     public int pageTotal;
+    public float distance = 5;
+    public Vector3 offset;
+
+    [SerializeField] private GameManager gameManager;
+    [SerializeField] private PlayerController playerController;
     // Start is called before the first frame update
 
-     void Start()
+    void Start()
     {
         SetupContent();
         UpdatePagination();
@@ -68,9 +73,23 @@ public class InstructionBook : MonoBehaviour
 
         UpdatePagination();
     }
-    // Update is called once per frame
-    void Update()
+    public override void OnInteract()
     {
-        
+        Debug.Log("Book Touched");
+        playerController.CanMove = false;
+        transform.position = Camera.main.transform.position + offset;
+        transform.rotation = Camera.main.transform.rotation;
+
+        //transform.rotation.x = transform.rotation.x*-1;
+        //transform.rotation
+
+    }
+    public override void OnFocus()
+    {
+
+    }
+    public override void OnLoseFocus()
+    {
+
     }
 }

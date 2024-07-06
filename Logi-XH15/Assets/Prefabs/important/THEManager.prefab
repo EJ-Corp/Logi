@@ -198,7 +198,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3457075585715341874}
-  - {fileID: 2274225571418576066}
+  - {fileID: 8246336443196507442}
   - {fileID: 584335769624465114}
   - {fileID: 3400343324599453236}
   m_Father: {fileID: 7180450322601600812}
@@ -395,6 +395,38 @@ Transform:
   - {fileID: 157145418620026493}
   - {fileID: 6362596411528359305}
   - {fileID: 454595140806167733}
+  m_Father: {fileID: 1005242503384527356}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8135071422072928975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8246336443196507442}
+  m_Layer: 0
+  m_Name: NoteBook Origin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8246336443196507442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8135071422072928975}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2274225571418576066}
   m_Father: {fileID: 1005242503384527356}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8670783568710060205
@@ -714,7 +746,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1005242503384527356}
+    m_TransformParent: {fileID: 8246336443196507442}
     m_Modifications:
     - target: {fileID: 264661130838289229, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
       propertyPath: m_Name
