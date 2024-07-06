@@ -5774,7 +5774,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 1
+    maxNumParticles: 3
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 1
     rotation3D: 1
@@ -6175,7 +6175,7 @@ ParticleSystem:
           outWeight: 1
         - serializedVersion: 3
           time: 0.12284331
-          value: 0.9999985
+          value: 0.79999936
           inSlope: -2.73559
           outSlope: -2.73559
           tangentMode: 0
@@ -10087,7 +10087,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 079bd6186ef75ec4a9b08f89b8b3d1c9, type: 2}
+  - {fileID: 2100000, guid: f37c5791aa5904d97b41292df11cd8c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10154,6 +10154,8 @@ MonoBehaviour:
   bufferTime: 0
   gameManager: {fileID: 0}
   cameraShakeScript: {fileID: 0}
+  menuSun: {fileID: 2100000, guid: f37c5791aa5904d97b41292df11cd8c0, type: 2}
+  inGameSun: {fileID: 2100000, guid: 079bd6186ef75ec4a9b08f89b8b3d1c9, type: 2}
 --- !u!95 &3706913062806889429
 Animator:
   serializedVersion: 5

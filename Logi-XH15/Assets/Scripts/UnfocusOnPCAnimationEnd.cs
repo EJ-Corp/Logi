@@ -14,7 +14,7 @@ public class UnfocusOnPCAnimationEnd : StateMachineBehaviour
       //  gameManager = GameManager.Manager.GetComponent<GameManager>();
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         mainCamera = gameManager.mainCamera;
-        playerController = gameManager.playerController;
+        playerController = gameManager.player.GetComponent<PlayerController>();
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
