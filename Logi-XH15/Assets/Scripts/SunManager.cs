@@ -194,6 +194,9 @@ public class SunManager : MonoBehaviour
     public void ResetFlare()
     {
         SetBooleans(false, true, false, false);
+        warningPanel.enabled = false;
+        panelActive = false;
+        flashCooldown = 0;
         randomWait = UnityEngine.Random.Range(minWait, maxWait);
     }
 
