@@ -23,6 +23,7 @@ public class MonitorScript : MonoBehaviour
     [SerializeField] GameObject desktopScreen;
     [SerializeField] GameObject loginScreen;
     [SerializeField] private InteractCompBreaker powerSupply;
+    [SerializeField] private bool startingGame;
 
     [Header("Annoying Bubbles")]
     [SerializeField] private int maxAnnoy;
@@ -65,21 +66,25 @@ public class MonitorScript : MonoBehaviour
             CheckIDAndPassword();
         }
         
-
-
         //We are getting the same 4 corners repeadetly every fram --- IS THIS NEEDED??? NOT JUST ONCE?? BAD CODE.
         for (int i = 0 ; i < 4; i++)
         {
             screenCorners[i] = gameManager.pcCamera.WorldToScreenPoint(worldCorners[i]); //botleft, topleft, topright, botright
         }
 
-        if (gameManager.inPCView)
+        if (startingGame == true)
         {
             gameManager.playerCanvas.enabled = false;
-            RestrictMouseToMonitorBounds();
         } else {
-            gameManager.playerCanvas.enabled = true;
-        }
+            if (gameManager.inPCView)
+            {
+                gameManager.playerCanvas.enabled = false;
+                RestrictMouseToMonitorBounds();
+            } else {
+                gameManager.playerCanvas.enabled = true;
+            }
+            }
+
 
         if(annoyCountdown > 0 && activeAnnoy < maxAnnoy)
         {
@@ -193,7 +198,7 @@ public class MonitorScript : MonoBehaviour
         }
     }
 
-    public void FixedProblem(int problemID)
+    public void FixedProblemOnMonitor(int problemID)
     {
         if(problemID == 11) //Fixed Buttons
         {

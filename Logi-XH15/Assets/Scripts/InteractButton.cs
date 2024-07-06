@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InteractButton : Interactable
@@ -7,14 +8,24 @@ public class InteractButton : Interactable
     [SerializeField] private Animator buttonClick;
     [SerializeField] private ButtonProblem problem;
     [SerializeField] private bool canFix = false;
+    [SerializeField] private string id;
+    [SerializeField] public string ID
+    {
+        get { return id; }
+    }
     [SerializeField] private AudioClip[] buttonSFX;
     [SerializeField] private AudioClip[] correctSFX;
     [SerializeField] private AudioClip[] wrongSFX;
     private ProblemHandler warningSign; 
+    [SerializeField] private Renderer buttonLight;
+    [SerializeField] private Material[] buttonLightMaterial;
 
     void Start()
     {
-        
+        if(buttonLight != null)
+        {
+            buttonLight.sharedMaterial = buttonLightMaterial[0];
+        }
     }
 
     public override void OnInteract()
@@ -23,7 +34,7 @@ public class InteractButton : Interactable
         SFXManager.Instance.PlayRandomSFXClip(buttonSFX, transform, 1f);
         if(canFix)
         {
-            FixProblem();
+            FixProblemOnInteractButton();
             SFXManager.Instance.PlayRandomSFXClip(correctSFX, transform, 1f);
         } else
         {
@@ -42,18 +53,33 @@ public class InteractButton : Interactable
         
     }
 
-    public void FixProblem()
+    public void FixProblemOnInteractButton()
     {
         Debug.Log("Fixed the problem");
-        warningSign.FixProblem(11);
+        warningSign.FixProblemOnHandler(11);
         canFix = false;
+        if(buttonLight != null)
+        {
+            buttonLight.sharedMaterial = buttonLightMaterial[0];
+        }
     }
 
     public void MakeProblem(ProblemHandler warning)
     {
         canFix = true;
         warningSign = warning;
+        if(buttonLight != null)
+        {
+            buttonLight.sharedMaterial = buttonLightMaterial[1];
+        }
     }
 
+    public void Update()
+    {
+        if(canFix)
+        {
+            buttonLight.sharedMaterial = buttonLightMaterial[1];
+        }
+    }
     
 }

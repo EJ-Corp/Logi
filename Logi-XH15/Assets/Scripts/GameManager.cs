@@ -23,10 +23,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] public AudioListener pcListener;
 
     //player objects
-    [SerializeField] public PlayerController playerController;
+    [SerializeField] public GameObject player;
     [SerializeField] public Canvas playerCanvas;
 
     //computer objects
+    [SerializeField] public MonitorScript computerMonitor;
     [SerializeField] public ComputerFocusScript computerScreenFocus;
     [SerializeField] public Canvas monitorBoundary;
     [SerializeField] public IDandPasswordInputScript idInput;

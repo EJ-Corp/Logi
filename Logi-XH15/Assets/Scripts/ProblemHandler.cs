@@ -7,6 +7,8 @@ public class ProblemHandler : MonoBehaviour
 {
     [SerializeField] private Image warningPanel;
 
+    //[SerializeField] private WarningLights[] warningLights;
+
     [SerializeField] private float flashInterval;
     [SerializeField] private float flashCooldown;
 
@@ -20,8 +22,7 @@ public class ProblemHandler : MonoBehaviour
     [SerializeField] private WarningState currentState;
     private bool panelActive = false;
 
-    //Get rid of this and make it better
-    [SerializeField] private TempProblemTimer problemTimer;
+    [SerializeField] private ProblemTimer problemTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -45,9 +46,20 @@ public class ProblemHandler : MonoBehaviour
         {
             case WarningState.disabled:
 
-            break;
+                // foreach(WarningLights light in warningLights)
+                // {
+                //     light.SetFlashing(false);
+                // }
+
+                break;
 
             case WarningState.active:
+
+                // foreach(WarningLights light in warningLights)
+                // {
+                //     light.SetFlashing(true);
+                // }
+
                 if(flashCooldown > 0)
                 {
                     flashCooldown -= Time.deltaTime;
@@ -77,12 +89,12 @@ public class ProblemHandler : MonoBehaviour
         }
     }
 
-    public void FixProblem(int problemID)
+    public void FixProblemOnHandler(int problemID)
     {       
-        problemTimer.FixedProblem(problemID);
+        problemTimer.FixedProblemOnTimer(problemID);
     }
 
-    public void StartProblem()
+    public void StartWarning()
     {
         currentState = WarningState.active;
     }

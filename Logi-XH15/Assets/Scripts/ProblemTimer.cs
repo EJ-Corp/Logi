@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TempProblemTimer : MonoBehaviour
+public class ProblemTimer : MonoBehaviour
 {
     [SerializeField] private bool debug = false;
     [SerializeField] private int numberOfProblems;
     [SerializeField] private float nextProblemCountDown;
     [SerializeField] private int activeProblems = 0; 
+
     [SerializeField] private ButtonProblem buttonProblem;
     [SerializeField] private SwitchProblem switchProblem;
+
     [SerializeField] private AudioClip alarmSFX;
     [SerializeField] private ProblemHandler warningPanel;
 
@@ -37,13 +39,18 @@ public class TempProblemTimer : MonoBehaviour
                 StartProblem();
             }
         }
+
+        if (activeProblems < 0)
+        {
+            activeProblems = 0;
+        }
     }
 
     public void StartProblem()
     {
         if(activeProblems == 0)
         {
-            warningPanel.StartProblem();
+            warningPanel.StartWarning();
         }
         int randomProblem = Random.Range(0, problemIDPool.Count);
 
@@ -54,7 +61,7 @@ public class TempProblemTimer : MonoBehaviour
         if(chosenProblemID == 11) //Chose Buttons (ID = 11)
         {
             buttonProblem.ActivateProblem();
-            activeProblems++;
+            activeProblems += 1;
             problemIDPool.RemoveAt(randomProblem);
 
             //Spawn Speech bubble
@@ -63,7 +70,7 @@ public class TempProblemTimer : MonoBehaviour
         } else if(chosenProblemID == 12) //Chose Switched (ID = 12)
         {
             switchProblem.ActivateProblem();
-            activeProblems++;
+            activeProblems += 1;
             problemIDPool.RemoveAt(randomProblem);
 
             //Spawn Speech bubble
@@ -78,11 +85,11 @@ public class TempProblemTimer : MonoBehaviour
         nextProblemCountDown = Random.Range(10.0f, 15.0f);
     }
 
-    public void FixedProblem(int IDFixed)
+    public void FixedProblemOnTimer(int IDFixed)
     {
-        activeProblems--;
+        activeProblems -= 1;
         problemIDPool.Add(IDFixed);
-        computerScreen.FixedProblem(IDFixed);
+        computerScreen.FixedProblemOnMonitor(IDFixed);
 
         if(activeProblems <= 0)
         {

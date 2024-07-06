@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Funtional Options")]
     [SerializeField] private bool canInteract = true;
+    [SerializeField] private bool startingGame = true;
+    [SerializeField] private bool zoomOver = false;
 
 
     [Header("Interaction")]
@@ -37,7 +39,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-
         Cursor.lockState = CursorLockMode.Locked;
       //  Cursor.visible = false;
     }
@@ -45,37 +46,47 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
-        Vector3 right = transform.TransformDirection(Vector3.right);
-
-        float currentSpeedX = canMove ? walkSpeed * Input.GetAxis("Vertical") : 0;
-        float currentSpeedY = canMove ? walkSpeed * Input.GetAxis("Horizontal") : 0;
-
-       // float movementDirectionY = moveDirection.y;
-        moveDirection = (forward * currentSpeedX) + (right * currentSpeedY);
-
-        characterController.Move(moveDirection * Time.deltaTime);
-
-        if(canMove)
+        if (startingGame == true)
         {
-
-            Cursor.lockState = CursorLockMode.Locked;
-
-            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
-            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
-
-            if(canInteract)
-            {
-                HandleInteractionCheck();
-                HandleInteractionInput();
-            }
+            canMove = false;
         } else {
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
-        }
+
+            if (zoomOver != true)
+            {
+                canMove = true;
+                zoomOver = true;
+            }
+
+            Vector3 forward = transform.TransformDirection(Vector3.forward);
+            Vector3 right = transform.TransformDirection(Vector3.right);
+
+            float currentSpeedX = canMove ? walkSpeed * Input.GetAxis("Vertical") : 0;
+            float currentSpeedZ = canMove ? walkSpeed * Input.GetAxis("Horizontal") : 0;
+
+            moveDirection.y = -0.1f;
+            moveDirection = (forward * currentSpeedX) + (right * currentSpeedZ);
+
+            characterController.Move(moveDirection * Time.deltaTime);
+
+            if(canMove)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+
+                rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+                rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+                playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+                transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+
+                if(canInteract)
+                {
+                    HandleInteractionCheck();
+                    HandleInteractionInput();
+                }
+            } else {
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+            }
+        } 
     }
 
     public void HandleInteractionCheck()
