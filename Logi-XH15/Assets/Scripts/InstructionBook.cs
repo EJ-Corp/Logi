@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class InstructionBook : Interactable
 {
@@ -16,12 +17,20 @@ public class InstructionBook : Interactable
 
     [SerializeField] private GameManager gameManager;
     [SerializeField] private PlayerController playerController;
+
+    [SerializeField] private GameObject book;
+    private GameObject bookInstance;
     // Start is called before the first frame update
 
     void Start()
     {
         SetupContent();
         UpdatePagination();
+
+        if(gameObject.name != "notebook")
+        {
+            playerController = gameObject.GetComponentInParent<PlayerController>();
+        }
     }
 
     private void SetupContent()
@@ -77,12 +86,17 @@ public class InstructionBook : Interactable
     {
         Debug.Log("Book Touched");
         playerController.CanMove = false;
-        transform.position = Camera.main.transform.position + offset;
-        transform.rotation = Camera.main.transform.rotation;
 
-        //transform.rotation.x = transform.rotation.x*-1;
-        //transform.rotation
+        bookInstance = Instantiate(book, Camera.main.transform);
+        bookInstance.transform.localPosition = offset;
+        bookInstance.transform.localRotation = Quaternion.Euler(new Vector3(-90, 0, 0));
 
+    }
+
+    public void ExitBook(){
+        
+        Destroy(this);
+        playerController.CanMove = true;
     }
     public override void OnFocus()
     {
