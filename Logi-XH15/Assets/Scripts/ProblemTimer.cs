@@ -10,6 +10,7 @@ public class ProblemTimer : MonoBehaviour
     [SerializeField] private int activeProblems = 0; 
 
     [SerializeField] private ButtonProblem buttonProblem;
+    [SerializeField] private string buttonID;
     [SerializeField] private SwitchProblem switchProblem;
 
     // [SerializeField] private AudioClip alarmSFX;
@@ -62,11 +63,12 @@ public class ProblemTimer : MonoBehaviour
         if(chosenProblemID == 11) //Chose Buttons (ID = 11)
         {
             buttonProblem.ActivateProblem();
+            buttonID = buttonProblem.getCurButtonID();
             activeProblems += 1;
             problemIDPool.RemoveAt(randomProblem);
 
             //Spawn Speech bubble
-            computerScreen.SpawnProblemFact(chosenProblemID);
+            computerScreen.SpawnProblemFact(chosenProblemID, buttonID);
             
         } else if(chosenProblemID == 12) //Chose Switched (ID = 12)
         {
@@ -75,7 +77,7 @@ public class ProblemTimer : MonoBehaviour
             problemIDPool.RemoveAt(randomProblem);
 
             //Spawn Speech bubble
-            computerScreen.SpawnProblemFact(chosenProblemID);
+            computerScreen.SpawnProblemFact(chosenProblemID, buttonID);
         }
 
         ResetCountdown();

@@ -24,18 +24,6 @@ public class SwitchProblem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if(Input.GetButtonDown("Jump"))
-        // {
-        //     if(!problemActive)
-        //     {
-        //         ActivateProblem();
-        //     } else 
-        //     {
-        //         Debug.Log("Switch problem is already active");
-        //     }
-            
-        // }
-
         if(problemActive)
         {
             if(onSwitches == allSwitches.Count)
@@ -47,16 +35,12 @@ public class SwitchProblem : MonoBehaviour
 
                 warningSign.FixProblemOnHandler(12);
                 problemActive = false;
-
-                
             }
         }
     }
 
     public void ActivateProblem()
     {
-        
-
         //Debug.Log("Problem Activated");
         int amountToBreak = Random.Range(1, allSwitches.Count);
         Debug.Log("Must break: " + amountToBreak);

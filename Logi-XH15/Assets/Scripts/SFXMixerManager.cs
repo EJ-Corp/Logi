@@ -9,7 +9,7 @@ public class SFXMixerManager : MonoBehaviour
 
     public void SetMasterVolumeLevel(float volume)
     {
-        Debug.Log("Setting Volume");
+        //Debug.Log("Setting Volume");
         audioMixer.SetFloat("MasterVolume", volume);
     }
 

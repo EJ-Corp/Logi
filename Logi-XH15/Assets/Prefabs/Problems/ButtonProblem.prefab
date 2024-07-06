@@ -92,7 +92,9 @@ MonoBehaviour:
   - {fileID: 4879156303136371450}
   - {fileID: 1220897097362254098}
   fixButton: {fileID: 0}
+  buttonID: 
   warningSign: {fileID: 0}
+  problemActive: 0
 --- !u!1001 &158529260726293010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -288,6 +290,10 @@ PrefabInstance:
     - target: {fileID: 138451156567771327, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 524405634871844512, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
+      propertyPath: id
+      value: Hydroponics Drainage
       objectReference: {fileID: 0}
     - target: {fileID: 765664968749519365, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
       propertyPath: m_LocalPosition.x
