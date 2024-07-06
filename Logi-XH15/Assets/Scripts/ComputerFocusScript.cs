@@ -30,7 +30,7 @@ public class ComputerFocusScript : MonoBehaviour
         cameraAnimator = mainCamera.GetComponent<Animator>();
         cameraAnimator.enabled = false;
 
-        playerController = gameManager.playerController;
+        playerController = gameManager.player.GetComponent<PlayerController>();
     }
 
     // Update is called once per frame

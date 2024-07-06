@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SunManager : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class SunManager : MonoBehaviour
     public float bufferTime = 0;
     private bool bufferState = false;
 
+    [SerializeField] private bool pressedPlay = false;
+    [SerializeField] private bool startedGame = false;
     [SerializeField] GameManager gameManager;
     [SerializeField] CameraShake cameraShakeScript;
 
@@ -36,41 +39,64 @@ public class SunManager : MonoBehaviour
         {
             sun = this;
         }
+
+        DontDestroyOnLoad(this.gameObject);
     }
 
     void Start()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 1) {
+            gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+            cameraShakeScript = gameManager.mainCamera.GetComponent<CameraShake>();
+            playerLocation = gameManager.player.GetComponent<Transform>();
+            randomWait = UnityEngine.Random.Range(minWait, maxWait);
+            MoveParticleEmitter();
+        }
 
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        cameraShakeScript = gameManager.mainCamera.GetComponent<CameraShake>();
-        randomWait = UnityEngine.Random.Range(minWait, maxWait);
-        MoveParticleEmitter();
     }
 
     void Update()
     {
-        if (bufferTime > 0)
+        if (SceneManager.GetActiveScene().buildIndex == 0) 
         {
-            bufferTime -= Time.deltaTime;
-        }
-        else if (bufferTime <= 0 && bufferState == true)
+            startedGame = false;
+        } else 
+        if (SceneManager.GetActiveScene().buildIndex == 1) 
         {
-            canFire = true;
-            bufferState = false;
-        }
-
-        if (canFire)
-        {
-            if(randomWait > 0)
+            startedGame = true;
+            if (pressedPlay != true)
             {
-                randomWait -= Time.deltaTime;
-            }
-
-            if(randomWait <= 0)
-            {
-                FireSolarFlare();
+                Start();
+                pressedPlay = true;
             }
         }
+        
+        if (startedGame)
+        {
+            if (bufferTime > 0)
+            {
+                bufferTime -= Time.deltaTime;
+            }
+            else if (bufferTime <= 0 && bufferState == true)
+            {
+                canFire = true;
+                bufferState = false;
+            }
+
+            if (canFire)
+            {
+                if(randomWait > 0)
+                {
+                    randomWait -= Time.deltaTime;
+                }
+
+                if(randomWait <= 0)
+                {
+                    FireSolarFlare();
+                }
+            }
+        }
+
     }
 
     void MoveParticleEmitter()

@@ -366,7 +366,7 @@ MonoBehaviour:
   mainListener: {fileID: 2293047166652199111}
   pcCamera: {fileID: 8686932326670274843}
   pcListener: {fileID: 5679252087132938059}
-  playerController: {fileID: 4985998063863180393}
+  player: {fileID: 1089212392933331615}
   playerCanvas: {fileID: 464146758655962328}
   computerMonitor: {fileID: 0}
   computerScreenFocus: {fileID: 0}
@@ -543,6 +543,11 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 6242420620231663883, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
   m_PrefabInstance: {fileID: 6710847178825328513}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1089212392933331615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5925645374540641566, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
+  m_PrefabInstance: {fileID: 6710847178825328513}
+  m_PrefabAsset: {fileID: 0}
 --- !u!81 &2293047166652199111 stripped
 AudioListener:
   m_CorrespondingSourceObject: {fileID: 4824267570722232134, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
@@ -553,14 +558,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7274233868648558748, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
   m_PrefabInstance: {fileID: 6710847178825328513}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4985998063863180393 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1733997072241740776, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
-  m_PrefabInstance: {fileID: 6710847178825328513}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c5cd0fbc7d7c148a8aa866a1a7bef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
