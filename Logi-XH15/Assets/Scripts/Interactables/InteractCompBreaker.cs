@@ -19,6 +19,7 @@ public class InteractCompBreaker : Interactable
         SFXManager.Instance.PlayRandomSFXClip(switchSFX, transform, 1f);
         if (isOn) //Turning Computer Off
         {
+            Debug.Log("Turned off");
             GameManager.Manager.ToggleComputer(true);
             isOn = false;
 
@@ -28,6 +29,7 @@ public class InteractCompBreaker : Interactable
 
         } else //Turning COmputer On
         {
+            Debug.Log("Turned on");
             GameManager.Manager.ToggleComputer(false);
             isOn = true;
 
@@ -47,7 +49,7 @@ public class InteractCompBreaker : Interactable
     public void FlareBreak()
     {
         isOn = false;
-
+        animator.SetTrigger("Off");
         //XAVIER add animation here from ON to OFF
 
     }

@@ -56,7 +56,7 @@ public class SunManager : MonoBehaviour
         else if (bufferTime <= 0 && bufferState == true)
         {
             canFire = true;
-            randomWait = UnityEngine.Random.Range(minWait, maxWait);
+            bufferState = false;
         }
 
         if (canFire)

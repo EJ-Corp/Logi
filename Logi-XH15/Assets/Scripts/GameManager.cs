@@ -62,6 +62,8 @@ public class GameManager : MonoBehaviour
 
     public string password;
 
+    public bool computerState = false;
+
     void Awake()
     {
         if(manager == null)
@@ -143,8 +145,10 @@ public class GameManager : MonoBehaviour
             computerScreenFocus.transform.GetComponent<MonitorScript>().BreakComputer();
             idInput.ResetInputResult();
             pswdInput.ResetInputResult();
+            this.computerState = false;
         } else //COmputer is off so we turn it on
         {
+            this.computerState = true;
             sumManager.BufferFlare();
             computerScreenFocus.transform.GetComponent<MonitorScript>().FixComputer();
             idInput.ResetInputResult();
