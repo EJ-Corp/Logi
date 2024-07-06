@@ -50,10 +50,10 @@ public class PlayerController : MonoBehaviour
         Vector3 right = transform.TransformDirection(Vector3.right);
 
         float currentSpeedX = canMove ? walkSpeed * Input.GetAxis("Vertical") : 0;
-        float currentSpeedY = canMove ? walkSpeed * Input.GetAxis("Horizontal") : 0;
+        float currentSpeedZ = canMove ? walkSpeed * Input.GetAxis("Horizontal") : 0;
 
-       // float movementDirectionY = moveDirection.y;
-        moveDirection = (forward * currentSpeedX) + (right * currentSpeedY);
+        moveDirection.y = -0.1f;
+        moveDirection = (forward * currentSpeedX) + (right * currentSpeedZ);
 
         characterController.Move(moveDirection * Time.deltaTime);
 
