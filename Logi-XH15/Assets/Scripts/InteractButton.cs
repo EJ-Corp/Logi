@@ -6,7 +6,6 @@ using UnityEngine;
 public class InteractButton : Interactable
 {
     [SerializeField] private Animator buttonClick;
-    [SerializeField] private ButtonProblem problem;
     [SerializeField] private bool canFix = false;
     [SerializeField] private string id;
     [SerializeField] public string ID
@@ -39,7 +38,7 @@ public class InteractButton : Interactable
         } else
         {
             //Show it was the wrong button -> maybe drop data collection rate and have a wrong sound + camera shake
-            Debug.Log("You got the wrong button");
+            //Debug.Log("You got the wrong button");
             SFXManager.Instance.PlayRandomSFXClip(wrongSFX, transform, 1f);
         }
         

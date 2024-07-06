@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.UI;
+using TMPro;
 
 public class MonitorScript : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class MonitorScript : MonoBehaviour
     [SerializeField] private GameObject randomFactBubble;
     [SerializeField] private GameObject flirtBubble;
     [SerializeField] private List<GameObject> activeBubbles = new List<GameObject>();
+   // [SerializeField] private
 
     private int buttonBubbleIdx;
     private int switchBubbleIdx;
@@ -152,7 +154,7 @@ public class MonitorScript : MonoBehaviour
     {
         int randomAnnoy = Random.Range(0, amountOfAnnoyOptions);
 
-        Debug.Log("Spawned Annoy ID: " + randomAnnoy);
+        //Debug.Log("Spawned Annoy ID: " + randomAnnoy);
 
         switch(randomAnnoy)
         {
@@ -176,7 +178,7 @@ public class MonitorScript : MonoBehaviour
         activeAnnoy--;
     }
 
-    public void SpawnProblemFact(int problemID)
+    public void SpawnProblemFact(int problemID, string buttonID)
     {
         switch(problemID)
         {
@@ -185,6 +187,11 @@ public class MonitorScript : MonoBehaviour
                 buttonBubble.name = "11Bubble";
                 activeBubbles.Add(buttonBubble);
                 buttonBubbleIdx = activeBubbles.Count - 1;
+                
+                //change button name in text
+                TMP_Text bubbleText = buttonBubble.transform.Find("fact (2)").GetComponent<TMP_Text>();
+                bubbleText.text = 
+                "Don't worry, the " + buttonID + " button should be able to stabilise it. You got this! :)";
                 //buttonBubble.transform.parent = bubbleHolder.transform;
                 break;
 

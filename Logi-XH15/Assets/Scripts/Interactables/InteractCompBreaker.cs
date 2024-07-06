@@ -19,7 +19,7 @@ public class InteractCompBreaker : Interactable
         SFXManager.Instance.PlayRandomSFXClip(switchSFX, transform, 1f);
         if (isOn) //Turning Computer Off
         {
-            Debug.Log("Turned off");
+            //Debug.Log("Turned off");
             GameManager.Manager.ToggleComputer(true);
             isOn = false;
 
@@ -29,7 +29,7 @@ public class InteractCompBreaker : Interactable
 
         } else //Turning COmputer On
         {
-            Debug.Log("Turned on");
+            //Debug.Log("Turned on");
             GameManager.Manager.ToggleComputer(false);
             isOn = true;
 

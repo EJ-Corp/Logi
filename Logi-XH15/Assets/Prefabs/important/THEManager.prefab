@@ -1653,6 +1653,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7180450322601600812}
     m_Modifications:
+    - target: {fileID: 512943095604290699, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+      propertyPath: id
+      value: Inertial Dampeners
+      objectReference: {fileID: 0}
+    - target: {fileID: 1107050529051524545, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+      propertyPath: id
+      value: Arc Generator
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552979608342011007, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+      propertyPath: id
+      value: Pressure Regulator
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578733876152245821, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+      propertyPath: id
+      value: Fusion Reactor
+      objectReference: {fileID: 0}
     - target: {fileID: 4721954217560202587, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1692,6 +1708,14 @@ PrefabInstance:
     - target: {fileID: 4721954217560202587, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4808222177169213788, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+      propertyPath: id
+      value: Oxygen Recycler
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304980849994515337, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+      propertyPath: id
+      value: Subspace Scanner
       objectReference: {fileID: 0}
     - target: {fileID: 6803998707453088731, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
       propertyPath: idInput

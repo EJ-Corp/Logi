@@ -374,6 +374,7 @@ MonoBehaviour:
   idInput: {fileID: 0}
   pswdInput: {fileID: 0}
   problemPanel: {fileID: 0}
+  problemTimer: {fileID: 1486587392168475845}
   warningLights:
   - {fileID: 0}
   - {fileID: 0}
@@ -465,6 +466,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 188761201983962873, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
   m_PrefabInstance: {fileID: 492787136526559876}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1486587392168475845 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1330760988278560321, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
+  m_PrefabInstance: {fileID: 492787136526559876}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82bcc42c17a895d408e54a2b7378a836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3035853420915798806 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3240128620195944850, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}

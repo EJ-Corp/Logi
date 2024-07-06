@@ -10,10 +10,12 @@ public class ProblemTimer : MonoBehaviour
     [SerializeField] private int activeProblems = 0; 
 
     [SerializeField] private ButtonProblem buttonProblem;
+    [SerializeField] private string buttonID;
     [SerializeField] private SwitchProblem switchProblem;
 
-    [SerializeField] private AudioClip alarmSFX;
-    [SerializeField] private ProblemHandler warningPanel;
+    // [SerializeField] private AudioClip alarmSFX;
+
+    //[SerializeField] private ProblemHandler warningPanel;
 
     [SerializeField] private List<int> problemIDPool;   //IDs: Buttons - 11, Switches = 12
 
@@ -50,22 +52,23 @@ public class ProblemTimer : MonoBehaviour
     {
         if(activeProblems == 0)
         {
-            warningPanel.StartWarning();
+           // warningPanel.StartWarning();
         }
         int randomProblem = Random.Range(0, problemIDPool.Count);
 
         int chosenProblemID = problemIDPool[randomProblem];
 
-        SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 0.75f);
+        //SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 0.75f);
 
         if(chosenProblemID == 11) //Chose Buttons (ID = 11)
         {
             buttonProblem.ActivateProblem();
+            buttonID = buttonProblem.getCurButtonID();
             activeProblems += 1;
             problemIDPool.RemoveAt(randomProblem);
 
             //Spawn Speech bubble
-            computerScreen.SpawnProblemFact(chosenProblemID);
+            computerScreen.SpawnProblemFact(chosenProblemID, buttonID);
             
         } else if(chosenProblemID == 12) //Chose Switched (ID = 12)
         {
@@ -74,7 +77,7 @@ public class ProblemTimer : MonoBehaviour
             problemIDPool.RemoveAt(randomProblem);
 
             //Spawn Speech bubble
-            computerScreen.SpawnProblemFact(chosenProblemID);
+            computerScreen.SpawnProblemFact(chosenProblemID, buttonID);
         }
 
         ResetCountdown();
@@ -93,7 +96,7 @@ public class ProblemTimer : MonoBehaviour
 
         if(activeProblems <= 0)
         {
-            warningPanel.NoProblems();
+            //warningPanel.NoProblems();
         }
     }
 }
