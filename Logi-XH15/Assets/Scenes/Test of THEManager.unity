@@ -159,6 +159,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5348289845329791924, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348289845329791924, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348289845329791924, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5790298033205485983, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
       propertyPath: m_Name
       value: THEManager
