@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
 
     //problem objects
     [SerializeField] public Image problemPanel;
+    [SerializeField] public ProblemTimer problemTimer;
     [SerializeField] public Light[] warningLights;
 
     //Sun objects
@@ -76,6 +77,7 @@ public class GameManager : MonoBehaviour
         // idInput = GameObject.FindGameObjectWithTag("idInput").GetComponent<IDandPasswordInputScript>();
         // pswdInput = GameObject.FindGameObjectWithTag("pswdInput").GetComponent<IDandPasswordInputScript>();
         // problemPanel = GameObject.FindGameObjectWithTag("problemPanel").GetComponent<Image>();
+        sumManager = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunManager>();
         gameState = GameState.mainView;
 
     }

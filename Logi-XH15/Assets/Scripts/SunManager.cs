@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class SunManager : MonoBehaviour
@@ -11,14 +12,35 @@ public class SunManager : MonoBehaviour
     [SerializeField] private Transform playerLocation;
     private Vector3 targetedParticlePosition;
     [SerializeField] private float randomWait;
-    public float minWait = 10;
-    public float maxWait = 30;
-    public float targetedFlareDistance = 0.5f;
+    [SerializeField] private float minWait = 10;
+    [SerializeField] private float maxWait = 30;
+    [SerializeField] private float targetedFlareDistance = 0.5f;
     [SerializeField] Vector3 flareYOffset;
-    public bool canFire = true;
-    public float bufferTime = 0;
-    private bool bufferState = false;
 
+    [SerializeField] private bool bufferState = true;
+    [SerializeField] private bool canFire = false;
+    [SerializeField] private bool isFiring = false;
+    [SerializeField] private bool hasFired = false;
+
+    [SerializeField] private float bufferTime = 10f;
+
+
+    //all stuff that has been moved from problem 
+    [Header("Problems")]
+    [SerializeField] private Image warningPanel;
+    [SerializeField] private float flashInterval;
+    [SerializeField] private float flashCooldown;
+    [SerializeField] private Light[] problemLights = new Light[4];
+    enum WarningState
+    {
+        buffer, firing, fired
+    };
+    [SerializeField] private WarningState currentState;
+    private bool panelActive = false;
+    [SerializeField] private AudioClip alarmSFX;
+
+
+    [Header("OtherStuff")]
     [SerializeField] private bool pressedPlay = false;
     [SerializeField] private bool startedGame = false;
     [SerializeField] GameManager gameManager;
@@ -49,6 +71,18 @@ public class SunManager : MonoBehaviour
             gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
             cameraShakeScript = gameManager.mainCamera.GetComponent<CameraShake>();
             playerLocation = gameManager.player.GetComponent<Transform>();
+
+
+            //problem stuff
+            warningPanel = GameManager.Manager.problemPanel;
+            warningPanel.enabled = false;
+            for (int i = 0; i < problemLights.Length; i++)
+            {
+                problemLights[i] = gameManager.warningLights[i];  
+                problemLights[i].enabled = false;
+            }
+
+
             randomWait = UnityEngine.Random.Range(minWait, maxWait);
             MoveParticleEmitter();
         }
@@ -71,32 +105,66 @@ public class SunManager : MonoBehaviour
             }
         }
         
-        if (startedGame)
+        if (bufferState == true)
         {
-            if (bufferTime > 0)
-            {
-                bufferTime -= Time.deltaTime;
-            }
-            else if (bufferTime <= 0 && bufferState == true)
-            {
-                canFire = true;
-                bufferState = false;
-            }
-
-            if (canFire)
-            {
-                if(randomWait > 0)
-                {
-                    randomWait -= Time.deltaTime;
-                }
-
-                if(randomWait <= 0)
-                {
-                    FireSolarFlare();
-                }
-            }
+            currentState = WarningState.buffer;
+        } else
+        if (canFire == true)
+        {
+            currentState = WarningState.firing;
+        } else 
+        if (isFiring == true)
+        {
+            currentState = WarningState.fired;
         }
 
+        if (startedGame)
+        {
+            LoopThroughLights();
+
+            switch(currentState)
+            {
+                case WarningState.buffer:
+                    if (bufferTime > 0)
+                    {
+                        bufferTime -= Time.deltaTime;
+                    }
+                    if (bufferTime <= 0)
+                    {
+                        SetBooleans(false, true, false, false);
+                    }
+                break;
+
+                case WarningState.firing:
+                    if (randomWait > 0)
+                    {
+                        randomWait -= Time.deltaTime;
+                    }
+                    if (randomWait <= 0)
+                    {
+                        SetBooleans(false, false, true, false);
+                    }
+
+                break;
+
+                case WarningState.fired:
+                    if (hasFired != true)
+                    {
+                        FireSolarFlare();
+                        hasFired = true;
+                    }
+
+                    if (flashCooldown > 0)
+                    {
+                        flashCooldown -= Time.deltaTime;
+                    }
+                    if (flashCooldown <= 0)
+                    {
+                        FlashPanel();
+                    }
+                break;
+            }
+        }
     }
 
     void MoveParticleEmitter()
@@ -112,24 +180,58 @@ public class SunManager : MonoBehaviour
 
     public void FireSolarFlare()
     {
-        bufferState = false;
+        SetBooleans(false, false, false, true);
         solarFlareParticleSystem.Play();
+        
+        SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 0.75f);
+
         Instantiate(solarFlarePrefab, transform.position + flareYOffset, Quaternion.LookRotation(playerLocation.position - this.transform.position));
         cameraShakeScript.StartCameraShake();
-        randomWait = UnityEngine.Random.Range(minWait, maxWait);
+        // randomWait = UnityEngine.Random.Range(minWait, maxWait);
         MoveParticleEmitter();
-        canFire = false;
     }
 
     public void ResetFlare()
     {
-        canFire = true;
+        SetBooleans(false, true, false, false);
+        randomWait = UnityEngine.Random.Range(minWait, maxWait);
     }
 
     public void BufferFlare()
     {
-        bufferState = true;
-        canFire = false;
-        bufferTime = UnityEngine.Random.Range(minWait, maxWait);
+        if (currentState != WarningState.buffer)
+        {
+            SetBooleans(true, false, false, false);
+            bufferTime = UnityEngine.Random.Range(minWait, maxWait);
+        }
+
+    }
+
+    public void FlashPanel()
+    {
+        warningPanel.enabled = !warningPanel.enabled;
+        panelActive = !panelActive;
+        flashCooldown = flashInterval;
+    }
+
+    void LoopThroughLights() 
+    {
+        for (int i = 0; i < problemLights.Length; i++)
+        {
+            if (currentState == WarningState.buffer || currentState == WarningState.firing) {
+                problemLights[i].enabled = false;
+            } else {
+                problemLights[i].enabled = true;
+            }
+            
+        }
+    }
+
+    void SetBooleans(bool buffer, bool fireStart, bool fireMid, bool fireEnd)
+    {
+        bufferState = buffer;
+        canFire = fireStart;
+        isFiring = fireMid;
+        hasFired = fireEnd;
     }
 }

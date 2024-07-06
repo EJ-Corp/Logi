@@ -12,8 +12,9 @@ public class ProblemTimer : MonoBehaviour
     [SerializeField] private ButtonProblem buttonProblem;
     [SerializeField] private SwitchProblem switchProblem;
 
-    [SerializeField] private AudioClip alarmSFX;
-    [SerializeField] private ProblemHandler warningPanel;
+    // [SerializeField] private AudioClip alarmSFX;
+
+    //[SerializeField] private ProblemHandler warningPanel;
 
     [SerializeField] private List<int> problemIDPool;   //IDs: Buttons - 11, Switches = 12
 
@@ -50,13 +51,13 @@ public class ProblemTimer : MonoBehaviour
     {
         if(activeProblems == 0)
         {
-            warningPanel.StartWarning();
+           // warningPanel.StartWarning();
         }
         int randomProblem = Random.Range(0, problemIDPool.Count);
 
         int chosenProblemID = problemIDPool[randomProblem];
 
-        SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 0.75f);
+        //SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 0.75f);
 
         if(chosenProblemID == 11) //Chose Buttons (ID = 11)
         {
@@ -93,7 +94,7 @@ public class ProblemTimer : MonoBehaviour
 
         if(activeProblems <= 0)
         {
-            warningPanel.NoProblems();
+            //warningPanel.NoProblems();
         }
     }
 }
