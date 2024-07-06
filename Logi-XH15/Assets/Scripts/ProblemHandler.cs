@@ -7,6 +7,8 @@ public class ProblemHandler : MonoBehaviour
     [SerializeField] private GameObject warningPanel;
     [SerializeField] private WarningLights[] warningLights;
 
+    //[SerializeField] private WarningLights[] warningLights;
+
     [SerializeField] private float flashInterval;
     [SerializeField] private float flashCooldown;
 
@@ -34,19 +36,19 @@ public class ProblemHandler : MonoBehaviour
         {
             case WarningState.diabled:
 
-                foreach(WarningLights light in warningLights)
-                {
-                    light.SetFlashing(false);
-                }
+                // foreach(WarningLights light in warningLights)
+                // {
+                //     light.SetFlashing(false);
+                // }
 
                 break;
 
             case WarningState.active:
 
-                foreach(WarningLights light in warningLights)
-                {
-                    light.SetFlashing(true);
-                }
+                // foreach(WarningLights light in warningLights)
+                // {
+                //     light.SetFlashing(true);
+                // }
 
                 if(flashCooldown > 0)
                 {
