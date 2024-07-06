@@ -23,7 +23,7 @@ public class InteractButton : Interactable
         SFXManager.Instance.PlayRandomSFXClip(buttonSFX, transform, 1f);
         if(canFix)
         {
-            FixProblem();
+            FixProblemOnInteractButton();
             SFXManager.Instance.PlayRandomSFXClip(correctSFX, transform, 1f);
         } else
         {
@@ -42,10 +42,10 @@ public class InteractButton : Interactable
         
     }
 
-    public void FixProblem()
+    public void FixProblemOnInteractButton()
     {
         Debug.Log("Fixed the problem");
-        warningSign.FixProblem(11);
+        warningSign.FixProblemOnHandler(11);
         canFix = false;
     }
 

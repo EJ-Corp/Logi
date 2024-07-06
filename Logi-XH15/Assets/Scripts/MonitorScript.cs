@@ -193,7 +193,7 @@ public class MonitorScript : MonoBehaviour
         }
     }
 
-    public void FixedProblem(int problemID)
+    public void FixedProblemOnMonitor(int problemID)
     {
         if(problemID == 11) //Fixed Buttons
         {
