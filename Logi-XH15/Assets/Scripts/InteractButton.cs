@@ -7,6 +7,11 @@ public class InteractButton : Interactable
     [SerializeField] private Animator buttonClick;
     [SerializeField] private ButtonProblem problem;
     [SerializeField] private bool canFix = false;
+    [SerializeField] private string id;
+    [SerializeField] public string ID
+    {
+        get { return id; }
+    }
     [SerializeField] private AudioClip[] buttonSFX;
     [SerializeField] private AudioClip[] correctSFX;
     [SerializeField] private AudioClip[] wrongSFX;
