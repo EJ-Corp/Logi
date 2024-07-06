@@ -7,6 +7,8 @@ public class ProblemHandler : MonoBehaviour
 {
     [SerializeField] private Image warningPanel;
 
+    //[SerializeField] private WarningLights[] warningLights;
+
     [SerializeField] private float flashInterval;
     [SerializeField] private float flashCooldown;
 
@@ -44,9 +46,20 @@ public class ProblemHandler : MonoBehaviour
         {
             case WarningState.disabled:
 
-            break;
+                // foreach(WarningLights light in warningLights)
+                // {
+                //     light.SetFlashing(false);
+                // }
+
+                break;
 
             case WarningState.active:
+
+                // foreach(WarningLights light in warningLights)
+                // {
+                //     light.SetFlashing(true);
+                // }
+
                 if(flashCooldown > 0)
                 {
                     flashCooldown -= Time.deltaTime;
