@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InteractButton : Interactable
@@ -16,10 +17,15 @@ public class InteractButton : Interactable
     [SerializeField] private AudioClip[] correctSFX;
     [SerializeField] private AudioClip[] wrongSFX;
     private ProblemHandler warningSign; 
+    [SerializeField] private Renderer buttonLight;
+    [SerializeField] private Material[] buttonLightMaterial;
 
     void Start()
     {
-        
+        if(buttonLight != null)
+        {
+            buttonLight.sharedMaterial = buttonLightMaterial[0];
+        }
     }
 
     public override void OnInteract()
@@ -52,13 +58,28 @@ public class InteractButton : Interactable
         Debug.Log("Fixed the problem");
         warningSign.FixProblemOnHandler(11);
         canFix = false;
+        if(buttonLight != null)
+        {
+            buttonLight.sharedMaterial = buttonLightMaterial[0];
+        }
     }
 
     public void MakeProblem(ProblemHandler warning)
     {
         canFix = true;
         warningSign = warning;
+        if(buttonLight != null)
+        {
+            buttonLight.sharedMaterial = buttonLightMaterial[1];
+        }
     }
 
+    public void Update()
+    {
+        if(canFix)
+        {
+            buttonLight.sharedMaterial = buttonLightMaterial[1];
+        }
+    }
     
 }
