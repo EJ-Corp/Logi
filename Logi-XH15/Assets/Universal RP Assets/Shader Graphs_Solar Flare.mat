@@ -42,10 +42,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _FlareScale: 15
+    - _FlareSpeed: 0.5
+    - _Intensity: 5.96
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
     - _FlareColour: {r: 1, g: 0.3177098, b: 0, a: 0}
+    - _Tint: {r: 1, g: 0.9764151, b: 0.9764151, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7102799009215299404
 MonoBehaviour:

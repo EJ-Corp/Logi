@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Menu Sun
+  m_Name: Shader Graphs_Ingame Sun
   m_Shader: {fileID: -6465566751694194690, guid: d2e1c1841fbdc47949dd43ecdace1396, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -45,8 +45,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Blend: 7.13
-    - _Brightness: 17.2
+    - _Blend: 1.47
+    - _Brightness: 0.49
+    - _Intensity: 2.08
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Rotation_Speed_1: 1
