@@ -45,7 +45,7 @@ public class SwitchProblem : MonoBehaviour
                 breakbleSwitches.Clear();
                 switchesToBreak.Clear();
 
-                warningSign.FixProblem(12);
+                warningSign.FixProblemOnHandler(12);
                 problemActive = false;
 
                 
@@ -82,10 +82,10 @@ public class SwitchProblem : MonoBehaviour
     {
         if(on)
         {
-            onSwitches++;
+            onSwitches += 1;
         } else
         {
-            onSwitches--;
+            onSwitches -= 1;
         }
     }
 }
