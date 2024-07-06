@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82bcc42c17a895d408e54a2b7378a836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
   numberOfProblems: 2
   nextProblemCountDown: 15
   activeProblems: 0
@@ -68,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   warningPanel: {fileID: 0}
-  flashInterval: 1.5
+  flashInterval: 0.9
   flashCooldown: 0
   currentState: 0
   problemTimer: {fileID: 1330760988278560321}

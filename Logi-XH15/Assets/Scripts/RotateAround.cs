@@ -5,10 +5,12 @@ using UnityEngine;
 public class RotateAround : MonoBehaviour
 {
     public Transform target;
-    public float rotationSpeed;
+    public float rotateYSpeed;
+    public float rotateXSpeed;
 
     void Update()
     {
-        transform.RotateAround(target.position, Vector3.up, rotationSpeed*Time.deltaTime);
+        transform.RotateAround(target.position, Vector3.up, rotateYSpeed * Time.deltaTime);
+        transform.RotateAround(target.position, Vector3.right, rotateXSpeed * Time.deltaTime);
     }
 }
