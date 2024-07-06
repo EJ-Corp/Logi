@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] public IDandPasswordInputScript pswdInput;
     [SerializeField] public Image problemPanel;
 
+    //Sun objects
+    [SerializeField] public SunManager sumManager;
+
     enum GameState
     {
         mainView,
@@ -116,7 +119,7 @@ public class GameManager : MonoBehaviour
             length = Random.Range(min_length, max_length);
         }
 
-        string allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        string allChars = "abcdefghijklmnopqrstuvwxyz0123456789";
 
         string password = "";
 
@@ -137,6 +140,7 @@ public class GameManager : MonoBehaviour
             pswdInput.ResetInputResult();
         } else //COmputer is off so we turn it on
         {
+            sumManager.BufferFlare();
             computerScreenFocus.transform.GetComponent<MonitorScript>().FixComputer();
             idInput.ResetInputResult();
             pswdInput.ResetInputResult();

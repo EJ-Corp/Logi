@@ -14,7 +14,9 @@ public class SunManager : MonoBehaviour
     public float maxWait = 30;
     public float targetedFlareDistance = 0.5f;
     [SerializeField] Vector3 flareYOffset;
-    private bool canFire = true;
+    public bool canFire = true;
+    public float bufferTime = 0;
+    private bool bufferState = false;
 
     [SerializeField] GameManager gameManager;
     [SerializeField] CameraShake cameraShakeScript;
@@ -47,7 +49,17 @@ public class SunManager : MonoBehaviour
 
     void Update()
     {
-        if(canFire)
+        if (bufferTime > 0)
+        {
+            bufferTime -= Time.deltaTime;
+        }
+        else if (bufferTime <= 0 && bufferState == true)
+        {
+            canFire = true;
+            randomWait = UnityEngine.Random.Range(minWait, maxWait);
+        }
+
+        if (canFire)
         {
             if(randomWait > 0)
             {
@@ -74,6 +86,7 @@ public class SunManager : MonoBehaviour
 
     public void FireSolarFlare()
     {
+        bufferState = false;
         solarFlareParticleSystem.Play();
         Instantiate(solarFlarePrefab, transform.position + flareYOffset, Quaternion.LookRotation(playerLocation.position - this.transform.position));
         cameraShakeScript.StartCameraShake();
@@ -85,5 +98,12 @@ public class SunManager : MonoBehaviour
     public void ResetFlare()
     {
         canFire = true;
+    }
+
+    public void BufferFlare()
+    {
+        bufferState = true;
+        canFire = false;
+        bufferTime = UnityEngine.Random.Range(minWait, maxWait);
     }
 }
