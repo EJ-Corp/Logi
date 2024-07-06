@@ -31,7 +31,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Canvas monitorBoundary;
     [SerializeField] public IDandPasswordInputScript idInput;
     [SerializeField] public IDandPasswordInputScript pswdInput;
+
+    //problem objects
     [SerializeField] public Image problemPanel;
+    [SerializeField] public Light[] warningLights;
 
     //Sun objects
     [SerializeField] public SunManager sumManager;
@@ -51,10 +54,10 @@ public class GameManager : MonoBehaviour
 
     //Password Generator
     [Header("Password Generation")]
-    [SerializeField] private int length = 7;
-    [SerializeField] private int max_length = 8;
-    [SerializeField] private int min_length = 4;
-    [SerializeField] private bool randomLength = false;
+    [SerializeField] private int length;
+    [SerializeField] private int max_length;
+    [SerializeField] private int min_length;
+    [SerializeField] private bool randomLength;
     [SerializeField] private TMP_Text passwordNote;
 
     public string password;
@@ -66,10 +69,10 @@ public class GameManager : MonoBehaviour
             manager = this;
         }
 
-        computerScreenFocus = GameObject.FindGameObjectWithTag("PCScreen").GetComponent<ComputerFocusScript>();
-        idInput = GameObject.FindGameObjectWithTag("idInput").GetComponent<IDandPasswordInputScript>();
-        pswdInput = GameObject.FindGameObjectWithTag("pswdInput").GetComponent<IDandPasswordInputScript>();
-        problemPanel = GameObject.FindGameObjectWithTag("problemPanel").GetComponent<Image>();
+        // computerScreenFocus = GameObject.FindGameObjectWithTag("PCScreen").GetComponent<ComputerFocusScript>();
+        // idInput = GameObject.FindGameObjectWithTag("idInput").GetComponent<IDandPasswordInputScript>();
+        // pswdInput = GameObject.FindGameObjectWithTag("pswdInput").GetComponent<IDandPasswordInputScript>();
+        // problemPanel = GameObject.FindGameObjectWithTag("problemPanel").GetComponent<Image>();
         gameState = GameState.mainView;
 
     }
@@ -120,6 +123,8 @@ public class GameManager : MonoBehaviour
         }
 
         string allChars = "abcdefghijklmnopqrstuvwxyz0123456789";
+       // string allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+       // string allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
         string password = "";
 

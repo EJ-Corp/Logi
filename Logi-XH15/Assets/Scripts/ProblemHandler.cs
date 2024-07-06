@@ -10,13 +10,15 @@ public class ProblemHandler : MonoBehaviour
     [SerializeField] private float flashInterval;
     [SerializeField] private float flashCooldown;
 
+    [SerializeField] private Light[] problemLights = new Light[4];
+
     enum WarningState
     {
-        diabled, active
+        disabled, active
     };
 
     [SerializeField] private WarningState currentState;
-    private bool active = false;
+    private bool panelActive = false;
 
     //Get rid of this and make it better
     [SerializeField] private TempProblemTimer problemTimer;
@@ -26,19 +28,26 @@ public class ProblemHandler : MonoBehaviour
     {
         warningPanel = GameManager.Manager.problemPanel;
         warningPanel.enabled = false;
+        
+        for (int i = 0; i < problemLights.Length; i++)
+        {
+            problemLights[i] = GameManager.Manager.warningLights[i];  
+            problemLights[i].enabled = false;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        LoopThroughLights();
         switch(currentState)
         {
-            case WarningState.diabled:
-                break;
+            case WarningState.disabled:
+
+            break;
 
             case WarningState.active:
-
-                
                 if(flashCooldown > 0)
                 {
                     flashCooldown -= Time.deltaTime;
@@ -48,21 +57,21 @@ public class ProblemHandler : MonoBehaviour
                 {
                     Trigger();
                 }
-                break;
+            break;
         }
     }
 
     public void Trigger()
     {
-        if(active)
+        if(panelActive)
         {
             warningPanel.enabled = false;
-            active = false;
+            panelActive = false;
             flashCooldown = flashInterval;
         } else 
         {
             warningPanel.enabled = true;
-            active = true;
+            panelActive = true;
             flashCooldown = flashInterval;
             
         }
@@ -81,7 +90,20 @@ public class ProblemHandler : MonoBehaviour
     public void NoProblems()
     {
         warningPanel.enabled = false;
-        currentState = WarningState.diabled;
-        active = false;
+        currentState = WarningState.disabled;
+        panelActive = false;
+    }
+
+    void LoopThroughLights()
+    {
+        for (int i = 0; i < problemLights.Length; i++)
+        {
+            if (currentState == WarningState.disabled) {
+                problemLights[i].enabled = false;
+            } else {
+                problemLights[i].enabled = true;
+            }
+            
+        }
     }
 }
