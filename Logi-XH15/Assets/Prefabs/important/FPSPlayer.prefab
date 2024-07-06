@@ -310,8 +310,10 @@ MonoBehaviour:
   playerCamera: {fileID: 6242420620231663883}
   lookSpeed: 2
   lookXLimit: 70
-  canMove: 1
+  canMove: 0
   canInteract: 1
+  startingGame: 1
+  zoomOver: 0
   interactionRayPoint: {x: 0.5, y: 0.5, z: 0}
   interactionDistance: 2
   interactionLayer:
