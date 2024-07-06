@@ -1,40 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ProblemHandler : MonoBehaviour
 {
-    [SerializeField] private GameObject warningPanel;
-    [SerializeField] private WarningLights[] warningLights;
+    [SerializeField] private Image warningPanel;
 
     //[SerializeField] private WarningLights[] warningLights;
 
     [SerializeField] private float flashInterval;
     [SerializeField] private float flashCooldown;
 
+    [SerializeField] private Light[] problemLights = new Light[4];
+
     enum WarningState
     {
-        diabled, active
+        disabled, active
     };
 
     [SerializeField] private WarningState currentState;
-    private bool active = false;
+    private bool panelActive = false;
 
-    //Get rid of this and make it better
-    [SerializeField] private TempProblemTimer problemTimer;
+    [SerializeField] private ProblemTimer problemTimer;
 
     // Start is called before the first frame update
     void Start()
     {
-        warningPanel.SetActive(false);
+        warningPanel = GameManager.Manager.problemPanel;
+        warningPanel.enabled = false;
+        
+        for (int i = 0; i < problemLights.Length; i++)
+        {
+            problemLights[i] = GameManager.Manager.warningLights[i];  
+            problemLights[i].enabled = false;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        LoopThroughLights();
         switch(currentState)
         {
-            case WarningState.diabled:
+            case WarningState.disabled:
 
                 // foreach(WarningLights light in warningLights)
                 // {
@@ -59,40 +69,53 @@ public class ProblemHandler : MonoBehaviour
                 {
                     Trigger();
                 }
-                break;
+            break;
         }
     }
 
     public void Trigger()
     {
-        if(active)
+        if(panelActive)
         {
-            warningPanel.SetActive(false);
-            active = false;
+            warningPanel.enabled = false;
+            panelActive = false;
             flashCooldown = flashInterval;
         } else 
         {
-            warningPanel.SetActive(true);
-            active = true;
+            warningPanel.enabled = true;
+            panelActive = true;
             flashCooldown = flashInterval;
             
         }
     }
 
-    public void FixProblem(int problemID)
+    public void FixProblemOnHandler(int problemID)
     {       
-        problemTimer.FixedProblem(problemID);
+        problemTimer.FixedProblemOnTimer(problemID);
     }
 
-    public void StartProblem()
+    public void StartWarning()
     {
         currentState = WarningState.active;
     }
 
     public void NoProblems()
     {
-        warningPanel.SetActive(false);
-        currentState = WarningState.diabled;
-        active = false;
+        warningPanel.enabled = false;
+        currentState = WarningState.disabled;
+        panelActive = false;
+    }
+
+    void LoopThroughLights()
+    {
+        for (int i = 0; i < problemLights.Length; i++)
+        {
+            if (currentState == WarningState.disabled) {
+                problemLights[i].enabled = false;
+            } else {
+                problemLights[i].enabled = true;
+            }
+            
+        }
     }
 }
