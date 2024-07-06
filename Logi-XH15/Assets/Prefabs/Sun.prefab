@@ -9905,10 +9905,12 @@ MonoBehaviour:
   solarFlarePrefab: {fileID: 1997127103868728048, guid: 7e31edfab4d41453fa8e8fd0fb2d82e4, type: 3}
   playerLocation: {fileID: 0}
   randomWait: 0
-  minWait: 10
-  maxWait: 20
+  minWait: 15
+  maxWait: 30
   targetedFlareDistance: 0.5
   flareYOffset: {x: 0, y: 1.75, z: 2}
+  gameManager: {fileID: 0}
+  cameraShakeScript: {fileID: 0}
 --- !u!95 &3706913062806889429
 Animator:
   serializedVersion: 5

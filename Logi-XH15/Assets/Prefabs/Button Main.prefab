@@ -128,6 +128,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: aeda18de97d344ee7834ec81ac8057af, type: 3}
   - {fileID: 8300000, guid: 03f2be26ccc684762b88fecadc6d9693, type: 3}
   - {fileID: 8300000, guid: 29f14c80f10114e3bad01813d5c22470, type: 3}
+  correctSFX:
+  - {fileID: 8300000, guid: 930bc9d8fde274c7da10224f19838a04, type: 3}
+  wrongSFX:
+  - {fileID: 8300000, guid: 5fd2dd5a29c6b45b694cf9cf954e53a6, type: 3}
 --- !u!1 &3771531301396966000
 GameObject:
   m_ObjectHideFlags: 0
