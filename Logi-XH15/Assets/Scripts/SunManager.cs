@@ -201,7 +201,7 @@ public class SunManager : MonoBehaviour
         SetStateBooleans(false, false, false);
         solarFlareParticleSystem.Play();
         
-        SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 0.1f);
+        SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 0.3f);
 
         Instantiate(solarFlarePrefab, transform.position + flareYOffset, Quaternion.LookRotation(playerLocation.position - this.transform.position));
         cameraShakeScript.StartCameraShake();
