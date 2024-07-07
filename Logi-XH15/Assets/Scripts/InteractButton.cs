@@ -59,8 +59,9 @@ public class InteractButton : Interactable
     public void FixProblemOnInteractButton()
     {
         Debug.Log("Fixed the problem");
-        warningSign.FixProblemOnHandler(11);
         canFix = false;
+        warningSign.FixProblemOnHandler(11);
+        
         if(buttonLight != null)
         {
             buttonLight.sharedMaterial = buttonLightMaterial[0];
@@ -82,6 +83,9 @@ public class InteractButton : Interactable
         if(canFix)
         {
             buttonLight.sharedMaterial = buttonLightMaterial[1];
+        } else 
+        {
+            buttonLight.sharedMaterial = buttonLightMaterial[0];
         }
     }
     

@@ -100,10 +100,10 @@ public class ProblemTimer : MonoBehaviour
     public void FixedProblemOnTimer(int IDFixed)
     {
         activeProblems -= 1;
-        if(!problemIDPool.Contains(IDFixed))
-        {
+        //if(!problemIDPool.Contains(IDFixed))
+        //{
             problemIDPool.Add(IDFixed);
-        }
+        //}
         computerScreen.FixedProblemOnMonitor(IDFixed);
 
         if(activeProblems <= 0)
