@@ -49,6 +49,7 @@ public class PressurePuzzle : MonoBehaviour
             pressure += Time.deltaTime;
         }
 
+        
 
         //Break puzzle
         //TODO: Ping player + update data transfer speed
@@ -73,6 +74,15 @@ public class PressurePuzzle : MonoBehaviour
                 releaseSFX.volume += Time.deltaTime * fadeSpeed; 
             }
             pressure -= Time.deltaTime * pressureReleaseSpeed;
+
+
+            if(isIncreasingPressure) //Problem is active on the handler
+            {
+                //Stop it from going up and tell the problem handler it can be fired again
+                Debug.Log("We shoudl stop increasing");
+                isIncreasingPressure = false;
+                warningSign.FixProblemOnHandler(13);
+            }
             
             //break once it reaches red
 
