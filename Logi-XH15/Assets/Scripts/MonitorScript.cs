@@ -31,6 +31,7 @@ public class MonitorScript : MonoBehaviour
     [SerializeField] private int activeAnnoy;
     [SerializeField] private float annoyCountdown;
     [SerializeField] private List<int> annoyIDPool; 
+    [SerializeField] private List<GameObject> activeAnnoyList;
 
     [Header("Speech Bubbles")]
     [SerializeField] private GameObject bubbleHolder;
@@ -209,8 +210,8 @@ public class MonitorScript : MonoBehaviour
             case 0: //Spawn a flirt
                 GameObject flirtSpeechBubble = Instantiate(flirtBubble, bubbleHolder.transform);
                 flirtSpeechBubble.name = "Flirt Bubble";
-                activeBubbles.Add(flirtSpeechBubble);
-                flirtSpeechBubbleIdx = activeBubbles.Count - 1;
+                activeAnnoyList.Add(flirtSpeechBubble);
+                flirtSpeechBubbleIdx = activeAnnoyList.Count - 1;
 
                 activeAnnoy++;
                 stellaAnimator.SetTrigger("flirtTime");
@@ -220,8 +221,8 @@ public class MonitorScript : MonoBehaviour
             case 1: //Spawn a history fact
                 GameObject historySpeechBubble = Instantiate(historyBubble, bubbleHolder.transform);
                 historySpeechBubble.name = "History Bubble";
-                activeBubbles.Add(historySpeechBubble);
-                historySpeechBubbleIdx = activeBubbles.Count - 1;
+                activeAnnoyList.Add(historySpeechBubble);
+                historySpeechBubbleIdx = activeAnnoyList.Count - 1;
 
                 activeAnnoy++;
                 stellaAnimator.SetTrigger("talkingTime");
@@ -231,8 +232,8 @@ public class MonitorScript : MonoBehaviour
             case 2: //Spawn a galaxy fact
                 GameObject galaxySpeechBubble = Instantiate(galaxyBubble, bubbleHolder.transform);
                 galaxySpeechBubble.name = "Galaxy Bubble";
-                activeBubbles.Add(galaxySpeechBubble);
-                galaxySpeechBubbleIdx = activeBubbles.Count - 1;
+                activeAnnoyList.Add(galaxySpeechBubble);
+                galaxySpeechBubbleIdx = activeAnnoyList.Count - 1;
 
                 activeAnnoy++;
                 stellaAnimator.SetTrigger("talkingTime");
@@ -245,24 +246,25 @@ public class MonitorScript : MonoBehaviour
 
     public void ClosedAnnoy(int annoyIDClosed)
     {
-        activeAnnoy--;
+        
         if (annoyIDClosed == 0) //flirt bubble
         {
-            Destroy(activeBubbles[flirtSpeechBubbleIdx].gameObject);
-            activeBubbles.RemoveAt(flirtSpeechBubbleIdx);
+            Destroy(activeAnnoyList[flirtSpeechBubbleIdx].gameObject);
+            activeAnnoyList.RemoveAt(flirtSpeechBubbleIdx);
         } else
         if (annoyIDClosed == 1) //history fact bubble
         {
-            Destroy(activeBubbles[historySpeechBubbleIdx].gameObject);
-            activeBubbles.RemoveAt(historySpeechBubbleIdx);
+            Destroy(activeAnnoyList[historySpeechBubbleIdx].gameObject);
+            activeAnnoyList.RemoveAt(historySpeechBubbleIdx);
         } else 
         if (annoyIDClosed == 2) //galaxy fact bubble
         {
-            Destroy(activeBubbles[galaxySpeechBubbleIdx].gameObject);
-            activeBubbles.RemoveAt(galaxySpeechBubbleIdx);
+            Destroy(activeAnnoyList[galaxySpeechBubbleIdx].gameObject);
+            activeAnnoyList.RemoveAt(galaxySpeechBubbleIdx);
         }
 
         annoyIDPool.Add(annoyIDClosed);
+        activeAnnoy--;
     }
 
     public void SpawnProblemFact(int problemID, string buttonID)
