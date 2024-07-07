@@ -1483,10 +1483,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: No interactable Elements
       objectReference: {fileID: 0}
-    - target: {fileID: 6053204192113252535, guid: 99c5a53e86c900e43a17e92aed8a01fe, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6720999203831957610, guid: 99c5a53e86c900e43a17e92aed8a01fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.661363
@@ -1901,6 +1897,10 @@ PrefabInstance:
     - target: {fileID: 8200243184741035534, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360182581247992874, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
