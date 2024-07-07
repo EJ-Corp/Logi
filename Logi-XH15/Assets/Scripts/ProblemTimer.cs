@@ -102,6 +102,13 @@ public class ProblemTimer : MonoBehaviour
     {
         activeProblems -= 1; 
 
+        computerScreen.FixedProblemOnMonitor(IDFixed);
+        
+        if(IDFixed == 11)
+        {
+            buttonProblem.FixProblem();
+        }
+
         if(!problemIDPool.Contains(IDFixed))
         {
             Debug.Log("added problem back to list " + IDFixed);
@@ -109,16 +116,13 @@ public class ProblemTimer : MonoBehaviour
         }     
         
         
-        if(IDFixed == 11)
-        {
-            buttonProblem.FixProblem();
-        }
+        
 
         if(activeProblems <= 0)
         {
             warningPanel.NoProblems();
         }
 
-        computerScreen.FixedProblemOnMonitor(IDFixed);
+        
     }
 }

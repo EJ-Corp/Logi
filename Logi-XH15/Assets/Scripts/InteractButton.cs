@@ -60,12 +60,14 @@ public class InteractButton : Interactable
     {
         //Debug.Log("Fixed the problem");
         canFix = false;
-        warningSign.FixedProblemOnTimer(11);
+        
         
         if(buttonLight != null)
         {
             buttonLight.sharedMaterial = buttonLightMaterial[0];
         }
+
+        warningSign.FixedProblemOnTimer(11);
     }
 
     public void MakeProblem(ProblemTimer warning)
