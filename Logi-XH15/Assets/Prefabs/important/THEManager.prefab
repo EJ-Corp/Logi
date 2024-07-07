@@ -971,6 +971,10 @@ PrefabInstance:
         and requires venting before rupture. To do so simple <b>pull the draw cord</b>
         to a reasonable length and <b>hold it to continue releasing pressure</b>. "
       objectReference: {fileID: 0}
+    - target: {fileID: 5879210157955423964, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
+      propertyPath: m_pageToDisplay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5942960093676340766, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
