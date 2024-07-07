@@ -1013,7 +1013,7 @@ MonoBehaviour:
   nextIcon: {fileID: 5348289845329791924}
   pageTotal: 5
   distance: 5
-  offset: {x: 0, y: 0, z: 0.5}
+  offset: {x: 0, y: -0.01, z: 0.5}
   playerController: {fileID: 4564935018383249647}
   book: {fileID: 4952152014885502978, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
 --- !u!114 &3803346297339768492 stripped
