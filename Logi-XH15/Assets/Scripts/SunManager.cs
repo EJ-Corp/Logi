@@ -165,6 +165,33 @@ public class SunManager : MonoBehaviour
                 break;
             }
         }
+        
+        if (startedGame)
+        {
+            if (bufferTime > 0)
+            {
+                bufferTime -= Time.deltaTime;
+            }
+            else if (bufferTime <= 0 && bufferState == true)
+            {
+                canFire = true;
+                bufferState = false;
+            }
+
+            if (canFire)
+            {
+                if(randomWait > 0)
+                {
+                    randomWait -= Time.deltaTime;
+                }
+
+                if(randomWait <= 0)
+                {
+                    FireSolarFlare();
+                }
+            }
+        }
+
     }
 
     void MoveParticleEmitter()
