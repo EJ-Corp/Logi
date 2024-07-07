@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debug: 0
-  numberOfProblems: 2
+  numberOfProblems: 3
   nextProblemCountDown: 20
   activeProblems: 0
   buttonProblem: {fileID: 7649493771567849724}

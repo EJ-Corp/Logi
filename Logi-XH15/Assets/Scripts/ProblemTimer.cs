@@ -84,6 +84,9 @@ public class ProblemTimer : MonoBehaviour
             pressureProblem.ActivateProblem();
             activeProblems += 1;
             problemIDPool.RemoveAt(randomProblem);
+            
+            //Spawn Speech bubble
+            computerScreen.SpawnProblemFact(chosenProblemID, buttonID);
         }
 
         ResetCountdown();

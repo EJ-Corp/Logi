@@ -36,18 +36,23 @@ public class MonitorScript : MonoBehaviour
     [SerializeField] private GameObject bubbleHolder;
     [SerializeField] private GameObject buttonProbBubble;
     [SerializeField] private GameObject switchProbBubble;
+    [SerializeField] private GameObject pressureProbBubble;
     [SerializeField] private GameObject randomFactBubble;
     [SerializeField] private GameObject flirtBubble;
     [SerializeField] private List<GameObject> activeBubbles = new List<GameObject>();
 
-    [Header("SOVA Animation Stuff")]
-    [SerializeField] private Animator sovaAnimator;
+    [Header("stella Animation Stuff")]
+    [SerializeField] private Animator stellaAnimator;
     [SerializeField] private int problemBubbleCount = 0;
     [SerializeField] private float idleTriggerTimer;
     [SerializeField] private float idleTriggerRandInterval;
 
     private int buttonBubbleIdx;
     private int switchBubbleIdx;
+    private int pressureBubbleIdx;
+
+    private int factSpeechBubbleIdx;
+    private int flirtSpeechBubbleIdx;
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +63,7 @@ public class MonitorScript : MonoBehaviour
         desktopScreen.SetActive(false);
         correctID = "helios";
 
-        idleTriggerRandInterval = Random.Range(4, 10);
+        ResetIdleTimer();    
     }
 
     // Update is called once per frame
@@ -75,17 +80,11 @@ public class MonitorScript : MonoBehaviour
             CheckIDAndPassword();
         }
 
-        if (problemBubbleCount < 0)
+        if (activeBubbles.Count <= 0)
         {
-            problemBubbleCount = 0;
-        }
-
-        if (activeBubbles.Count == 0)
-        {
-            sovaAnimator.SetBool("isBubbleActive", false);
+            stellaAnimator.SetBool("isBubbleActive", false);
         } else {
-            sovaAnimator.SetBool("isBubbleActive", true);
-            sovaAnimator.SetInteger("isProblemActive", problemBubbleCount);
+            stellaAnimator.SetBool("isBubbleActive", true);
 
             if (idleTriggerTimer > 0)
             {
@@ -98,14 +97,13 @@ public class MonitorScript : MonoBehaviour
 
                 if (randomCoinFlip <= 2)
                 {
-                    sovaAnimator.SetTrigger("goIdle1");   
+                    stellaAnimator.SetTrigger("goIdle1");   
                 } else if (randomCoinFlip >= 3)
                 {
-                    sovaAnimator.SetTrigger("goIdle2");
+                    stellaAnimator.SetTrigger("goIdle2");
                 }
 
-                idleTriggerRandInterval = Random.Range(8, 16);
-                idleTriggerTimer = idleTriggerRandInterval;
+                ResetIdleTimer();
             }
         }
         
@@ -203,15 +201,21 @@ public class MonitorScript : MonoBehaviour
             case 0: //Spawn a flirt
                 GameObject flirtSpeechBubble = Instantiate(flirtBubble, bubbleHolder.transform);
                 flirtSpeechBubble.name = "Flirt Bubble";
+                activeBubbles.Add(flirtSpeechBubble);
+                flirtSpeechBubbleIdx = activeBubbles.Count - 1;
+
                 activeAnnoy++;
-                sovaAnimator.SetTrigger("flirtTime");
+                stellaAnimator.SetTrigger("flirtTime");
                 annoyIDPool.RemoveAt(randomAnnoy);
                 break;
             case 1: //Spawn a fact
-                GameObject factSpeeechBubble = Instantiate(randomFactBubble, bubbleHolder.transform);
-                factSpeeechBubble.name = "Fact Bubble";
+                GameObject factSpeechBubble = Instantiate(randomFactBubble, bubbleHolder.transform);
+                factSpeechBubble.name = "Fact Bubble";
+                activeBubbles.Add(factSpeechBubble);
+                factSpeechBubbleIdx = activeBubbles.Count - 1;
+
                 activeAnnoy++;
-                sovaAnimator.SetTrigger("talkingTime");
+                stellaAnimator.SetTrigger("talkingTime");
                 annoyIDPool.RemoveAt(randomAnnoy);
                 break;
         }
@@ -222,6 +226,15 @@ public class MonitorScript : MonoBehaviour
     public void ClosedAnnoy(int annoyIDClosed)
     {
         activeAnnoy--;
+        if (annoyIDClosed == 0) //flirt bubble
+        {
+            activeBubbles.RemoveAt(flirtSpeechBubbleIdx);
+        } else
+        if (annoyIDClosed == 1)
+        {
+            activeBubbles.RemoveAt(factSpeechBubbleIdx);
+        }
+
         annoyIDPool.Add(annoyIDClosed);
     }
 
@@ -236,15 +249,16 @@ public class MonitorScript : MonoBehaviour
                 buttonBubbleIdx = activeBubbles.Count - 1;
                 
                 //change button name in text
-                TMP_Text bubbleText = buttonBubble.transform.Find("fact (2)").GetComponent<TMP_Text>();
+                TMP_Text bubbleText = buttonBubble.transform.Find("fact (1)").GetComponent<TMP_Text>();
                 bubbleText.text = 
-                "Don't worry, the " + buttonID + " button should be able to stabilise it. You got this! :)";
+                "Seems like the " + buttonID + " is destabilising!!!";
                 //buttonBubble.transform.parent = bubbleHolder.transform;
 
                 problemBubbleCount += 1;
-                sovaAnimator.SetTrigger("talkingTime");
+                stellaAnimator.SetTrigger("talkingTime");
+                ResetIdleTimer();
 
-                break;
+            break;
 
             case 12: //Its the switch Problem (ID = 12)
                 GameObject switchBubble = Instantiate(switchProbBubble, bubbleHolder.transform);
@@ -254,9 +268,23 @@ public class MonitorScript : MonoBehaviour
                 //switchBubble.transform.parent = bubbleHolder.transform;
 
                 problemBubbleCount += 1;
-                sovaAnimator.SetTrigger("talkingTime");
+                stellaAnimator.SetTrigger("talkingTime");
+                ResetIdleTimer();
 
-                break;
+            break;
+
+            case 13: //Its the pressure Problem (ID = 13)
+                GameObject pressureBubble = Instantiate(pressureProbBubble, bubbleHolder.transform);
+                pressureBubble.name = "13Bubble";
+                activeBubbles.Add(pressureBubble);
+                pressureBubbleIdx = activeBubbles.Count - 1;
+                //switchBubble.transform.parent = bubbleHolder.transform;
+
+                problemBubbleCount += 1;
+                stellaAnimator.SetTrigger("talkingTime");
+                ResetIdleTimer();
+                
+            break;
         }
     }
 
@@ -275,6 +303,12 @@ public class MonitorScript : MonoBehaviour
             activeBubbles.RemoveAt(switchBubbleIdx);
 
             problemBubbleCount -= 1;
+        } else if (problemID == 13) //Fixed pressure
+        {
+            Destroy(activeBubbles[pressureBubbleIdx].gameObject);
+            activeBubbles.RemoveAt(pressureBubbleIdx);
+
+            problemBubbleCount -= 1;            
         }
     }
 
@@ -293,4 +327,9 @@ public class MonitorScript : MonoBehaviour
         desktopScreen.SetActive(false);
     }
 
+    void ResetIdleTimer()
+    {
+        idleTriggerRandInterval = Random.Range(8, 16);
+        idleTriggerTimer = idleTriggerRandInterval;       
+    }
 }
