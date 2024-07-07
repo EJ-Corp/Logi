@@ -60,10 +60,15 @@ Material:
     m_Floats:
     - _Animation_Speed: 0.3
     - _Brightness: 22.47
+    - _Bumpyness_scale: 17.98
+    - _Horizontal_Offset: 0.03
     - _Intensity: 1.5
+    - _MovementDirectionSpeed: 0.28
+    - _Noise_Intensity: 0.005
     - _Opacity: 1.49
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _vertical_Offset: 0.03
     m_Colors:
     - _Colour_Tint: {r: 1.5314398, g: 0.2929977, b: 0.252832, a: 0}
     - _Flare_Shot_Colour: {r: 1, g: 0.2117647, b: 0, a: 0}
