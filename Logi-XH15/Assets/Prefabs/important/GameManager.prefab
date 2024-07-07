@@ -520,6 +520,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4721954217560202587}
     m_Modifications:
+    - target: {fileID: 2627962140316395722, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
+      propertyPath: problemTimer
+      value: 
+      objectReference: {fileID: 1486587392168475845}
     - target: {fileID: 2847744281658589633, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
       propertyPath: anchor
       value: 
