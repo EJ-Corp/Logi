@@ -11,6 +11,7 @@ public class PressurePuzzle : MonoBehaviour
     [SerializeField] private float handleDistance;
     [SerializeField] private GameObject handle;
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject arrowhead;
     [SerializeField] private bool isIncreasingPressure;
     [SerializeField] private bool isBroken;
     [SerializeField] private float pressure = 0f;
@@ -18,6 +19,7 @@ public class PressurePuzzle : MonoBehaviour
     [SerializeField] private float dangerousPressure = 60f;
     [SerializeField] private float maxPressure = 100f;
     [SerializeField] private int pressureReleaseSpeed = 1;
+    [SerializeField] private float arrowheadRotationFactor = 0.05f;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +44,7 @@ public class PressurePuzzle : MonoBehaviour
         if(isIncreasingPressure && pressure < maxPressure)
         {
             pressure += Time.deltaTime;
+            arrowhead.transform.Rotate(0, -arrowheadRotationFactor, 0, Space.Self);
         }
 
         //Break puzzle
@@ -55,10 +58,11 @@ public class PressurePuzzle : MonoBehaviour
         if(handleDistance > innerDistance && pressure > 0)
         {
             pressure -= Time.deltaTime * pressureReleaseSpeed;
+            arrowhead.transform.Rotate(0, arrowheadRotationFactor * pressureReleaseSpeed, 0, Space.Self);
         }
 
         //Fix puzzle if pressure is safe
-        if(pressure <= safePressure)
+        if(pressure <= safePressure && isBroken == true)
         {
             isBroken = false;
             isIncreasingPressure = false;
@@ -67,8 +71,8 @@ public class PressurePuzzle : MonoBehaviour
         //Release handle when outside range
         if(handleDistance > outerDistance)
         {
-            //TODO: Handle release interaction
-            player.GetComponent<TestDummy>().ReleaseGrab();
+            handle.GetComponent<Rigidbody>().isKinematic = false;
+            handle.transform.parent = this.transform;
         }
     }
 }

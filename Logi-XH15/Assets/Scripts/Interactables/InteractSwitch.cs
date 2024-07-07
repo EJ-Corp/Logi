@@ -41,6 +41,11 @@ public class InteractSwitch : Interactable
         GetComponentInChildren<Outline>().enabled = false;
     }
 
+    public override void OnStopInteract()
+    {
+
+    }
+
     public void Break()
     {
         if(isOn)

@@ -43,6 +43,11 @@ public class InteractButton : Interactable
         }
         
     }
+
+    public override void OnStopInteract()
+    {
+
+    }
     public override void OnFocus()
     {
 

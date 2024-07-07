@@ -45,6 +45,11 @@ public class InteractCompBreaker : Interactable
         
     }
 
+    public override void OnStopInteract()
+    {
+
+    }
+
     // Start is called before the first frame update
     public void FlareBreak()
     {

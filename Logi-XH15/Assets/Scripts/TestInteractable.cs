@@ -18,4 +18,9 @@ public class TestInteractable : Interactable
     {
         //Debug.Log("Stopped looking at " + gameObject.name);
     }
+
+    public override void OnStopInteract()
+    {
+
+    }
 }
