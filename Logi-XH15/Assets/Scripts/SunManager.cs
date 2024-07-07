@@ -115,6 +115,7 @@ public class SunManager : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
+            SetStateBooleans(false, false, false);
         }
 
         if (bufferState == true)
