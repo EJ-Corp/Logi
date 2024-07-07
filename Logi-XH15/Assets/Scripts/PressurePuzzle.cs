@@ -12,6 +12,7 @@ public class PressurePuzzle : MonoBehaviour
     [SerializeField] private GameObject handle;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject arrowhead;
+    [SerializeField] private ProblemHandler warningSign;
     [SerializeField] private bool isIncreasingPressure;
     [SerializeField] private bool isBroken;
     [SerializeField] private float pressure = 0f;
@@ -59,11 +60,16 @@ public class PressurePuzzle : MonoBehaviour
         {
             pressure -= Time.deltaTime * pressureReleaseSpeed;
             arrowhead.transform.Rotate(0, arrowheadRotationFactor * pressureReleaseSpeed, 0, Space.Self);
+            if(!isBroken)
+            {
+                isBroken = true;
+            }
         }
 
         //Fix puzzle if pressure is safe
         if(pressure <= safePressure && isBroken == true)
         {
+            warningSign.FixProblemOnHandler(13);
             isBroken = false;
             isIncreasingPressure = false;
         }
@@ -74,5 +80,11 @@ public class PressurePuzzle : MonoBehaviour
             handle.GetComponent<Rigidbody>().isKinematic = false;
             handle.transform.parent = this.transform;
         }
+    }
+
+    public void ActivateProblem()
+    {
+        isIncreasingPressure = true;
+        Debug.Log("Problem is Pressure");
     }
 }

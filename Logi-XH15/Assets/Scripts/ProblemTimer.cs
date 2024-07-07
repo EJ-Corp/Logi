@@ -12,12 +12,13 @@ public class ProblemTimer : MonoBehaviour
     [SerializeField] private ButtonProblem buttonProblem;
     [SerializeField] private string buttonID;
     [SerializeField] private SwitchProblem switchProblem;
+    [SerializeField] private PressurePuzzle pressureProblem;
 
     // [SerializeField] private AudioClip alarmSFX;
 
     //[SerializeField] private ProblemHandler warningPanel;
 
-    [SerializeField] private List<int> problemIDPool;   //IDs: Buttons - 11, Switches = 12
+    [SerializeField] private List<int> problemIDPool;   //IDs: Buttons - 11, Switches = 12, Pressure = 13
 
     private MonitorScript computerScreen;
 
@@ -78,6 +79,11 @@ public class ProblemTimer : MonoBehaviour
 
             //Spawn Speech bubble
             computerScreen.SpawnProblemFact(chosenProblemID, buttonID);
+        } else if(chosenProblemID == 13) //Chose Pressure (ID = 13)
+        {
+            pressureProblem.ActivateProblem();
+            activeProblems += 1;
+            problemIDPool.RemoveAt(randomProblem);
         }
 
         ResetCountdown();

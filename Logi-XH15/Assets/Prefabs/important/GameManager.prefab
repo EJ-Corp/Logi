@@ -448,10 +448,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProblemsHolder
       objectReference: {fileID: 0}
-    - target: {fileID: 6076313066550673698, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
-      propertyPath: warningPanel
+    - target: {fileID: 5945151555668674184, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
+      propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3598193359080818476}
+    - target: {fileID: 7439615241501069348, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3598193359080818476}
     - target: {fileID: 8541268041764627670, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
       propertyPath: warningPanel
       value: 
@@ -563,6 +567,11 @@ GameObject:
 --- !u!81 &2293047166652199111 stripped
 AudioListener:
   m_CorrespondingSourceObject: {fileID: 4824267570722232134, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
+  m_PrefabInstance: {fileID: 6710847178825328513}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3598193359080818476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7840465959188848813, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
   m_PrefabInstance: {fileID: 6710847178825328513}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &4166659638994491165 stripped

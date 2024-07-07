@@ -105,4 +105,9 @@ public class InstructionBook : Interactable
     {
 
     }
+
+    public override void OnStopInteract()
+    {
+
+    }
 }
