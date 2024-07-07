@@ -56,6 +56,11 @@ public class MonitorScript : MonoBehaviour
     private int flirtSpeechBubbleIdx;
     private int historySpeechBubbleIdx;
     private int galaxySpeechBubbleIdx;
+
+    private GameObject flirtSpeechBubble;
+    private GameObject historySpeechBubble;
+    private GameObject galaxySpeechBubble;
+
     private GameObject buttonBubble;
     private GameObject switchBubble;
     private GameObject pressureBubble;
@@ -207,11 +212,11 @@ public class MonitorScript : MonoBehaviour
         
 
         //Debug.Log("Spawned Annoy ID: " + randomAnnoy);
-
+        
         switch(chosenAnnoyID)
         {
             case 0: //Spawn a flirt
-                GameObject flirtSpeechBubble = Instantiate(flirtBubble, bubbleHolder.transform);
+                flirtSpeechBubble = Instantiate(flirtBubble, bubbleHolder.transform);
                 flirtSpeechBubble.name = "Flirt Bubble";
                 activeAnnoyList.Add(flirtSpeechBubble);
                 flirtSpeechBubbleIdx = activeAnnoyList.Count - 1;
@@ -222,7 +227,7 @@ public class MonitorScript : MonoBehaviour
             break;
 
             case 1: //Spawn a history fact
-                GameObject historySpeechBubble = Instantiate(historyBubble, bubbleHolder.transform);
+                historySpeechBubble = Instantiate(historyBubble, bubbleHolder.transform);
                 historySpeechBubble.name = "History Bubble";
                 activeAnnoyList.Add(historySpeechBubble);
                 historySpeechBubbleIdx = activeAnnoyList.Count - 1;
@@ -233,7 +238,7 @@ public class MonitorScript : MonoBehaviour
             break;
 
             case 2: //Spawn a galaxy fact
-                GameObject galaxySpeechBubble = Instantiate(galaxyBubble, bubbleHolder.transform);
+                galaxySpeechBubble = Instantiate(galaxyBubble, bubbleHolder.transform);
                 galaxySpeechBubble.name = "Galaxy Bubble";
                 activeAnnoyList.Add(galaxySpeechBubble);
                 galaxySpeechBubbleIdx = activeAnnoyList.Count - 1;
@@ -252,18 +257,21 @@ public class MonitorScript : MonoBehaviour
         
         if (annoyIDClosed == 0) //flirt bubble
         {
-            Destroy(activeAnnoyList[flirtSpeechBubbleIdx].gameObject);
-            activeAnnoyList.RemoveAt(flirtSpeechBubbleIdx);
+            int annoyIDX = activeAnnoyList.IndexOf(flirtSpeechBubble);
+            Destroy(activeAnnoyList[annoyIDX].gameObject);
+            activeAnnoyList.RemoveAt(annoyIDX);
         } else
         if (annoyIDClosed == 1) //history fact bubble
         {
-            Destroy(activeAnnoyList[historySpeechBubbleIdx].gameObject);
-            activeAnnoyList.RemoveAt(historySpeechBubbleIdx);
+            int annoyIDX = activeAnnoyList.IndexOf(historySpeechBubble);
+            Destroy(activeAnnoyList[annoyIDX].gameObject);
+            activeAnnoyList.RemoveAt(annoyIDX);
         } else 
         if (annoyIDClosed == 2) //galaxy fact bubble
         {
-            Destroy(activeAnnoyList[galaxySpeechBubbleIdx].gameObject);
-            activeAnnoyList.RemoveAt(galaxySpeechBubbleIdx);
+            int annoyIDX = activeAnnoyList.IndexOf(galaxySpeechBubble);
+            Destroy(activeAnnoyList[annoyIDX].gameObject);
+            activeAnnoyList.RemoveAt(annoyIDX);
         }
 
         annoyIDPool.Add(annoyIDClosed);
