@@ -49,7 +49,7 @@ public class MonitorScript : MonoBehaviour
     [SerializeField] private float idleTriggerTimer;
     [SerializeField] private float idleTriggerRandInterval;
 
-    private int buttonBubbleIdx;
+    [SerializeField] private int buttonBubbleIdx;
     private int switchBubbleIdx;
     private int pressureBubbleIdx;
 
