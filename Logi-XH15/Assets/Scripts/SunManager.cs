@@ -12,8 +12,8 @@ public class SunManager : MonoBehaviour
     [SerializeField] private Transform playerLocation;
     private Vector3 targetedParticlePosition;
     [SerializeField] private float randomWait;
-    [SerializeField] private float minWait = 10;
-    [SerializeField] private float maxWait = 30;
+    [SerializeField] private float minWait;
+    [SerializeField] private float maxWait;
     [SerializeField] private float targetedFlareDistance = 0.5f;
     [SerializeField] Vector3 flareYOffset;
 
@@ -22,7 +22,8 @@ public class SunManager : MonoBehaviour
     [SerializeField] private bool isFiring = false;
     [SerializeField] private bool hasFired = false;
 
-    [SerializeField] private float bufferTime = 10f;
+    [SerializeField] private float bufferTime;
+    [SerializeField] private bool hasSunBuffered;
 
 
     //all stuff that has been moved from problem 
@@ -72,7 +73,6 @@ public class SunManager : MonoBehaviour
             cameraShakeScript = gameManager.mainCamera.GetComponent<CameraShake>();
             playerLocation = gameManager.player.GetComponent<Transform>();
 
-
             //problem stuff
             warningPanel = GameManager.Manager.problemPanel;
             warningPanel.enabled = false;
@@ -82,7 +82,7 @@ public class SunManager : MonoBehaviour
                 problemLights[i].enabled = false;
             }
 
-
+            bufferTime = UnityEngine.Random.Range(minWait, maxWait);
             randomWait = UnityEngine.Random.Range(minWait, maxWait);
             MoveParticleEmitter();
         }
@@ -104,7 +104,8 @@ public class SunManager : MonoBehaviour
                 pressedPlay = true;
             }
         }
-        
+
+
         if (bufferState == true)
         {
             currentState = WarningState.buffer;
@@ -125,13 +126,14 @@ public class SunManager : MonoBehaviour
             switch(currentState)
             {
                 case WarningState.buffer:
+                    hasSunBuffered = true;
                     if (bufferTime > 0)
                     {
                         bufferTime -= Time.deltaTime;
                     }
                     if (bufferTime <= 0)
                     {
-                        SetBooleans(false, true, false, false);
+                        SetStateBooleans(false, true, false);
                     }
                 break;
 
@@ -142,7 +144,7 @@ public class SunManager : MonoBehaviour
                     }
                     if (randomWait <= 0)
                     {
-                        SetBooleans(false, false, true, false);
+                        SetStateBooleans(false, false, true);
                     }
 
                 break;
@@ -165,33 +167,6 @@ public class SunManager : MonoBehaviour
                 break;
             }
         }
-        
-        if (startedGame)
-        {
-            if (bufferTime > 0)
-            {
-                bufferTime -= Time.deltaTime;
-            }
-            else if (bufferTime <= 0 && bufferState == true)
-            {
-                canFire = true;
-                bufferState = false;
-            }
-
-            if (canFire)
-            {
-                if(randomWait > 0)
-                {
-                    randomWait -= Time.deltaTime;
-                }
-
-                if(randomWait <= 0)
-                {
-                    FireSolarFlare();
-                }
-            }
-        }
-
     }
 
     void MoveParticleEmitter()
@@ -207,10 +182,10 @@ public class SunManager : MonoBehaviour
 
     public void FireSolarFlare()
     {
-        SetBooleans(false, false, false, true);
+        SetStateBooleans(false, false, false);
         solarFlareParticleSystem.Play();
         
-        SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 0.75f);
+        SFXManager.Instance.PlaySFXClip(alarmSFX, transform, 0.5f);
 
         Instantiate(solarFlarePrefab, transform.position + flareYOffset, Quaternion.LookRotation(playerLocation.position - this.transform.position));
         cameraShakeScript.StartCameraShake();
@@ -220,21 +195,26 @@ public class SunManager : MonoBehaviour
 
     public void ResetFlare()
     {
-        SetBooleans(false, true, false, false);
+        SetStateBooleans(false, true, false);
+        hasFired = false;
         warningPanel.enabled = false;
         panelActive = false;
+        hasSunBuffered = false;
         flashCooldown = 0;
         randomWait = UnityEngine.Random.Range(minWait, maxWait);
     }
 
     public void BufferFlare()
     {
-        if (currentState != WarningState.buffer)
+        if (hasSunBuffered != true)
         {
-            SetBooleans(true, false, false, false);
-            bufferTime = UnityEngine.Random.Range(minWait, maxWait);
+            if (currentState != WarningState.buffer)
+            {
+                SetStateBooleans(true, false, false);
+                bufferTime = UnityEngine.Random.Range(minWait, maxWait);
+            }
+            hasSunBuffered = true;
         }
-
     }
 
     public void FlashPanel()
@@ -257,11 +237,10 @@ public class SunManager : MonoBehaviour
         }
     }
 
-    void SetBooleans(bool buffer, bool fireStart, bool fireMid, bool fireEnd)
+    void SetStateBooleans(bool buffer, bool fireStart, bool fireMid)
     {
         bufferState = buffer;
         canFire = fireStart;
         isFiring = fireMid;
-        hasFired = fireEnd;
     }
 }

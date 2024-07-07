@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
     [Header("Problems")]
     public SwitchProblem switches;
     private bool hasPlayedTrigger = false;
+    private bool hasBufferedSun = false;
 
     //Password Generator
     [Header("Password Generation")]
@@ -126,7 +127,7 @@ public class GameManager : MonoBehaviour
     {
         if (randomLength)
         {
-            length = Random.Range(min_length, max_length);
+            length = UnityEngine.Random.Range(min_length, max_length);
         }
 
         string allChars = "abcdefghijklmnopqrstuvwxyz0123456789";
@@ -137,7 +138,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < length; i++)
         {
-            password += allChars[Random.Range(0, allChars.Length)];
+            password += allChars[UnityEngine.Random.Range(0, allChars.Length)];
         }
 
         return password;
@@ -147,11 +148,12 @@ public class GameManager : MonoBehaviour
     {
         if(computerState) //Computer is on so we turn it off
         {
-            if (hasPlayedTrigger != true)
-            {
-                monitorAnimator.SetTrigger("pcTurnedOff");
-                hasPlayedTrigger = true;
-            }
+         //   if (hasPlayedTrigger != true)
+          //  {
+                monitorAnimator.SetBool("pcTurnedOff", true);
+                monitorAnimator.SetBool("pcTurnedOn", false);
+           //     hasPlayedTrigger = true;
+           // }
 
             computerScreenFocus.transform.GetComponent<MonitorScript>().BreakComputer();
             idInput.ResetInputResult();
@@ -159,10 +161,13 @@ public class GameManager : MonoBehaviour
             this.computerState = false;
         } else //COmputer is off so we turn it on
         {
-            monitorAnimator.SetTrigger("pcTurnedOn");
-            hasPlayedTrigger = false;
-            this.computerState = true;
+            monitorAnimator.SetBool("pcTurnedOff", false);
+            monitorAnimator.SetBool("pcTurnedOn", true);
+          //  hasPlayedTrigger = false;
+
             sumManager.BufferFlare();
+            this.computerState = true;
+
             computerScreenFocus.transform.GetComponent<MonitorScript>().FixComputer();
             idInput.ResetInputResult();
             pswdInput.ResetInputResult();

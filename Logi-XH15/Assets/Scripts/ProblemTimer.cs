@@ -55,7 +55,7 @@ public class ProblemTimer : MonoBehaviour
         {
            warningPanel.StartWarning();
         }
-        int randomProblem = Random.Range(0, problemIDPool.Count);
+        int randomProblem = UnityEngine.Random.Range(0, problemIDPool.Count);
 
         int chosenProblemID = problemIDPool[randomProblem];
 
@@ -94,7 +94,7 @@ public class ProblemTimer : MonoBehaviour
 
     public void ResetCountdown()
     {
-        nextProblemCountDown = Random.Range(10.0f, 15.0f);
+        nextProblemCountDown = UnityEngine.Random.Range(10.0f, 15.0f);
     }
 
     public void FixedProblemOnTimer(int IDFixed)

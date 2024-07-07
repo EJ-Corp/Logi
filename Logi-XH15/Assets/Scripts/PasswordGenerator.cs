@@ -21,7 +21,7 @@ public class PasswordGenerator : MonoBehaviour
     {
         if (randomLength)
         {
-            length = Random.Range(min_length, max_length);
+            length = UnityEngine.Random.Range(min_length, max_length);
         }
 
         string allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
