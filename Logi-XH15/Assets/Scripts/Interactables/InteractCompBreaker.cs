@@ -24,7 +24,7 @@ public class InteractCompBreaker : Interactable
             isOn = false;
 
             //XAVIER add animation here from ON to OFF
-            animator.SetTrigger("Off");
+            animator.SetBool("IsClicked", true);
 
 
         } else //Turning COmputer On
@@ -34,7 +34,7 @@ public class InteractCompBreaker : Interactable
             isOn = true;
 
             //XAVIER add animation here from OFF to ON
-            animator.SetTrigger("On");
+            animator.SetBool("IsClicked", false);
         }
 
         
@@ -53,8 +53,9 @@ public class InteractCompBreaker : Interactable
     // Start is called before the first frame update
     public void FlareBreak()
     {
+        Debug.Log("Flared turned it off");
         isOn = false;
-        animator.SetTrigger("Off");
+        animator.SetBool("IsClicked", true);
         //XAVIER add animation here from ON to OFF
 
     }
