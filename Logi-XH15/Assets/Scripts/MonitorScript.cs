@@ -96,7 +96,7 @@ public class MonitorScript : MonoBehaviour
 
             if (idleTriggerTimer <= 0)
             {
-                float randomCoinFlip = Random.Range(1,4);
+                float randomCoinFlip = UnityEngine.Random.Range(1,4);
 
                 if (randomCoinFlip <= 2)
                 {
@@ -194,7 +194,7 @@ public class MonitorScript : MonoBehaviour
 
     public void SpawnAnnoyBubble()
     {
-        int randomAnnoy = Random.Range(0, annoyIDPool.Count);
+        int randomAnnoy = UnityEngine.Random.Range(0, annoyIDPool.Count);
         int chosenAnnoyID = annoyIDPool[randomAnnoy];
 
         //Debug.Log("Spawned Annoy ID: " + randomAnnoy);
@@ -235,7 +235,7 @@ public class MonitorScript : MonoBehaviour
             break;
         }
 
-        annoyCountdown = Random.Range(5.0f, 30.0f);
+        annoyCountdown = UnityEngine.Random.Range(5.0f, 30.0f);
     }
 
     public void ClosedAnnoy(int annoyIDClosed)
@@ -348,7 +348,7 @@ public class MonitorScript : MonoBehaviour
 
     void ResetIdleTimer()
     {
-        idleTriggerRandInterval = Random.Range(8, 16);
+        idleTriggerRandInterval = UnityEngine.Random.Range(8, 16);
         idleTriggerTimer = idleTriggerRandInterval;       
     }
 }

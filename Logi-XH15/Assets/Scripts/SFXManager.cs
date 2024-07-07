@@ -47,7 +47,7 @@ public class SFXManager : MonoBehaviour
     public void PlayRandomSFXClip(AudioClip[] audioClip, Transform spawnTransform, float volume)
     {
         //Assign random integer
-        int rand = Random.Range(0, audioClip.Length);
+        int rand = UnityEngine.Random.Range(0, audioClip.Length);
 
         //Spawn in gameObject
         AudioSource audioSource = Instantiate(sfxObject, spawnTransform.position, Quaternion.identity);

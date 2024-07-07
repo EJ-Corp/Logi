@@ -15,7 +15,7 @@ public class ButtonProblem : MonoBehaviour
     public void ActivateProblem()
     {
         problemActive = true;
-        int randomButton = Random.Range(0, buttons.Count);
+        int randomButton = UnityEngine.Random.Range(0, buttons.Count);
         fixButton = buttons[randomButton];
         fixButton.MakeProblem(warningSign);
         buttonID = fixButton.ID;
