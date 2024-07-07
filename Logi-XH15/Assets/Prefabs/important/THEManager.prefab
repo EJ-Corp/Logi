@@ -202,6 +202,7 @@ Transform:
   - {fileID: 584335769624465114}
   - {fileID: 3400343324599453236}
   - {fileID: 6619632912963698681}
+  - {fileID: 7205596250862156683}
   m_Father: {fileID: 7180450322601600812}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5275550428544246307
@@ -1915,6 +1916,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4148857023650401196, guid: 164976ef5092aab468d80cddf63d1b70, type: 3}
   m_PrefabInstance: {fileID: 7083628353147532373}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7742363833471558053
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1005242503384527356}
+    m_Modifications:
+    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.954
+      objectReference: {fileID: 0}
+    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.913
+      objectReference: {fileID: 0}
+    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.677
+      objectReference: {fileID: 0}
+    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6861027
+      objectReference: {fileID: 0}
+    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.1710646
+      objectReference: {fileID: 0}
+    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6861027
+      objectReference: {fileID: 0}
+    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.1710646
+      objectReference: {fileID: 0}
+    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593819998905542677, guid: 134617789edb34874b50c5d55a558f74, type: 3}
+      propertyPath: m_Name
+      value: Bed Light Switch
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 134617789edb34874b50c5d55a558f74, type: 3}
+--- !u!4 &7205596250862156683 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
+  m_PrefabInstance: {fileID: 7742363833471558053}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8820364624992943238
 PrefabInstance:
