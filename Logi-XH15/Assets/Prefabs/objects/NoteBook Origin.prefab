@@ -84,10 +84,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1778006600780843672, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9d9514fcad968b8468551ff81bd93b24, type: 2}
     - target: {fileID: 2567065102049086361, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
       propertyPath: m_text
       value: 1
@@ -95,84 +91,6 @@ PrefabInstance:
     - target: {fileID: 5353445102469171413, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6724100834646158977, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7175239739734534453, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
-      propertyPath: content
-      value: "\n\n<align=\"center\"><style=\"Title\">Helios Innovations \r\n\r\n
-        <sprite=0>\r\n\r\n\r\n\r\n\r\n\n<size=200%>Instruction Manual\r\n</style></align>\r\n<page>\r\n<style=\"Title\">Helios
-        Innovations </style>\r\n\r\n<size=100%>If you suspect there to be a problem,
-        please consult your provided main system terminal to diagnosis any problem
-        by listening to our lovely AI assistant, <i>STELLA</i>.\r\n\r\nIn the unlikely
-        event that such a problem would occur these are the known issues with the
-        FLARE<sup>TM</sup> system.\r\r\n\r\nNote: FLARE<sup>TM</sup> is shield to
-        a rating of 2000W/m<sup>2</sup>, anything higher than this will cause the
-        main terminal to shutdown to avoid the system being destroyed. This can only
-        be reset via the electrical breaker box.</size>\r\n<page>\r\n<size=110%>Known
-        Issue:</size>\r\n<size=100%>Due to the implementation of the latest simplified
-        circuit for our sub systems this has caused the control panel of the FLARE<sup>TM</sup>
-        probe to encounter a familiar issue known as the <b>\"Button Mirage.\"</b></size>\r\n\r\n<size=110%>Known
-        solution:</size>\r\n<size=100%><i>STELLA</i> will inform the user of the
-        type of sub system that is experiencing an expected issue.\r\nPressure Regulator
-        = <b>RED</b>\r\nInertial Dampeners = <b>GREEN</b>\r\nOxygen Recycler = <b>PURPLE</b>\r\nFusion
-        Reactor = <b>BLUE</b>\r\nArc Generator = <b>YELLOW</b>\r\nSubspace Scanner
-        = <b>CYAN</b>\r\nHydroponics Drainage = <b>ORANGE</b> \r\n</size>\r\n<page>\r\n<size=110%>Known
-        Issue:</size>\r\n<size=100%>Due to a shortage in material availability non-Helios
-        piping clamps were used in the installation of the FLARE<sup>TM</sup> piping
-        (this is under investigation and replacement parts are expected to begin
-        production within the next 600 Earth cycles). This causes the electromagnetic
-        clamps to disengage and <b>require a reset.</b> </size>\r\n\r\n<size=110%>Known
-        solution:</size>\r\n<size=100%>Simple reset any switches which are turned
-        <b>off to</b> the on</b> position. </size>\n<page>\r\n<size=110%>Known Issue:</size>\r\n<size=100%>
-        Due to financial constraints automatic pressure release systems were not
-        within the budget of <i>R&D</i>, as such the system was moved over to <b>manual
-        control</b> for the FLARE<sup>TM</sup> Program.\r\n\r\n<size=110%>Known solution:</size>\r\n<size=100%><i>STELLA</i>
-        will inform the user when the pressure has begun to reach critical levels
-        and requires venting before rupture. To do so simple <b>pull the draw cord</b>
-        to a reasonable length and <b>hold it to continue releasing pressure</b>.
-        \r\n\r\n\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7175239739734534453, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
-      propertyPath: pageTotal
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8260474116653187364, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
-      propertyPath: m_text
-      value: "\n\n<align=\"center\"><style=\"Title\">Helios Innovations \r\n\r\n
-        <sprite=0>\r\n\r\n\r\n\r\n\r\n\n<size=200%>Instruction Manual\r\n</style></align>\r\n<page>\r\n<style=\"Title\">Helios
-        Innovations </style>\r\n\r\n<size=100%>If you suspect there to be a problem,
-        please consult your provided main system terminal to diagnosis any problem
-        by listening to our lovely AI assistant, <i>STELLA</i>.\r\n\r\nIn the unlikely
-        event that such a problem would occur these are the known issues with the
-        FLARE<sup>TM</sup> system.\r\r\n\r\nNote: FLARE<sup>TM</sup> is shield to
-        a rating of 2000W/m<sup>2</sup>, anything higher than this will cause the
-        main terminal to shutdown to avoid the system being destroyed. This can only
-        be reset via the electrical breaker box.</size>\r\n<page>\r\n<size=110%>Known
-        Issue:</size>\r\n<size=100%>Due to the implementation of the latest simplified
-        circuit for our sub systems this has caused the control panel of the FLARE<sup>TM</sup>
-        probe to encounter a familiar issue known as the <b>\"Button Mirage.\"</b></size>\r\n\r\n<size=110%>Known
-        solution:</size>\r\n<size=100%><i>STELLA</i> will inform the user of the
-        type of sub system that is experiencing an expected issue.\r\nPressure Regulator
-        = <b>RED</b>\r\nInertial Dampeners = <b>GREEN</b>\r\nOxygen Recycler = <b>PURPLE</b>\r\nFusion
-        Reactor = <b>BLUE</b>\r\nArc Generator = <b>YELLOW</b>\r\nSubspace Scanner
-        = <b>CYAN</b>\r\nHydroponics Drainage = <b>ORANGE</b> \r\n</size>\r\n<page>\r\n<size=110%>Known
-        Issue:</size>\r\n<size=100%>Due to a shortage in material availability non-Helios
-        piping clamps were used in the installation of the FLARE<sup>TM</sup> piping
-        (this is under investigation and replacement parts are expected to begin
-        production within the next 600 Earth cycles). This causes the electromagnetic
-        clamps to disengage and <b>require a reset.</b> </size>\r\n\r\n<size=110%>Known
-        solution:</size>\r\n<size=100%>Simple reset any switches which are turned
-        <b>off to</b> the on</b> position. </size>\n<page>\r\n<size=110%>Known Issue:</size>\r\n<size=100%>
-        Due to financial constraints automatic pressure release systems were not
-        within the budget of <i>R&D</i>, as such the system was moved over to <b>manual
-        control</b> for the FLARE<sup>TM</sup> Program.\r\n\r\n<size=110%>Known solution:</size>\r\n<size=100%><i>STELLA</i>
-        will inform the user when the pressure has begun to reach critical levels
-        and requires venting before rupture. To do so simple <b>pull the draw cord</b>
-        to a reasonable length and <b>hold it to continue releasing pressure</b>.
-        \r\n\r\n\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8260474116653187364, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
       propertyPath: m_pageToDisplay
