@@ -1,0 +1,49 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BedLightSwitch : Interactable
+{
+    [SerializeField] private Transform switchBody;
+    [SerializeField] private bool isOn = true;
+    [SerializeField] private Vector3 onRotation = new Vector3(13, 0, 0);
+    [SerializeField] private Vector3 offRotation = new Vector3(100, 0, 0);
+    [SerializeField] private AudioClip[] switchSFX;
+    [SerializeField] private Light bedLight;
+    [SerializeField] private float lightIntensity;
+    
+    void Start()
+    {
+        GetComponentInChildren<Outline>().enabled = false;
+        switchBody = transform.Find("Switch");
+    }
+    public override void OnFocus()
+    {
+        
+    }
+
+    public override void OnInteract()
+    {
+        SFXManager.Instance.PlayRandomSFXClip(switchSFX, transform, 1f);
+        if(isOn)
+        {
+            switchBody.Rotate(onRotation, Space.Self);
+            bedLight.intensity = lightIntensity;
+        } else 
+        {
+            switchBody.Rotate(offRotation, Space.Self);
+            bedLight.intensity = 0;
+        }
+        isOn = !isOn;
+    }
+
+    public override void OnLoseFocus()
+    {
+        GetComponentInChildren<Outline>().enabled = false;
+    }
+
+    public override void OnStopInteract()
+    {
+
+    }
+}
