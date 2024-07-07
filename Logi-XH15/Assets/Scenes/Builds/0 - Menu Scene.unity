@@ -1093,7 +1093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7307336361415092903, guid: a236e7f24e3d549d1bbeb1792b2a7c86, type: 3}
       propertyPath: m_Name
-      value: Global Music
+      value: Menu Music
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
