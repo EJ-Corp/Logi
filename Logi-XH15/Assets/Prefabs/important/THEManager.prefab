@@ -836,6 +836,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1005242503384527356}
     m_Modifications:
+    - target: {fileID: 41714441260176481, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
+      propertyPath: m_text
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094393169845913975, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3007200930627725519, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -892,7 +900,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5879210157955423964, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
+      propertyPath: m_text
+      value: "\n\n<align=\"center\"><style=\"Title\">Helios Innovations \r\n\r\n
+        <sprite=0>\r\n\r\n\r\n\r\n\r\n\n<size=200%>Instruction Manual\r\n</style></align>\r\n<page>\r\n<style=\"Title\">Helios
+        Innovations </style>\r\n\r\n<size=100%>If you suspect there to be a problem,
+        please consult your provided main system terminal to diagnosis any problem
+        by listening to our lovely AI assistant, <i>STELLA</i>.\r\n\r\nIn the unlikely
+        event that such a problem would occur these are the known issues with the
+        FLARE<sup>TM</sup> system.\r\r\n\r\nNote: FLARE<sup>TM</sup> is shield to
+        a rating of 2000W/m<sup>2</sup>, anything higher than this will cause the
+        main terminal to shutdown to avoid the system being destroyed. This can only
+        be reset via the electrical breaker box.</size>\r\n<page>\r\n<size=110%>Known
+        Issue:</size>\r\n<size=100%>Due to the implementation of the latest simplified
+        circuit for our sub systems this has caused the control panel of the FLARE<sup>TM</sup>
+        probe to encounter a familiar issue known as the <b>\"Button Mirage.\"</b></size>\r\n\r\n<size=110%>Known
+        solution:</size>\r\n<size=100%><i>STELLA</i> will inform the user of the
+        type of sub system that is experiencing an expected issue.\r\nPressure Regulator
+        = <b>RED</b>\r\nInertial Dampeners = <b>GREEN</b>\r\nOxygen Recycler = <b>PURPLE</b>\r\nFusion
+        Reactor = <b>BLUE</b>\r\nArc Generator = <b>YELLOW</b>\r\nSubspace Scanner
+        = <b>CYAN</b>\r\nHydroponics Drainage = <b>ORANGE</b> \r\n</size>\r\n<page>\r\n<size=110%>Known
+        Issue:</size>\r\n<size=100%>Due to a shortage in material availability non-Helios
+        piping clamps were used in the installation of the FLARE<sup>TM</sup> piping
+        (this is under investigation and replacement parts are expected to begin
+        production within the next 600 Earth cycles). This causes the electromagnetic
+        clamps to disengage and <b>require a reset.</b> </size>\r\n\r\n<size=110%>Known
+        solution:</size>\r\n<size=100%>Simple reset any switches which are turned
+        <b>off to</b> the on</b> position. </size>\n<page>\r\n<size=110%>Known Issue:</size>\r\n<size=100%>
+        Due to financial constraints automatic pressure release systems were not
+        within the budget of <i>R&D</i>, as such the system was moved over to <b>manual
+        control</b> for the FLARE<sup>TM</sup> Program.\r\n\r\n<size=110%>Known solution:</size>\r\n<size=100%><i>STELLA</i>
+        will inform the user when the pressure has begun to reach critical levels
+        and requires venting before rupture. To do so simple <b>pull the draw cord</b>
+        to a reasonable length and <b>hold it to continue releasing pressure</b>. "
+      objectReference: {fileID: 0}
     - target: {fileID: 5942960093676340766, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601934303107995437, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786772601804350679, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
@@ -902,6 +952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3015568975793376351, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
+    - {fileID: 4658883151220029133, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -926,12 +977,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fe670e74631fe940aaf3730843f7195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  content: "<align=\"center\"><style=\"Title\">Helios Innovations \r\n\r\n <sprite=0>\r\n\r\n\r\n\r\n\r\n\r\n<size=200%>Instruction
+  content: "\n\n<align=\"center\"><style=\"Title\">Helios Innovations \r\n\r\n <sprite=0>\r\n\r\n\r\n\r\n\r\n\n<size=200%>Instruction
     Manual\r\n</style></align>\r\n<page>\r\n<style=\"Title\">Helios Innovations </style>\r\n\r\n<size=100%>If
     you suspect there to be a problem, please consult your provided main system terminal
     to diagnosis any problem by listening to our lovely AI assistant, <i>STELLA</i>.\r\n\r\nIn
     the unlikely event that such a problem would occur these are the known issues
-    with the FLARE<sup>TM</sup> system.\r\n\r\n\r\nNote: FLARE<sup>TM</sup> is shield
+    with the FLARE<sup>TM</sup> system.\r\r\n\r\nNote: FLARE<sup>TM</sup> is shield
     to a rating of 2000W/m<sup>2</sup>, anything higher than this will cause the
     main terminal to shutdown to avoid the system being destroyed. This can only
     be reset via the electrical breaker box.</size>\r\n<page>\r\n<size=110%>Known
@@ -948,14 +999,21 @@ MonoBehaviour:
     (this is under investigation and replacement parts are expected to begin production
     within the next 600 Earth cycles). This causes the electromagnetic clamps to
     disengage and <b>require a reset.</b> </size>\r\n\r\n<size=110%>Known solution:</size>\r\n<size=100%>Simple
-    reset any switches which are turned <b>off to</b> the on</b> position. </size>\r\n"
+    reset any switches which are turned <b>off to</b> the on</b> position. </size>\n<page>\r\n<size=110%>Known
+    Issue:</size>\r\n<size=100%> Due to financial constraints automatic pressure
+    release systems were not within the budget of <i>R&D</i>, as such the system
+    was moved over to <b>manual control</b> for the FLARE<sup>TM</sup> Program.\r\n\r\n<size=110%>Known
+    solution:</size>\r\n<size=100%><i>STELLA</i> will inform the user when the pressure
+    has begun to reach critical levels and requires venting before rupture. To do
+    so simple <b>pull the draw cord</b> to a reasonable length and <b>hold it to
+    continue releasing pressure</b>. "
   currentPage: {fileID: 7334998349988750353}
   pagination: {fileID: 3803346297339768492}
   previousIcon: {fileID: 6711347123447737824}
   nextIcon: {fileID: 5348289845329791924}
   pageTotal: 5
   distance: 5
-  offset: {x: 0, y: 0, z: 0.5}
+  offset: {x: 0, y: -0.01, z: 0.5}
   playerController: {fileID: 4564935018383249647}
   book: {fileID: 4952152014885502978, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
 --- !u!114 &3803346297339768492 stripped
@@ -1417,6 +1475,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1005242503384527356}
     m_Modifications:
+    - target: {fileID: 5329600045252446148, guid: bf15e83d3e34e2849890cdf76ca5e0d5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2d2130128aa435a4e8e5fc771e6dc84d, type: 2}
     - target: {fileID: 8092904793042968505, guid: bf15e83d3e34e2849890cdf76ca5e0d5, type: 3}
       propertyPath: m_Name
       value: Thermostat
@@ -1482,10 +1544,6 @@ PrefabInstance:
     - target: {fileID: 6053204192113252535, guid: 99c5a53e86c900e43a17e92aed8a01fe, type: 3}
       propertyPath: m_Name
       value: No interactable Elements
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053204192113252535, guid: 99c5a53e86c900e43a17e92aed8a01fe, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6720999203831957610, guid: 99c5a53e86c900e43a17e92aed8a01fe, type: 3}
       propertyPath: m_LocalPosition.x
