@@ -125,6 +125,6 @@ public class PressurePuzzle : MonoBehaviour
     public void FixPuzzle()
     {
         isIncreasingPressure = false;
-        warningSign.FixProblemOnHandler(13);
+        warningSign.FixedProblemOnTimer(13);
     }
 }
