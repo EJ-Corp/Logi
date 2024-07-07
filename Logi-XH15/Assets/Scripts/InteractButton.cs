@@ -15,7 +15,7 @@ public class InteractButton : Interactable
     [SerializeField] private AudioClip[] buttonSFX;
     [SerializeField] private AudioClip[] correctSFX;
     [SerializeField] private AudioClip[] wrongSFX;
-    private ProblemHandler warningSign; 
+    private ProblemTimer warningSign; 
     [SerializeField] private Renderer buttonLight;
     [SerializeField] private Material[] buttonLightMaterial;
 
@@ -60,7 +60,7 @@ public class InteractButton : Interactable
     {
         //Debug.Log("Fixed the problem");
         canFix = false;
-        warningSign.FixProblemOnHandler(11);
+        warningSign.FixedProblemOnTimer(11);
         
         if(buttonLight != null)
         {
@@ -68,7 +68,7 @@ public class InteractButton : Interactable
         }
     }
 
-    public void MakeProblem(ProblemHandler warning)
+    public void MakeProblem(ProblemTimer warning)
     {
         canFix = true;
         warningSign = warning;

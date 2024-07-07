@@ -13,7 +13,7 @@ public class PressurePuzzle : MonoBehaviour
     [SerializeField] private GameObject handle;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject arrowhead;
-    [SerializeField] private ProblemHandler warningSign;
+    [SerializeField] private ProblemTimer warningSign;
     [SerializeField] private AudioSource releaseSFX;
     [SerializeField] private bool isIncreasingPressure;
     [SerializeField] private bool isBroken;
@@ -80,8 +80,8 @@ public class PressurePuzzle : MonoBehaviour
             {
                 //Stop it from going up and tell the problem handler it can be fired again
                 //Debug.Log("We shoudl stop increasing");
-                // isIncreasingPressure = false;
-                // warningSign.FixProblemOnHandler(13);
+                //isIncreasingPressure = false;
+                //warningSign.FixedProblemOnTimer(13);
             }
             
             //break once it reaches red
@@ -98,7 +98,7 @@ public class PressurePuzzle : MonoBehaviour
             isBroken = false;
             isIncreasingPressure = false;
             //Debug.Log("We gonna fix it");
-            warningSign.FixProblemOnHandler(13);
+            warningSign.FixedProblemOnTimer(13);
             
         }
 
@@ -125,6 +125,6 @@ public class PressurePuzzle : MonoBehaviour
     public void FixPuzzle()
     {
         isIncreasingPressure = false;
-        warningSign.FixProblemOnHandler(13);
+        warningSign.FixedProblemOnTimer(13);
     }
 }

@@ -87,10 +87,10 @@ public class ProblemHandler : MonoBehaviour
         // }
     }
 
-    public void FixProblemOnHandler(int problemID)
-    {       
-        problemTimer.FixedProblemOnTimer(problemID);
-    }
+    // public void FixProblemOnHandler(int problemID)
+    // {       
+    //     problemTimer.FixedProblemOnTimer(problemID);
+    // }
 
     // public void StartWarning()
     // {

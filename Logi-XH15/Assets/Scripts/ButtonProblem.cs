@@ -9,7 +9,7 @@ public class ButtonProblem : MonoBehaviour
     [SerializeField] private string buttonID;
 
     //Maybe get rid of this and make it more efficient -> only used to get the flashing warning sign.
-    [SerializeField] private ProblemHandler warningSign;
+    [SerializeField] private ProblemTimer warningSign;
     [SerializeField] private bool problemActive = false;
 
     public void ActivateProblem()

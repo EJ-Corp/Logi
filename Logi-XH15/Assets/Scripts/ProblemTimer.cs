@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ProblemTimer : MonoBehaviour
@@ -17,7 +18,7 @@ public class ProblemTimer : MonoBehaviour
 
     [SerializeField] private HUDController warningPanel;
 
-    [SerializeField] private List<int> problemIDPool;   //IDs: Buttons - 11, Switches = 12, Pressure = 13
+    [SerializeField] public List<int> problemIDPool;   //IDs: Buttons - 11, Switches = 12, Pressure = 13
 
     private MonitorScript computerScreen;
 

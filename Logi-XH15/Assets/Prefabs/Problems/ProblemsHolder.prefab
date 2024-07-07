@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 188761201983962873}
   - component: {fileID: 1330760988278560321}
-  - component: {fileID: 6076313066550673698}
   m_Layer: 0
   m_Name: ProblemsHolder
   m_TagString: Untagged
@@ -48,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82bcc42c17a895d408e54a2b7378a836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug: 0
+  Debug: 0
   numberOfProblems: 3
   nextProblemCountDown: 20
   activeProblems: 0
@@ -58,19 +57,6 @@ MonoBehaviour:
   pressureProblem: {fileID: 5945151555668674184}
   warningPanel: {fileID: 0}
   problemIDPool: 0b0000000c0000000d000000
---- !u!114 &6076313066550673698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5507657793669707926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ece53ecdbf0054695a0a4661e860cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  problemTimer: {fileID: 1330760988278560321}
 --- !u!1001 &936632712250088439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -126,7 +112,7 @@ PrefabInstance:
     - target: {fileID: 7410638497317403403, guid: 74963f0b36c54f940873ff3f1acca119, type: 3}
       propertyPath: warningSign
       value: 
-      objectReference: {fileID: 6076313066550673698}
+      objectReference: {fileID: 1330760988278560321}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -159,7 +145,7 @@ PrefabInstance:
     - target: {fileID: 2284762052904984070, guid: fd6d6011ea7c18049aabbce75f91980e, type: 3}
       propertyPath: warningSign
       value: 
-      objectReference: {fileID: 6076313066550673698}
+      objectReference: {fileID: 1330760988278560321}
     - target: {fileID: 2417183643275999908, guid: fd6d6011ea7c18049aabbce75f91980e, type: 3}
       propertyPath: problemTimer
       value: 
@@ -244,7 +230,7 @@ PrefabInstance:
     - target: {fileID: 7409256785351987910, guid: 754c062b065ff4a7694e71ec9dcf671d, type: 3}
       propertyPath: warningSign
       value: 
-      objectReference: {fileID: 6076313066550673698}
+      objectReference: {fileID: 1330760988278560321}
     - target: {fileID: 8246111228902784116, guid: 754c062b065ff4a7694e71ec9dcf671d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2697855
