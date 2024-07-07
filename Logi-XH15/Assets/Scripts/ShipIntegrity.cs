@@ -49,7 +49,7 @@ public class ShipIntegrity : MonoBehaviour
 
     void CalculateDamage()
     {
-        int damageTaken = damageScaleFactor * 5;
+        int damageTaken = damageScaleFactor;
         currentShipHealth -= damageTaken;
     }
 }

@@ -18,13 +18,11 @@ public class WinLoseCalculator : MonoBehaviour
     {
         if(timerScript.timeLeft <= 0)
         {
-            Debug.Log("Win");
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            SceneManager.LoadScene(2);
         }
         if(shipIntegrity.currentShipHealth <= 0)
         {
-            Debug.Log("Lose");
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            SceneManager.LoadScene(3);
         }
     }
 }
