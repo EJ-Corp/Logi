@@ -61,9 +61,14 @@ public class SunManager : MonoBehaviour
         if(sun == null)
         {
             sun = this;
+            DontDestroyOnLoad(this.gameObject);
+        } else 
+        if (sun != this)
+        {
+            Destroy(gameObject);
         }
 
-        DontDestroyOnLoad(this.gameObject);
+
     }
 
     void Start()
@@ -94,6 +99,7 @@ public class SunManager : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == 0) 
         {
             startedGame = false;
+            pressedPlay = false;
         } else 
         if (SceneManager.GetActiveScene().buildIndex == 1) 
         {
@@ -105,6 +111,11 @@ public class SunManager : MonoBehaviour
             }
         }
 
+        if (SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+        }
 
         if (bufferState == true)
         {
@@ -121,7 +132,11 @@ public class SunManager : MonoBehaviour
 
         if (startedGame)
         {
-            LoopThroughLights();
+
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                LoopThroughLights();
+            }
 
             switch(currentState)
             {

@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Builds/3 - Third Build.unity
     guid: c52aa58e0dc8b094281b8d39383b8250
+  - enabled: 1
+    path: Assets/Scenes/Builds/4 - Win Scene.unity
+    guid: 415e39814254a4ad4bdef43ecdd39c55
+  - enabled: 1
+    path: Assets/Scenes/Builds/5 - Lose Scene.unity
+    guid: 658b504e17bb24612b019f50fb411385
   m_configObjects: {}
