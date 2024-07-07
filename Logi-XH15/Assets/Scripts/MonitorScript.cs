@@ -84,7 +84,7 @@ public class MonitorScript : MonoBehaviour
             CheckIDAndPassword();
         }
 
-        if (activeBubbles.Count <= 0)
+        if (activeBubbles.Count <= 0 && activeAnnoy <= 0)
         {
             stellaAnimator.SetBool("isBubbleActive", false);
         } else {
