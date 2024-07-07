@@ -21,11 +21,6 @@ public class SolarFlare : MonoBehaviour
         masterMixer.SetFloat("FlareLowpass", lowpass);
         float t = Mathf.Clamp01(timeElapsed / lifetime);
         lowpass = MapToFrequency(t);
-
-        if(timeElapsed >= lifetime)
-        {
-            //Destroy(this.gameObject);
-        }
     }
 
     public float MapToFrequency(float value)

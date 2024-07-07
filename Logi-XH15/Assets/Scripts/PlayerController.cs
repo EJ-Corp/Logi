@@ -113,11 +113,11 @@ public class PlayerController : MonoBehaviour
 
     public void HandleInteractionInput()
     {
-        if(Input.GetKeyDown(interactKey) && currentInteractable != null && Physics.Raycast(playerCamera.ViewportPointToRay(interactionRayPoint), out RaycastHit hit, interactionDistance, interactionLayer))
+        if(Input.GetMouseButtonDown(0) && currentInteractable != null && Physics.Raycast(playerCamera.ViewportPointToRay(interactionRayPoint), out RaycastHit hit, interactionDistance, interactionLayer))
         {
             currentInteractable.OnInteract();
         }
-        if(Input.GetKeyUp(interactKey) && currentInteractable != null)
+        if(Input.GetMouseButtonUp(0) && currentInteractable != null)
         {
             currentInteractable.OnStopInteract();
         }

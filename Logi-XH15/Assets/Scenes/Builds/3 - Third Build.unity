@@ -173,11 +173,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3503947036109650812, guid: 80e4b3b981636427c856589339f92e67, type: 3}
       propertyPath: maxWait
-      value: 120
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3503947036109650812, guid: 80e4b3b981636427c856589339f92e67, type: 3}
       propertyPath: minWait
-      value: 60
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8394737136183770508, guid: 80e4b3b981636427c856589339f92e67, type: 3}
       propertyPath: m_Name
@@ -204,6 +204,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2d2130128aa435a4e8e5fc771e6dc84d, type: 2}
+    - target: {fileID: 3332640057303634058, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: fadeSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3803346297339768492, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
       propertyPath: m_text
       value: 1

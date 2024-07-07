@@ -58,6 +58,7 @@ public class PressurePuzzle : MonoBehaviour
 
         if(!isCurrentlyReleasing && releaseSFX.volume > 0)
         {
+            Debug.Log("Decreasing Volume");
             releaseSFX.volume -= Time.deltaTime * fadeSpeed;
         }
 
@@ -89,6 +90,12 @@ public class PressurePuzzle : MonoBehaviour
         {
             handle.GetComponent<Rigidbody>().isKinematic = false;
             handle.transform.parent = this.transform;
+        }
+
+        if(pressure <= 0 || handleDistance < innerDistance)
+        {
+            Debug.Log("Setting state to false");
+            isCurrentlyReleasing = false;
         }
     }
 
