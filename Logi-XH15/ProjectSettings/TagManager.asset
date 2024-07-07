@@ -11,6 +11,7 @@ TagManager:
   - Selectable
   - problemPanel
   - Sun
+  - Reticle
   layers:
   - Default
   - TransparentFX

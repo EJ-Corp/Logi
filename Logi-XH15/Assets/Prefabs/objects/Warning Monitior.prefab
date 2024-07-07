@@ -249,6 +249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Warning Monitior
       objectReference: {fileID: 0}
+    - target: {fileID: 8207371899320261026, guid: 2ac57b0288d7cfc448034a2838f52331, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2e0f036ae9c870e4994815b762db8bdc, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
