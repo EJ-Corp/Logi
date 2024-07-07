@@ -50,7 +50,6 @@ public class InteractButton : Interactable
     }
     public override void OnFocus()
     {
-
     }
     public override void OnLoseFocus()
     {

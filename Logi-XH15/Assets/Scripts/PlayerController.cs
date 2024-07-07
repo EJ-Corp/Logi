@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float interactionDistance = default;
     [SerializeField] private LayerMask interactionLayer = default;
     private Interactable currentInteractable;
-    private KeyCode interactKey = KeyCode.Space;
+    private KeyCode interactKey = KeyCode.Mouse0;
 
     void Start()
     {
