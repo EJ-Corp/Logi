@@ -1079,6 +1079,7 @@ GameObject:
   - component: {fileID: 5639342261068836595}
   - component: {fileID: 5398417912641375102}
   - component: {fileID: 665419086626553920}
+  - component: {fileID: 4271201971456645286}
   m_Layer: 5
   m_Name: anime girl
   m_TagString: Untagged
@@ -1134,7 +1135,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9bd93c55c0843d944a6f2854a714f400, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22a6e72bc36c94848bccacc3135ff348, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1144,6 +1145,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &4271201971456645286
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4049849359329811309}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea127e2d06a538d47b0c69c7316fcf7b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4130967263914577820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,7 +2774,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2558768937769868606
 MonoBehaviour:
   m_ObjectHideFlags: 0
