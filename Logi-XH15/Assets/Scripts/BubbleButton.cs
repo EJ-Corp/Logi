@@ -17,9 +17,9 @@ public class BubbleButton : MonoBehaviour
         
     }
 
-    public void CloseClick()
+    public void CloseClick(int annoyID)
     {
-        computerScreen.ClosedAnnoy();
+        computerScreen.ClosedAnnoy(annoyID);
         Destroy(transform.parent.gameObject);
     }
 }

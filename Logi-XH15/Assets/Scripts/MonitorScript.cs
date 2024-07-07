@@ -29,8 +29,8 @@ public class MonitorScript : MonoBehaviour
     [Header("Annoying Bubbles")]
     [SerializeField] private int maxAnnoy;
     [SerializeField] private int activeAnnoy;
-    [SerializeField] private int amountOfAnnoyOptions;
     [SerializeField] private float annoyCountdown;
+    [SerializeField] private List<int> annoyIDPool; 
 
     [Header("Speech Bubbles")]
     [SerializeField] private GameObject bubbleHolder;
@@ -39,7 +39,12 @@ public class MonitorScript : MonoBehaviour
     [SerializeField] private GameObject randomFactBubble;
     [SerializeField] private GameObject flirtBubble;
     [SerializeField] private List<GameObject> activeBubbles = new List<GameObject>();
-   // [SerializeField] private
+
+    [Header("SOVA Animation Stuff")]
+    [SerializeField] private Animator sovaAnimator;
+    [SerializeField] private int problemBubbleCount = 0;
+    [SerializeField] private float idleTriggerTimer;
+    [SerializeField] private float idleTriggerRandInterval;
 
     private int buttonBubbleIdx;
     private int switchBubbleIdx;
@@ -52,6 +57,8 @@ public class MonitorScript : MonoBehaviour
         mouse = Mouse.current;
         desktopScreen.SetActive(false);
         correctID = "helios";
+
+        idleTriggerRandInterval = Random.Range(4, 10);
     }
 
     // Update is called once per frame
@@ -66,6 +73,40 @@ public class MonitorScript : MonoBehaviour
             idInputValue = gameManager.idInput.GetInputResult();
             pswdInputValue = gameManager.pswdInput.GetInputResult();
             CheckIDAndPassword();
+        }
+
+        if (problemBubbleCount < 0)
+        {
+            problemBubbleCount = 0;
+        }
+
+        if (activeBubbles.Count == 0)
+        {
+            sovaAnimator.SetBool("isBubbleActive", false);
+        } else {
+            sovaAnimator.SetBool("isBubbleActive", true);
+            sovaAnimator.SetInteger("isProblemActive", problemBubbleCount);
+
+            if (idleTriggerTimer > 0)
+            {
+                idleTriggerTimer -= Time.deltaTime;
+            }
+
+            if (idleTriggerTimer <= 0)
+            {
+                float randomCoinFlip = Random.Range(1,4);
+
+                if (randomCoinFlip <= 2)
+                {
+                    sovaAnimator.SetTrigger("goIdle1");   
+                } else if (randomCoinFlip >= 3)
+                {
+                    sovaAnimator.SetTrigger("goIdle2");
+                }
+
+                idleTriggerRandInterval = Random.Range(8, 16);
+                idleTriggerTimer = idleTriggerRandInterval;
+            }
         }
         
         //We are getting the same 4 corners repeadetly every fram --- IS THIS NEEDED??? NOT JUST ONCE?? BAD CODE.
@@ -152,30 +193,36 @@ public class MonitorScript : MonoBehaviour
 
     public void SpawnAnnoyBubble()
     {
-        int randomAnnoy = Random.Range(0, amountOfAnnoyOptions);
+        int randomAnnoy = Random.Range(0, annoyIDPool.Count);
+        int chosenAnnoyID = annoyIDPool[randomAnnoy];
 
         //Debug.Log("Spawned Annoy ID: " + randomAnnoy);
 
-        switch(randomAnnoy)
+        switch(chosenAnnoyID)
         {
             case 0: //Spawn a flirt
                 GameObject flirtSpeechBubble = Instantiate(flirtBubble, bubbleHolder.transform);
                 flirtSpeechBubble.name = "Flirt Bubble";
                 activeAnnoy++;
+                sovaAnimator.SetTrigger("flirtTime");
+                annoyIDPool.RemoveAt(randomAnnoy);
                 break;
             case 1: //Spawn a fact
                 GameObject factSpeeechBubble = Instantiate(randomFactBubble, bubbleHolder.transform);
                 factSpeeechBubble.name = "Fact Bubble";
                 activeAnnoy++;
+                sovaAnimator.SetTrigger("talkingTime");
+                annoyIDPool.RemoveAt(randomAnnoy);
                 break;
         }
 
         annoyCountdown = Random.Range(5.0f, 30.0f);
     }
 
-    public void ClosedAnnoy()
+    public void ClosedAnnoy(int annoyIDClosed)
     {
         activeAnnoy--;
+        annoyIDPool.Add(annoyIDClosed);
     }
 
     public void SpawnProblemFact(int problemID, string buttonID)
@@ -193,6 +240,10 @@ public class MonitorScript : MonoBehaviour
                 bubbleText.text = 
                 "Don't worry, the " + buttonID + " button should be able to stabilise it. You got this! :)";
                 //buttonBubble.transform.parent = bubbleHolder.transform;
+
+                problemBubbleCount += 1;
+                sovaAnimator.SetTrigger("talkingTime");
+
                 break;
 
             case 12: //Its the switch Problem (ID = 12)
@@ -201,6 +252,10 @@ public class MonitorScript : MonoBehaviour
                 activeBubbles.Add(switchBubble);
                 switchBubbleIdx = activeBubbles.Count - 1;
                 //switchBubble.transform.parent = bubbleHolder.transform;
+
+                problemBubbleCount += 1;
+                sovaAnimator.SetTrigger("talkingTime");
+
                 break;
         }
     }
@@ -211,10 +266,15 @@ public class MonitorScript : MonoBehaviour
         {
             Destroy(activeBubbles[buttonBubbleIdx].gameObject);
             activeBubbles.RemoveAt(buttonBubbleIdx);
+
+            problemBubbleCount -= 1;
+
         } else if(problemID == 12) //Fixed Switches
         {
             Destroy(activeBubbles[switchBubbleIdx].gameObject);
             activeBubbles.RemoveAt(switchBubbleIdx);
+
+            problemBubbleCount -= 1;
         }
     }
 
