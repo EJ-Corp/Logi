@@ -56,6 +56,9 @@ public class MonitorScript : MonoBehaviour
     private int flirtSpeechBubbleIdx;
     private int historySpeechBubbleIdx;
     private int galaxySpeechBubbleIdx;
+    private GameObject buttonBubble;
+    private GameObject switchBubble;
+    private GameObject pressureBubble;
 
     // Start is called before the first frame update
     void Start()
@@ -272,7 +275,7 @@ public class MonitorScript : MonoBehaviour
         switch(problemID)
         {
             case 11: //Its the button problem (ID = 11)
-                GameObject buttonBubble = Instantiate(buttonProbBubble, bubbleHolder.transform);
+                buttonBubble = Instantiate(buttonProbBubble, bubbleHolder.transform);
                 buttonBubble.name = "11Bubble";
                 
                 
@@ -292,7 +295,7 @@ public class MonitorScript : MonoBehaviour
             break;
 
             case 12: //Its the switch Problem (ID = 12)
-                GameObject switchBubble = Instantiate(switchProbBubble, bubbleHolder.transform);
+                switchBubble = Instantiate(switchProbBubble, bubbleHolder.transform);
                 switchBubble.name = "12Bubble";
                 activeBubbles.Add(switchBubble);
                 switchBubbleIdx = activeBubbles.Count - 1;
@@ -305,7 +308,7 @@ public class MonitorScript : MonoBehaviour
             break;
 
             case 13: //Its the pressure Problem (ID = 13)
-                GameObject pressureBubble = Instantiate(pressureProbBubble, bubbleHolder.transform);
+                pressureBubble = Instantiate(pressureProbBubble, bubbleHolder.transform);
                 pressureBubble.name = "13Bubble";
                 activeBubbles.Add(pressureBubble);
                 pressureBubbleIdx = activeBubbles.Count - 1;
@@ -323,8 +326,9 @@ public class MonitorScript : MonoBehaviour
     {
         if(problemID == 11) //Fixed Buttons
         {
-            Destroy(activeBubbles[buttonBubbleIdx].gameObject);
-            activeBubbles.RemoveAt(buttonBubbleIdx);
+            int problemIDX = activeBubbles.IndexOf(buttonBubble);
+            Destroy(activeBubbles[problemIDX].gameObject);
+            activeBubbles.RemoveAt(problemIDX);
 
             problemBubbleCount -= 1;
 
@@ -332,14 +336,16 @@ public class MonitorScript : MonoBehaviour
 
         } else if(problemID == 12) //Fixed Switches
         {
-            Destroy(activeBubbles[switchBubbleIdx].gameObject);
-            activeBubbles.RemoveAt(switchBubbleIdx);
+            int problemIDX = activeBubbles.IndexOf(switchBubble);
+            Destroy(activeBubbles[problemIDX].gameObject);
+            activeBubbles.RemoveAt(problemIDX);
 
             problemBubbleCount -= 1;
         } else if (problemID == 13) //Fixed pressure
         {
-            Destroy(activeBubbles[pressureBubbleIdx].gameObject);
-            activeBubbles.RemoveAt(pressureBubbleIdx);
+            int problemIDX = activeBubbles.IndexOf(pressureBubble);
+            Destroy(activeBubbles[problemIDX].gameObject);
+            activeBubbles.RemoveAt(problemIDX);
 
             problemBubbleCount -= 1;            
         }
