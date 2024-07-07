@@ -1535,10 +1535,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1005242503384527356}
     m_Modifications:
-    - target: {fileID: 5329600045252446148, guid: bf15e83d3e34e2849890cdf76ca5e0d5, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2d2130128aa435a4e8e5fc771e6dc84d, type: 2}
     - target: {fileID: 8092904793042968505, guid: bf15e83d3e34e2849890cdf76ca5e0d5, type: 3}
       propertyPath: m_Name
       value: Thermostat

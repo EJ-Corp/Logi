@@ -659,7 +659,6 @@ MonoBehaviour:
   arrowheadRotationFactor: 2.8
   arrowheadRotationOffset: -230
   fadeSpeed: 1
-  volume: 0
 --- !u!82 &5872208597700752976
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1411,7 +1410,7 @@ GameObject:
   - component: {fileID: 7645599528551807550}
   m_Layer: 6
   m_Name: Joint 4
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1460,8 +1459,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 4092924ef92febd428a1c9c5e4bef783, type: 2}
-  - {fileID: 2100000, guid: 106f3ff43a17d4967a2b64c7a92e49ec, type: 2}
-  - {fileID: 2100000, guid: 311313efa011949e98b6761d652ad13c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
