@@ -20,7 +20,8 @@ public class PressurePuzzle : MonoBehaviour
     [SerializeField] private float dangerousPressure = 60f;
     [SerializeField] private float maxPressure = 100f;
     [SerializeField] private int pressureReleaseSpeed = 1;
-    [SerializeField] private float arrowheadRotationFactor = 0.05f;
+    [SerializeField] private float arrowheadRotationFactor = 2.8f;
+    [SerializeField] private int arrowheadRotationOffset = -230;
 
     // Start is called before the first frame update
     void Start()
@@ -35,17 +36,13 @@ public class PressurePuzzle : MonoBehaviour
         //Calculate distance from handle to pressure gauge
         handleDistance = Vector3.Distance(handle.transform.position, transform.position);
 
-        //Start increasing pressure at random
-        /*if(!isIncreasingPressure)
-        {
-
-        }*/
+        //Calculate arrowhead rotation from pressure
+        arrowhead.transform.localEulerAngles = new Vector3(arrowheadRotationOffset + (pressure * arrowheadRotationFactor), -90, 90);
 
         //Increase pressure
         if(isIncreasingPressure && pressure < maxPressure)
         {
             pressure += Time.deltaTime;
-            arrowhead.transform.Rotate(0, -arrowheadRotationFactor, 0, Space.Self);
         }
 
         //Break puzzle
@@ -59,7 +56,6 @@ public class PressurePuzzle : MonoBehaviour
         if(handleDistance > innerDistance && pressure > 0)
         {
             pressure -= Time.deltaTime * pressureReleaseSpeed;
-            arrowhead.transform.Rotate(0, arrowheadRotationFactor * pressureReleaseSpeed, 0, Space.Self);
             if(!isBroken)
             {
                 isBroken = true;
