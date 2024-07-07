@@ -129,7 +129,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1315841374}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6025dd9be802cb945814acd4a90ee960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6025dd9be802cb945814acd4a90ee960, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000000059604645
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6025dd9be802cb945814acd4a90ee960, type: 3}
       propertyPath: m_LocalPosition.z
@@ -180,6 +180,149 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6025dd9be802cb945814acd4a90ee960, type: 3}
+--- !u!4 &25461561 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6025dd9be802cb945814acd4a90ee960, type: 3}
+  m_PrefabInstance: {fileID: 25461560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1245953064
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1315841374}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.10000001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.10000001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.816529
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1633725
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.8367394
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9832029
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.18251608
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 21.033
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8143710011712545758, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9e5a18aca547945dca5d27831f243c63, type: 2}
+    - target: {fileID: -7824753648676844136, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6914922
+      objectReference: {fileID: 0}
+    - target: {fileID: -7824753648676844136, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6967988
+      objectReference: {fileID: 0}
+    - target: {fileID: -7824753648676844136, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.14777863
+      objectReference: {fileID: 0}
+    - target: {fileID: -7824753648676844136, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.12029753
+      objectReference: {fileID: 0}
+    - target: {fileID: -7824753648676844136, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -68.142
+      objectReference: {fileID: 0}
+    - target: {fileID: -7824753648676844136, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -92.268
+      objectReference: {fileID: 0}
+    - target: {fileID: -7824753648676844136, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 55e06859cf12faa4b9025ea65e2ea3a3, type: 2}
+    - target: {fileID: -1806680513116206669, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9e5a18aca547945dca5d27831f243c63, type: 2}
+    - target: {fileID: -678588488315902003, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9e5a18aca547945dca5d27831f243c63, type: 2}
+    - target: {fileID: 327064008815436722, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9e5a18aca547945dca5d27831f243c63, type: 2}
+    - target: {fileID: 919132149155446097, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_Name
+      value: Newtons Cradle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4321514657177891973, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9e5a18aca547945dca5d27831f243c63, type: 2}
+    - target: {fileID: 7071182760956848314, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9e5a18aca547945dca5d27831f243c63, type: 2}
+    - target: {fileID: 7202271454713460447, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9e5a18aca547945dca5d27831f243c63, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+--- !u!4 &1245953065 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 49ab1b66c036b4d75ba7bb4bb10a86ec, type: 3}
+  m_PrefabInstance: {fileID: 1245953064}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1315841373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -258,50 +401,70 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334998349988750353, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
       propertyPath: m_text
-      value: "\n\n<align=\"center\"><style=\"Title\">Helios Innovations \r\n\r\n
-        <sprite=0>\r\n\r\n\r\n\r\n\r\n\n<size=200%>Instruction Manual\r\n</style></align>\r\n<page>\r\n<style=\"Title\">Helios
+      value: "\r\n\r\n<align=\"center\"><style=\"Title\">Helios Innovations \r\n\r\n
+        <sprite=0>\r\n\r\n\r\n\r\n\r\n\r\n<size=200%>Instruction Manual\r\n</style></align>\r\n<page>\r\n<style=\"Title\">Helios
         Innovations </style>\r\n\r\n<size=100%>If you suspect there to be a problem,
         please consult your provided main system terminal to diagnosis any problem
         by listening to our lovely AI assistant, <i>STELLA</i>.\r\n\r\nIn the unlikely
-        event that such a problem would occur these are the known issues with the
-        FLARE<sup>TM</sup> system.\r\r\n\r\nNote: FLARE<sup>TM</sup> is shield to
-        a rating of 2000W/m<sup>2</sup>, anything higher than this will cause the
-        main terminal to shutdown to avoid the system being destroyed. This can only
+        event that such a problem would occur, these are the known issues with the
+        FLARE<sup>TM</sup> system.\r\n\r\n\r\nNote: FLARE<sup>TM</sup> is shield
+        to a rating of 2000W/m<sup>2</sup>, anything higher than this will cause
+        the main terminal to shutdown to avoid the system malfunction. This can only
         be reset via the electrical breaker box.</size>\r\n<page>\r\n<size=110%>Known
         Issue:</size>\r\n<size=100%>Due to the implementation of the latest simplified
         circuit for our sub systems this has caused the control panel of the FLARE<sup>TM</sup>
         probe to encounter a familiar issue known as the <b>\"Button Mirage.\"</b></size>\r\n\r\n<size=110%>Known
         solution:</size>\r\n<size=100%><i>STELLA</i> will inform the user of the
         type of sub system that is experiencing an expected issue.\r\nPressure Regulator
-        = <b>RED</b>\r\nInertial Dampeners = <b>GREEN</b>\r\nOxygen Recycler = <b>PURPLE</b>\r\nFusion
-        Reactor = <b>BLUE</b>\r\nArc Generator = <b>YELLOW</b>\r\nSubspace Scanner
-        = <b>CYAN</b>\r\nHydroponics Drainage = <b>ORANGE</b> \r\n</size>\r\n<page>\r\n<size=110%>Known
+        = <color=\"red\"><b>RED</b></color>\r\nInertial Dampeners = <color=\"green\"><b>GREEN</b></color>\r\nOxygen
+        Recycler = <color=\"purple\"><b>PURPLE</b></color>\r\nFusion Reactor = <color=\"blue\"><b>BLUE</b></color>\r\nArc
+        Generator = <color=\"yellow\"><b>YELLOW</b></color>\r\nSubspace Scanner =
+        <color=#02DEF2><b>CYAN</b></color>\r\nHydroponics Drainage = <color=#F28202><b>ORANGE</b></color>\r\n</size>\r\n<page>\r\n<size=110%>Known
         Issue:</size>\r\n<size=100%>Due to a shortage in material availability non-Helios
         piping clamps were used in the installation of the FLARE<sup>TM</sup> piping
         (this is under investigation and replacement parts are expected to begin
         production within the next 600 Earth cycles). This causes the electromagnetic
         clamps to disengage and <b>require a reset.</b> </size>\r\n\r\n<size=110%>Known
-        solution:</size>\r\n<size=100%>Simple reset any switches which are turned
-        <b>off to</b> the on</b> position. </size>\n<page>\r\n<size=110%>Known Issue:</size>\r\n<size=100%>
-        Due to financial constraints automatic pressure release systems were not
-        within the budget of <i>R&D</i>, as such the system was moved over to <b>manual
-        control</b> for the FLARE<sup>TM</sup> Program.\r\n\r\n<size=110%>Known solution:</size>\r\n<size=100%><i>STELLA</i>
-        will inform the user when the pressure has begun to reach critical levels
-        and requires venting before rupture. To do so simple <b>pull the draw cord</b>
-        to a reasonable length and <b>hold it to continue releasing pressure</b>. "
+        solution:</size>\r\n<size=100%>Simply reset any switches which are turned
+        <b>off </b> to the <b>on</b> position. </size>\r\n<page>\r\n<size=110%>Known
+        Issue:</size>\r\n<size=100%> Due to financial constraints automatic pressure
+        release systems were not within the budget of <i>R&D</i>, as such the system
+        was moved over to <b>manual control</b> for the FLARE<sup>TM</sup> Program.\r\n\r\n<size=110%>Known
+        solution:</size>\r\n<size=100%><i>STELLA</i> will inform the user when the
+        pressure has begun to reach critical levels and requires venting before rupture.
+        To do so simple <b>pull the draw cord</b> to a reasonable length and <b>hold
+        it to continue releasing pressure</b>. \r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1518815282844589377, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1005242503384527356, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2038847178}
+    - targetCorrespondingSourceObject: {fileID: 1005242503384527356, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 25461561}
+    - targetCorrespondingSourceObject: {fileID: 1005242503384527356, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1990370669}
+    - targetCorrespondingSourceObject: {fileID: 1005242503384527356, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1245953065}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+--- !u!4 &1315841374 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1005242503384527356, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+  m_PrefabInstance: {fileID: 1315841373}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1990370668
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1315841374}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9e0a5d1ddb127994291bb8d19e6a6df9, type: 3}
       propertyPath: m_LocalScale.x
@@ -333,7 +496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9e0a5d1ddb127994291bb8d19e6a6df9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9e0a5d1ddb127994291bb8d19e6a6df9, type: 3}
       propertyPath: m_LocalRotation.y
@@ -380,13 +543,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e0a5d1ddb127994291bb8d19e6a6df9, type: 3}
+--- !u!4 &1990370669 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9e0a5d1ddb127994291bb8d19e6a6df9, type: 3}
+  m_PrefabInstance: {fileID: 1990370668}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2038847177
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1315841374}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fd7ba4e264b3dea42b5992a13b315842, type: 3}
       propertyPath: m_LocalPosition.x
@@ -437,11 +605,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd7ba4e264b3dea42b5992a13b315842, type: 3}
+--- !u!4 &2038847178 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fd7ba4e264b3dea42b5992a13b315842, type: 3}
+  m_PrefabInstance: {fileID: 2038847177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1315841373}
-  - {fileID: 2038847177}
-  - {fileID: 25461560}
-  - {fileID: 1990370668}
