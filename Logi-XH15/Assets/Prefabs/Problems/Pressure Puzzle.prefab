@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7012123327838485234}
   - component: {fileID: 3985287372844661227}
   - component: {fileID: 5438287492774036318}
+  - component: {fileID: 3130398495800878694}
   m_Layer: 0
   m_Name: Gauge Housing
   m_TagString: Untagged
@@ -167,6 +168,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3130398495800878694
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890403928836876346}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.023344526, y: 0.01978791, z: 0.03167115}
+  m_Center: {x: -0.0000000060535963, y: 0.0016404206, z: -0.00017570349}
 --- !u!1 &2433634821985627635
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +680,7 @@ MonoBehaviour:
   pressureReleaseSpeed: 5
   arrowheadRotationFactor: 2.8
   arrowheadRotationOffset: -230
-  fadeSpeed: 1
+  fadeSpeed: 5
 --- !u!82 &5872208597700752976
 AudioSource:
   m_ObjectHideFlags: 0
@@ -668,7 +690,7 @@ AudioSource:
   m_GameObject: {fileID: 2607066735616185187}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 9049237304414047153, guid: 336909c2fbdce4b9798176aa3729c392, type: 2}
   m_audioClip: {fileID: 8300000, guid: 5c319c3ac27b0451d84a556a21179a07, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
