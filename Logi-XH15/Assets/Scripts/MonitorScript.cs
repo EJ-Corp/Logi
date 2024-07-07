@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.UI;
 using TMPro;
+using System.Linq;
 
 public class MonitorScript : MonoBehaviour
 {
@@ -351,11 +352,15 @@ public class MonitorScript : MonoBehaviour
             problemBubbleCount -= 1;
         } else if (problemID == 13) //Fixed pressure
         {
-            int problemIDX = activeBubbles.IndexOf(pressureBubble);
-            Destroy(activeBubbles[problemIDX].gameObject);
-            activeBubbles.RemoveAt(problemIDX);
+            if(activeBubbles.Any())
+            {
+                int problemIDX = activeBubbles.IndexOf(pressureBubble);
+                Destroy(activeBubbles[problemIDX].gameObject);
+                activeBubbles.RemoveAt(problemIDX);
 
-            problemBubbleCount -= 1;            
+                problemBubbleCount -= 1;    
+            }
+                    
         }
     }
 
