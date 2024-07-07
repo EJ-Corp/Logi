@@ -25,11 +25,11 @@ public class CameraShake : MonoBehaviour
             timeUsed += Time.deltaTime;
             float strength = curve.Evaluate(timeUsed / shakeTime);
             transform.localPosition = startPosition + Random.insideUnitSphere * strength;
-            // Debug.Log(handle.transform.parent);
-            // Debug.Log(playerCamera.transform);
+            // //Debug.Log(handle.transform.parent);
+            // //Debug.Log(playerCamera.transform);
             if(handle.transform.parent == playerCamera.transform)
             {
-                Debug.Log("Dropping Handle");
+                //Debug.Log("Dropping Handle");
                 handle.transform.parent = anchor.transform;
                 handle.GetComponent<Rigidbody>().isKinematic = false;
             }

@@ -13,7 +13,7 @@ public class FlareEater : MonoBehaviour
 
         if(flareLayer.Contains(collided))
         {
-            Debug.Log("Eat Flare");
+            //Debug.Log("Eat Flare");
             collided.transform.GetComponent<SolarFlare>().BreakComputer();
             SFXManager.Instance.PlaySFXClip(flareCrackle, transform, 1f);
             SFXManager.Instance.PlaySFXClip(pcPowerDown, transform, 1f);

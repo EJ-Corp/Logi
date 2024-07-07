@@ -53,7 +53,7 @@ public class InteractCompBreaker : Interactable
     // Start is called before the first frame update
     public void FlareBreak()
     {
-        Debug.Log("Flared turned it off");
+        //Debug.Log("Flared turned it off");
         isOn = false;
         animator.SetBool("IsClicked", true);
         //XAVIER add animation here from ON to OFF

@@ -55,13 +55,13 @@ public class PressurePuzzle : MonoBehaviour
         //TODO: Ping player + update data transfer speed
         if(pressure >= dangerousPressure)
         {
-            Debug.Log("Pressure is greater than danger zone");
+            //Debug.Log("Pressure is greater than danger zone");
             isBroken = true;
         }
 
         if(!isCurrentlyReleasing && releaseSFX.volume > 0)
         {
-            Debug.Log("Decreasing Volume");
+            //Debug.Log("Decreasing Volume");
             releaseSFX.volume -= Time.deltaTime * fadeSpeed;
         }
 
@@ -79,7 +79,7 @@ public class PressurePuzzle : MonoBehaviour
             if(isIncreasingPressure) //Problem is active on the handler
             {
                 //Stop it from going up and tell the problem handler it can be fired again
-                Debug.Log("We shoudl stop increasing");
+                //Debug.Log("We shoudl stop increasing");
                 isIncreasingPressure = false;
                 warningSign.FixProblemOnHandler(13);
             }
@@ -97,7 +97,7 @@ public class PressurePuzzle : MonoBehaviour
         {
             isBroken = false;
             isIncreasingPressure = false;
-            Debug.Log("We gonna fix it");
+            //Debug.Log("We gonna fix it");
             warningSign.FixProblemOnHandler(13);
             
         }
@@ -111,7 +111,7 @@ public class PressurePuzzle : MonoBehaviour
 
         if(pressure <= 0 || handleDistance < innerDistance)
         {
-            Debug.Log("Setting state to false");
+            //Debug.Log("Setting state to false");
             isCurrentlyReleasing = false;
         }
     }
@@ -119,6 +119,6 @@ public class PressurePuzzle : MonoBehaviour
     public void ActivateProblem()
     {
         isIncreasingPressure = true;
-        Debug.Log("Problem is Pressure");
+        //Debug.Log("Problem is Pressure");
     }
 }

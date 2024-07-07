@@ -58,7 +58,7 @@ public class InteractButton : Interactable
 
     public void FixProblemOnInteractButton()
     {
-        Debug.Log("Fixed the problem");
+        //Debug.Log("Fixed the problem");
         canFix = false;
         warningSign.FixProblemOnHandler(11);
         

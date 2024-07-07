@@ -68,13 +68,13 @@ public class ComputerInteractableScript : Interactable
 
     public override void OnFocus()
     {
-        Debug.Log("Looking at " + gameObject.name);
+        //Debug.Log("Looking at " + gameObject.name);
         print("Looking at " + gameObject.name);
     }
     
     public override void OnLoseFocus()
     {
-        Debug.Log("Stopped looking at " + gameObject.name);
+        //Debug.Log("Stopped looking at " + gameObject.name);
     }
 }
 */

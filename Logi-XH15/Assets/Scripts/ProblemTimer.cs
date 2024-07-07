@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProblemTimer : MonoBehaviour
 {
-    [SerializeField] private bool debug = false;
+    [SerializeField] private bool Debug = false;
     [SerializeField] private int numberOfProblems;
     [SerializeField] private float nextProblemCountDown;
     [SerializeField] private int activeProblems = 0; 
@@ -30,7 +30,7 @@ public class ProblemTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(activeProblems < numberOfProblems && !debug)
+        if(activeProblems < numberOfProblems && !Debug)
         {
             if(nextProblemCountDown > 0)
             {

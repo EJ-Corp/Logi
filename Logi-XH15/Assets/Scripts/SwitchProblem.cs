@@ -28,7 +28,7 @@ public class SwitchProblem : MonoBehaviour
         {
             if(onSwitches == allSwitches.Count)
             {
-                Debug.Log("Problem Fixed");
+                //Debug.Log("Problem Fixed");
 
                 breakbleSwitches.Clear();
                 switchesToBreak.Clear();
@@ -43,7 +43,7 @@ public class SwitchProblem : MonoBehaviour
     {
         //Debug.Log("Problem Activated");
         int amountToBreak = UnityEngine.Random.Range(1, allSwitches.Count);
-        Debug.Log("Must break: " + amountToBreak);
+        //Debug.Log("Must break: " + amountToBreak);
         breakbleSwitches = new List<InteractSwitch>(allSwitches);
 
         for(int i = amountToBreak; i > 0; i--)

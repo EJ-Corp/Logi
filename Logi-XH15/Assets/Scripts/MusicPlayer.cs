@@ -11,7 +11,7 @@ public class MusicPlayer : MonoBehaviour
     {
         if(!introSource || !loopSource)
         {
-            Debug.Log("No Audio Sources Found!");
+            //Debug.Log("No Audio Sources Found!");
         }
         else
         {

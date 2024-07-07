@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
     {
         if(Physics.Raycast(playerCamera.ViewportPointToRay(interactionRayPoint), out RaycastHit hit, interactionDistance))
         {
-            Debug.DrawRay(transform.position, transform.forward, Color.green);
+            //Debug.DrawRay(transform.position, transform.forward, Color.green);
             
             if(hit.collider.gameObject.layer == 6 && (currentInteractable == null || hit.collider.gameObject.GetInstanceID() != currentInteractable.GetInstanceID()))
             {
