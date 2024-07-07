@@ -14,8 +14,6 @@ public class InstructionBook : Interactable
     public int pageTotal;
     public float distance = 5;
     public Vector3 offset;
-
-    [SerializeField] private GameManager gameManager;
     [SerializeField] private PlayerController playerController;
 
     [SerializeField] private GameObject book;
@@ -96,7 +94,7 @@ public class InstructionBook : Interactable
     public void ExitBook(){
         
         Debug.Log("Exit Book");
-        Destroy(this);
+        Destroy(gameObject.transform.parent.gameObject);
         playerController.CanMove = true;
     }
     public override void OnFocus()
