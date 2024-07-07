@@ -158,16 +158,17 @@ MonoBehaviour:
   loginScreen: {fileID: 1092279905117981226}
   powerSupply: {fileID: 4706544164991944959}
   startingGame: 0
-  maxAnnoy: 2
+  maxAnnoy: 3
   activeAnnoy: 0
   annoyCountdown: 15
-  annoyIDPool: 0000000001000000
+  annoyIDPool: 000000000100000002000000
   bubbleHolder: {fileID: 5849317719660824670}
   buttonProbBubble: {fileID: 6743292420630616860, guid: d3793b07412a3e348960f89e904d6e6f, type: 3}
   switchProbBubble: {fileID: 9014948847776218458, guid: 92ce8ce3e7b4b80488c7d9c4b6fdd232, type: 3}
   pressureProbBubble: {fileID: 9014948847776218458, guid: b33f0faa8a906274e93d1edaa19e57b1, type: 3}
-  randomFactBubble: {fileID: 490484484383809632, guid: 6cbd9bd5339e2b44780424066b34215f, type: 3}
   flirtBubble: {fileID: 850607240268304017, guid: 55f1b892dd44e794095aa97541592a4a, type: 3}
+  historyBubble: {fileID: 490484484383809632, guid: 6cbd9bd5339e2b44780424066b34215f, type: 3}
+  galaxyBubble: {fileID: 850607240268304017, guid: bdb16d6f4edfbbd40977954cf7fad5ef, type: 3}
   activeBubbles: []
   stellaAnimator: {fileID: 5465878107400993231}
   problemBubbleCount: 0

@@ -37,8 +37,9 @@ public class MonitorScript : MonoBehaviour
     [SerializeField] private GameObject buttonProbBubble;
     [SerializeField] private GameObject switchProbBubble;
     [SerializeField] private GameObject pressureProbBubble;
-    [SerializeField] private GameObject randomFactBubble;
     [SerializeField] private GameObject flirtBubble;
+    [SerializeField] private GameObject historyBubble;
+    [SerializeField] private GameObject galaxyBubble;
     [SerializeField] private List<GameObject> activeBubbles = new List<GameObject>();
 
     [Header("stella Animation Stuff")]
@@ -51,8 +52,9 @@ public class MonitorScript : MonoBehaviour
     private int switchBubbleIdx;
     private int pressureBubbleIdx;
 
-    private int factSpeechBubbleIdx;
     private int flirtSpeechBubbleIdx;
+    private int historySpeechBubbleIdx;
+    private int galaxySpeechBubbleIdx;
 
     // Start is called before the first frame update
     void Start()
@@ -207,17 +209,29 @@ public class MonitorScript : MonoBehaviour
                 activeAnnoy++;
                 stellaAnimator.SetTrigger("flirtTime");
                 annoyIDPool.RemoveAt(randomAnnoy);
-                break;
-            case 1: //Spawn a fact
-                GameObject factSpeechBubble = Instantiate(randomFactBubble, bubbleHolder.transform);
-                factSpeechBubble.name = "Fact Bubble";
-                activeBubbles.Add(factSpeechBubble);
-                factSpeechBubbleIdx = activeBubbles.Count - 1;
+            break;
+
+            case 1: //Spawn a history fact
+                GameObject historySpeechBubble = Instantiate(historyBubble, bubbleHolder.transform);
+                historySpeechBubble.name = "History Bubble";
+                activeBubbles.Add(historySpeechBubble);
+                historySpeechBubbleIdx = activeBubbles.Count - 1;
 
                 activeAnnoy++;
                 stellaAnimator.SetTrigger("talkingTime");
                 annoyIDPool.RemoveAt(randomAnnoy);
-                break;
+            break;
+
+            case 2: //Spawn a galaxy fact
+                GameObject galaxySpeechBubble = Instantiate(galaxyBubble, bubbleHolder.transform);
+                galaxySpeechBubble.name = "Galaxy Bubble";
+                activeBubbles.Add(galaxySpeechBubble);
+                galaxySpeechBubbleIdx = activeBubbles.Count - 1;
+
+                activeAnnoy++;
+                stellaAnimator.SetTrigger("talkingTime");
+                annoyIDPool.RemoveAt(randomAnnoy);
+            break;
         }
 
         annoyCountdown = Random.Range(5.0f, 30.0f);
@@ -230,9 +244,13 @@ public class MonitorScript : MonoBehaviour
         {
             activeBubbles.RemoveAt(flirtSpeechBubbleIdx);
         } else
-        if (annoyIDClosed == 1)
+        if (annoyIDClosed == 1) //history fact bubble
         {
-            activeBubbles.RemoveAt(factSpeechBubbleIdx);
+            activeBubbles.RemoveAt(historySpeechBubbleIdx);
+        } else 
+        if (annoyIDClosed == 2) //galaxy fact bubble
+        {
+            activeBubbles.RemoveAt(galaxySpeechBubbleIdx);
         }
 
         annoyIDPool.Add(annoyIDClosed);
@@ -283,7 +301,7 @@ public class MonitorScript : MonoBehaviour
                 problemBubbleCount += 1;
                 stellaAnimator.SetTrigger("talkingTime");
                 ResetIdleTimer();
-                
+
             break;
         }
     }
