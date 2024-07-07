@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float interactionDistance = default;
     [SerializeField] private LayerMask interactionLayer = default;
     private Interactable currentInteractable;
-    private KeyCode interactKey = KeyCode.Mouse0;
+    private KeyCode interactKey = KeyCode.Space;
 
     void Start()
     {
@@ -113,11 +113,11 @@ public class PlayerController : MonoBehaviour
 
     public void HandleInteractionInput()
     {
-        if(Input.GetMouseButtonDown(0) && currentInteractable != null && Physics.Raycast(playerCamera.ViewportPointToRay(interactionRayPoint), out RaycastHit hit, interactionDistance, interactionLayer))
+        if(Input.GetKeyDown(interactKey) && currentInteractable != null && Physics.Raycast(playerCamera.ViewportPointToRay(interactionRayPoint), out RaycastHit hit, interactionDistance, interactionLayer))
         {
             currentInteractable.OnInteract();
         }
-        if(Input.GetMouseButtonUp(0) && currentInteractable != null)
+        if(Input.GetKeyUp(interactKey) && currentInteractable != null)
         {
             currentInteractable.OnStopInteract();
         }

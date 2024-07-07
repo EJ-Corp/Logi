@@ -66,10 +66,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782daf899929ccf42bfa872ed97b9649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
   flareLayer:
     serializedVersion: 2
     m_Bits: 128
+  flareCrackle: {fileID: 8300000, guid: 610a781d8a2a34c54bec1ccc006e40a0, type: 3}
+  pcPowerDown: {fileID: 8300000, guid: fa1c154db04444bb6b936b4422cd1b0a, type: 3}
 --- !u!1 &6053204192113252535
 GameObject:
   m_ObjectHideFlags: 0
