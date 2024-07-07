@@ -161,6 +161,7 @@ MonoBehaviour:
   activeAnnoy: 0
   annoyCountdown: 15
   annoyIDPool: 000000000100000002000000
+  activeAnnoyList: []
   bubbleHolder: {fileID: 5849317719660824670}
   buttonProbBubble: {fileID: 6743292420630616860, guid: d3793b07412a3e348960f89e904d6e6f, type: 3}
   switchProbBubble: {fileID: 9014948847776218458, guid: 92ce8ce3e7b4b80488c7d9c4b6fdd232, type: 3}
@@ -383,7 +384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.026
+      value: 3.022
       objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalRotation.w
