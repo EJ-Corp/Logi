@@ -195,7 +195,12 @@ public class MonitorScript : MonoBehaviour
     public void SpawnAnnoyBubble()
     {
         int randomAnnoy = UnityEngine.Random.Range(0, annoyIDPool.Count);
-        int chosenAnnoyID = annoyIDPool[randomAnnoy];
+        int chosenAnnoyID = -1;
+        if(annoyIDPool != null)
+        {
+            chosenAnnoyID = annoyIDPool[randomAnnoy];
+        }
+        
 
         //Debug.Log("Spawned Annoy ID: " + randomAnnoy);
 
@@ -243,14 +248,17 @@ public class MonitorScript : MonoBehaviour
         activeAnnoy--;
         if (annoyIDClosed == 0) //flirt bubble
         {
+            Destroy(activeBubbles[flirtSpeechBubbleIdx].gameObject);
             activeBubbles.RemoveAt(flirtSpeechBubbleIdx);
         } else
         if (annoyIDClosed == 1) //history fact bubble
         {
+            Destroy(activeBubbles[historySpeechBubbleIdx].gameObject);
             activeBubbles.RemoveAt(historySpeechBubbleIdx);
         } else 
         if (annoyIDClosed == 2) //galaxy fact bubble
         {
+            Destroy(activeBubbles[galaxySpeechBubbleIdx].gameObject);
             activeBubbles.RemoveAt(galaxySpeechBubbleIdx);
         }
 
@@ -264,13 +272,15 @@ public class MonitorScript : MonoBehaviour
             case 11: //Its the button problem (ID = 11)
                 GameObject buttonBubble = Instantiate(buttonProbBubble, bubbleHolder.transform);
                 buttonBubble.name = "11Bubble";
-                activeBubbles.Add(buttonBubble);
-                buttonBubbleIdx = activeBubbles.Count - 1;
+                
                 
                 //change button name in text
                 TMP_Text bubbleText = buttonBubble.transform.Find("fact (1)").GetComponent<TMP_Text>();
                 bubbleText.text = 
                 "Seems like the " + buttonID + " is destabilising!!!";
+
+                activeBubbles.Add(buttonBubble);
+                buttonBubbleIdx = activeBubbles.Count - 1;
                 //buttonBubble.transform.parent = bubbleHolder.transform;
 
                 problemBubbleCount += 1;

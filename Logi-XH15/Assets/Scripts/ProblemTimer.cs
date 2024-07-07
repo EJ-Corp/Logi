@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ProblemTimer : MonoBehaviour
 {
-    [SerializeField] private bool Debug = false;
     [SerializeField] private int numberOfProblems;
     [SerializeField] private float nextProblemCountDown;
     [SerializeField] private int activeProblems = 0; 
@@ -30,7 +29,7 @@ public class ProblemTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(activeProblems < numberOfProblems && !Debug)
+        if(activeProblems < numberOfProblems)
         {
             if(nextProblemCountDown > 0)
             {
@@ -65,7 +64,7 @@ public class ProblemTimer : MonoBehaviour
         {
             buttonProblem.ActivateProblem();
             buttonID = buttonProblem.getCurButtonID();
-            activeProblems += 1;
+            //activeProblems += 1;
             problemIDPool.RemoveAt(randomProblem);
 
             //Spawn Speech bubble
@@ -74,7 +73,7 @@ public class ProblemTimer : MonoBehaviour
         } else if(chosenProblemID == 12) //Chose Switched (ID = 12)
         {
             switchProblem.ActivateProblem();
-            activeProblems += 1;
+            //activeProblems += 1;
             problemIDPool.RemoveAt(randomProblem);
 
             //Spawn Speech bubble
@@ -82,13 +81,14 @@ public class ProblemTimer : MonoBehaviour
         } else if(chosenProblemID == 13) //Chose Pressure (ID = 13)
         {
             pressureProblem.ActivateProblem();
-            activeProblems += 1;
+            //activeProblems += 1;
             problemIDPool.RemoveAt(randomProblem);
             
             //Spawn Speech bubble
             computerScreen.SpawnProblemFact(chosenProblemID, buttonID);
         }
 
+        activeProblems++;
         ResetCountdown();
     }
 
@@ -99,9 +99,14 @@ public class ProblemTimer : MonoBehaviour
 
     public void FixedProblemOnTimer(int IDFixed)
     {
-        activeProblems -= 1;      
-        computerScreen.FixedProblemOnMonitor(IDFixed);  
-        problemIDPool.Add(IDFixed);
+        activeProblems -= 1; 
+
+        if(!problemIDPool.Contains(IDFixed))
+        {
+            Debug.Log("added problem back to list " + IDFixed);
+            problemIDPool.Add(IDFixed);
+        }     
+        
         
         if(IDFixed == 11)
         {
@@ -112,5 +117,7 @@ public class ProblemTimer : MonoBehaviour
         {
             warningPanel.NoProblems();
         }
+
+        computerScreen.FixedProblemOnMonitor(IDFixed);
     }
 }
