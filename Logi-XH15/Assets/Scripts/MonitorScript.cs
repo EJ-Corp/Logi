@@ -74,6 +74,7 @@ public class MonitorScript : MonoBehaviour
         correctPSWD = gameManager.password;
         mousePos = Input.mousePosition;
         mouseBounds.GetComponent<RectTransform>().GetWorldCorners(worldCorners);
+        GameManager.Manager.monitorAnimator.SetBool("pcIsWorking", isUsable);
 
         if(isUsable)
         {

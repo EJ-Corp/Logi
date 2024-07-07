@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Canvas monitorBoundary;
     [SerializeField] public IDandPasswordInputScript idInput;
     [SerializeField] public IDandPasswordInputScript pswdInput;
+    [SerializeField] public Animator monitorAnimator;
 
     //problem objects
     [SerializeField] public Image problemPanel;
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Problems")]
     public SwitchProblem switches;
+    private bool hasPlayedTrigger = false;
 
     //Password Generator
     [Header("Password Generation")]
@@ -145,12 +147,20 @@ public class GameManager : MonoBehaviour
     {
         if(computerState) //Computer is on so we turn it off
         {
+            if (hasPlayedTrigger != true)
+            {
+                monitorAnimator.SetTrigger("pcTurnedOff");
+                hasPlayedTrigger = true;
+            }
+
             computerScreenFocus.transform.GetComponent<MonitorScript>().BreakComputer();
             idInput.ResetInputResult();
             pswdInput.ResetInputResult();
             this.computerState = false;
         } else //COmputer is off so we turn it on
         {
+            monitorAnimator.SetTrigger("pcTurnedOn");
+            hasPlayedTrigger = false;
             this.computerState = true;
             sumManager.BufferFlare();
             computerScreenFocus.transform.GetComponent<MonitorScript>().FixComputer();
