@@ -236,8 +236,7 @@ PrefabInstance:
         it to continue releasing pressure</b>. \r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1518815282844589377, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
