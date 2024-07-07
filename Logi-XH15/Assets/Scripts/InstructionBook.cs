@@ -19,6 +19,8 @@ public class InstructionBook : Interactable
     public int pageTotal;
     public float distance = 5;
     public Vector3 offset;
+    [SerializeField] private GameObject player;
+    [SerializeField] private Image playerReticle;
     [SerializeField] private PlayerController playerController;
 
     [SerializeField] private GameObject book;
@@ -32,8 +34,11 @@ public class InstructionBook : Interactable
 
         if(gameObject.transform.parent.name != "NoteBook Origin")
         {
-            playerController = gameObject.transform.parent.parent.parent.GetComponentInParent<PlayerController>();
+            player = gameObject.transform.parent.parent.parent.gameObject;
+            playerController = player.GetComponent<PlayerController>();
         }
+
+        playerReticle = GameManager.Manager.playerCanvas.gameObject.transform.Find("Reticle").GetComponent<Image>();
     }
 
     private void SetupContent()
@@ -103,10 +108,12 @@ public class InstructionBook : Interactable
 
         UpdatePagination();
     }
+
     public override void OnInteract()
     {
         Debug.Log("Book Touched");
         playerController.CanMove = false;
+        playerReticle.enabled = false;
 
         bookInstance = Instantiate(book, Camera.main.transform);
         bookInstance.transform.localPosition = offset;
@@ -119,7 +126,9 @@ public class InstructionBook : Interactable
         Debug.Log("Exit Book");
         Destroy(gameObject.transform.parent.gameObject);
         playerController.CanMove = true;
+        playerReticle.enabled = true;
     }
+
     public override void OnFocus()
     {
 
