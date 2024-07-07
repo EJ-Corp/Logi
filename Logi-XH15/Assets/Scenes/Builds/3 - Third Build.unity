@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &852634762 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1005242503384527356, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-  m_PrefabInstance: {fileID: 1315841373}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &910720515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -185,11 +180,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80e4b3b981636427c856589339f92e67, type: 3}
---- !u!4 &1190805541 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
-  m_PrefabInstance: {fileID: 8534503721830394611}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1315841373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -304,71 +294,15 @@ PrefabInstance:
         and requires venting before rupture. To do so simple <b>pull the draw cord</b>
         to a reasonable length and <b>hold it to continue releasing pressure</b>. "
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1005242503384527356, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1190805541}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
---- !u!1001 &8534503721830394611
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 852634762}
-    m_Modifications:
-    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.954
-      objectReference: {fileID: 0}
-    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.913
-      objectReference: {fileID: 0}
-    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5.677
-      objectReference: {fileID: 0}
-    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6861027
-      objectReference: {fileID: 0}
-    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.1710646
-      objectReference: {fileID: 0}
-    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.6861027
-      objectReference: {fileID: 0}
-    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.1710646
-      objectReference: {fileID: 0}
-    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 616163559916771886, guid: 134617789edb34874b50c5d55a558f74, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6593819998905542677, guid: 134617789edb34874b50c5d55a558f74, type: 3}
-      propertyPath: m_Name
-      value: Bed Light Switch
+    - target: {fileID: 8162675298396564511, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.091
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 134617789edb34874b50c5d55a558f74, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
