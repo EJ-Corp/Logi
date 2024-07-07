@@ -50,12 +50,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   numberOfProblems: 2
-  nextProblemCountDown: 15
+  nextProblemCountDown: 20
   activeProblems: 0
   buttonProblem: {fileID: 7649493771567849724}
   buttonID: 
   switchProblem: {fileID: 3240128620195944850}
   pressureProblem: {fileID: 5945151555668674184}
+  warningPanel: {fileID: 0}
   problemIDPool: 0b0000000c0000000d000000
 --- !u!114 &6076313066550673698
 MonoBehaviour:
@@ -126,10 +127,6 @@ PrefabInstance:
       propertyPath: warningSign
       value: 
       objectReference: {fileID: 6076313066550673698}
-    - target: {fileID: 8824584093815258913, guid: 74963f0b36c54f940873ff3f1acca119, type: 3}
-      propertyPath: problemTimer
-      value: 
-      objectReference: {fileID: 1330760988278560321}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

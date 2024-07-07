@@ -122,9 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonClick: {fileID: 8821939796930609031}
-  problem: {fileID: 0}
   canFix: 0
-  id: 
+  id: Pressure Regulator
   buttonSFX:
   - {fileID: 8300000, guid: 4fa739098111c47b8a088d9da4bcfcd7, type: 3}
   - {fileID: 8300000, guid: aeda18de97d344ee7834ec81ac8057af, type: 3}

@@ -131,53 +131,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 965744030691156453, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1039609304745892012, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3744506819814129423, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: id
-      value: Subspace Scanner
-      objectReference: {fileID: 0}
-    - target: {fileID: 4094342143856063962, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: id
-      value: Oxygen Recycler
-      objectReference: {fileID: 0}
-    - target: {fileID: 5035821354968556219, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: id
-      value: Fusion Reactor
-      objectReference: {fileID: 0}
-    - target: {fileID: 5415159388863111417, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: id
-      value: Pressure Regulator
-      objectReference: {fileID: 0}
-    - target: {fileID: 5415159388863111417, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: buttonLight
-      value: 
-      objectReference: {fileID: 1432794734}
-    - target: {fileID: 5415159388863111417, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: buttonLightMaterial.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5415159388863111417, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: buttonLightMaterial.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c70d23b3237d34d7ead315fc98a82180, type: 2}
-    - target: {fileID: 5415159388863111417, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: buttonLightMaterial.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 383444ce4c6fa4edca4444d4005162c7, type: 2}
     - target: {fileID: 5790298033205485983, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
       propertyPath: m_Name
       value: THEManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6967183670844351719, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: id
-      value: Hydroponics Problem
       objectReference: {fileID: 0}
     - target: {fileID: 7180450322601600812, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -219,24 +179,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8445712149374173511, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: id
-      value: Arc Generator
-      objectReference: {fileID: 0}
-    - target: {fileID: 9040534127968491533, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: id
-      value: Inertial Dampeners
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
---- !u!23 &1432794734 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8728054949716769638, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-  m_PrefabInstance: {fileID: 1315841373}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -111,6 +111,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 524405634871844512, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
+      propertyPath: id
+      value: Arc Generator
+      objectReference: {fileID: 0}
     - target: {fileID: 765664968749519365, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.928
@@ -200,6 +204,10 @@ PrefabInstance:
     - target: {fileID: 138451156567771327, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 524405634871844512, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
+      propertyPath: id
+      value: Inertial Dampeners
       objectReference: {fileID: 0}
     - target: {fileID: 765664968749519365, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -293,7 +301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 524405634871844512, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
       propertyPath: id
-      value: Hydroponics Drainage
+      value: Hydroponics Problem
       objectReference: {fileID: 0}
     - target: {fileID: 765664968749519365, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -384,6 +392,10 @@ PrefabInstance:
     - target: {fileID: 138451156567771327, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 524405634871844512, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
+      propertyPath: id
+      value: Fusion Reactor
       objectReference: {fileID: 0}
     - target: {fileID: 765664968749519365, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -557,6 +569,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 524405634871844512, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
+      propertyPath: id
+      value: Subspace Scanner
+      objectReference: {fileID: 0}
     - target: {fileID: 765664968749519365, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.013
@@ -646,6 +662,10 @@ PrefabInstance:
     - target: {fileID: 138451156567771327, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 524405634871844512, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
+      propertyPath: id
+      value: Oxygen Recycler
       objectReference: {fileID: 0}
     - target: {fileID: 765664968749519365, guid: bc912c8f0b9bc7f43972b34dc5371ac3, type: 3}
       propertyPath: m_LocalPosition.x
