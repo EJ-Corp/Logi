@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -13,8 +14,10 @@ public class PressurePuzzle : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject arrowhead;
     [SerializeField] private ProblemHandler warningSign;
+    [SerializeField] private AudioSource releaseSFX;
     [SerializeField] private bool isIncreasingPressure;
     [SerializeField] private bool isBroken;
+    [SerializeField] private bool isCurrentlyReleasing;
     [SerializeField] private float pressure = 0f;
     [SerializeField] private float safePressure = 40f;
     [SerializeField] private float dangerousPressure = 60f;
@@ -22,6 +25,7 @@ public class PressurePuzzle : MonoBehaviour
     [SerializeField] private int pressureReleaseSpeed = 1;
     [SerializeField] private float arrowheadRotationFactor = 2.8f;
     [SerializeField] private int arrowheadRotationOffset = -230;
+    [SerializeField] private float fadeSpeed = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -52,9 +56,19 @@ public class PressurePuzzle : MonoBehaviour
             isBroken = true;
         }
 
+        if(!isCurrentlyReleasing && releaseSFX.volume > 0)
+        {
+            releaseSFX.volume -= Time.deltaTime * fadeSpeed;
+        }
+
         //Relieve pressure if handle is being pulled
         if(handleDistance > innerDistance && pressure > 0)
         {
+            isCurrentlyReleasing = true;
+            if(releaseSFX.volume < 1)
+            {
+                releaseSFX.volume += Time.deltaTime * fadeSpeed; 
+            }
             pressure -= Time.deltaTime * pressureReleaseSpeed;
             if(!isBroken)
             {
