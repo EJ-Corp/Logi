@@ -80,8 +80,8 @@ public class PressurePuzzle : MonoBehaviour
             {
                 //Stop it from going up and tell the problem handler it can be fired again
                 //Debug.Log("We shoudl stop increasing");
-                isIncreasingPressure = false;
-                warningSign.FixProblemOnHandler(13);
+                // isIncreasingPressure = false;
+                // warningSign.FixProblemOnHandler(13);
             }
             
             //break once it reaches red
@@ -120,5 +120,11 @@ public class PressurePuzzle : MonoBehaviour
     {
         isIncreasingPressure = true;
         //Debug.Log("Problem is Pressure");
+    }
+
+    public void FixPuzzle()
+    {
+        isIncreasingPressure = false;
+        warningSign.FixProblemOnHandler(13);
     }
 }

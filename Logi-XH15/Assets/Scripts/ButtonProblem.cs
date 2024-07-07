@@ -19,8 +19,14 @@ public class ButtonProblem : MonoBehaviour
         fixButton = buttons[randomButton];
         fixButton.MakeProblem(warningSign);
         buttonID = fixButton.ID;
-        //Debug.Log("Problem is the " + buttonID + " button");
+        Debug.Log("Problem is the " + name + " button");
 
+    }
+
+    public void FixProblem()
+    {
+        problemActive = false;
+        fixButton = null;
     }
 
     public string getCurButtonID()

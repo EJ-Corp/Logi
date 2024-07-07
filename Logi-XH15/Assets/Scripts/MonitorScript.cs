@@ -316,6 +316,8 @@ public class MonitorScript : MonoBehaviour
 
             problemBubbleCount -= 1;
 
+            Debug.Log("Remove Button BUbble");
+
         } else if(problemID == 12) //Fixed Switches
         {
             Destroy(activeBubbles[switchBubbleIdx].gameObject);

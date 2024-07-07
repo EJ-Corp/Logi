@@ -1538,6 +1538,7 @@ MonoBehaviour:
   player: {fileID: 0}
   anchor: {fileID: 2607066735616185187}
   rb: {fileID: 7755849442694736914}
+  puzzleInstance: {fileID: 7409256785351987910}
 --- !u!54 &7755849442694736914
 Rigidbody:
   m_ObjectHideFlags: 0
