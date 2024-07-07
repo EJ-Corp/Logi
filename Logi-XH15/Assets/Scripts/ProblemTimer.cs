@@ -16,7 +16,7 @@ public class ProblemTimer : MonoBehaviour
 
     // [SerializeField] private AudioClip alarmSFX;
 
-    //[SerializeField] private ProblemHandler warningPanel;
+    [SerializeField] private HUDController warningPanel;
 
     [SerializeField] private List<int> problemIDPool;   //IDs: Buttons - 11, Switches = 12, Pressure = 13
 
@@ -53,7 +53,7 @@ public class ProblemTimer : MonoBehaviour
     {
         if(activeProblems == 0)
         {
-           // warningPanel.StartWarning();
+           warningPanel.StartWarning();
         }
         int randomProblem = Random.Range(0, problemIDPool.Count);
 
@@ -102,7 +102,7 @@ public class ProblemTimer : MonoBehaviour
 
         if(activeProblems <= 0)
         {
-            //warningPanel.NoProblems();
+            warningPanel.NoProblems();
         }
     }
 }

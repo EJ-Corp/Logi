@@ -1888,6 +1888,10 @@ PrefabInstance:
       propertyPath: warningLights.Array.data[3]
       value: 
       objectReference: {fileID: 5578866722667830526}
+    - target: {fileID: 7189178061819363657, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+      propertyPath: warningAlarm
+      value: 
+      objectReference: {fileID: 965744030691156453}
     - target: {fileID: 7664761292831770968, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1985,6 +1989,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4e1412c79458584993b019aa32724f2, type: 3}
+--- !u!82 &965744030691156453 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8626243751026216801, guid: d4e1412c79458584993b019aa32724f2, type: 3}
+  m_PrefabInstance: {fileID: 8850015170938089092}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3772924780529150482 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5660337474612774038, guid: d4e1412c79458584993b019aa32724f2, type: 3}
