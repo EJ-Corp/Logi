@@ -27,9 +27,9 @@ public class InstructionBook : Interactable
         SetupContent();
         UpdatePagination();
 
-        if(gameObject.name != "notebook")
+        if(gameObject.transform.parent.name != "NoteBook Origin")
         {
-            playerController = gameObject.GetComponentInParent<PlayerController>();
+            playerController = gameObject.transform.parent.parent.parent.GetComponentInParent<PlayerController>();
         }
     }
 
@@ -95,6 +95,7 @@ public class InstructionBook : Interactable
 
     public void ExitBook(){
         
+        Debug.Log("Exit Book");
         Destroy(this);
         playerController.CanMove = true;
     }
