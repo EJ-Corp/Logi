@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class InstructionBook : Interactable
 {
@@ -11,6 +12,10 @@ public class InstructionBook : Interactable
 
     [SerializeField] private TMP_Text currentPage;
     [SerializeField] private TMP_Text pagination;
+
+    [SerializeField] private Image previousIcon;
+    
+    [SerializeField] private Image nextIcon;
     public int pageTotal;
     public float distance = 5;
     public Vector3 offset;
@@ -49,14 +54,32 @@ public class InstructionBook : Interactable
     private void UpdatePagination()
     {
         pagination.text = currentPage.pageToDisplay.ToString();
+        if(currentPage.pageToDisplay <= 1)
+        {
+            previousIcon.enabled = false;
+        }
+        else
+        {
+            previousIcon.enabled = true;
+        }
+
+        if(currentPage.pageToDisplay >= pageTotal)
+        {
+            nextIcon.enabled = false;
+        }
+        else
+        {
+            nextIcon.enabled = true;
+        }
     }
 
     public void PreviousPage()
     {
-        if (currentPage.pageToDisplay < 1)
+        if (currentPage.pageToDisplay <= 1)
         {
             currentPage.pageToDisplay = 1;
             return;
+
         }
         else
         {
@@ -68,7 +91,7 @@ public class InstructionBook : Interactable
 
     public void NextPage()
     {
-        if (currentPage.pageToDisplay > pageTotal)
+        if (currentPage.pageToDisplay >= pageTotal)
         {
             currentPage.pageToDisplay = pageTotal;
             return;
