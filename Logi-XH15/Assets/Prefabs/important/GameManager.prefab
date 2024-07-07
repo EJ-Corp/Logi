@@ -373,6 +373,7 @@ MonoBehaviour:
   monitorBoundary: {fileID: 3990328492795263748}
   idInput: {fileID: 0}
   pswdInput: {fileID: 0}
+  monitorAnimator: {fileID: 0}
   problemPanel: {fileID: 0}
   problemTimer: {fileID: 1486587392168475845}
   warningLights:
@@ -456,6 +457,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 3598193359080818476}
+    - target: {fileID: 6076313066550673698, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7439615241501069348, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
       propertyPath: player
       value: 
@@ -464,7 +469,8 @@ PrefabInstance:
       propertyPath: warningPanel
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6076313066550673698, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

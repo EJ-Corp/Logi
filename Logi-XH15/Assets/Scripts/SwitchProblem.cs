@@ -8,7 +8,7 @@ public class SwitchProblem : MonoBehaviour
     [SerializeField] private List<InteractSwitch> breakbleSwitches;
     [SerializeField] private List<InteractSwitch> switchesToBreak;
 
-    [SerializeField] private ProblemHandler warningSign;
+    [SerializeField] private ProblemTimer warningSign;
 
     [SerializeField] private bool problemActive = false;
 
@@ -33,7 +33,7 @@ public class SwitchProblem : MonoBehaviour
                 breakbleSwitches.Clear();
                 switchesToBreak.Clear();
 
-                warningSign.FixProblemOnHandler(12);
+                warningSign.FixedProblemOnTimer(12);
                 problemActive = false;
             }
         }
