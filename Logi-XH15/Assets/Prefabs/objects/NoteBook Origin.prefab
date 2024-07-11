@@ -84,6 +84,78 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -36
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 961082498956861735, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1778006600780843672, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -96,6 +168,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6724100834646158977, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e0c65bfef9973eb4c91ac3dbcd574c5e, type: 3}
     - target: {fileID: 7175239739734534453, guid: 362eac68b7e7394449dda57c75133f2c, type: 3}
       propertyPath: content
       value: "\r\n\r\n<align=\"center\"><style=\"Title\">Helios Innovations \r\n\r\n
