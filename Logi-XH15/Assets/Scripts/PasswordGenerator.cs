@@ -14,7 +14,7 @@ public class PasswordGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        passwordText.text = GeneratePassword();
+       // passwordText.text = GeneratePassword();
     }
 
     private string GeneratePassword()

@@ -235,10 +235,6 @@ PrefabInstance:
         To do so simple <b>pull the draw cord</b> to a reasonable length and <b>hold
         it to continue releasing pressure</b>. \r\n"
       objectReference: {fileID: 0}
-    - target: {fileID: 8985450719108901937, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

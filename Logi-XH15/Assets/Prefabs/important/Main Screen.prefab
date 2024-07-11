@@ -183,6 +183,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2208582549275231182}
     m_Modifications:
+    - target: {fileID: 862071039255805619, guid: 044c9daa865ba734d8503ceb27f3f0e6, type: 3}
+      propertyPath: m_text
+      value: Fortnite
+      objectReference: {fileID: 0}
+    - target: {fileID: 862071039255805619, guid: 044c9daa865ba734d8503ceb27f3f0e6, type: 3}
+      propertyPath: m_fontSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 862071039255805619, guid: 044c9daa865ba734d8503ceb27f3f0e6, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 9d193fb6314ee4f6b8ebf503e35debd8, type: 2}
+    - target: {fileID: 862071039255805619, guid: 044c9daa865ba734d8503ceb27f3f0e6, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 862071039255805619, guid: 044c9daa865ba734d8503ceb27f3f0e6, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7595330978902827306, guid: 9d193fb6314ee4f6b8ebf503e35debd8, type: 2}
+    - target: {fileID: 862071039255805619, guid: 044c9daa865ba734d8503ceb27f3f0e6, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1344533005332086985, guid: 044c9daa865ba734d8503ceb27f3f0e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.19675606
