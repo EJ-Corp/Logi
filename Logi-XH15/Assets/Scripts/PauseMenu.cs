@@ -47,7 +47,7 @@ public class PauseMenu : MonoBehaviour
                     break;
             }
         }
-        if(gameState == GameState.paused)
+        if(gameState != GameState.playing)
         {
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
@@ -62,6 +62,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
+        Debug.Log("Click");
         gameplayHUDObject.SetActive(true);
         pauseMenuObject.SetActive(false);
         Time.timeScale = 1f;
