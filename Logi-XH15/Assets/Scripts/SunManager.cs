@@ -113,7 +113,7 @@ public class SunManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex != 1)
         {
-            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             SetStateBooleans(false, false, false);
         }

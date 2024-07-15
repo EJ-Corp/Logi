@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour
             if(canMove)
             {
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
 
                 rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
                 rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
@@ -83,7 +84,7 @@ public class PlayerController : MonoBehaviour
                     HandleInteractionInput();
                 }
             } else {
-                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
         } 
