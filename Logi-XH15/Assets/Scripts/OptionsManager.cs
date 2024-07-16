@@ -25,30 +25,27 @@ public class OptionsManager : MonoBehaviour
 {
     //Reference to Audio Mixer
     [SerializeField] private AudioMixer audioMixer;
-    [SerializeField] private OptionsSlider[] menuOptionsSliders;
-    [SerializeField] private OptionsSlider[] inGameOptionsSliders;
+    [SerializeField] private OptionsSlider[] optionsSliders;
     [SerializeField] private PlayerController playerController;
-    [SerializeField] private GameManager gameManager;
+    [SerializeField] public GameManager gameManager;
+    [SerializeField] private GameObject menuCanvas;
 
     void Start()
     {
-        if(SceneManager.GetActiveScene().name == "0 - Menu Scene")
+        InstantiateOptionsSliders(optionsSliders);
+    }
+
+    void Update()
+    {
+        if(SceneManager.GetActiveScene().name == "3 - Third Build" && gameManager != null && playerController == null)
         {
-            Debug.Log("Menu Scene");
-            InstantiateOptionsSliders(menuOptionsSliders);
-        }
-        else if(SceneManager.GetActiveScene().name == "3 - Third Build")
-        {
-            Debug.Log("Game Scene");
-            gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
             playerController = gameManager.player.GetComponent<PlayerController>();
-            InstantiateOptionsSliders(inGameOptionsSliders);
+            menuCanvas.SetActive(false);
         }
     }
 
     void InstantiateOptionsSliders(OptionsSlider[] sliders)
     {
-        Debug.Log("Instantiating");
         for (int i = 0; i < sliders.Length - 1; i++)
         {
             Debug.Log(i);
@@ -65,12 +62,10 @@ public class OptionsManager : MonoBehaviour
 
     public void SetOptionLevel(OptionsSlider option, float value)
     {
-        Debug.Log("Setting Option Level");
         option.currentValue = value;
         option.textObject.text = CalculatePercentage(option.currentValue, option.maxValue, option.minValue).ToString() + "%";
         if(option.sliderName != "LookSensitivity")
         {
-            Debug.Log("Volume");
             HandleVolumeChange(option.sliderName, value);
         }
         else
@@ -82,11 +77,18 @@ public class OptionsManager : MonoBehaviour
 
     void HandleVolumeChange(string name, float value)
     {
-        Debug.Log("Volume Change");
         audioMixer.SetFloat(name, value);
         if(name == "SFXVolume")
         {
             audioMixer.SetFloat("FlareVolume", value);
+        }
+        foreach (OptionsSlider option in optionsSliders)
+        {
+            if (option.sliderName == name)
+            {
+                option.currentValue = value;
+                option.sliderObject.value = value;
+            }
         }
     }
 

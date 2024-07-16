@@ -44,8 +44,10 @@ public class SunManager : MonoBehaviour
     [Header("OtherStuff")]
     [SerializeField] private bool pressedPlay = false;
     [SerializeField] private bool startedGame = false;
-    [SerializeField] GameManager gameManager;
+    [SerializeField] public GameManager gameManager;
     [SerializeField] CameraShake cameraShakeScript;
+    [SerializeField] PauseMenu pauseMenu;
+    [SerializeField] OptionsManager optionsManager;
 
     private static SunManager sun;
     public static SunManager Sun
@@ -77,6 +79,8 @@ public class SunManager : MonoBehaviour
             gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
             cameraShakeScript = gameManager.mainCamera.GetComponent<CameraShake>();
             playerLocation = gameManager.player.GetComponent<Transform>();
+            pauseMenu.gameManager = gameManager;
+            optionsManager.gameManager = gameManager;
 
             //problem stuff
             warningPanel = GameManager.Manager.problemPanel;

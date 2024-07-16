@@ -12,6 +12,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenuObject;
     [SerializeField] private GameObject optionsMenuObject;
     [SerializeField] private GameObject gameplayHUDObject;
+    [SerializeField] public GameManager gameManager;
+    [SerializeField] private PlayerController playerController;
     public enum GameState
     {
         playing,
@@ -24,39 +26,54 @@ public class PauseMenu : MonoBehaviour
     {
         if(pauseKey == KeyCode.None)
         {
-            pauseKey = KeyCode.P;
+            pauseKey = KeyCode.Escape;
         }
         gameState = GameState.playing;
+
+        if (SceneManager.GetActiveScene().name == "3 - Third Build") {
+            playerController = gameManager.player.GetComponent<PlayerController>();
+            gameplayHUDObject = gameManager.player.transform.GetChild(2).transform.GetChild(0).gameObject;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(pauseKey))
+        if(SceneManager.GetActiveScene().name == "3 - Third Build")
         {
-            switch (gameState)
+            if(gameManager != null && playerController == null)
             {
-                case GameState.playing:
-                    PauseGame();
-                    break;
-                case GameState.paused:
-                    ResumeGame();
-                    break;
-                case GameState.options:
-                    PauseGame();
-                    break;
+                Debug.Log("here");
+                playerController = gameManager.player.GetComponent<PlayerController>();
+                gameplayHUDObject = gameManager.player.transform.GetChild(2).transform.GetChild(0).gameObject;
             }
-        }
-        if(gameState != GameState.playing)
-        {
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
-            transform.parent.gameObject.GetComponent<PlayerController>().enabled = false;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            transform.parent.gameObject.GetComponent<PlayerController>().enabled = true;
+
+            if(Input.GetKeyDown(pauseKey))
+            {
+                switch (gameState)
+                {
+                    case GameState.playing:
+                        PauseGame();
+                        break;
+                    case GameState.paused:
+                        ResumeGame();
+                        break;
+                    case GameState.options:
+                        PauseGame();
+                        break;
+                }
+            }
+            if(gameState != GameState.playing)
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+                playerController.enabled = false;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                playerController.enabled = true;
+            }
         }
     }
 
