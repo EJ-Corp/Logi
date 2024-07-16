@@ -51,7 +51,7 @@ public class OptionsManager : MonoBehaviour
 
     void InstantiateOptionsSliders(OptionsSlider[] sliders)
     {
-        for (int i = 0; i < sliders.Length - 1; i++)
+        for (int i = 0; i < sliders.Length; i++)
         {
             Debug.Log(i);
             OptionsSlider option = sliders[i];
@@ -76,7 +76,7 @@ public class OptionsManager : MonoBehaviour
         else
         {
             Debug.Log("Sensitivity");
-            HandleLookSensitivityChange(value);
+            HandleLookSensitivityChange(option.sliderName, value);
         }
     }
 
@@ -97,12 +97,21 @@ public class OptionsManager : MonoBehaviour
         }
     }
 
-    void HandleLookSensitivityChange(float value)
+    void HandleLookSensitivityChange(string name, float value)
     {
         Debug.Log("Sensitivity Change");
-        if(playerController != null)
+        if (playerController != null)
         {
             playerController.LookSpeed = value;
+        }
+
+        foreach (OptionsSlider option in optionsSliders)
+        {
+            if (option.sliderName == name)
+            {
+                option.currentValue = value;
+                option.sliderObject.value = value;
+            }
         }
     }
 

@@ -19400,15 +19400,15 @@ PrefabInstance:
     - target: {fileID: 6207274836956702530, guid: c846fdbb857fd4d34845cf1a2a716e7d, type: 3}
       propertyPath: optionsSliders.Array.data[4].sliderObject
       value: 
-      objectReference: {fileID: 1007058580945411132}
+      objectReference: {fileID: 4320959345184837423}
     - target: {fileID: 6207274836956702530, guid: c846fdbb857fd4d34845cf1a2a716e7d, type: 3}
       propertyPath: optionsSliders.Array.data[5].sliderObject
       value: 
-      objectReference: {fileID: 5455206183242380886}
+      objectReference: {fileID: 1437785447323091451}
     - target: {fileID: 6207274836956702530, guid: c846fdbb857fd4d34845cf1a2a716e7d, type: 3}
       propertyPath: optionsSliders.Array.data[6].sliderObject
       value: 
-      objectReference: {fileID: 3394089269128290178}
+      objectReference: {fileID: 2522587296286622218}
     - target: {fileID: 6207274836956702530, guid: c846fdbb857fd4d34845cf1a2a716e7d, type: 3}
       propertyPath: optionsSliders.Array.data[7].currentValue
       value: 2
@@ -19416,7 +19416,7 @@ PrefabInstance:
     - target: {fileID: 6207274836956702530, guid: c846fdbb857fd4d34845cf1a2a716e7d, type: 3}
       propertyPath: optionsSliders.Array.data[7].sliderObject
       value: 
-      objectReference: {fileID: 8478402615457308999}
+      objectReference: {fileID: 5727326555874651220}
     - target: {fileID: 6207274836956702530, guid: c846fdbb857fd4d34845cf1a2a716e7d, type: 3}
       propertyPath: menuOptionsSliders.Array.data[0].sliderName
       value: MasterVolume
