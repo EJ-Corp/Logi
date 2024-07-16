@@ -73,7 +73,7 @@ public class SunManager : MonoBehaviour
 
     void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1) {
+        if (SceneManager.GetActiveScene().name == "3 - Third Build") {
             gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
             cameraShakeScript = gameManager.mainCamera.GetComponent<CameraShake>();
             playerLocation = gameManager.player.GetComponent<Transform>();

@@ -39,7 +39,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] public ProblemTimer problemTimer;
     [SerializeField] public Light[] warningLights;
 
+    //book stuff
+
+    [SerializeField] public InstructionBook bookInstructions;
+
     //Sun objects
+    [SerializeField] public GameObject theManager;
     [SerializeField] public SunManager sumManager;
 
     enum GameState
@@ -81,6 +86,7 @@ public class GameManager : MonoBehaviour
         // pswdInput = GameObject.FindGameObjectWithTag("pswdInput").GetComponent<IDandPasswordInputScript>();
         // problemPanel = GameObject.FindGameObjectWithTag("problemPanel").GetComponent<Image>();
         sumManager = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunManager>();
+        theManager = this.transform.parent.gameObject;
         gameState = GameState.mainView;
 
     }
@@ -94,6 +100,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+       // OpenBookOnGameStart();
+
         switch(gameState)
         {
             case GameState.mainView:
@@ -176,4 +184,13 @@ public class GameManager : MonoBehaviour
         }
         
     }
+
+    // void OpenBookOnGameStart()
+    // {
+    //     if (openedBook != true && sumManager != null)
+    //     {
+    //         bookInstructions.OnInteract();
+    //         openedBook = true;
+    //     }
+    // }
 }

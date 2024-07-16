@@ -750,6 +750,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 616211367681596738, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1094393169845913975, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -949,17 +953,6 @@ PrefabInstance:
       insertIndex: 3
       addedObject: {fileID: 4352756619587264198}
   m_SourcePrefab: {fileID: 100100000, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
---- !u!114 &1055532600430523609 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4249710368863784468, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
-  m_PrefabInstance: {fileID: 3772890992763140813}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1496458101634879096 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2348764547031577781, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
@@ -1022,13 +1015,13 @@ MonoBehaviour:
     to continue releasing pressure</b>. \r\n"
   currentPage: {fileID: 7334998349988750353}
   pagination: {fileID: 3803346297339768492}
-  previousIcon: {fileID: 1055532600430523609}
+  previousIcon: {fileID: 0}
   nextIcon: {fileID: 5348289845329791924}
-  pageTotal: 5
+  pageTotal: 8
   distance: 5
   offset: {x: 0, y: -0.01, z: 0.5}
-  player: {fileID: 0}
-  playerReticle: {fileID: 0}
+  player: {fileID: 8463831613671648793}
+  playerReticle: {fileID: 2277545750422906292}
   playerController: {fileID: 4564935018383249647}
   book: {fileID: 4952152014885502978, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
 --- !u!114 &3803346297339768492 stripped
@@ -1064,6 +1057,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8135071422072928975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4952152014885502978, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
+  m_PrefabInstance: {fileID: 3772890992763140813}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8246336443196507442 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5056661756961423359, guid: f967fd1a3d04d6a41a93a6338d183c1d, type: 3}
@@ -2825,6 +2823,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6441134389006829382}
     - target: {fileID: 6803998707453088731, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+      propertyPath: noteBook
+      value: 
+      objectReference: {fileID: 1496458101634879096}
+    - target: {fileID: 6803998707453088731, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
       propertyPath: pswdInput
       value: 
       objectReference: {fileID: 8158512567144472864}
@@ -2837,6 +2839,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1602390096554347227}
     - target: {fileID: 6803998707453088731, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+      propertyPath: noteBookOrigin
+      value: 
+      objectReference: {fileID: 8135071422072928975}
+    - target: {fileID: 6803998707453088731, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
       propertyPath: computerMonitor
       value: 
       objectReference: {fileID: 3772924780529150482}
@@ -2844,6 +2850,10 @@ PrefabInstance:
       propertyPath: monitorAnimator
       value: 
       objectReference: {fileID: 6007283116229762464}
+    - target: {fileID: 6803998707453088731, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+      propertyPath: bookInstructions
+      value: 
+      objectReference: {fileID: 4352756619587264198}
     - target: {fileID: 6803998707453088731, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
       propertyPath: computerScreenFocus
       value: 
@@ -2868,10 +2878,6 @@ PrefabInstance:
       propertyPath: warningAlarm
       value: 
       objectReference: {fileID: 3293767620218140765}
-    - target: {fileID: 7664761292831770968, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8200243184741035534, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -2885,6 +2891,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+--- !u!114 &2277545750422906292 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7346300285247576370, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+  m_PrefabInstance: {fileID: 8820364624992943238}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2595359962680356701 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6803998707453088731, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
@@ -2906,12 +2923,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4985998063863180393, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
   m_PrefabInstance: {fileID: 8820364624992943238}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 8463831613671648793}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c5cd0fbc7d7c148a8aa866a1a7bef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8463831613671648793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1089212392933331615, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+  m_PrefabInstance: {fileID: 8820364624992943238}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8850015170938089092
 PrefabInstance:
   m_ObjectHideFlags: 0
