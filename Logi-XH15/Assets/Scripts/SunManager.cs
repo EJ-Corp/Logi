@@ -79,8 +79,8 @@ public class SunManager : MonoBehaviour
     {
 
         //for debug reasons
-        startedGame = true;
-        pressedPlay = true;
+        // startedGame = true;
+        // pressedPlay = true;
         
         if (SceneManager.GetActiveScene().name == "3 - Third Build") {
             gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
