@@ -3493,6 +3493,7 @@ MonoBehaviour:
   playerCamera: {fileID: 6242420620231663883}
   lookSpeed: 2
   lookXLimit: 70
+  playerReticle: {fileID: 4094610833904549555}
   canMove: 0
   canInteract: 1
   startingGame: 1
