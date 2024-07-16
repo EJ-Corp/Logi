@@ -1,0 +1,347 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 0f8585b5fe94f48299569ea2221051c9, type: 2}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 12
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 3
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1001 &889586149
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1039609304745892012, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352756619587264198, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: content
+      value: "<align=\"center\"><style=\"Title\">Helios Innovations \r\n\r\n <sprite=0>\r\n\r\n\r\n\r\n\r\n\r\n<size=200%>Instruction
+        Manual\r\n</style></align>\r\n\r\n<page>\r\n<style=\"Title\">Welcome to Helios
+        Innovations</style>\r\n\r\n<size=110%>Congratulations on your new job at
+        Helios Innovations! If you do not remember applying for this position please
+        be assured you most definitely did.\r\n\r\n Your role at your new job is
+        to use the unique gravitational pull of <i>LOGI-XH15</i> to send data through
+        the nearby galaxy. However, due to the close proximity your ship needs to
+        be to achieve this effect, this puts you in the danger of receiving <b>solar
+        flares</b>.</size>\r\n\r\n<page>\r\n<size=110%>Due to this, your ship will
+        require high amounts of maintenance. Your <b>ship terminal</b> and <b>visor
+        HUD</b> will alert you to the presence of any problems. The most common problems
+        and how to fix them have been included inside this manual. \r\n\r\nPlease
+        <b>refer back to this manual</b> to solve any  <b>issues</b> you might have.\r\n\r\nAnd
+        remember to enjoy your new life as a valued member of Helios Innovations!
+        </size>\r\n\r\n<page>\r\n<style=\"Title\">Maintaining Your Mandated Ship</style>\r\n\r\n<size=95%>If
+        you suspect there to be a problem, please consult your provided <b>main system
+        terminal</b> to diagnosis any problem by listening to our lovely AI assistant,
+        <i>STELLA</i>.\r\n\r\nIn the unlikely event that such a problem would occur
+        these are the known issues with the FLARE<sup>TM</sup> system.\r\n\r\n\r\nNote:
+        FLARE<sup>TM</sup> is a shield to a rating of 2000W/m<sup>2</sup>, anything
+        higher than this will cause the main terminal to shutdown to avoid the system
+        being destroyed. \r\n\r\nThis can only be reset via the <b>electrical breaker
+        box</b> located <b>next to your quarters</b>.</size>\r\n\r\n<page>\r\n<size=110%>Known
+        Issue:</size>\r\n<size=100%>Due to the implementation of the latest simplified
+        circuit for our sub systems this has caused the control panel of the FLARE<sup>TM</sup>
+        probe to encounter a familiar issue known as the <b>\"Button Mirage.\"</b></size>\r\n\r\n<size=110%><b>Known
+        solution:</b></size>\r\n<size=100%><i>STELLA</i> will inform the user of
+        the type of sub system that is experiencing an expected issue.\r\nPressure
+        Regulator = <color=\"red\"><b>RED</b></color>\r\nInertial Dampeners = <color=\"green\"><b>GREEN</b></color>\r\nOxygen
+        Recycler = <color=\"purple\"><b>PURPLE</b></color>\r\nFusion Reactor = <color=\"blue\"><b>BLUE</b></color>\r\nArc
+        Generator = <color=\"yellow\"><b>YELLOW</b></color>\r\nSubspace Scanner =
+        <color=#02DEF2><b>CYAN</b></color>\r\nHydroponics Drainage = <color=#F28202><b>ORANGE</b></color>\r\n</size>\r\n\r\n<page>\r\n<size=110%>Known
+        Issue:</size>\r\n<size=100%>Due to a shortage in material availability non-Helios
+        piping clamps were used in the installation of the FLARE<sup>TM</sup> piping
+        (this is under investigation and replacement parts are expected to begin
+        production within the next 600 Earth cycles). \r\n\r\nThis causes the electromagnetic
+        clamps to disengage and <b>require a reset.</b> </size>\r\n\r\n<size=110%><b>Known
+        solution:</b></size>\r\n<size=100%>Simple reset any switches which are turned
+        <b>off to</b> the on</b> position. </size>\r\n\r\n<page>\r\n<size=110%>Known
+        Issue:</size>\r\n<size=100%> Due to financial constraints automatic pressure
+        release systems were not within the budget of <i>R&D</i>, as such the system
+        was moved over to <b>manual control</b> for the FLARE<sup>TM</sup> Program.\r\n\r\n<size=110%>Known
+        solution:</size>\r\n<size=100%><i>STELLA</i> will inform the user when the
+        pressure has begun to reach critical levels and requires venting before rupture.\r\n\r\nTo
+        do so simple <b>pull the draw cord</b> to a reasonable length and <b>hold
+        it to continue releasing pressure</b>. \r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790298033205485983, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_Name
+      value: THEManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180450322601600812, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180450322601600812, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180450322601600812, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180450322601600812, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180450322601600812, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180450322601600812, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180450322601600812, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180450322601600812, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180450322601600812, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180450322601600812, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334998349988750353, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+      propertyPath: m_text
+      value: "<align=\"center\"><style=\"Title\">Helios Innovations \r\n\r\n <sprite=0>\r\n\r\n\r\n\r\n\r\n\r\n<size=200%>Instruction
+        Manual\r\n</style></align>\r\n\r\n<page>\r\n<style=\"Title\">Welcome to Helios
+        Innovations</style>\r\n\r\n<size=110%>Congratulations on your new job at
+        Helios Innovations! If you do not remember applying for this position please
+        be assured you most definitely did.\r\n\r\n Your role at your new job is
+        to use the unique gravitational pull of <i>LOGI-XH15</i> to send data through
+        the nearby galaxy. However, due to the close proximity your ship needs to
+        be to achieve this effect, this puts you in the danger of receiving <b>solar
+        flares</b>.</size>\r\n\r\n<page>\r\n<size=110%>Due to this, your ship will
+        require high amounts of maintenance. Your <b>ship terminal</b> and <b>visor
+        HUD</b> will alert you to the presence of any problems. The most common problems
+        and how to fix them have been included inside this manual. \r\n\r\nPlease
+        <b>refer back to this manual</b> to solve any  <b>issues</b> you might have.\r\n\r\nAnd
+        remember to enjoy your new life as a valued member of Helios Innovations!
+        </size>\r\n\r\n<page>\r\n<style=\"Title\">Maintaining Your Mandated Ship</style>\r\n\r\n<size=95%>If
+        you suspect there to be a problem, please consult your provided <b>main system
+        terminal</b> to diagnosis any problem by listening to our lovely AI assistant,
+        <i>STELLA</i>.\r\n\r\nIn the unlikely event that such a problem would occur
+        these are the known issues with the FLARE<sup>TM</sup> system.\r\n\r\n\r\nNote:
+        FLARE<sup>TM</sup> is a shield to a rating of 2000W/m<sup>2</sup>, anything
+        higher than this will cause the main terminal to shutdown to avoid the system
+        being destroyed. \r\n\r\nThis can only be reset via the <b>electrical breaker
+        box</b> located <b>next to your quarters</b>.</size>\r\n\r\n<page>\r\n<size=110%>Known
+        Issue:</size>\r\n<size=100%>Due to the implementation of the latest simplified
+        circuit for our sub systems this has caused the control panel of the FLARE<sup>TM</sup>
+        probe to encounter a familiar issue known as the <b>\"Button Mirage.\"</b></size>\r\n\r\n<size=110%><b>Known
+        solution:</b></size>\r\n<size=100%><i>STELLA</i> will inform the user of
+        the type of sub system that is experiencing an expected issue.\r\nPressure
+        Regulator = <color=\"red\"><b>RED</b></color>\r\nInertial Dampeners = <color=\"green\"><b>GREEN</b></color>\r\nOxygen
+        Recycler = <color=\"purple\"><b>PURPLE</b></color>\r\nFusion Reactor = <color=\"blue\"><b>BLUE</b></color>\r\nArc
+        Generator = <color=\"yellow\"><b>YELLOW</b></color>\r\nSubspace Scanner =
+        <color=#02DEF2><b>CYAN</b></color>\r\nHydroponics Drainage = <color=#F28202><b>ORANGE</b></color>\r\n</size>\r\n\r\n<page>\r\n<size=110%>Known
+        Issue:</size>\r\n<size=100%>Due to a shortage in material availability non-Helios
+        piping clamps were used in the installation of the FLARE<sup>TM</sup> piping
+        (this is under investigation and replacement parts are expected to begin
+        production within the next 600 Earth cycles). \r\n\r\nThis causes the electromagnetic
+        clamps to disengage and <b>require a reset.</b> </size>\r\n\r\n<size=110%><b>Known
+        solution:</b></size>\r\n<size=100%>Simple reset any switches which are turned
+        <b>off to</b> the on</b> position. </size>\r\n\r\n<page>\r\n<size=110%>Known
+        Issue:</size>\r\n<size=100%> Due to financial constraints automatic pressure
+        release systems were not within the budget of <i>R&D</i>, as such the system
+        was moved over to <b>manual control</b> for the FLARE<sup>TM</sup> Program.\r\n\r\n<size=110%>Known
+        solution:</size>\r\n<size=100%><i>STELLA</i> will inform the user when the
+        pressure has begun to reach critical levels and requires venting before rupture.\r\n\r\nTo
+        do so simple <b>pull the draw cord</b> to a reasonable length and <b>hold
+        it to continue releasing pressure</b>. \r\n"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
+--- !u!1001 &1260522791
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 871509866936869268, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 871509866936869268, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 871509866936869268, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 871509866936869268, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 871509866936869268, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 871509866936869268, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 871509866936869268, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 871509866936869268, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 871509866936869268, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 871509866936869268, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394737136183770508, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_Name
+      value: Sun
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 889586149}
+  - {fileID: 1260522791}

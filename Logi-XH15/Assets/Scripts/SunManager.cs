@@ -111,7 +111,7 @@ public class SunManager : MonoBehaviour
             }
         }
 
-        if (SceneManager.GetActiveScene().buildIndex != 1)
+        if (SceneManager.GetActiveScene().name.Contains("Scene"))
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
