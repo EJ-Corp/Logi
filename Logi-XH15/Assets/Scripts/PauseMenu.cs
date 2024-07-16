@@ -21,6 +21,8 @@ public class PauseMenu : MonoBehaviour
     }
     public GameState gameState;
 
+    [SerializeField] private bool stoppedReading = false;
+
     void Start()
     {
         if(pauseKey == KeyCode.None)
@@ -38,12 +40,11 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Manager.isReading == false)
+        if (SceneManager.GetActiveScene().name == "0 - Menu Scene")
         {
-            ResumeGame();
-        } else
-        {
-            Reading();
+            pauseMenuObject.SetActive(false);
+            Time.timeScale = 1f;
+            gameState = GameState.playing;
         }
 
         if(SceneManager.GetActiveScene().name == "3 - Third Build")
@@ -54,6 +55,21 @@ public class PauseMenu : MonoBehaviour
                 playerController = GameManager.Manager.player.GetComponent<PlayerController>();
                 gameplayHUDObject = GameManager.Manager.player.transform.GetChild(2).transform.GetChild(0).gameObject;
             }
+
+
+            if (GameManager.Manager.isReading == false)
+            {
+                if (stoppedReading != true)
+                {
+                    ResumeGame();
+                    stoppedReading = true;
+                }
+            } else {
+                Reading();
+                stoppedReading = false;
+            }
+
+
 
             if(Input.GetKeyDown(pauseKey))
             {

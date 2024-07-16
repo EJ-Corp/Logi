@@ -19,7 +19,7 @@ public class theCEOManagerScript : MonoBehaviour
         } else 
         if (ceo != this)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

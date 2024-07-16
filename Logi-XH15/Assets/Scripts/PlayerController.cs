@@ -18,7 +18,10 @@ public class PlayerController : MonoBehaviour
     }
     [SerializeField] private float lookXLimit = 45;
     [SerializeField] private Image playerReticle;
-
+    public Image PlayerReticle
+    {
+        get { return playerReticle; }
+    }
     private CharacterController characterController;
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
