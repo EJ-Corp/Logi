@@ -27,19 +27,24 @@ public class OptionsManager : MonoBehaviour
     [SerializeField] private AudioMixer audioMixer;
     [SerializeField] private OptionsSlider[] optionsSliders;
     [SerializeField] private PlayerController playerController;
-    [SerializeField] public GameManager gameManager;
     [SerializeField] private GameObject menuCanvas;
 
     void Start()
     {
+        menuCanvas = SunManager.Sun.mainMenu;
         InstantiateOptionsSliders(optionsSliders);
     }
 
     void Update()
     {
-        if(SceneManager.GetActiveScene().name == "3 - Third Build" && gameManager != null && playerController == null)
+        if(SceneManager.GetActiveScene().name == "3 - Third Build" && playerController == null)
         {
-            playerController = gameManager.player.GetComponent<PlayerController>();
+            playerController = GameManager.Manager.player.GetComponent<PlayerController>();
+        } 
+        
+        if (SceneManager.GetActiveScene().buildIndex == 0){
+            menuCanvas.SetActive(true);
+        } else {
             menuCanvas.SetActive(false);
         }
     }

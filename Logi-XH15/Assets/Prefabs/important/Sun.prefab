@@ -1073,8 +1073,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4635363056325827924}
-  - {fileID: 2118994458754068672}
   - {fileID: 906456824086231463}
+  - {fileID: 2118994458754068672}
   - {fileID: 8609556298335096181}
   m_Father: {fileID: 871509866936869268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1932,9 +1932,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Quit
-
-'
+  m_text: Back to menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7e1767a78f1884aa8936ed912bece27b, type: 2}
   m_sharedMaterial: {fileID: -4467557649851133851, guid: 7e1767a78f1884aa8936ed912bece27b, type: 2}
@@ -1965,7 +1963,7 @@ MonoBehaviour:
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_fontSizeMin: 38.23
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -1977,7 +1975,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -18253,7 +18251,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
 --- !u!225 &6643404135470606262
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -18263,7 +18261,7 @@ CanvasGroup:
   m_GameObject: {fileID: 7832003361445877913}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 0
+  m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!114 &2404683507033923458
@@ -18278,11 +18276,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8439074a7129d4be39921213dab8f7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseKey: 27
+  pauseKey: 112
   pauseMenuObject: {fileID: 2009480304538215844}
   optionsMenuObject: {fileID: 949530661709514502}
   gameplayHUDObject: {fileID: 0}
-  gameManager: {fileID: 0}
   playerController: {fileID: 0}
   gameState: 0
 --- !u!1 &7849895107941462647
@@ -18794,9 +18791,10 @@ MonoBehaviour:
   alarmSFX: {fileID: 8300000, guid: f9d3586731e9a4f64ac1b99c0f9dfe95, type: 3}
   pressedPlay: 0
   startedGame: 0
-  gameManager: {fileID: 0}
   cameraShakeScript: {fileID: 0}
   pauseMenu: {fileID: 2404683507033923458}
+  mainMenu: {fileID: 785820475352688994}
+  mainMenuCamera: {fileID: 0}
   optionsManager: {fileID: 4998442644749552136}
 --- !u!95 &3706913062806889429
 Animator:

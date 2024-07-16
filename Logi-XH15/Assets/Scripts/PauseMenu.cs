@@ -12,7 +12,6 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenuObject;
     [SerializeField] private GameObject optionsMenuObject;
     [SerializeField] private GameObject gameplayHUDObject;
-    [SerializeField] public GameManager gameManager;
     [SerializeField] private PlayerController playerController;
     public enum GameState
     {
@@ -26,13 +25,13 @@ public class PauseMenu : MonoBehaviour
     {
         if(pauseKey == KeyCode.None)
         {
-            pauseKey = KeyCode.Escape;
+            pauseKey = KeyCode.P;
         }
         gameState = GameState.playing;
 
         if (SceneManager.GetActiveScene().name == "3 - Third Build") {
-            playerController = gameManager.player.GetComponent<PlayerController>();
-            gameplayHUDObject = gameManager.player.transform.GetChild(2).transform.GetChild(0).gameObject;
+            playerController = GameManager.Manager.player.GetComponent<PlayerController>();
+            gameplayHUDObject = GameManager.Manager.player.transform.GetChild(2).transform.GetChild(0).gameObject;
         }
     }
 
@@ -41,11 +40,11 @@ public class PauseMenu : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().name == "3 - Third Build")
         {
-            if(gameManager != null && playerController == null)
+            if(GameManager.Manager != null && playerController == null)
             {
                 Debug.Log("here");
-                playerController = gameManager.player.GetComponent<PlayerController>();
-                gameplayHUDObject = gameManager.player.transform.GetChild(2).transform.GetChild(0).gameObject;
+                playerController = GameManager.Manager.player.GetComponent<PlayerController>();
+                gameplayHUDObject = GameManager.Manager.player.transform.GetChild(2).transform.GetChild(0).gameObject;
             }
 
             if(Input.GetKeyDown(pauseKey))
@@ -112,6 +111,7 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitMenu()
     {
+        ResumeGame();
         SceneManager.LoadScene(0);
     }
 }
