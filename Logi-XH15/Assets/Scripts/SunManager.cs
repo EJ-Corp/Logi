@@ -48,16 +48,17 @@ public class SunManager : MonoBehaviour
     {
         get { return startedGame; }
     }
-    [SerializeField] GameManager gameManager;
-    [SerializeField] CameraShake cameraShakeScript;
+
+    [SerializeField] private CameraShake cameraShakeScript;
+    [SerializeField] private PauseMenu pauseMenu;
+    [SerializeField] public GameObject mainMenu;
+    [SerializeField] private GameObject mainMenuCamera;
+    [SerializeField] OptionsManager optionsManager;
 
     private static SunManager sun;
     public static SunManager Sun
     {
-        get
-        {
-            return sun;
-        }
+        get {return sun;}
     }
 
     void Awake()
@@ -71,8 +72,6 @@ public class SunManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
     }
 
     void Start()
@@ -83,16 +82,17 @@ public class SunManager : MonoBehaviour
         // pressedPlay = true;
         
         if (SceneManager.GetActiveScene().name == "3 - Third Build") {
-            gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-            cameraShakeScript = gameManager.mainCamera.GetComponent<CameraShake>();
-            playerLocation = gameManager.player.GetComponent<Transform>();
+            mainMenuCamera.SetActive(false);
+
+            cameraShakeScript = GameManager.Manager.mainCamera.GetComponent<CameraShake>();
+            playerLocation = GameManager.Manager.player.GetComponent<Transform>();
 
             //problem stuff
             warningPanel = GameManager.Manager.problemPanel;
             warningPanel.enabled = false;
             for (int i = 0; i < problemLights.Length; i++)
             {
-                problemLights[i] = gameManager.warningLights[i];  
+                problemLights[i] = GameManager.Manager.warningLights[i];  
                 problemLights[i].enabled = false;
             }
 
@@ -109,6 +109,7 @@ public class SunManager : MonoBehaviour
         {
             startedGame = false;
             pressedPlay = false;
+            mainMenuCamera.SetActive(true);
         } else 
         if (SceneManager.GetActiveScene().buildIndex == 1) 
         {

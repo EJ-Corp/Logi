@@ -38,6 +38,19 @@ public class MenuCameraAnimator : MonoBehaviour
 
     void Update()
     {
+       // this.transform.rotation = Quaternion.Euler(0.0f, 0, 0.0f);
+        // if (SunManager.Sun != null)
+        // {
+        //     home = SunManager.Sun.mainMenu.transform.GetChild(0).gameObject;
+        //     homeCanvasGroup = home.GetComponent<CanvasGroup>();
+
+        //     options = SunManager.Sun.mainMenu.transform.GetChild(1).gameObject;
+        //     optionsCanvasGroup = options.GetComponent<CanvasGroup>();
+
+        //     credits = SunManager.Sun.mainMenu.transform.GetChild(2).gameObject;
+        //     creditsCanvasGroup = credits.GetComponent<CanvasGroup>();
+        // }
+
         if (isHomeTransition)
         {
             menuState = MenuState.homeMenu;

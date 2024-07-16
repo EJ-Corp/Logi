@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4837652825050203249}
   - component: {fileID: 6207274836956702530}
   m_Layer: 0
-  m_Name: SFXMixerManager
+  m_Name: OptionsManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 336909c2fbdce4b9798176aa3729c392, type: 2}
+  optionsSliders: []
