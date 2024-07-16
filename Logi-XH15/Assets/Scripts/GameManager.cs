@@ -43,8 +43,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] public InstructionBook bookInstructions;
 
-    //Sun objects
+    //manager objects
     [SerializeField] public GameObject theManager;
+    [SerializeField] public bool shipDoneMoving = false;
     [SerializeField] public SunManager sumManager;
 
     enum GameState

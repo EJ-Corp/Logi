@@ -126,7 +126,7 @@ public class MonitorScript : MonoBehaviour
             screenCorners[i] = gameManager.pcCamera.WorldToScreenPoint(worldCorners[i]); //botleft, topleft, topright, botright
         }
 
-        if (startingGame == true)
+        if (SunManager.Sun.StartedGame != true)
         {
             gameManager.playerCanvas.enabled = false;
         } else {

@@ -44,6 +44,10 @@ public class SunManager : MonoBehaviour
     [Header("OtherStuff")]
     [SerializeField] private bool pressedPlay = false;
     [SerializeField] private bool startedGame = false;
+    public bool StartedGame
+    {
+        get { return startedGame; }
+    }
     [SerializeField] GameManager gameManager;
     [SerializeField] CameraShake cameraShakeScript;
 
@@ -73,6 +77,11 @@ public class SunManager : MonoBehaviour
 
     void Start()
     {
+
+        //for debug reasons
+        startedGame = true;
+        pressedPlay = true;
+        
         if (SceneManager.GetActiveScene().name == "3 - Third Build") {
             gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
             cameraShakeScript = gameManager.mainCamera.GetComponent<CameraShake>();

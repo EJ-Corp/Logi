@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterController))]
 
@@ -11,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Camera playerCamera;
     [SerializeField] private float lookSpeed = 2;
     [SerializeField] private float lookXLimit = 45;
+    [SerializeField] private Image playerReticle;
 
     private CharacterController characterController;
     private Vector3 moveDirection = Vector3.zero;
@@ -25,11 +27,12 @@ public class PlayerController : MonoBehaviour
 
     [Header("Funtional Options")]
     [SerializeField] private bool canInteract = true;
-    [SerializeField] private bool startingGame = true;
+    [SerializeField] private float startingGameTimer = 4f;
     [SerializeField] private bool zoomOver = false;
 
 
     [Header("Interaction")]
+    
     [SerializeField] private Vector3 interactionRayPoint = default;
     [SerializeField] private float interactionDistance = default;
     [SerializeField] private LayerMask interactionLayer = default;
@@ -46,17 +49,24 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (startingGame == true)
-        {
-            canMove = false;
-        } else {
+        
 
-            if (zoomOver != true)
+        if (zoomOver != true)
+        {
+            if (GameManager.Manager.shipDoneMoving == true && SunManager.Sun.StartedGame != true)
             {
-                canMove = true;
+                canMove = false;
                 zoomOver = true;
             }
+        }
 
+        if(canMove)
+        {
+            playerReticle.enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
+            //walking movement
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
 
@@ -68,26 +78,23 @@ public class PlayerController : MonoBehaviour
 
             characterController.Move(moveDirection * Time.deltaTime);
 
-            if(canMove)
+            //camera movement
+            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+
+            if(canInteract)
             {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-
-                rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
-                rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-                playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-                transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
-
-                if(canInteract)
-                {
-                    HandleInteractionCheck();
-                    HandleInteractionInput();
-                }
-            } else {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
+                HandleInteractionCheck();
+                HandleInteractionInput();
             }
-        } 
+        } else {
+            playerReticle.enabled = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+     
     }
 
     public void HandleInteractionCheck()

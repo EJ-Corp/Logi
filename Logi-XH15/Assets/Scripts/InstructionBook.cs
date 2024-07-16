@@ -20,7 +20,7 @@ public class InstructionBook : Interactable
     public float distance = 5;
     public Vector3 offset;
     [SerializeField] private GameObject player;
-    [SerializeField] private Image playerReticle;
+    //[SerializeField] private Image playerReticle;
     [SerializeField] private PlayerController playerController;
 
     [SerializeField] private GameObject book;
@@ -38,7 +38,7 @@ public class InstructionBook : Interactable
             playerController = player.GetComponent<PlayerController>();
         }
 
-        playerReticle = GameManager.Manager.playerCanvas.gameObject.transform.Find("Reticle").GetComponent<Image>();
+       // playerReticle = GameManager.Manager.playerCanvas.gameObject.transform.Find("Reticle").GetComponent<Image>();
     }
 
     private void SetupContent()
@@ -113,7 +113,7 @@ public class InstructionBook : Interactable
     {
         //Debug.Log("Book Touched");
         playerController.CanMove = false;
-        playerReticle.enabled = false;
+        //playerReticle.enabled = false;
 
         bookInstance = Instantiate(book, Camera.main.transform);
         bookInstance.transform.localPosition = offset;
@@ -124,9 +124,10 @@ public class InstructionBook : Interactable
     public void ExitBook(){
         
         //Debug.Log("Exit Book");
-        Destroy(gameObject.transform.parent.gameObject);
         playerController.CanMove = true;
-        playerReticle.enabled = true;
+       // playerReticle.enabled = true;
+        Destroy(gameObject.transform.parent.gameObject);
+
     }
 
     public override void OnFocus()

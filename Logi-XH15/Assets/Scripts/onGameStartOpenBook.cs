@@ -19,6 +19,10 @@ public class onGameStartOpenBook : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         book.OnInteract();
+        GameManager.Manager.player.GetComponent<PlayerController>().CanMove = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        GameManager.Manager.shipDoneMoving = true;
         GameManager.Manager.theManager.GetComponent<Animator>().enabled = false;
     }
 }
