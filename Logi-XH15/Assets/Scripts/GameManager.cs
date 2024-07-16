@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     //player objects
     [SerializeField] public GameObject player;
     [SerializeField] public Canvas playerCanvas;
+    [SerializeField] public bool isReading = false;
 
     //computer objects
     [SerializeField] public MonitorScript computerMonitor;

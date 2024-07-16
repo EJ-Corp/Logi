@@ -32,17 +32,28 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Manager.isReading == false)
+        {
+            ResumeGame();
+        } else
+        {
+            Reading();
+        }
+
         if(Input.GetKeyDown(pauseKey))
         {
             switch (gameState)
             {
                 case GameState.playing:
+                    Debug.Log("playing");
                     PauseGame();
                     break;
                 case GameState.paused:
+                    Debug.Log("paused");
                     ResumeGame();
                     break;
                 case GameState.options:
+                    Debug.Log("options");
                     PauseGame();
                     break;
             }
@@ -62,7 +73,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        Debug.Log("Click");
+        //Debug.Log("Click");
         gameplayHUDObject.SetActive(true);
         pauseMenuObject.SetActive(false);
         Time.timeScale = 1f;
@@ -84,6 +95,12 @@ public class PauseMenu : MonoBehaviour
             optionsMenuObject.SetActive(false);
             gameState = GameState.paused;
         }
+    }
+
+    public void Reading()
+    {
+        Time.timeScale = 0f;
+        gameState = GameState.paused;
     }
 
     public void OptionsMenu()

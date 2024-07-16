@@ -112,6 +112,7 @@ public class InstructionBook : Interactable
     public override void OnInteract()
     {
         //Debug.Log("Book Touched");
+        GameManager.Manager.isReading = true;
         playerController.CanMove = false;
         //playerReticle.enabled = false;
 
@@ -125,6 +126,7 @@ public class InstructionBook : Interactable
         
         //Debug.Log("Exit Book");
         playerController.CanMove = true;
+        GameManager.Manager.isReading = false;
        // playerReticle.enabled = true;
         Destroy(gameObject.transform.parent.gameObject);
 

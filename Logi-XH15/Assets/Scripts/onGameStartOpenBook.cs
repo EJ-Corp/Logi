@@ -20,6 +20,7 @@ public class onGameStartOpenBook : StateMachineBehaviour
     {
         book.OnInteract();
         GameManager.Manager.player.GetComponent<PlayerController>().CanMove = false;
+        GameManager.Manager.isReading = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         GameManager.Manager.shipDoneMoving = true;

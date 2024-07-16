@@ -10,7 +10,7 @@ public class FocusOnPCAnimationEnd : StateMachineBehaviour
 
     void Awake() 
     {
-       // //Debug.Log("We start 1");
+       //Debug.Log("We start 1");
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         compFocusScript = gameManager.computerScreenFocus;
        // compInteractableScript = gameManager.computerScreen.GetComponent<ComputerInteractableScript>();

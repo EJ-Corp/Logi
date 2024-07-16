@@ -25,7 +25,7 @@ public class TimerScript : MonoBehaviour
             }
             else
             {
-                Debug.Log("Time is UP!");
+                //Debug.Log("Time is UP!");
                 timeLeft = 0;
                 timerOn = false;
             }

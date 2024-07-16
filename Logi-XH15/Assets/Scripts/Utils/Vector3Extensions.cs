@@ -51,7 +51,7 @@ public static class Vector3Extensions  {
 	 *
 	 * Example:
 	 *		Vector3 v;
-	 *		//Debug.Log("v = " + v.LongString());
+	 *		Debug.Log("v = " + v.LongString());
 	 */
 
 	public static string LongString(this Vector3 v) 

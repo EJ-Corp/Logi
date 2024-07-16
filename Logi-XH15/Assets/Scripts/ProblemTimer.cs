@@ -111,7 +111,7 @@ public class ProblemTimer : MonoBehaviour
 
         if(!problemIDPool.Contains(IDFixed))
         {
-            Debug.Log("added problem back to list " + IDFixed);
+            //Debug.Log("added problem back to list " + IDFixed);
             problemIDPool.Add(IDFixed);
         }     
         
