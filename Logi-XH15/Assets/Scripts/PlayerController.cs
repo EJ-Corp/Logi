@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float walkSpeed = 7.5f;
     [SerializeField] private Camera playerCamera;
     [SerializeField] private float lookSpeed = 2;
+    public float LookSpeed
+    {
+        get { return lookSpeed; }
+        set { lookSpeed = value; }
+    }
     [SerializeField] private float lookXLimit = 45;
 
     private CharacterController characterController;

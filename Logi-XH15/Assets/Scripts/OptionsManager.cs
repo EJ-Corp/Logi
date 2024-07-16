@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using AOT;
 using TMPro;
 using Unity.Mathematics;
+using UnityEditor.SearchService;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [Serializable] public class OptionsSlider
 {
@@ -17,52 +19,70 @@ using UnityEngine.UI;
     public float maxValue;
     public TextMeshProUGUI textObject;
     public Slider sliderObject;
-    public bool hasBeenChanged;
 }
 
 public class OptionsManager : MonoBehaviour
 {
     //Reference to Audio Mixer
     [SerializeField] private AudioMixer audioMixer;
-    [SerializeField] private OptionsSlider[] optionsSliders;
+    [SerializeField] private OptionsSlider[] menuOptionsSliders;
+    [SerializeField] private OptionsSlider[] inGameOptionsSliders;
+    [SerializeField] private PlayerController playerController;
+    [SerializeField] private GameManager gameManager;
 
     void Start()
     {
-        for (int i = 0; i < optionsSliders.Length - 1; i++)
+        if(SceneManager.GetActiveScene().name == "0 - Menu Scene")
         {
-            OptionsSlider option = optionsSliders[i];
+            Debug.Log("Menu Scene");
+            InstantiateOptionsSliders(menuOptionsSliders);
+        }
+        else if(SceneManager.GetActiveScene().name == "3 - Third Build")
+        {
+            Debug.Log("Game Scene");
+            gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+            playerController = gameManager.player.GetComponent<PlayerController>();
+            InstantiateOptionsSliders(inGameOptionsSliders);
+        }
+    }
 
-            option.sliderObject.minValue = optionsSliders[i].minValue;
-            option.sliderObject.maxValue = optionsSliders[i].maxValue;
+    void InstantiateOptionsSliders(OptionsSlider[] sliders)
+    {
+        Debug.Log("Instantiating");
+        for (int i = 0; i < sliders.Length - 1; i++)
+        {
+            Debug.Log(i);
+            OptionsSlider option = sliders[i];
 
-            if(!option.hasBeenChanged)
-            {
-                option.currentValue = optionsSliders[i].maxValue;
-                option.sliderObject.value = optionsSliders[i].maxValue;
-                option.textObject.text = "100%";
-            }
-
+            option.sliderObject.minValue = sliders[i].minValue;
+            option.sliderObject.maxValue = sliders[i].maxValue;
+            option.currentValue = sliders[i].currentValue;
+            option.sliderObject.value = sliders[i].currentValue;
+            option.textObject.text = CalculatePercentage(option.currentValue, option.maxValue, option.minValue).ToString() + "%";
             option.sliderObject.onValueChanged.AddListener((value) => SetOptionLevel(option, value));
         }
     }
 
     public void SetOptionLevel(OptionsSlider option, float value)
     {
+        Debug.Log("Setting Option Level");
         option.currentValue = value;
         option.textObject.text = CalculatePercentage(option.currentValue, option.maxValue, option.minValue).ToString() + "%";
-        option.hasBeenChanged = true;
         if(option.sliderName != "LookSensitivity")
         {
+            Debug.Log("Volume");
             HandleVolumeChange(option.sliderName, value);
         }
         else
         {
-            HandleLookSensitivityChange();
+            Debug.Log("Sensitivity");
+            HandleLookSensitivityChange(value);
         }
     }
 
     void HandleVolumeChange(string name, float value)
     {
+        Debug.Log("Volume Change");
         audioMixer.SetFloat(name, value);
         if(name == "SFXVolume")
         {
@@ -70,13 +90,18 @@ public class OptionsManager : MonoBehaviour
         }
     }
 
-    void HandleLookSensitivityChange()
+    void HandleLookSensitivityChange(float value)
     {
-
+        Debug.Log("Sensitivity Change");
+        if(playerController != null)
+        {
+            playerController.LookSpeed = value;
+        }
     }
 
     public int CalculatePercentage(float volume, float maxValue, float minValue)
     {
+        Debug.Log("Calculate Percentage");
         int percent = (int)Mathf.Ceil((volume - minValue)/(maxValue - minValue) * 100);
         return percent;
     }
