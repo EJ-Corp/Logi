@@ -112,14 +112,14 @@ public class PauseMenu : MonoBehaviour
     public void PauseGame()
     {
         if(gameState == GameState.playing)
-        {
+        { //playing to pause
             gameplayHUDObject.SetActive(false);
             pauseMenuObject.SetActive(true);
             Time.timeScale = 0f;
             gameState = GameState.paused;
         }
         else if(gameState == GameState.options)
-        {
+        { //options to pause
             pauseMenuObject.SetActive(true);
             optionsMenuObject.SetActive(false);
             gameState = GameState.paused;
