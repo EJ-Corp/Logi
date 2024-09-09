@@ -26,7 +26,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186245412253529828}
   m_LocalRotation: {x: 0.000000059604645, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.00000039749}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 18.3}
-  m_SizeDelta: {x: -20, y: -69.5}
+  m_AnchoredPosition: {x: 3.1834, y: 21.6344}
+  m_SizeDelta: {x: -19.767, y: -67.8329}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4661669130385854532
 CanvasRenderer:
@@ -65,7 +65,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oops I can see a<br><size=105%><b>[PROBLEM]!</b></size><br>with the
+  m_text: 'Oops I can see a<br><size=105%><b>[PROBLEM]!</b></size><br>with the
+
+    <size=105%><b>[LIFESYSTEM<sup>TM</sup>]!</size></b>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -92,7 +94,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8.75
+  m_fontSize: 6.85
   m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -238,7 +240,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7673816130494894136}
   m_LocalRotation: {x: 0.000000059604645, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000000037266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -246,8 +248,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -22.2}
-  m_SizeDelta: {x: -20, y: -91.132}
+  m_AnchoredPosition: {x: 3.1834, y: -21.8874}
+  m_SizeDelta: {x: -19.767, y: -90.5068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &420447128416330941
 CanvasRenderer:
@@ -304,7 +306,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7.9
+  m_fontSize: 8.45
   m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -380,7 +382,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.1833, y: -5.8}
+  m_AnchoredPosition: {x: 3.1833, y: -6.2}
   m_SizeDelta: {x: -19.7666, y: -90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7087112223428875080
