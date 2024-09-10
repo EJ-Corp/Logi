@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class onGameStartOpenBook : StateMachineBehaviour
 {
 
-    [SerializeField] private InstructionBook book;
+    [SerializeField] private OnBookInteract book;
 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state

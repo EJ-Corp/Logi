@@ -4,8 +4,9 @@ using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.UI;
+using System;
 
-public class InstructionBook : Interactable
+public class InstructionBook : MonoBehaviour
 {
     [TextArea(3, 10)]
     [SerializeField] private string content;
@@ -19,6 +20,8 @@ public class InstructionBook : Interactable
     public int pageTotal;
     public float distance = 5;
     public Vector3 offset;
+    // Start is called before the first frame update
+
     [SerializeField] private GameObject player;
     [SerializeField] private PlayerController playerController;
 
@@ -28,6 +31,7 @@ public class InstructionBook : Interactable
 
     void Start()
     {
+
         SetupContent();
         UpdatePagination();
 
@@ -106,19 +110,7 @@ public class InstructionBook : Interactable
         UpdatePagination();
     }
 
-    public override void OnInteract()
-    {
-        //Debug.Log("Book Touched");
-        GameManager.Manager.isReading = true;
-        playerController.CanMove = false;
-        playerController.PlayerReticle.enabled = false;
-
-        bookInstance = Instantiate(book, Camera.main.transform);
-        bookInstance.transform.localPosition = offset;
-        bookInstance.transform.localRotation = Quaternion.Euler(new Vector3(-90, 0, 0));
-
-    }
-
+    
     public void ExitBook(){
         
         //Debug.Log("Exit Book");
@@ -126,20 +118,6 @@ public class InstructionBook : Interactable
         GameManager.Manager.isReading = false;
         playerController.PlayerReticle.enabled = true;
         Destroy(gameObject.transform.parent.gameObject);
-
-    }
-
-    public override void OnFocus()
-    {
-
-    }
-    public override void OnLoseFocus()
-    {
-
-    }
-
-    public override void OnStopInteract()
-    {
 
     }
 }

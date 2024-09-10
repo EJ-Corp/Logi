@@ -131,37 +131,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 437780842948140958, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1039609304745892012, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3803346297339768492, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: m_text
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281815575219237818, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5348289845329791924, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5790298033205485983, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
       propertyPath: m_Name
       value: THEManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6362508969421839898, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711347123447737824, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7180450322601600812, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -203,42 +179,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7334998349988750353, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
-      propertyPath: m_text
-      value: "\r\n\r\n<align=\"center\"><style=\"Title\">Helios Innovations \r\n\r\n
-        <sprite=0>\r\n\r\n\r\n\r\n\r\n\r\n<size=200%>Instruction Manual\r\n</style></align>\r\n<page>\r\n<style=\"Title\">Helios
-        Innovations </style>\r\n\r\n<size=100%>If you suspect there to be a problem,
-        please consult your provided main system terminal to diagnosis any problem
-        by listening to our lovely AI assistant, <i>STELLA</i>.\r\n\r\nIn the unlikely
-        event that such a problem would occur, these are the known issues with the
-        FLARE<sup>TM</sup> system.\r\n\r\n\r\nNote: FLARE<sup>TM</sup> is shield
-        to a rating of 2000W/m<sup>2</sup>, anything higher than this will cause
-        the main terminal to shutdown to avoid the system malfunction. This can only
-        be reset via the electrical breaker box.</size>\r\n<page>\r\n<size=110%>Known
-        Issue:</size>\r\n<size=100%>Due to the implementation of the latest simplified
-        circuit for our sub systems this has caused the control panel of the FLARE<sup>TM</sup>
-        probe to encounter a familiar issue known as the <b>\"Button Mirage.\"</b></size>\r\n\r\n<size=110%>Known
-        solution:</size>\r\n<size=100%><i>STELLA</i> will inform the user of the
-        type of sub system that is experiencing an expected issue.\r\nPressure Regulator
-        = <color=\"red\"><b>RED</b></color>\r\nInertial Dampeners = <color=\"green\"><b>GREEN</b></color>\r\nOxygen
-        Recycler = <color=\"purple\"><b>PURPLE</b></color>\r\nFusion Reactor = <color=\"blue\"><b>BLUE</b></color>\r\nArc
-        Generator = <color=\"yellow\"><b>YELLOW</b></color>\r\nSubspace Scanner =
-        <color=#02DEF2><b>CYAN</b></color>\r\nHydroponics Drainage = <color=#F28202><b>ORANGE</b></color>\r\n</size>\r\n<page>\r\n<size=110%>Known
-        Issue:</size>\r\n<size=100%>Due to a shortage in material availability non-Helios
-        piping clamps were used in the installation of the FLARE<sup>TM</sup> piping
-        (this is under investigation and replacement parts are expected to begin
-        production within the next 600 Earth cycles). This causes the electromagnetic
-        clamps to disengage and <b>require a reset.</b> </size>\r\n\r\n<size=110%>Known
-        solution:</size>\r\n<size=100%>Simply reset any switches which are turned
-        <b>off </b> to the <b>on</b> position. </size>\r\n<page>\r\n<size=110%>Known
-        Issue:</size>\r\n<size=100%> Due to financial constraints automatic pressure
-        release systems were not within the budget of <i>R&D</i>, as such the system
-        was moved over to <b>manual control</b> for the FLARE<sup>TM</sup> Program.\r\n\r\n<size=110%>Known
-        solution:</size>\r\n<size=100%><i>STELLA</i> will inform the user when the
-        pressure has begun to reach critical levels and requires venting before rupture.
-        To do so simple <b>pull the draw cord</b> to a reasonable length and <b>hold
-        it to continue releasing pressure</b>. \r\n"
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -252,6 +192,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 115200795321968980, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 115200795321968980, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 372920056078745242, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 372920056078745242, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 372920056078745242, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 871509866936869268, guid: 80e4b3b981636427c856589339f92e67, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -292,9 +252,69 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 905317428220812571, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 905317428220812571, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 905317428220812571, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457020362314714148, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457020362314714148, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966385507341509862, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966385507341509862, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966385507341509862, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440789712071678674, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440789712071678674, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798714448641873901, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798714448641873901, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8394737136183770508, guid: 80e4b3b981636427c856589339f92e67, type: 3}
       propertyPath: m_Name
       value: Sun
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064711294554511958, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064711294554511958, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064711294554511958, guid: 80e4b3b981636427c856589339f92e67, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

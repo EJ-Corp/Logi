@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 
     //book stuff
 
-    [SerializeField] public InstructionBook bookInstructions;
+    [SerializeField] public OnBookInteract bookInstructions;
 
     //manager objects
     [SerializeField] public GameObject theManager;
