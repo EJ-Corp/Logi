@@ -17,7 +17,7 @@ public class FlareEater : MonoBehaviour
             collided.transform.GetComponent<SolarFlare>().BreakComputer();
             SFXManager.Instance.PlaySFXClip(flareCrackle, transform, 1f);
             SFXManager.Instance.PlaySFXClip(pcPowerDown, transform, 1f);
-            Destroy(collided.gameObject);
+            //Destroy(collided.gameObject);
             SunManager.Sun.ResetFlare();
         }
     }

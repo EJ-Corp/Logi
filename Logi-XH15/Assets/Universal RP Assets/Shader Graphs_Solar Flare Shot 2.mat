@@ -66,8 +66,10 @@ Material:
     - _MovementDirectionSpeed: 0.28
     - _Noise_Intensity: 0.005
     - _Opacity: 1.49
+    - _Opacity_2: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _clipping: 0.5
     - _vertical_Offset: 0.03
     m_Colors:
     - _Colour_Tint: {r: 1.5314398, g: 0.2929977, b: 0.252832, a: 0}

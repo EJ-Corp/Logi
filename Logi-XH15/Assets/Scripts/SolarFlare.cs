@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -10,9 +11,12 @@ public class SolarFlare : MonoBehaviour
     public AudioMixer masterMixer;
     public float lowpass = 0f;
 
+    [SerializeField] private Animator Flare;
+
     void Start()
     {
         transform.Rotate(0, 180, 0);
+        
     }
     void Update()
     {
@@ -21,6 +25,12 @@ public class SolarFlare : MonoBehaviour
         masterMixer.SetFloat("FlareLowpass", lowpass);
         float t = Mathf.Clamp01(timeElapsed / lifetime);
         lowpass = MapToFrequency(t);
+
+        if (Flare.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && Flare.GetCurrentAnimatorStateInfo(0).IsName("Fadeout"))
+        {
+            Debug.Log($"Animation over");
+            Destroy(gameObject);
+        }
     }
 
     public float MapToFrequency(float value)
@@ -46,5 +56,15 @@ public class SolarFlare : MonoBehaviour
     public void BreakComputer()
     {
         GameManager.Manager.ToggleComputer(true);
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        GameObject collided = other.gameObject;
+
+        if(collided.name == "FlareEater")
+        {
+            Flare.Play("Base Layer.Fadeout", -1, 0f);
+            
+        }
     }
 }
