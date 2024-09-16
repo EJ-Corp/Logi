@@ -126,6 +126,20 @@ public class GameManager : MonoBehaviour
             }
             break;
         }
+
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            if(Time.timeScale == 0)
+            {
+                Debug.Log("Game Resumed");
+                Time.timeScale = 1f;
+                
+            } else 
+            {
+                Debug.Log("Game Paused");
+                Time.timeScale = 0f;
+            }
+        }
     }
 
     public ComputerFocusScript ShareComputerFocusScript()

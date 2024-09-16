@@ -53,7 +53,6 @@ public class OptionsManager : MonoBehaviour
     {
         for (int i = 0; i < sliders.Length; i++)
         {
-            Debug.Log(i);
             OptionsSlider option = sliders[i];
 
             option.sliderObject.minValue = sliders[i].minValue;
@@ -117,7 +116,6 @@ public class OptionsManager : MonoBehaviour
 
     public int CalculatePercentage(float volume, float maxValue, float minValue)
     {
-        Debug.Log("Calculate Percentage");
         int percent = (int)Mathf.Ceil((volume - minValue)/(maxValue - minValue) * 100);
         return percent;
     }
