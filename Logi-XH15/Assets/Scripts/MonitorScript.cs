@@ -289,10 +289,8 @@ public class MonitorScript : MonoBehaviour
                 
                 
                 //change button name in text
-                TMP_Text bubbleText = buttonBubble.transform.Find("fact (1)").GetComponent<TMP_Text>();
-                bubbleText.text = 
-                "Seems like the " + buttonID + " is destabilising!!!";
-
+                TMP_Text bubbleText = buttonBubble.transform.Find("problem (2)").GetComponent<TMP_Text>();
+                bubbleText.text = ChooseColour(buttonID); 
                 activeBubbles.Add(buttonBubble);
                 buttonBubbleIdx = activeBubbles.Count - 1;
                 //buttonBubble.transform.parent = bubbleHolder.transform;
@@ -383,5 +381,37 @@ public class MonitorScript : MonoBehaviour
     {
         idleTriggerRandInterval = UnityEngine.Random.Range(8, 16);
         idleTriggerTimer = idleTriggerRandInterval;       
+    }
+
+    string ChooseColour(string buttonID)
+    {
+        string textColourChange = "<size=120%><color=#000000><b>["+buttonID+"]!</b></color></size>";
+
+        switch(buttonID)
+        {
+            case "Pressure Regulator":
+                textColourChange = "<size=120%><color=#FF0000><b>["+buttonID+"]!</b></color></size>";
+            break;
+            case "Inertial Dampeners":
+                textColourChange = "<size=120%><color=#00FF00><b>["+buttonID+"]!</b></color></size>";
+            break;
+            case "Oxygen Recycler":
+                textColourChange = "<size=120%><color=#BF40BF><b>["+buttonID+"]!</b></color></size>";
+            break;
+            case "Fusion Reactor":
+                textColourChange = "<size=120%><color=#0000FF><b>["+buttonID+"]!</b></color></size>";
+            break;
+            case "Arc Generator":
+                textColourChange = "<size=120%><color=#FFBF00><b>["+buttonID+"]!</b></color></size>";
+            break;
+            case "Subspace Scanner":
+                textColourChange = "<size=120%><color=#02DEF2><b>["+buttonID+"]!</b></color></size>";
+            break;
+            case "Hydroponics Drainage":
+                textColourChange = "<size=120%><color=#F28202><b>["+buttonID+"]!</b></color></size>";
+            break;   
+        }
+
+        return textColourChange;
     }
 }
