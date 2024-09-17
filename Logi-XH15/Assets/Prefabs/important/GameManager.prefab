@@ -367,7 +367,8 @@ MonoBehaviour:
   pcCamera: {fileID: 8686932326670274843}
   pcListener: {fileID: 5679252087132938059}
   player: {fileID: 1089212392933331615}
-  playerCanvas: {fileID: 464146758655962328}
+  playerCanvas: {fileID: 3067027533192838524}
+  isReading: 0
   computerMonitor: {fileID: 0}
   computerScreenFocus: {fileID: 0}
   monitorBoundary: {fileID: 3990328492795263748}
@@ -381,10 +382,14 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  bookInstructions: {fileID: 0}
+  theManager: {fileID: 0}
+  shipDoneMoving: 0
   sumManager: {fileID: 0}
   gameState: 0
   inMainView: 1
   inPCView: 0
+  tutorialText: {fileID: 0}
   switches: {fileID: 3035853420915798806}
   length: 6
   max_length: 8
@@ -589,11 +594,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
---- !u!223 &464146758655962328 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 6580125126564940633, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
-  m_PrefabInstance: {fileID: 6710847178825328513}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &828732214524741258 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 6242420620231663883, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
@@ -607,6 +607,11 @@ GameObject:
 --- !u!81 &2293047166652199111 stripped
 AudioListener:
   m_CorrespondingSourceObject: {fileID: 4824267570722232134, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
+  m_PrefabInstance: {fileID: 6710847178825328513}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3067027533192838524 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8624941662262385405, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
   m_PrefabInstance: {fileID: 6710847178825328513}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3598193359080818476 stripped

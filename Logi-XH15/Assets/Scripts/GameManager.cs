@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     //player objects
     [SerializeField] public GameObject player;
-    [SerializeField] public Canvas playerCanvas;
+    [SerializeField] public GameObject playerCanvas;
     [SerializeField] public bool isReading = false;
 
     //computer objects
@@ -201,12 +201,6 @@ public class GameManager : MonoBehaviour
             passwordNote.text = password;
         }
         
-    }
-
-    public void CloseTutorialText()
-    {
-        tutorialText.SetActive(false);
-        Debug.Log("Disabled Text");
     }
 
     // void OpenBookOnGameStart()

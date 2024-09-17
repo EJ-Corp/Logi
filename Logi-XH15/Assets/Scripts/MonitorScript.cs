@@ -128,14 +128,14 @@ public class MonitorScript : MonoBehaviour
 
         if (SunManager.Sun.StartedGame != true)
         {
-            gameManager.playerCanvas.enabled = false;
+            gameManager.playerCanvas.SetActive(false);
         } else {
             if (gameManager.inPCView)
             {
-                gameManager.playerCanvas.enabled = false;
+                gameManager.playerCanvas.SetActive(false);
                 RestrictMouseToMonitorBounds();
             } else {
-                gameManager.playerCanvas.enabled = true;
+                gameManager.playerCanvas.SetActive(true);
             }
             }
 

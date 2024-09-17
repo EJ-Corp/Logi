@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class tutorialInteracts : MonoBehaviour
@@ -23,6 +24,7 @@ public class tutorialInteracts : MonoBehaviour
         GameManager.Manager.player.GetComponent<PlayerController>().PlayerReticle.enabled = true;
         GameManager.Manager.isReading = false;
         Cursor.visible = false;
-        GameManager.Manager.CloseTutorialText();
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
     }
 }
