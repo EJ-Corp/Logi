@@ -163,12 +163,12 @@ MonoBehaviour:
   annoyIDPool: 000000000100000002000000
   activeAnnoyList: []
   bubbleHolder: {fileID: 5849317719660824670}
-  buttonProbBubble: {fileID: 6743292420630616860, guid: d3793b07412a3e348960f89e904d6e6f, type: 3}
-  switchProbBubble: {fileID: 9014948847776218458, guid: 92ce8ce3e7b4b80488c7d9c4b6fdd232, type: 3}
-  pressureProbBubble: {fileID: 9014948847776218458, guid: b33f0faa8a906274e93d1edaa19e57b1, type: 3}
-  flirtBubble: {fileID: 850607240268304017, guid: 55f1b892dd44e794095aa97541592a4a, type: 3}
-  historyBubble: {fileID: 490484484383809632, guid: 6cbd9bd5339e2b44780424066b34215f, type: 3}
-  galaxyBubble: {fileID: 850607240268304017, guid: bdb16d6f4edfbbd40977954cf7fad5ef, type: 3}
+  buttonProbBubble: {fileID: 6743292420630616860, guid: a46e64eb8e8404640ab61f5cb1d0b530, type: 3}
+  switchProbBubble: {fileID: 9014948847776218458, guid: 73b9a77b16bcc2d478525b58f3819926, type: 3}
+  pressureProbBubble: {fileID: 9014948847776218458, guid: 3e84cab78f1eeb448927b239cd0373b5, type: 3}
+  flirtBubble: {fileID: 850607240268304017, guid: e3edbefe6ed4c794eb07961111acdb65, type: 3}
+  historyBubble: {fileID: 490484484383809632, guid: dd0328c0282232b47904b519857035ac, type: 3}
+  galaxyBubble: {fileID: 850607240268304017, guid: 6b8c289db61fb6642a6e330045103dad, type: 3}
   activeBubbles: []
   stellaAnimator: {fileID: 5465878107400993231}
   problemBubbleCount: 0
@@ -245,8 +245,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2208582549275231182}
     m_Modifications:
-    - target: {fileID: 3956159210326962653, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
-      propertyPath: m_PresetInfoIsWorld
+    - target: {fileID: 3316298619616148091, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3800316797207180150, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4481822507171501202, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
@@ -329,9 +333,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5154208724839244471, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752268900870162608, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7570742824194983327, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
       propertyPath: m_Name
       value: ComputerCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7808133098614819368, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837713484162693779, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837713484162693779, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837713484162693779, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202092589350497091, guid: 85c8f70333135db47b23fda88154b61f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
