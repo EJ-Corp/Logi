@@ -13,17 +13,18 @@ public class onGameStartOpenBook : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         book = GameManager.Manager.bookInstructions;
+        stellaText = GameManager.Manager.tutorialText;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //open the book on start
-        book.OnInteract();
+        //book.OnInteract();
         //Debug.Log(name);
 
         //Open a tutorial UI
-        //stellaText.SetActive(true);
+        stellaText.SetActive(true);
 
         GameManager.Manager.player.GetComponent<PlayerController>().CanMove = false;
         GameManager.Manager.isReading = true;

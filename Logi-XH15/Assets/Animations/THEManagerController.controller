@@ -35,6 +35,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   book: {fileID: 0}
+  stellaText: {fileID: 0}
 --- !u!114 &-2248150728426326811
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -48,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   book: {fileID: 0}
+  stellaText: {fileID: 0}
 --- !u!1102 &-1502000889175312882
 AnimatorState:
   serializedVersion: 6
@@ -186,6 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   book: {fileID: 0}
+  stellaText: {fileID: 0}
 --- !u!1107 &7871129932798702202
 AnimatorStateMachine:
   serializedVersion: 6
@@ -197,7 +200,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1251795977847511854}
-    m_Position: {x: 380, y: 160, z: 0}
+    m_Position: {x: 380, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4181289011891478761}
     m_Position: {x: 638.72363, y: 315.73917, z: 0}

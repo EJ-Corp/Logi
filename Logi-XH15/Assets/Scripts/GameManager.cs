@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour
     public bool inMainView = true;
     public bool inPCView = false;
 
+    public GameObject tutorialText;
+
     [Header("Problems")]
     public SwitchProblem switches;
     private bool hasPlayedTrigger = false;
@@ -199,6 +201,12 @@ public class GameManager : MonoBehaviour
             passwordNote.text = password;
         }
         
+    }
+
+    public void CloseTutorialText()
+    {
+        tutorialText.SetActive(false);
+        Debug.Log("Disabled Text");
     }
 
     // void OpenBookOnGameStart()
