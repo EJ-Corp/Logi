@@ -22,6 +22,12 @@ public class ProblemTimer : MonoBehaviour
 
     private MonitorScript computerScreen;
 
+    [Header("Tutorial Checks")]
+    [SerializeField] private bool tutorialActive = true;
+    [SerializeField] private int tutorialTasksLeft = 3;
+    [SerializeField] private bool awaitingTask = false;
+    [SerializeField] private ShipIntegrity integrity;
+
     void Start()
     {
         computerScreen = GameObject.FindGameObjectWithTag("PCScreen").transform.GetComponent<MonitorScript>();
@@ -32,7 +38,7 @@ public class ProblemTimer : MonoBehaviour
     {
         if(activeProblems < numberOfProblems)
         {
-            if(nextProblemCountDown > 0)
+            if(nextProblemCountDown > 0 && !awaitingTask)
             {
                 nextProblemCountDown -= Time.deltaTime;
             }
@@ -56,6 +62,14 @@ public class ProblemTimer : MonoBehaviour
            warningPanel.StartWarning();
         }
         int randomProblem = UnityEngine.Random.Range(0, problemIDPool.Count);
+
+        //If tutorial still true then choose tasks left - 1 (for index purpose)
+        if(tutorialActive)
+        {
+            randomProblem = tutorialTasksLeft - 1;
+            awaitingTask = true;
+            integrity.TutorialDamage();
+        }
 
         int chosenProblemID = problemIDPool[randomProblem];
 
@@ -81,7 +95,7 @@ public class ProblemTimer : MonoBehaviour
             computerScreen.SpawnProblemFact(chosenProblemID, buttonID);
         } else if(chosenProblemID == 13) //Chose Pressure (ID = 13)
         {
-            pressureProblem.ActivateProblem();
+            pressureProblem.ActivateProblem(tutorialActive);
             //activeProblems += 1;
             problemIDPool.RemoveAt(randomProblem);
             

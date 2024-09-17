@@ -33,7 +33,7 @@ public class PauseMenu : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "3 - Third Build") {
             playerController = GameManager.Manager.player.GetComponent<PlayerController>();
-            gameplayHUDObject = GameManager.Manager.player.transform.GetChild(2).transform.GetChild(0).gameObject;
+            gameplayHUDObject = GameManager.Manager.player.transform.GetChild(2).transform.GetChild(1).gameObject;
         }
     }
 
@@ -53,7 +53,7 @@ public class PauseMenu : MonoBehaviour
             {
                 //Debug.Log("here");
                 playerController = GameManager.Manager.player.GetComponent<PlayerController>();
-                gameplayHUDObject = GameManager.Manager.player.transform.GetChild(2).transform.GetChild(0).gameObject;
+                gameplayHUDObject = GameManager.Manager.player.transform.GetChild(2).transform.GetChild(1).gameObject;
             }
 
 

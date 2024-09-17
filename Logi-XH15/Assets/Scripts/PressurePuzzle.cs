@@ -116,10 +116,10 @@ public class PressurePuzzle : MonoBehaviour
         }
     }
 
-    public void ActivateProblem()
+    public void ActivateProblem(bool tutorial)
     {
         isIncreasingPressure = true;
-        //Debug.Log("Problem is Pressure");
+
     }
 
     public void FixPuzzle()

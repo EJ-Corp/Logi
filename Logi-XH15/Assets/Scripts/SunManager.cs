@@ -164,7 +164,7 @@ public class SunManager : MonoBehaviour
                 break;
 
                 case WarningState.firing:
-                    if (randomWait > 0)
+                    if (randomWait > 0 && GameManager.Manager.tutorialCompleted)
                     {
                         randomWait -= Time.deltaTime;
                     }

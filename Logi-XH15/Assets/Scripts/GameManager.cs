@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
     public bool inPCView = false;
 
     public GameObject tutorialText;
+    public bool tutorialCompleted = false;
 
     [Header("Problems")]
     public SwitchProblem switches;

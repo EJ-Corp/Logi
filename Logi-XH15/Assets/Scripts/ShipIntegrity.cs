@@ -40,9 +40,14 @@ public class ShipIntegrity : MonoBehaviour
         {
             timerCountdown -= Time.deltaTime;
         }else{
-            CalculateDamage();
-            timerCountdown = timerFull;
+            if(GameManager.Manager.tutorialCompleted)
+            {
+                CalculateDamage();
+                timerCountdown = timerFull;
+            }
+            
         }
+
         healthText.text = currentShipHealth.ToString() + "%";
         damageIndicatorText.text = string.Concat(Enumerable.Repeat(damageIndicatorSegment, damageScaleFactor));
     }
@@ -51,5 +56,10 @@ public class ShipIntegrity : MonoBehaviour
     {
         int damageTaken = damageScaleFactor;
         currentShipHealth -= damageTaken;
+    }
+
+    public void TutorialDamage()
+    {
+        currentShipHealth = 99;
     }
 }
