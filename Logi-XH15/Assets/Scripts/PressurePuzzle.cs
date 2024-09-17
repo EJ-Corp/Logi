@@ -27,6 +27,8 @@ public class PressurePuzzle : MonoBehaviour
     [SerializeField] private int arrowheadRotationOffset = -230;
     [SerializeField] private float fadeSpeed = 1;
 
+    private bool firstFix = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -131,5 +133,11 @@ public class PressurePuzzle : MonoBehaviour
     {
         isIncreasingPressure = false;
         warningSign.FixedProblemOnTimer(13);
+
+        if(!firstFix)
+        {
+            firstFix = true;
+            GameManager.Manager.problemTimer.NextTutorial();
+        }
     }
 }

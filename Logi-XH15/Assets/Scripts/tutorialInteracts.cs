@@ -14,6 +14,7 @@ public class TutorialInteracts : MonoBehaviour
     }
 
     [SerializeField] private GameObject stellaText;
+    [SerializeField] private TimerScript timer;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class TutorialInteracts : MonoBehaviour
     public void Continue()
     {
         Debug.Log("Button Pressed");
-        
+
         GameManager.Manager.player.GetComponent<PlayerController>().CanMove = true;
         GameManager.Manager.player.GetComponent<PlayerController>().PlayerReticle.enabled = true;
         GameManager.Manager.isReading = false;
@@ -51,6 +52,11 @@ public class TutorialInteracts : MonoBehaviour
         GameManager.Manager.player.GetComponent<PlayerController>().PlayerReticle.enabled = false;
         GameManager.Manager.isReading = true;
         Cursor.visible = true;
+        timer.timerOn = false;
+    }
 
+    public void FixTimer()
+    {
+        timer.timerOn = true;
     }
 }

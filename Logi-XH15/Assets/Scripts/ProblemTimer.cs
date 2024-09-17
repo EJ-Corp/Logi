@@ -87,7 +87,7 @@ public class ProblemTimer : MonoBehaviour
             
         } else if(chosenProblemID == 12) //Chose Switched (ID = 12)
         {
-            switchProblem.ActivateProblem();
+            switchProblem.ActivateProblem(tutorialActive);
             //activeProblems += 1;
             problemIDPool.RemoveAt(randomProblem);
 
@@ -138,5 +138,12 @@ public class ProblemTimer : MonoBehaviour
         }
 
         
+    }
+
+    public void NextTutorial()
+    {
+        tutorialTasksLeft--;
+        awaitingTask = false;
+        TutorialInteracts.TutManager.FixTimer();
     }
 }

@@ -13,6 +13,7 @@ public class SwitchProblem : MonoBehaviour
     [SerializeField] private bool problemActive = false;
 
     [SerializeField] private int onSwitches;
+    private bool firstFix = false;
 
     
 
@@ -35,11 +36,17 @@ public class SwitchProblem : MonoBehaviour
 
                 warningSign.FixedProblemOnTimer(12);
                 problemActive = false;
+
+                if(!firstFix)
+                {
+                    firstFix = true;
+                    GameManager.Manager.problemTimer.NextTutorial();
+                }
             }
         }
     }
 
-    public void ActivateProblem()
+    public void ActivateProblem(bool tutorial)
     {
         //Debug.Log("Problem Activated");
         int amountToBreak = UnityEngine.Random.Range(1, allSwitches.Count);
@@ -60,6 +67,11 @@ public class SwitchProblem : MonoBehaviour
         }
 
         problemActive = true;
+
+        if(tutorial)
+        {
+            TutorialInteracts.TutManager.SpawnTutorial();
+        }
     }
 
     public void SwitchTrigger(bool on)
