@@ -120,6 +120,11 @@ public class PressurePuzzle : MonoBehaviour
     {
         isIncreasingPressure = true;
 
+        if(tutorial)
+        {
+            //Spawn bubble explaining how to solve
+            TutorialInteracts.TutManager.SpawnTutorial();
+        }
     }
 
     public void FixPuzzle()

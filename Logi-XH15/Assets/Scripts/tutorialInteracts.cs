@@ -1,14 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class tutorialInteracts : MonoBehaviour
+public class TutorialInteracts : MonoBehaviour
 {
+    private static TutorialInteracts tutManager;
+    public static TutorialInteracts TutManager
+    {
+        get
+        {
+            return tutManager;
+        }
+    }
+
+    [SerializeField] private GameObject stellaText;
+
     // Start is called before the first frame update
     void Start()
     {
-        //gameObject.SetActive(false);
+        if(tutManager == null)
+        {
+            tutManager = this;
+        }
+
+        stellaText = gameObject;
     }
 
     // Update is called once per frame
@@ -19,6 +34,7 @@ public class tutorialInteracts : MonoBehaviour
 
     public void Continue()
     {
+        Debug.Log("Button Pressed");
         
         GameManager.Manager.player.GetComponent<PlayerController>().CanMove = true;
         GameManager.Manager.player.GetComponent<PlayerController>().PlayerReticle.enabled = true;
@@ -26,5 +42,15 @@ public class tutorialInteracts : MonoBehaviour
         Cursor.visible = false;
         gameObject.SetActive(false);
         //Destroy(gameObject);
+    }
+
+    public void SpawnTutorial()
+    {
+        gameObject.SetActive(true);
+        GameManager.Manager.player.GetComponent<PlayerController>().CanMove = false;
+        GameManager.Manager.player.GetComponent<PlayerController>().PlayerReticle.enabled = false;
+        GameManager.Manager.isReading = true;
+        Cursor.visible = true;
+
     }
 }

@@ -179,7 +179,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1315841376}
-          m_TargetAssemblyTypeName: tutorialInteracts, Assembly-CSharp
+          m_TargetAssemblyTypeName: TutorialInteracts, Assembly-CSharp
           m_MethodName: Continue
           m_Mode: 1
           m_Arguments:
@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5252b70461d08ed458e2504f045a0664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stellaText: {fileID: 0}
 --- !u!114 &1315841377 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 230220917329572813, guid: 5ab3f4e876868924e9e2d843cc67c54a, type: 3}
