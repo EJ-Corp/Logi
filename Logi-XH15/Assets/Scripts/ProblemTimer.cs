@@ -77,7 +77,7 @@ public class ProblemTimer : MonoBehaviour
 
         if(chosenProblemID == 11) //Chose Buttons (ID = 11)
         {
-            buttonProblem.ActivateProblem();
+            buttonProblem.ActivateProblem(tutorialActive);
             buttonID = buttonProblem.getCurButtonID();
             //activeProblems += 1;
             problemIDPool.RemoveAt(randomProblem);
@@ -145,5 +145,12 @@ public class ProblemTimer : MonoBehaviour
         tutorialTasksLeft--;
         awaitingTask = false;
         TutorialInteracts.TutManager.FixTimer();
+
+        if(tutorialTasksLeft <= 0)
+        {
+            tutorialActive = false;
+            SunManager.Sun.ActivateFire();
+            GameManager.Manager.tutorialCompleted = true;
+        }
     }
 }

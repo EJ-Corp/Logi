@@ -12,7 +12,7 @@ public class ButtonProblem : MonoBehaviour
     [SerializeField] private ProblemTimer warningSign;
     [SerializeField] private bool problemActive = false;
 
-    public void ActivateProblem()
+    public void ActivateProblem(bool tutorial)
     {
         problemActive = true;
         int randomButton = UnityEngine.Random.Range(0, buttons.Count);
@@ -21,12 +21,17 @@ public class ButtonProblem : MonoBehaviour
         buttonID = fixButton.ID;
         //Debug.Log("Problem is the " + name + " button");
 
+        if(tutorial)
+        {
+            TutorialInteracts.TutManager.SpawnTutorial();
+        }
     }
 
     public void FixProblem()
     {
         problemActive = false;
         fixButton = null;
+        GameManager.Manager.problemTimer.NextTutorial();
     }
 
     public string getCurButtonID()

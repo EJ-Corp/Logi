@@ -269,4 +269,9 @@ public class SunManager : MonoBehaviour
         canFire = fireStart;
         isFiring = fireMid;
     }
+
+    public void ActivateFire()
+    {
+        canFire = true;
+    }
 }
