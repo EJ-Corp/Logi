@@ -2705,6 +2705,10 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: -3.0000045
       objectReference: {fileID: 0}
+    - target: {fileID: 3311651928505920958, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 558245873134185205}
     - target: {fileID: 3850919311068507365, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: -2.9999998
@@ -2818,6 +2822,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+--- !u!114 &558245873134185205 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9067843149608359539, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}
+  m_PrefabInstance: {fileID: 8820364624992943238}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5252b70461d08ed458e2504f045a0664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4318946214939025885 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4721954217560202587, guid: 4c5c0579617171b42a0f5f63525fe560, type: 3}

@@ -389,7 +389,8 @@ MonoBehaviour:
   gameState: 0
   inMainView: 1
   inPCView: 0
-  tutorialText: {fileID: 0}
+  stellaTutorial: {fileID: 6472399225911764130}
+  tutorialCompleted: 0
   switches: {fileID: 3035853420915798806}
   length: 6
   max_length: 8
@@ -446,6 +447,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1330760988278560321, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
+      propertyPath: integrity
+      value: 
+      objectReference: {fileID: 8744251395700100939}
     - target: {fileID: 1330760988278560321, guid: 36dc5fc5a5b373c4284ee0433b9f68d9, type: 3}
       propertyPath: warningPanel
       value: 
@@ -624,6 +629,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7274233868648558748, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
   m_PrefabInstance: {fileID: 6710847178825328513}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6472399225911764130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 356667526889538339, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
+  m_PrefabInstance: {fileID: 6710847178825328513}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7189178061819363657 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4531923800166934216, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
@@ -633,5 +643,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29e25bfdecf8b4ca59fc033a34b2ae93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8744251395700100939 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2627962140316395722, guid: ad2231152ab5dd849b971fc9209a577a, type: 3}
+  m_PrefabInstance: {fileID: 6710847178825328513}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a786e40bb02454384538db8e1fca9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

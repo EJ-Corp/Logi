@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TimerScript : MonoBehaviour
+public class CountdownTimer : MonoBehaviour
 {
     public float timeLeft;
     public bool timerOn = false;

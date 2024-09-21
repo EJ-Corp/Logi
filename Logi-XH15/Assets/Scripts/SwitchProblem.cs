@@ -70,7 +70,7 @@ public class SwitchProblem : MonoBehaviour
 
         if(tutorial)
         {
-            TutorialInteracts.TutManager.SpawnTutorial();
+            TutorialInteracts.TutManager.SpawnTutorial(2);
         }
     }
 

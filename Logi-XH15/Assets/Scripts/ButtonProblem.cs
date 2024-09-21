@@ -23,7 +23,7 @@ public class ButtonProblem : MonoBehaviour
 
         if(tutorial)
         {
-            TutorialInteracts.TutManager.SpawnTutorial();
+            TutorialInteracts.TutManager.SpawnTutorial(3);
         }
     }
 

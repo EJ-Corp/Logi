@@ -125,7 +125,7 @@ public class PressurePuzzle : MonoBehaviour
         if(tutorial)
         {
             //Spawn bubble explaining how to solve
-            TutorialInteracts.TutManager.SpawnTutorial();
+            TutorialInteracts.TutManager.SpawnTutorial(1);
         }
     }
 

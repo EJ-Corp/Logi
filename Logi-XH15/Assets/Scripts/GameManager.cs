@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
     public bool inMainView = true;
     public bool inPCView = false;
 
-    public GameObject tutorialText;
+    public GameObject stellaTutorial;
     public bool tutorialCompleted = false;
 
     [Header("Problems")]
@@ -93,7 +93,6 @@ public class GameManager : MonoBehaviour
         sumManager = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunManager>();
         theManager = this.transform.parent.gameObject;
         gameState = GameState.mainView;
-
     }
 
     void Start()
@@ -130,19 +129,19 @@ public class GameManager : MonoBehaviour
             break;
         }
 
-        if(Input.GetKeyDown(KeyCode.L))
-        {
-            if(Time.timeScale == 0)
-            {
-                Debug.Log("Game Resumed");
-                Time.timeScale = 1f;
+        // if(Input.GetKeyDown(KeyCode.L))
+        // {
+        //     if(Time.timeScale == 0)
+        //     {
+        //         Debug.Log("Game Resumed");
+        //         Time.timeScale = 1f;
                 
-            } else 
-            {
-                Debug.Log("Game Paused");
-                Time.timeScale = 0f;
-            }
-        }
+        //     } else 
+        //     {
+        //         Debug.Log("Game Paused");
+        //         Time.timeScale = 0f;
+        //     }
+        // }
     }
 
     public ComputerFocusScript ShareComputerFocusScript()
@@ -157,7 +156,7 @@ public class GameManager : MonoBehaviour
             length = UnityEngine.Random.Range(min_length, max_length);
         }
 
-        string allChars = "abcdefghijklmnopqrstuvwxyz0123456789";
+        string allChars = "abcdefghi0123456789";
        // string allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
        // string allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 

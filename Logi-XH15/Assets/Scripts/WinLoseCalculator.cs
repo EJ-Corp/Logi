@@ -5,18 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class WinLoseCalculator : MonoBehaviour
 {
-    [SerializeField] private TimerScript timerScript;
+    [SerializeField] private CountdownTimer countdownTimerScript;
     [SerializeField] private ShipIntegrity shipIntegrity;
     // Start is called before the first frame update
     void Start()
     {
-        
+        countdownTimerScript = GetComponent<CountdownTimer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(timerScript.timeLeft <= 0)
+        if(countdownTimerScript.timeLeft <= 0)
         {
             SceneManager.LoadScene(2);
         }

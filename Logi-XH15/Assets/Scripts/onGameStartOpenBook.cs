@@ -7,13 +7,13 @@ public class onGameStartOpenBook : StateMachineBehaviour
 {
 
     [SerializeField] private OnBookInteract book;
-    [SerializeField] private GameObject stellaText;
+    [SerializeField] private GameObject stellaTutorial;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         book = GameManager.Manager.bookInstructions;
-        stellaText = GameManager.Manager.tutorialText;
+        stellaTutorial = GameManager.Manager.stellaTutorial;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
@@ -24,7 +24,7 @@ public class onGameStartOpenBook : StateMachineBehaviour
         //Debug.Log(name);
 
         //Open a tutorial UI
-        stellaText.SetActive(true);
+        stellaTutorial.SetActive(true);
 
         GameManager.Manager.player.GetComponent<PlayerController>().CanMove = false;
         GameManager.Manager.isReading = true;
