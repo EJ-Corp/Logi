@@ -70,8 +70,8 @@ public class GameManager : MonoBehaviour
     //Password Generator
     [Header("Password Generation")]
     [SerializeField] private int length;
-    [SerializeField] private int max_length;
     [SerializeField] private int min_length;
+    [SerializeField] private int max_length;
     [SerializeField] private bool randomLength;
     [SerializeField] private TMP_Text passwordNote;
 

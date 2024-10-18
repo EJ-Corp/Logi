@@ -101,7 +101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8079097615743804825
 Transform:
   m_ObjectHideFlags: 0
@@ -584,6 +584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electrical Switch (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.02700006
@@ -649,6 +653,10 @@ PrefabInstance:
     - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_Name
       value: Electrical Switch (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
@@ -716,6 +724,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electrical Switch (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.027
@@ -781,6 +793,10 @@ PrefabInstance:
     - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_Name
       value: Electrical Switch (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
@@ -848,6 +864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electrical Switch (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.027
@@ -913,6 +933,10 @@ PrefabInstance:
     - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_Name
       value: Electrical Switch (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
@@ -980,6 +1004,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electrical Switch (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.026999643
@@ -1045,6 +1073,10 @@ PrefabInstance:
     - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_Name
       value: Electrical Switch (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1112,6 +1144,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electrical Switch (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.027000003
@@ -1177,6 +1213,10 @@ PrefabInstance:
     - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_Name
       value: Electrical Switch (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1244,6 +1284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electrical Switch (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.026999643
@@ -1309,6 +1353,10 @@ PrefabInstance:
     - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_Name
       value: Electrical Switch (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1376,6 +1424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electrical Switch (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.026999643
@@ -1441,6 +1493,10 @@ PrefabInstance:
     - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_Name
       value: Electrical Switch (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1508,6 +1564,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electrical Switch (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.02700006
@@ -1573,6 +1633,10 @@ PrefabInstance:
     - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_Name
       value: Electrical Switch (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1640,6 +1704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electrical Switch (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.027000003
@@ -1705,6 +1773,10 @@ PrefabInstance:
     - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_Name
       value: Electrical Switch (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569494124860965040, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2201176356343437834, guid: 98ce1c459864c084ba59d44fc3844629, type: 3}
       propertyPath: m_LocalPosition.x

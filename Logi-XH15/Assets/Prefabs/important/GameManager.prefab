@@ -392,9 +392,9 @@ MonoBehaviour:
   stellaTutorial: {fileID: 6472399225911764130}
   tutorialCompleted: 0
   switches: {fileID: 3035853420915798806}
-  length: 6
-  max_length: 8
-  min_length: 4
+  length: 4
+  min_length: 3
+  max_length: 5
   randomLength: 1
   passwordNote: {fileID: 0}
   password: 

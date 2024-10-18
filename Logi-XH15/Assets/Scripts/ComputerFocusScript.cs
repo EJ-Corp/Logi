@@ -33,18 +33,6 @@ public class ComputerFocusScript : MonoBehaviour
         playerController = gameManager.player.GetComponent<PlayerController>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (pcCamera.enabled == true)
-        {
-            if (Input.GetButtonDown("Fire2") || Input.GetKeyDown(KeyCode.Escape))
-            {
-                cameraAnimator.SetTrigger("pcTOmain");
-            }
-        }
-    }
-
     private void OnMouseUpAsButton() 
     {
         cameraAnimator.enabled = true;
@@ -59,5 +47,13 @@ public class ComputerFocusScript : MonoBehaviour
 
         pcCamera.enabled = !pcCamera.enabled;
         pcListener.enabled = !pcListener.enabled;
+    }
+
+    public void ExitTerminal()
+    {
+        if (pcCamera.enabled == true)
+        {
+            cameraAnimator.SetTrigger("pcTOmain");
+        }
     }
 }
